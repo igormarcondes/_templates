@@ -1,0 +1,135 @@
+/* -------------------------------------------------------*/
+/* ------------*>>> CONFIGURAÇÕES <<<---------------------*/
+/* -------------------------------------------------------*/
+$color-theme: #00a651;
+$color-theme2: #000;
+$font-c: #6c6c6c;
+$link-c: $color-theme;
+$link-ch: $color-theme;
+$font-base: Arial,Helvetica,sans-serif;
+$font-custom: 'Roboto Condensed', sans-serif;;
+
+$m-font: $font-custom;				//Menu - Font Family
+$m-font-s: 15px;					//Menu - Font Size
+$m-font-c: #808080;					//Menu - Font Color
+$m-font-cv: $color-theme;			//Menu - Font Color Hover
+$m-bg-c: #fff;						//Menu - Background Color
+$m-bg-ch:  #f1f4f7;					//Menu - Background Color Hover
+
+$mv-title-color: $color-theme;		//Menu Vertical Title - Color
+$mv-title-font: $font-custom;		//Menu Vertical - Font Family
+
+$prod-title-c: $font-c;							//Produto Title - Color
+$prod-font: $font-custom;						//Produto Title - Font
+$prod-font-s: 14px;								//Produto Title - Font Size
+
+$prod-price-font: $font-custom;	  		     	//Produto Price - Font
+$prod-price-font-c: #9f9f9f;					//Produto Price - Color
+$prod-price-font-s: 15px;						//Produto Price - Size
+
+$prod-price-from-c: #9f9f9f;		 			//Produto Price From (de) - Font Color
+$prod-price-from-s: $prod-price-font-s; 		//Produto Price From (de) - Font Size
+
+$prod-price-to-c:  #00a651; 			        //Produto Price To (por) - Font Color
+$prod-price-to-s: 19px; 						//Produto Price To (por) - Font Size
+
+$prod-parcel-c:  #000; 							//Produto Parcelamento - Font Color
+$prod-parcel-s: 13px; 							//Produto Parcelamento - Font Size
+
+$vit-title-font: $font-custom;					// Vitrine Title - Font Family
+$vit-title-font-c: #000;						// Vitrine Title - Font Color
+
+	/* Inicio - Detalhes */
+	    $detail-font-family: $font-base;
+
+		$detail-name-color: #333;
+		$detail-name-font-size: 16px;
+		$detail-name-font-family: $font-custom;
+
+	    $detail-price-de-color: #000;
+		$detail-price-por-color: #000;
+		$detail-parcel-color: #000;
+
+		$detail-price-de-size: 13px;
+		$detail-price-por-size: 13px;
+		$detail-parcel-size: 13px;
+
+		$tools-icon-color: #E86464;
+		$tools-link-color: #222;
+	/* Fim -    Detalhes */
+	
+/*
+* Local padrão das imagens
+*/ 
+//$base-url: "http://recco.ecservice.rakuten.com.br";
+$base-url: "";
+$image-url: $base-url + "/static/locales/custom/img";
+$pathImg: "/static/locales/custom/img";
+$path_buttons: "/static/locales/custom/img/botoes";
+$font-url: $base-url + "/static/locales/custom/fonts";
+
+
+/*
+* Largura padrão do conteudo das páginas;
+*/
+$larguraPadrao: 990px;
+$largura_quickview: 890px;
+$altura_quickview: 690px;
+$largura-look-aside: 340px;
+
+
+/*Quantidade de produtos por linha */
+$prod-by-row: 3;
+$prod-by-row-home: 4;
+$prod-by-row-history: 4;
+$prod-by-row-product: 4;
+
+/*
+* DOCUMENTAÇÃO DE IMAGENS
+*/
+/* Vitrine */
+$ft_vitrine_w: 200px;
+$ft_vitrine_h: 200px;
+
+/* Vitrine - Vira */
+$ft_vitrine_vira_w: 200px;
+$ft_vitrine_vira_h: 200px;
+
+/* Detalhes */
+$ft_detalhes_w: 410px;
+$ft_detalhes_h: 410px;
+
+/* Detalhes */
+$ft_det_quick_w: 410px;
+$ft_det_quick_h: 410px;
+
+/* Ampliada */
+$ft_ampliada_w: 1100px;
+$ft_ampliada_h: 1100px;
+
+/* Thumb */
+$ft_thumb_w: 75px;
+$ft_thumb_h: 75px;
+
+/* look - vitrine */
+$look_vitrine_w: 200px;
+$look_vitrine_h: 200px;
+
+/* look - detalhes */
+$look_detalhes_w: 364px;
+$look_detalhes_h: 364px;
+
+/* Look - Ampliada */
+$look_ampliada_w: 1100px;
+$look_ampliada_h: 1100px;
+
+/* Look - Thumb */
+$look_thumb_w: 72px;
+$look_thumb_h: 72px;
+
+$ft_history_w: 146px;
+$ft_history_h: 146px;
+
+/* Quem viu viu tmb e quem viu Look*/
+$ft_suggest_w: 146px;
+$ft_suggest_h: 146px;

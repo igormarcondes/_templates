@@ -1,0 +1,76 @@
+/* Inicio - Variaveis*/
+
+	$color-theme: #fe4f4f;
+	$font-base: Arial;
+	$font-custom: 'Quicksand', sans-serif;
+	$link-color: #4e4e4e; 
+
+    /* Inicio - Menu */
+    	$header-height: 67px;
+		$menu-bg-color: #fff;
+		$menu-link-color: #000;
+		$menu-font-size: 14px;
+		$menu-font-family: Arial;
+		$menu-last-bg-color: darken($menu-bg-color, 5%);
+		$menu-last-font-color: darken($menu-bg-color, 5%);
+		$submenu-icon-color: #000;
+
+		$menu-help-bg: #e9e9e9;
+		$menu-help-font-color: #505050;
+	/* Fim    - Menu */
+	
+	/* Inicio - Icones Header */
+		$icon-nav-color: $color-theme;
+		$icon-basket-color: $color-theme;
+		$icon-search-color: $color-theme;
+	/* Fim    - Icones Header */
+
+	/* Inicio - Botoes */
+		$btn-font: $font-custom;
+
+		$btn-primary-bg: #1d1d1d;
+		$btn-primary-color: #fff;
+
+		$btn-success-bg: linear-gradient(to bottom, #45cfa0 0%,#3c9d7a 100%);
+		$btn-success-color: #fff;
+	/* Fim    - Botoes */
+
+	/* Inicio - Newsletter */
+		$news-bt-bg: $btn-primary-bg;
+		$news-bt-color: $btn-primary-color;
+		$news-bg: #E6CFA8;
+	/* Fim    - Newsletter */
+
+	/* Inicio - Titulos*/
+		$title-font: $font-custom;
+		$title-font-size: 22px;
+		$title-font-color: #727272;
+	/* Fim - Titulos*/
+
+	/* Inicio - Catalogo  */
+		$product-name-color: #4d4d4d;
+		$product-price-de-color: #4d4d4d;
+		$product-price-por-color: #4d4d4d;
+		$product-parcel-color: #4d4d4d;
+	/* fim - Catalogo */
+
+	/* Inicio - Detalhes */
+		$detail-name-color: #333;
+		$detail-name-font-size: 16px;
+
+	    $detail-price-de-color: $product-price-de-color;
+		$detail-price-por-color: $product-price-por-color;
+		$detail-parcel-color: $product-parcel-color;
+
+		$tools-icon-color: #E86464;
+		$tools-link-color: #222;
+	/* Fim -    Detalhes */
+
+	/* Inicio - Ocultar Elementos */
+		$hide-review-vitrine: false;
+		$hide-button-buy-vitrine: false;
+		$hide-compare-catalog: false;
+		$hide-newsletter-footer: false;
+	/* fim -    Ocultar Elementos */
+
+/* fim    - Variaveis */

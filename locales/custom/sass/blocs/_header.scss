@@ -1,0 +1,126 @@
+/* -------------------------------- -------------------------*/
+/* -----------------*>>> Cabecalho <<<----------------------*/
+/* --------------------------------------------------------*/
+
+html body {
+    font: 12px $font-base;
+    color: #666;
+    text-shadow: none;
+    background: #fff;
+
+    #header:not(.headerbuy) {
+        .container {
+            width: $larguraPadrao;
+            height: 150px;
+        }
+    }
+
+    #header {
+        background: none;
+
+        * {
+            @include box-sizing;
+        }
+
+        #logo {
+            h1 {
+                margin: 0;
+            }
+        }
+
+        .welcome {
+            a {
+                &:hover {
+                    color: #000;
+                }
+            }
+
+            #identificacao {
+                > strong {}
+            }
+
+            #DataCompleta {
+                display: none;
+            }
+        }
+
+        .newsletter {
+            display: none;
+        }
+
+        .help {
+            li {
+                &:first-child {}
+
+                &.loja {
+                    a {}
+                }
+
+                &.account {}
+
+                a {
+                    &:hover {}
+                }
+
+                span {}
+            }
+
+            a,
+            span {}
+        }
+
+        .help.help-user {
+            li {
+                &:first-child {}
+
+                a {}
+            }
+        }
+
+        .search {
+            input {
+                height: 30px;
+                &:focus {
+                    outline: 0;
+                }
+            }
+
+            .btn {}
+        }
+
+        .basket {
+            background: url("/static/locales/global/img/sprites_background.png") no-repeat 0 -197px;
+
+            &:hover {}
+
+            &::before {}
+
+            .title {
+                display: none;
+            }
+
+            .itens {
+                label {}
+            }
+        }
+
+        &.headerbuy {
+            background: #ccc;
+
+            .container {
+                height: 92px;
+            }
+
+            ~ #main {
+                .container {
+                    @include box-sizing(content-box);
+
+                    background: #fff;
+                    padding: 0 10px;
+                    border-radius: 0;
+                    min-height: calc(100vh - 278px);
+                }
+            }
+        }
+    }
+}

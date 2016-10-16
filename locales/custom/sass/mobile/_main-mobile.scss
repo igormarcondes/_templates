@@ -1,0 +1,124 @@
+html,
+body,
+#frm {
+    font-family: $font-base;
+}
+span.go-top-btn {
+	opacity: 1;
+	background: $color-theme;
+	overflow: hidden;
+	text-align: center;
+	border-radius: 40px;
+	&::before {
+		content: "\f077";
+		display: inline-block;
+		color: #fff;
+		font-family: "FontAwesome";
+		font-size: 24px;
+		line-height: 35px;
+	}
+}
+/* inicio - Banners */
+	body {
+	    .banners.full li a {
+	        display: block;
+	        background-repeat: repeat-x !important;
+	    }
+
+	    .banners.b-main .posicao2,
+	    .banners.b-main-mobile .posicao2 {
+	        width: 100%;
+	    }    
+	}
+/* fim    - Banners */
+
+/* inicio - Titulos */
+	.section {
+		h2 {
+			font-family: $title-font;
+			font-size: $title-font-size;
+			color: $title-font-color;
+		}
+	}
+/* fim - Titulos */
+
+/* inicio - Lista de Produtos */
+	body {
+	    .list-products {
+	        li {
+	        	.hproduct {
+	        		.details {
+	        			.name {
+							color: $product-name-color;
+	        			}
+	        			.offers {
+	        				.regular {
+	        					color: $product-price-de-color;
+	        				}
+	        				.sale {
+	        					color: $product-price-por-color;
+	        				}
+	        			}
+	        			.parcel {
+	        				color: $product-parcel-color;
+	        			}
+	        		}
+	        	}
+	        }
+	    }
+	}
+/* fim    - Lista de Produtos */
+
+/* inicio - Filtros*/
+	 .content .filters {
+		> fieldset ul li a.selected {
+			color: $link-color;
+		}
+	 }
+	 html body:not(.institucional) .aside .block a:before, 
+	 html body:not(.institucional) .catalog-filters .block a:before, 
+	 html body:not(.institucional) .catalog-filters .content-filters .horizontal-list a:before, 
+	 html body:not(.institucional) .aside .block span:before, 
+	 html body:not(.institucional) .catalog-filters .block span:before, 
+	 html body:not(.institucional) .catalog-filters .content-filters .horizontal-list span:before {
+		color: $link-color;
+	 }
+/* fim    - filtros*/
+
+/* inicio - Esconder Elementos*/
+	%rk-hide {
+		display: none !important;
+	}
+	@if $hide-review-vitrine {
+		body .list-products .reviewaggregate {
+			@extend %rk-hide;
+		}
+	}
+	@if $hide-button-buy-vitrine {
+		body:not(.product) .list-products li .hproduct .details .buy {
+			@extend %rk-hide;
+		}
+	}
+	@if $hide-compare-catalog {
+		.content .filter-details .btn-mob-compare,
+		.list-products li .hproduct .compare {
+			@extend %rk-hide;
+		}
+	}
+	@if $hide-newsletter-footer {
+		div#footer .container .newsletter {
+			@extend %rk-hide;
+		}
+	}
+/* fim - Esconder Elementos*/
+
+/* inicio - Confirmacao */
+    html {
+    	.confirmacao {
+    		.request .collum .info .title strong, 
+    		.request .collum .info .number strong {
+    			color: $link-color;
+    		}
+    	}
+    }
+/* fim    - Confirmacao */

@@ -1,0 +1,37 @@
+body {
+    #footer {
+        @include box-sizing;
+        background: #ccc;
+        display: block;
+        .collum {
+            .title {
+                font-family: $font-custom;
+                color: #000;
+            }
+            li {
+                background: none;
+                padding-left: 0;
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .footerbuy #footer {
+        @include box-sizing;
+
+        .bg-footer {
+            border-radius: 0;
+        }
+
+        .container {
+
+        }
+
+        .security {
+        }
+        .copy {
+        }
+    }
+}
