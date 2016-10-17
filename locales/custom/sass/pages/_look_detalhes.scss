@@ -124,12 +124,12 @@ body.lookDetalhe {
             }
             .details {
                 .price {
-                    color: $detail-price-por-color;
+                    color: $detail-price-to-c;
                     em {
                         display: none;
                     }
                     span {
-                        color: $detail-price-por-color;
+                        color: $detail-price-to-c;
                     }
                 }
             }

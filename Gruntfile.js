@@ -8,6 +8,7 @@ module.exports = function(grunt) {
 	 grunt.initConfig({
 	 	paths: {
          custom:    'R:/IKCLoja/Genesis/Repository/Genesis/locales/custom/' 
+         //custom:    'G:/FreeCycle/locales/custom/'
         },
 		// Sass: compiles SCSS files
 		sass : {

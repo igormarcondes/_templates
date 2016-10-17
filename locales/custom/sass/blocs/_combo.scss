@@ -83,17 +83,17 @@ body #main {
 
                     .parcel {
                         font-size: 12px;
-                        color: $detail-parcel-color;
-                        font-family: $detail-font-family;
+                        color: $prod-parcel-c;
+                        font-family: $prod-default-font;
                         width: 100%;
 
                         strong {
-                            color: $detail-parcel-color;
+                            color: $prod-parcel-c;
                             font-family: $font-custom;
                         }
 
                         b {
-                            color: $detail-parcel-color;
+                            color: $prod-parcel-c;
                         }
                     }
 

@@ -55,12 +55,24 @@
 	/* fim - Catalogo */
 
 	/* Inicio - Detalhes */
-		$detail-name-color: #333;
-		$detail-name-font-size: 16px;
+	    $detail-default-font: $font-base;
 
-	    $detail-price-de-color: $product-price-de-color;
-		$detail-price-por-color: $product-price-por-color;
-		$detail-parcel-color: $product-parcel-color;
+		$detail-name-color: #666;						//Detalhes Title - Color
+		$detail-name-font: $font-custom;				//Detalhes Title - Font
+		$detail-name-font-s: 14px;						//Detalhes Title - Font Size
+
+		$detail-price-font: $font-custom;	  		    //Detalhes Price - Font
+		$detail-price-font-c: #9f9f9f;					//Detalhes Price - Color
+		$detail-price-font-s: 15px;						//Detalhes Price - Size
+
+		$detail-price-from-c: #9f9f9f;		 			//Detalhes Price From (de) - Font Color
+		$detail-price-from-s: $detail-price-font-s; 	//Detalhes Price From (de) - Font Size
+
+		$detail-price-to-c:  #00a651; 			        //Detalhes Price To (por) - Font Color
+		$detail-price-to-s: 19px; 						//Detalhes Price To (por) - Font Size
+
+		$detail-parcel-c:  #000; 						//Detalhes Parcelamento - Font Color
+		$detail-parcel-s: 13px; 						//Detalhes Parcelamento - Font Size
 
 		$tools-icon-color: #E86464;
 		$tools-link-color: #222;
@@ -71,6 +83,7 @@
 		$hide-button-buy-vitrine: false;
 		$hide-compare-catalog: false;
 		$hide-newsletter-footer: false;
+		$hide-sigla-DePor: true;
 	/* fim -    Ocultar Elementos */
 
 /* fim    - Variaveis */

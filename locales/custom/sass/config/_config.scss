@@ -19,43 +19,53 @@ $m-bg-ch:  #f1f4f7;					//Menu - Background Color Hover
 $mv-title-color: $color-theme;		//Menu Vertical Title - Color
 $mv-title-font: $font-custom;		//Menu Vertical - Font Family
 
-$prod-title-c: $font-c;							//Produto Title - Color
-$prod-font: $font-custom;						//Produto Title - Font
-$prod-font-s: 14px;								//Produto Title - Font Size
-
-$prod-price-font: $font-custom;	  		     	//Produto Price - Font
-$prod-price-font-c: #9f9f9f;					//Produto Price - Color
-$prod-price-font-s: 15px;						//Produto Price - Size
-
-$prod-price-from-c: #9f9f9f;		 			//Produto Price From (de) - Font Color
-$prod-price-from-s: $prod-price-font-s; 		//Produto Price From (de) - Font Size
-
-$prod-price-to-c:  #00a651; 			        //Produto Price To (por) - Font Color
-$prod-price-to-s: 19px; 						//Produto Price To (por) - Font Size
-
-$prod-parcel-c:  #000; 							//Produto Parcelamento - Font Color
-$prod-parcel-s: 13px; 							//Produto Parcelamento - Font Size
 
 $vit-title-font: $font-custom;					// Vitrine Title - Font Family
 $vit-title-font-c: #000;						// Vitrine Title - Font Color
 
+
+
+	/* Inicio - Produto */
+	    $prod-default-font: $font-base;              //Produto Fonte Family Geral
+
+		$prod-name-color: #666;						//Produto Title - Color
+		$prod-name-font: $font-custom;				//Produto Title - Font
+		$prod-name-font-s: 14px;						//Produto Title - Font Size
+
+		$prod-price-font: $font-custom;	  		     	//Produto Price - Font
+		$prod-price-font-c: #9f9f9f;					//Produto Price - Color
+		$prod-price-font-s: 15px;						//Produto Price - Size
+
+		$prod-price-from-c: #9f9f9f;		 			//Produto Price From (de) - Font Color
+		$prod-price-from-s: $prod-price-font-s; 		//Produto Price From (de) - Font Size
+
+		$prod-price-to-c:  #00a651; 			        //Produto Price To (por) - Font Color
+		$prod-price-to-s: 19px; 						//Produto Price To (por) - Font Size
+
+		$prod-parcel-c:  #000; 							//Produto Parcelamento - Font Color
+		$prod-parcel-s: 13px; 							//Produto Parcelamento - Font Size
+	/* fim    - Produto */
+
+
 	/* Inicio - Detalhes */
-	    $detail-font-family: $font-base;
+	    $detail-default-font: $font-base;
 
-		$detail-name-color: #333;
-		$detail-name-font-size: 16px;
-		$detail-name-font-family: $font-custom;
+		$detail-name-color: #666;						//Detalhes Title - Color
+		$detail-name-font: $font-custom;				//Detalhes Title - Font
+		$detail-name-font-s: 14px;						//Detalhes Title - Font Size
 
-	    $detail-price-de-color: #000;
-		$detail-price-por-color: #000;
-		$detail-parcel-color: #000;
+		$detail-price-font: $font-custom;	  		    //Detalhes Price - Font
+		$detail-price-font-c: #9f9f9f;					//Detalhes Price - Color
+		$detail-price-font-s: 15px;						//Detalhes Price - Size
 
-		$detail-price-de-size: 13px;
-		$detail-price-por-size: 13px;
-		$detail-parcel-size: 13px;
+		$detail-price-from-c: #9f9f9f;		 			//Detalhes Price From (de) - Font Color
+		$detail-price-from-s: $detail-price-font-s; 	//Detalhes Price From (de) - Font Size
 
-		$tools-icon-color: #E86464;
-		$tools-link-color: #222;
+		$detail-price-to-c:  #00a651; 			        //Detalhes Price To (por) - Font Color
+		$detail-price-to-s: 19px; 						//Detalhes Price To (por) - Font Size
+
+		$detail-parcel-c:  #000; 						//Detalhes Parcelamento - Font Color
+		$detail-parcel-s: 13px; 						//Detalhes Parcelamento - Font Size
 	/* Fim -    Detalhes */
 	
 /*

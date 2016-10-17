@@ -157,10 +157,10 @@ body {
             .details {
                 font-family: $font-custom;
                 .name {
-                    font-family: $prod-font;
+                    font-family: $prod-name-font; 
                     font-weight: normal;
-                    color: $prod-title-c;
-                    font-size: $prod-font-s;
+                    color: $prod-name-color;
+                    font-size: $prod-name-font-s;
                 }
 
                 .offers {
@@ -220,7 +220,7 @@ body {
                 /*(preco com desconto)*/
                 .price-to + .sale {
                     font-size: 12px;
-                    font-family: $prod-font;
+                    font-family: $prod-default-font;
 
                     em {
                         display: inline-block;
@@ -228,7 +228,7 @@ body {
                 }
 
                 .value-sight {
-                    font-family: $prod-font;
+                    font-family: $prod-default-font;
                     font-size: 12px;
                     text-align: left;
                     padding: 5px 0 0;
@@ -435,7 +435,7 @@ body {
                     }
 
                     .name {
-                        font-size: $prod-font-s - 0.2;
+                        font-size: $prod-name-font-s - 0.2;
                     }
 
                     .parcel {
@@ -633,11 +633,11 @@ body {
                     text-align: center;
 
                     .name {
-                        font-family: $prod-font;
+                        font-family: $prod-name-font;
                         text-align: center;
                         font-weight: normal;
-                        color: $prod-title-c;
-                        font-size: $prod-font-s;
+                        color: $prod-name-color;
+                        font-size: $prod-name-font-s;
                     }
 
                     .regular,
@@ -653,7 +653,7 @@ body {
 
                     .percent-a-vista{
                         font-size: 15px;
-                        font-family: $prod-font;
+                        font-family: $prod-default-font;
                         color: #661919;
                         text-align: left;
 

@@ -2,7 +2,7 @@ body {
     #info-product {
         * {
             @include box-sizing;
-            font-family: $detail-font-family;
+            font-family: $detail-default-font;
         }      
         /* inicio - Collum Details */
             .collum.details {
@@ -10,8 +10,8 @@ body {
             }
             /* Product name :start */
                 .name {
-                    font-family: $detail-name-font-family;
-                    font-size: $detail-name-font-size;
+                    font-family: $detail-name-font;
+                    font-size: $detail-name-font-s;
                     color: $detail-name-color;
                 }
             /* Product name:end */
@@ -26,7 +26,7 @@ body {
                 .reviewaggregate {
 
                 }
-             /* rating:end */
+            /* rating:end */
 
             /* Stamps:start */
                 .stamp {

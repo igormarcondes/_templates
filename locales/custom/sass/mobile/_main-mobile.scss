@@ -110,6 +110,11 @@ span.go-top-btn {
 			@extend %rk-hide;
 		}
 	}
+	@if $hide-sigla-DePor {
+		 body #main .list-products .details .price:not(.percent-a-vista) em {
+			@extend %rk-hide;
+		}
+	}
 /* fim - Esconder Elementos*/
 
 /* inicio - Confirmacao */

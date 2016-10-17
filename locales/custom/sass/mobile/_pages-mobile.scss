@@ -23,7 +23,7 @@
 					color: $detail-name-color; 
 					text-transform: capitalize;
 					text-align: center;
-					font-size: $detail-name-font-size;
+					font-size: $detail-name-font-s;
 				}
 				.fab-cod {
 					text-align: center;
@@ -39,10 +39,10 @@
 						text-transform: uppercase;
 						&.regular {
 							font-size: 15px;
-							color: $detail-price-de-color;
+							color: $detail-price-from-c;
 						}
 						&.sale {
-							color: $detail-price-por-color;
+							color: $detail-price-to-c;
 							font-weight: bold;
 						}
 					} 
