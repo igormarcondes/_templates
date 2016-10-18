@@ -4,6 +4,11 @@ body {
             float: none;
             width: 100%;
         }
+        li {
+            img {
+                width: 100%;
+            }
+        }
     }
 
     &.home {
@@ -119,10 +124,15 @@ body {
                     }
                 }
             }
+            &.full.b-bottom {
+                width: $larguraPadrao;
+                margin: 0 auto;
+            }
         }
     }
 
-    &.catalog {
+    &.catalog,
+    &.look {
         .banners {
             &.main {
                 ul {
@@ -160,69 +170,10 @@ body {
                     }
 
                     li {
-                        //width: 117px !important;
-                        //height: 135px;
-                        //margin: 0 13px;
 
                         &.posicao1 {
                             float: left;
                             clear: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-/*
-* Catalogo
-*/
-body {
-    &.catalog {
-        .banners {
-            &.main {
-                &.b-main {
-                    .posicao1 {
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-/*
-* Look Catalogo
-*/
-body {
-    &.look {
-        .banners {
-            &.main {
-                &.b-main {
-                    width: 1004px;
-                    float: right;
-
-                    ul {
-                        border-bottom: 2px solid #dfdfdf;
-                        width: 100%;
-
-                        .posicao1 {
-                            width: 100% !important;
-                            border-bottom: 2px solid #dfdfdf;
-                        }
-
-                        .posicao2,
-                        .posicao3,
-                        .posicao4,
-                        .posicao5,
-                        .posicao6,
-                        .posicao7,
-                        .posicao8 {
-                            width: 117px !important;
-                            margin-right: 20px;
                         }
                     }
                 }

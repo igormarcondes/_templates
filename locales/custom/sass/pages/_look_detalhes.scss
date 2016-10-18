@@ -6,7 +6,7 @@ body.lookDetalhe {
          @include clearfix;
     }
     .big_photo_container {
-        img {
+        img[name="ProdutoImagem"] {
             width: $look_detalhes_w;
             height: $look_detalhes_h;
         }
