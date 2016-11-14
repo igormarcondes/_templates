@@ -26,7 +26,7 @@
     form[action*="consultarPrazoEntrega"]#frm,
     body.rate  {
         padding: 5px 10px;
-        height: calc(100vh - 10px);
+        @include box-sizing;
         h1 {
             @extend %title-modal;
         }
@@ -47,7 +47,6 @@
         p,
         label {
             color: #000;
-            text-shadow: 0 0 0 #000;
         }
     }
 /* fim    - Configuracoes Gerais */

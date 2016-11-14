@@ -35,7 +35,7 @@ body {
 
         &.internal {
             #main {
-                padding-top: 8px;
+                
             }
 
             .nav {
@@ -63,8 +63,11 @@ body {
                 }
             }
         }
-    }
+        &.search .internal {
 
+        }
+    }
+    /* Mapa do site */
     &.sitemap {
         h1 {
             font-family: $font-custom;

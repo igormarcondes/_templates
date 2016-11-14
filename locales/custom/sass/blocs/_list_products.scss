@@ -155,8 +155,7 @@ body {
             }
 
             .details {
-                font-family: $font-custom;
-                text-align: center;
+                font-family: $prod-default-font;
                 .name {
                     font-family: $prod-name-font; 
                     font-weight: normal;
@@ -187,7 +186,7 @@ body {
                 .regular {
                     color: $prod-price-from-c;
                     font-size: $prod-price-from-s;
-                    font-family: $font-custom;
+                    font-family: $prod-price-font;
                 }
 
                 .price {

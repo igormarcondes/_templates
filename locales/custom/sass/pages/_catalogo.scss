@@ -60,7 +60,6 @@ body {
         }
     }
     .see-category {
-        background: #ece810;
         text-transform: uppercase;
         color: #000;
         font-family: $font-custom;
@@ -155,10 +154,16 @@ body {
         .ico {
              background: url("#{$pathImg}/ico_list.gif") no-repeat;
              &.table{
-                background-position: 0 -24px;
+                background-position: 0 -0;
+                &.selected {
+                    background-position: 0 -45px;
+                }
              }
              &.list {
                 background-position: 0 0;
+                &.selected {
+                    background-position: 0 -45px;
+                }
              }
              &.selected {
                 color: #000;

@@ -1,8 +1,9 @@
 body {
     #footer {
         @include box-sizing;
-        background: #ccc;
+        background: #fff;
         display: block;
+        border: 0;
         .collum {
             .title {
                 font-family: $font-custom;
@@ -15,6 +16,9 @@ body {
                     color: #000;
                 }
             }
+        }
+        .copy {
+            border-top: 0;
         }
     }
 
