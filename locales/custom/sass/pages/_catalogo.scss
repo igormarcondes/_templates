@@ -8,6 +8,10 @@ body {
         height: 0;
         z-index: -1;
     }
+    .reviewaggregate .rating, 
+    .hreview .rating .value {
+        background-position: 0 -21px;
+    }
     #breadcrumbs {
         background: none;
         text-transform: uppercase;
@@ -156,7 +160,7 @@ body {
              &.table{
                 background-position: 0 -0;
                 &.selected {
-                    background-position: 0 -45px;
+                    background-position: 0 -15px;
                 }
              }
              &.list {

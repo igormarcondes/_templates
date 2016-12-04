@@ -9,6 +9,13 @@ body {
                 width: 100%;
             }
         }
+        &.special-store {
+            li {
+                img {
+                    width: auto;
+                }
+            }
+        }
     }
 
     &.home {
@@ -87,9 +94,8 @@ body {
             }
 
             &.b-betweenvit {
-                margin: 0 0 14px;
-                background: #f3f3f3;
-                padding: 19px;
+                margin: 0 0 10px;
+                padding: 0;
                 @include box-sizing;
             }
 

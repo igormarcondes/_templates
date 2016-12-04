@@ -156,6 +156,9 @@ body {
 
             .details {
                 font-family: $prod-default-font;
+                .link:hover {
+                    text-decoration: none;
+                }
                 .name {
                     font-family: $prod-name-font; 
                     font-weight: normal;
@@ -388,7 +391,7 @@ body {
                         }
                     }
                     .name {
-                        font-weight: bold;
+                       
                     }
                     .description {
                         color: $font-c;

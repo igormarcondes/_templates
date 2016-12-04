@@ -2,6 +2,7 @@ body.quickview {
 	background: none;
 	#main .container {
 		width: 100%;
+		@include box-sizing;
 	}
 	#info-product {
 		min-height: 10px !important;

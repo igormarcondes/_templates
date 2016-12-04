@@ -17,6 +17,7 @@ html body {
 
     #header {
         background: none;
+        border-bottom: 0;
 
         * {
             @include box-sizing;
@@ -50,17 +51,15 @@ html body {
 
         .help {
             width: auto;
+            top: 0;
+            left: 0;
             li {
                 padding-top: 0;
+                width: auto;
                 &:first-child {}
 
-                &.loja {
-                    a {}
-                }
-
-                &.account {}
-
                 a {
+                    background: none;
                     &:hover {}
                 }
 
@@ -111,7 +110,7 @@ html body {
                     content: "produtos";
                 }
                 label {
-                    display: none;
+                   
                 }
             }
         }
