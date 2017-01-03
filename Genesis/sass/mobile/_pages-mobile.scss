@@ -1,0 +1,237 @@
+/* inicio - Detalhes*/
+	body:not(.quickview).product { 
+		.add-list > div {
+			display: inline;
+		}
+		.content .collum {
+			&.details {
+				.tools {
+					text-align: center;
+					li {
+						&::before {
+							color: $tools-icon-color;
+						}
+						a {
+							color: $tools-link-color;
+						}
+					}
+				}
+				.social {
+					display: none;
+				}
+				.name {
+					color: $detail-name-color; 
+					text-transform: capitalize;
+					text-align: center;
+					font-size: $detail-name-font-s;
+				}
+				.fab-cod {
+					text-align: center;
+					padding-top: 2px;
+					font-size: 12px;
+				}
+				.offers { 
+					text-align: center;
+					font-size: 22px;  
+					font-family: Arial;
+					> span {
+						display: block;
+						text-transform: uppercase;
+						&.regular {
+							font-size: 15px;
+							color: $detail-price-from-c;
+						}
+						&.sale {
+							color: $detail-price-to-c;
+							font-weight: bold;
+						}
+					} 
+				}
+				.parcel {
+					display: block;
+					text-align: center;
+					font-size: 20px;
+					padding-top: 10px;
+				}
+				.seal,
+				.stamp { 
+					text-align: center;
+					a {
+						padding-bottom: 5px;
+						display: block;
+					}
+				}
+				.save {
+					text-align: center;
+					display: none;
+				}
+				#ProductBuy {
+					text-align: center;
+				}
+			}
+		}
+	}
+/* fim    - Detalhes */
+
+/* inicio - Basket */
+	body.basketpage {
+	    #banner-basket .promo {
+	        background: #f5ede0;
+	        text-align: center;
+	        color: #000;
+	        padding: 0 10px;
+	        font-family: $font-custom;
+	        box-sizing: border-box;
+	    }
+
+	    #banner-basket span {
+	        padding: 23px 0 0 0;
+	    }
+
+	    .orbit-bullets {
+	        bottom: 4px;
+
+	        li {
+	            background: #fff;
+	            border-radius: 10px;
+	            font-size: 11px;
+	            line-height: 17px;
+	            height: 20px;
+	            margin: 0 0 0 5px;
+	            border: 1px solid #ccc;
+
+	            &.active {
+	                background: $color-theme;
+	                color: #fff;
+	                font-size: 11px;
+	                line-height: 17px;
+	                height: 20px;
+	                text-decoration: none;
+	            }
+	        }
+	    }
+
+	    .basket .coupon-ok {
+	        color: #0e7e05;
+	    }
+
+	    .basket table tr td.delete a,
+	    .basket table tr td.quantity a,
+	    .basket table tr td.gift span:after {
+	        color: $color-theme;
+	    }
+	}
+/* fim    - Basket */
+
+/* inicio - Checkout */
+	html {
+	    body .login .collum fieldset .title {
+	        font: bold 17px $font-custom, Arial, Sans-serif;
+	        color: #303030;
+	        text-transform: uppercase;
+	    }
+
+	    .login .collum .remember {
+	        margin-top: 20px;
+	    }
+
+	    .checkout.close .main-content #BlocoNP .field input[type=text] {
+	        /*campo cpf*/
+	        border: 1px solid #000 !important;
+	        padding: 5px;
+	        margin: 0 auto;
+	    }
+
+	    body .service-basket .services tr td label {
+	        width: calc(100% - 30px);
+	    }
+	    body .form-new-card .field.full label>img {
+			width: 25px;
+	    }    
+	}
+/* fim 	  - Checkout */
+
+/* inicio - Cadastro */
+	html {
+		.register {
+			.actions {
+				padding: 0;
+			}
+		}
+	}
+/* Fim    - Cadastro */
+
+/* inicio - Institucional */
+	html {
+	    .institucional .nav > ul .box h2 {
+	        color: $color-theme;
+	    }
+
+	    .institucional .nav > ul .box ul li a:before,
+	    .sitemap #main_content .col > ul li a:before {
+	        color: $color-theme;
+	    }
+
+	    .sitemap #main_content .col > strong {
+	        color: $color-theme;
+	    }
+	}
+/* fim 	  - Institucional */
+
+/* inicio - Lista de desejos */
+	html {
+		ul.desired-products {
+			/*link alterar*/
+			&.list-products li .details.box>span.situation a {
+				color: $link-color;
+			}
+			/*excluir*/
+			&.list-products li .details.box>span.added a {
+				background: none;
+				font-size: 0;
+				&::before {
+					content: "\f00d";
+					font-family: "FontAwesome";
+					display: block;
+					text-indent: 0;
+					font-size: 33px;
+					color: #4e4e4e;
+				}
+			}
+		}
+	}
+/* fim - Lista de desejos */
+
+/* inicio - modais*/
+	body.modal-mobile {
+		h1 {
+			font-family: $font-custom;
+		}		
+		/* Modal Consultar prazo de entrega*/
+			&.consult-delivery {
+				#pnlHomeDelivery {
+					.cep .field {
+						width: 160px;
+						display: inline-block;
+						float: none;
+						margin: 0;
+						label > span {
+							height: 20px;
+							margin: 0;
+						}
+					}
+					.actions {
+						display: inline-block;
+						float: none;
+						vertical-align: bottom;
+						margin: 0 !important;
+					}
+					input[type="text"] {
+						width: 98% !important;
+						border-radius: 0;
+						height: 29px;
+					}
+				}
+			}		
+	}
+/* fim - modais*/

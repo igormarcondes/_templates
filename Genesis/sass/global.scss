@@ -1,0 +1,40 @@
+/* ----------- CONFIGURAÇÕES ------------ */
+@import "config/config";
+//@import "config/fonts";
+@import "config/normalize";
+@import "config/mixins";
+
+/*
+/* ----------- COMPONENTES ------------ */
+//@import "components/autoComplete";
+@import "desktop/components/owlcarousel"; 
+@import "desktop/components/buttons";
+@import "desktop/components/headings";
+@import "desktop/components/pagination";
+@import "desktop/components/banners";
+@import "desktop/components/modals";
+
+/* ----------- BLOCOS ------------ */
+@import "desktop/blocs/header";
+@import "desktop/blocs/footer";
+@import "desktop/blocs/minicar"; 
+@import "desktop/blocs/nav";
+@import "desktop/blocs/nav-vertical";
+@import "desktop/blocs/fixheader";
+@import "desktop/blocs/list_products";
+@import "desktop/blocs/history";
+@import "desktop/blocs/combo";
+@import "desktop/blocs/filter";
+
+
+/* ----------- PAGINAS------------ */ 
+@import "desktop/pages/basket";
+@import "desktop/pages/catalogo";
+@import "desktop/pages/checkout";
+@import "desktop/pages/detalhes";
+@import "desktop/pages/home";
+@import "desktop/pages/institucional";
+@import "desktop/pages/login";
+@import "desktop/pages/look_detalhes";
+@import "desktop/pages/minha_conta"; 
+@import "desktop/pages/quickview";

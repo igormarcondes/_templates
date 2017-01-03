@@ -1,0 +1,90 @@
+/* -------------------------------------------------------*/
+/* -----------------*>>> MENU - NAV <<<----------------------*/
+/* -------------------------------------------------------*/
+
+body {
+    #nav {
+        background: #000;
+        height: 40px;
+        margin: 0 auto;
+        width: $larguraPadrao;
+        text-align: center;
+
+        > li {
+            float: left;
+            > a {
+                background: none;
+                font-family: $font-custom;
+                font-size: 1.4em;
+                height: 40px;
+                padding: 0 25px;
+                color: #fff;
+                position: relative;
+                text-transform: uppercase;
+                z-index: 8;
+                &:hover,
+                &.hover {
+                   background: none;
+                }
+                &.hover {
+                    background: #f3f3f3;
+                    color: #000;
+                }
+            }
+            .sub-nav {
+                background-color: #f3f3f3;
+                border-top: none;
+                border-bottom: 0;
+                padding: 20px 0;
+                top: 40px;
+                width: 100% !important;
+
+                .collum {
+                    margin-left: 20px;
+                    width: 200px;
+
+                    &.imagem {
+                        float: right;
+                        margin: 0;
+                        width: auto;
+                        max-width: 507px;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                        a {
+                            padding: 0;
+                        }
+                    }
+                }
+
+                a {
+                    color: #6c6c6c;
+                    font-family: $font-custom;
+                    font-size: 14px;
+                    height: auto;
+                    text-transform: uppercase;
+                    text-indent: 0;
+                    width: auto;
+                    &:hover {
+                        color: $link-c;
+                        text-decoration: none;
+                    }
+                }
+
+                li {
+                    padding: 4px 0;
+                    border: 0;
+                    text-align: left;
+                    width: 210px;
+
+                    &::first-child {
+                        border-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

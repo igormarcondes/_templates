@@ -1,0 +1,80 @@
+/* inicio - Footer */
+	div#footer {
+	    .container {
+			> * {
+				order: 20;
+			}
+			.collum {
+				&.search {
+					order: 1;
+				}
+				&.payment{
+					order: 5;
+				}
+				&.social {
+					order: 2;
+				}
+				&.help {
+					order: 4;
+				}
+				&.institucional  {
+					order: 3;
+				}
+				&.security {
+					order: 6;
+				}
+				&.info-cli {
+					order: 7;
+				}
+				&.copy {
+					order:8;
+				}
+			}
+	    }
+	    .container {
+	    	.collum {
+	    		&.payment {
+	    			.title {
+	    				display: block;
+	    			}
+	    		}
+	    		&.security {
+	    			text-align: center;
+	    		}
+	    		&.social {
+	    			ul {
+	    				li {
+	    					&.ico {
+		    					a {
+									background: none !important;
+									height: 31px;
+									text-indent: -9999px;
+									width: 31px;
+									padding: 0 5px;
+									&::before {
+										background-color: #fff;
+										color: $color-theme;
+										float: left;
+										text-indent: 0;
+										text-align: center;
+										width: 100%;
+										text-rendering: auto;
+										-webkit-font-smoothing: antialiased;
+										font-family: "FontAwesome";
+										font-size: 31px;
+									}
+		    					}	    						
+	    					}
+	    					&.facebook a::before { content: "\f09a";}
+	    					&.twitter a::before { content: "\f099";}
+	    					&.instagram a::before { content: "\f16d";}
+	    					&.youtube a::before { content: "\f167";}
+	    					&.pinterest a::before { content: "\f231";}
+	    					&.blog a::before { content: "\f09e";}
+	    				}
+	    			}
+	    		}
+	    	}
+	    }
+	}
+/* fim    - Footer */

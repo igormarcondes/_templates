@@ -1,0 +1,194 @@
+body {
+    #info-product {
+        * {
+            @include box-sizing;
+            font-family: $detail-default-font;
+        }      
+        /* inicio - Collum Details */
+            .collum.details {
+                width: calc(100% - #{$ft_detalhes_w +15} );
+            }
+            /* Product name :start */
+                .name {
+                    font-family: $detail-name-font;
+                    font-size: $detail-name-font-s;
+                    color: $detail-name-color;
+                }
+            /* Product name:end */
+
+            /* Fabricante:start */
+                .fab-cod {
+
+                }
+            /* Fabricante:end */
+
+            /* rating:start */
+                .reviewaggregate {
+
+                }
+            /* rating:end */
+
+            /* Stamps:start */
+                .stamp {
+
+                }
+            /* Stamps:end */
+
+            /* Box Prices:start */
+                #infoPrices {
+
+                }
+                .offers {
+                    width: 100%;
+                    margin: 0;
+                    span {
+                        margin: 0;
+                    }
+                }
+                .price-from {
+
+                }
+                .price-to {
+
+                }
+                .desconto-avista {
+
+                }
+                .parcel {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+                .save {
+                    display: none;
+                }
+            /* Box Prices:end */
+            
+            /* Tabs:start */
+                #ajaxTabs {
+                    width: 100%;
+                }
+                .tabs {
+                    .tab-link {
+                        h2 {
+                            &.active {
+
+                            }
+                        }
+                    }
+                    .tab-content {
+
+                    }
+                }
+            /* Tabs:end */
+
+            /* Skus:start */
+                .skus-product {
+                    background: none;
+                    border: 0;
+                    .field {
+                        background: none;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    ul {
+                        li {
+                            a {
+
+                            }
+                        }
+                    }
+                }
+            /* Skus:end */
+
+            /* Comprar:start */
+                #ProductBuy {
+
+                }
+                .action {
+                    .btn.buy {
+
+                    }
+                }
+                .notifyme.form  {
+                    span {
+                        strong {
+                        }
+
+                    }
+
+                    label {
+                        span {
+                        }
+
+                        input {
+                        }
+
+                    }
+
+                    .btn {
+                    }
+                }                
+            /* Comprar:start */
+
+            /* Descricao preview:start */
+                #ajaxDescriptionPreview {
+
+                }
+            /* Descricao preview:end */
+            
+            /* tools:start */
+                .tools {
+
+                }
+            /* tools:start */
+
+            /* Disponibilidade:start*/
+                .time {
+                    display: none;
+                }
+            /* Disponibilidade:end*/
+        /* fim    - Details */
+
+        /* inicio - Collum Imagem */
+            .collum.images {
+                @include box-sizing(content-box);
+                width: $ft_detalhes_w;
+                margin-right: 15px;   
+            }
+            .photo {
+                width: $ft_detalhes_w;
+                height: $ft_detalhes_h;
+                border: 0 !important;
+                .main {
+                    width: $ft_detalhes_w;
+                    height: $ft_detalhes_h;
+                }
+            }
+            .zoom {
+                background: none;
+                
+                .mouseover {
+                    background: none;
+
+                }
+                #hplAmpliar {
+
+                }
+            }
+            .thumbs {
+
+            }
+            #thumbs {
+
+            }
+            .social {
+                .media {
+                    &.invite {
+
+                    }
+                }
+            }
+        /* fim    - Collum Imagem */
+    }
+}

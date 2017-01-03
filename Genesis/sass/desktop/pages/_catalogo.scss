@@ -1,0 +1,253 @@
+body {
+    .chaordic:empty {
+        display: none;
+    }
+    iframe[name="google_conversion_frame"] {
+        position: absolute;
+        width: 0px;
+        height: 0;
+        z-index: -1;
+    }
+    .reviewaggregate .rating, 
+    .hreview .rating .value {
+        background-position: 0 -21px;
+    }
+    #breadcrumbs {
+        background: none;
+        text-transform: uppercase;
+        border-bottom: 1px solid #e5e5e5;
+        margin: 0;
+        padding: 5px 10px 10px;
+        @at-root .product #breadcrumbs {
+            border-bottom: 0;
+        }
+
+        > span {
+            font-family: $font-custom;
+            font-weight: normal;
+            font-size: 12px;
+            text-shadow: 0 0 0 #000;
+            &:last-child {
+                text-decoration: underline;
+                color: #000;
+            }
+            &:first-child a span {
+                font-weight: bold;
+            }
+
+        }
+        a span {
+            color: $font-c;
+            font-family: $font-custom;
+            font-size: 11px;
+            border-right: 1px solid #ccc;
+            background: none;
+            padding-right: 10px;
+        }
+
+        h1 span {
+            color: #000;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: normal;
+            text-decoration: none;
+        }
+    }
+    &.vitrine .main-content {
+        text-align: center;
+        .section,
+        .categ-desc {
+            text-align: left;
+        }
+        .section {
+            border-bottom: 0;
+        }
+    }
+    .see-category {
+        text-transform: uppercase;
+        color: #000;
+        font-family: $font-custom;
+        display: inline-block;
+        padding: 12px 40px;
+        font-weight: bold;
+        border-bottom: 2px solid #b1ae0c;
+        margin: 20px 0;
+        &:hover {
+            text-decoration: none;
+            background: darken(#ece810, 5%);
+        }
+    }
+
+    .content {
+        div.filters {
+            background: #fff;
+            padding: 10px;
+            border-radius: 3px;
+            position: relative;
+            z-index: 2;
+            font-family: $font-custom;
+
+            > span {
+                font-weight: bold;
+                font-size: 12px;
+                text-shadow: none;
+                text-transform: uppercase;
+                color: #000;
+            }
+
+            li {
+                margin-left: 10px;
+                padding-left: 10px;
+                border-left: 0;
+
+                a {
+                    color: $font-c;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    &.selected {
+                        color: #000;
+                        font-weight: normal;
+                        text-decoration: underline;
+                    }
+                    &:hover {
+                        color: $color-theme;
+                    }
+                }
+            }
+
+            fieldset {
+                width: 670px;
+            }
+
+            #hypCompare {
+                @extend %btn;
+                @extend %btn-secondary;
+                @extend %btn-sm;
+            }
+        }
+    }
+
+    .filter-details {
+        border: 0;
+        position: relative;
+        overflow: visible;
+        padding: 0 0 52px 9px;
+        p {
+            position: absolute;
+            right: 20px;
+            top: 4px;
+            font-family: $font-custom;
+            font-size: 12px;
+            color: $font-c;
+            text-transform: uppercase;
+        }
+        &.no-result {
+            padding: 20px 0 0;
+            p {
+                position: static;
+                height: auto;
+            }
+        }
+    }   
+    .vs-mode {
+        font-family: $font-custom;
+        > span {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .ico {
+             background: url("#{$pathImg}/ico_list.gif") no-repeat;
+             &.table{
+                background-position: 0 -0;
+                &.selected {
+                    background-position: 0 -15px;
+                }
+             }
+             &.list {
+                background-position: 0 0;
+                &.selected {
+                    background-position: 0 -45px;
+                }
+             }
+             &.selected {
+                color: #000;
+                text-decoration: underline;
+             }
+        }
+        li {
+            a {
+                text-transform: uppercase;
+                color: $font-c;
+                &:hover {
+                    color: $link-ch;
+                }
+            }
+        }
+    }
+    
+
+    #divSort .itens-page {
+        left: 200px;
+        top: 46px;
+        text-transform: uppercase;
+        height: 26px;
+        select {
+            border: 1px solid #ccc;
+            padding: 2px 5px;
+            border-radius: 0;
+        }
+        span {
+            font-weight: bold;
+            line-height: 29px;
+        }
+    }
+    &.vitrine {
+        #main {
+            .vitrine-promo{
+                .b-main {
+                    float: left;
+                    width: 410px;
+
+                    + .section {
+                        float: left;
+                        width: 370px;
+                         h2 span {
+                            font-size: 18px;
+                         }
+                        .list-products {
+                            li {
+                                width: 100%;
+                                clear: both;
+                                margin: 0;
+                                border-top: 0;
+                            }
+                            .hproduct {
+                                width: 100%;
+                            }
+                            .tools,
+                            .stamp,
+                            .quick-look-container {
+                                display: none !important;
+                            }
+                            .figure {
+                                float: left;
+                                width: 100px;
+                                height: auto;
+                            }
+                        }
+                    }           
+                }
+            }
+            .vitrine-2,
+            .vitrine-3,
+            .vitrine-4 {
+                clear: none;
+            }
+            .list-products {
+                li {
+                    width: 33%;
+                }
+            }
+        }    
+    } 
+}

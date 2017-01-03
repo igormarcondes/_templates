@@ -1,0 +1,180 @@
+%btn {
+    border-bottom-width: 0;
+    border-radius: 0;
+    line-height: 32px;
+    height: auto;
+    text-align: center;
+    font-family: $font-custom; 
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0 15px;
+    text-transform: uppercase;
+    text-indent: 0;
+    &:hover {
+        text-decoration: none;
+    }
+}
+%btn-primary {
+    @extend %btn;
+    background: $color-theme;
+    color: #fff;
+    border-bottom-color: #027a3c;
+    &:hover {
+        background: $color-theme;
+    }
+}
+%btn-secondary {
+    @extend %btn;
+    background: #ece810;
+    color: #000;
+    text-transform: uppercase;
+    border-color: #b1ae0c;
+    &:hover {
+        background: #ece810;
+    }
+}
+%btn-success {
+    @extend %btn;
+    background: #5cb85c;
+    color: #fff;
+    text-transform: uppercase;
+    border-color: darken(#5cb85c, 50%);
+    &:hover {
+        background: #5cb85c;
+    }
+}
+%btn-default {
+    @extend %btn;
+    background: linear-gradient(to bottom,  #acacac 50%,#9d9d9d 50%); ;
+    border-color: #999;
+    color: #fff;
+    &:hover {
+        background: linear-gradient(to bottom,  #acacac 50%,#9d9d9d 50%); ;
+        border-bottom: 1px solid #999;
+    }
+}
+%btn-lg {
+    line-height: 48px;
+    height: 48px;
+    padding: 0 20px;
+    font-size: 22px;
+    &:hover {
+        
+    }
+}
+%btn-sm {
+    line-height: 24px;
+    height: 24px;
+    padding: 0 20px;
+    font-size: 13px;
+    padding: 0 10px;
+    &:hover {
+       
+    }
+}
+body .btn:hover {
+    text-decoration: none
+}
+/* inicio -  todos os botos */
+    html .btn.buy, 
+    html #hypBuyMore,
+    html #hypSalvar, 
+    html .btn.ir.save, 
+    html .btn.ir.send, 
+    html body .btn.ir.buy, 
+    html .new-search, 
+    html .reports .search, 
+    html .email .continue, 
+    html .forget .continue, 
+    html .loginexistente .continue, 
+    html .loginexistente .cancel, 
+    html .garantia .continue, 
+    html .checkout .continue, 
+    html .move-products .ok, 
+    html .filter-wish .search, 
+    html .my-lists #btnAvancar, 
+    html .alterarSenha .continue, 
+    html .confirmacao .actions a, 
+    html .meuspedidos .request .actions a, 
+    html .contaCorrente .form .btn, 
+    html .my-lists .login .continue, 
+    html .results .form .field .search ,
+    html .internal .text .actions .btn,
+    html .form.cep .btn,
+    html .desired-products .btn.ir.save,
+    html .compare .btn.ir.delete,
+    html .confirmacao .request .actions a {
+        @extend %btn-primary;
+    }
+    html .filter-wish .btn.ir.search {
+        @extend %btn-primary;
+        @extend %btn-sm;   
+    }
+/* fim -  todos os botos */  
+
+/* inicio - login */
+    body .login .btn.enter,
+    body .form .btn.continue,
+    body .form .actions .save {
+        @extend %btn-primary;
+    }
+    body.login .form .btn.continue {
+        margin: 10px 10px 0 0 !important;
+    } 
+/* fim - login */
+
+/* inicio - login/ login cadastro / login pedidos */
+    body .login .btn.enter {
+        @extend %btn-primary;
+    }
+/* fim-  login/ login cadastro / login pedidos */
+
+/* inicio - Meu Endereco */ 
+    body #p_LimparEndereco {
+        @extend %btn-default;
+    }
+/* fim - Meu Endereco */
+
+/* inicio - Fechamento */
+    body .actions .change-adress, 
+    body .actions .change-service {
+        @extend %btn-primary;
+        display: inline-block;
+        width: auto;
+    }
+    body #pnlPagamentos .finish a:not(.button-inactive) {
+        @extend %btn-primary;
+        line-height: 19px;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 12px 37px;
+        text-transform: uppercase;  
+        span {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+    body #pnlPagamentos .finish .button-inactive {
+        @extend %btn-default;
+        line-height: 19px;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 12px 37px;
+        span {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+    /* modal servico de entrega*/
+/* fim - Fechamento */
+
+
+
+
+/* ------ TRUMPS DE CORREÇÃO --------*/
+
+///afiliados/relatorios/vendas.aspx
+.reports .btn.ir.search{
+    line-height: 12px;
+}
+

@@ -1,0 +1,42 @@
+/* ----------------------------------------------------------------------*/
+/* ----------------------*>>> PAGES - HOME <<<--------------------------*/
+/* --------------------------------------------------------------------*/
+body {
+    &:not(.globalId):not(.home) #header:not(.headerbuy) ~ {
+        /*que nao seja checkout e nem pagina de cadastro*/
+        #main .container {
+            width: $larguraPadrao;
+            background: #fff;
+            @include box-sizing;
+            padding-bottom: 20px;
+        }
+    }
+
+    &.home {
+        #main {
+            .container {
+                padding: 0;
+                width: 100%;
+                @include box-sizing;
+                
+                .aside {
+                    display: none;
+                }
+                .content {
+                    margin: 0 auto;
+                    width: $larguraPadrao; 
+                }
+
+                .section {
+                    border: none;
+                }
+
+                .categ-desc {
+                    font-family: arial;
+                    line-height: 18px;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}

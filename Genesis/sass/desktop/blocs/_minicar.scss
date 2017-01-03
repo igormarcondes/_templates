@@ -1,0 +1,22 @@
+body #header .mini-car {
+    z-index: 5;
+    top: 20px;
+    width: 400px;
+    background: #fff;
+
+    .mid {
+        .prod {
+            .photo {
+                border: 1px solid #d1d1d1 !important;
+            }
+        }
+        .sum_container {
+            background: none;
+        }
+    }
+    #btn_checkout a {
+        @extend %btn-success;
+        width: auto;
+        display: inline-block;
+    }
+}

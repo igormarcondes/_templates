@@ -1,0 +1,20 @@
+body.quickview {
+	background: none;
+	#main .container {
+		width: 100%;
+		@include box-sizing;
+	}
+	#info-product {
+		min-height: 10px !important;
+		.box-tools {
+			margin: 10px 0 0;
+			float: left;
+		}
+		.reviewaggregate {
+			display: none;
+		}
+		 #infoPrices {
+		 	margin-top: 5px !important;
+		 }
+	}
+}
