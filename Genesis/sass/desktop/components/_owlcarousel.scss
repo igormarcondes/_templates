@@ -11,7 +11,7 @@ body {
                         width: 60px;
                         margin-top: -70px;
                         &::before {
-                            background: url("#{$pathImg}/arrow_banner.png") no-repeat;
+                            background: url("/static/locales/custom/img/arrow_banner.png") no-repeat;
                             background-position: 0 0;
                             content: " ";
                             height: 44px;
@@ -83,7 +83,7 @@ body {
                         opacity: 1;
 
                         &::before {
-                            background: url("#{$pathImg}/ico_arrows.png") no-repeat center -28px;
+                            background: url("/static/locales/custom/img/ico_arrows.png") no-repeat center -28px;
                             content: " ";
                             height: 22px;
                             display: block;
@@ -133,7 +133,7 @@ body {
                             margin: 0;
                             height: 28px !important;
                             left: 2px;
-                            background: url("#{$pathImg}/arrow_left.gif") no-repeat 0 center;
+                            background: url("/static/locales/custom/img/arrow_left.gif") no-repeat 0 center;
 
                             &.owl-next {
                                 left: auto !important;

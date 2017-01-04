@@ -49,18 +49,18 @@ span.go-top-btn {
 	        	.hproduct {
 	        		.details {
 	        			.name {
-							color: $product-name-color;
+							color: $prod-name-color;
 	        			}
 	        			.offers {
 	        				.regular {
-	        					color: $product-price-de-color;
+	        					color: $prod-price-from-c;
 	        				}
 	        				.sale {
-	        					color: $product-price-por-color;
+	        					color: $prod-price-to-c;
 	        				}
 	        			}
 	        			.parcel {
-	        				color: $product-parcel-color;
+	        				color: $prod-parcel-c;
 	        			}
 	        		}
 	        	}

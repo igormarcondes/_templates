@@ -162,7 +162,7 @@ body.lookDetalhe {
             @include box-sizing;
 
              &::before {
-                background:  url("#{$pathImg}/ico_btn-comprar.png") no-repeat;
+                background:  url("/static/locales/custom/img/ico_btn-comprar.png") no-repeat;
                 content: " ";
                 width: 24px;
                 height: 23px;

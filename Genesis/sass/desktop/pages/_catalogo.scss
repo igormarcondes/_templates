@@ -156,7 +156,7 @@ body {
             font-weight: bold;
         }
         .ico {
-             background: url("#{$pathImg}/ico_list.gif") no-repeat;
+             background: url("/static/locales/global/img/ico_list.gif") no-repeat;
              &.table{
                 background-position: 0 -0;
                 &.selected {
