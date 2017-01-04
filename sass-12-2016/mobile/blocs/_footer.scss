@@ -1,0 +1,151 @@
+﻿/* -------------------------------------------------------*/
+/* -----------------*>>> HEADER <<<----------------------*/
+/* -----------------------------------------------------*/
+
+// Config -----------------------------------------------------------------------------/
+
+// Components -----------------------------------------------------------------------/
+@import "../../desktop/blocs/footer";
+
+
+// Style --------------------------------------------------------------------------/
+.mobile-state{
+	&.mobile-mode{
+		#footer{
+			@include box-sizing();
+			*{
+				@include box-sizing();
+			}
+			background: transparent;
+			height: auto;
+			width: 100%;
+			.container{
+				background-image: none;
+				background: #FFF;
+				border-top: 5px solid #FFF;
+				height: auto;
+				.footer-top{
+					height: auto;
+					.newsletter{
+						padding: 10px;
+						background-color: #EDEAE5;
+						background-position: 22px 30px;
+						width: 100%;
+						height: auto;
+						position: relative;
+						.title{
+							margin-left: 50px;
+						}
+						fieldset{
+							width: 100%;
+							*{
+								margin: 0px;
+							}
+							.news-description{
+								padding: 0px 12px;
+								width: 100%;
+								height: auto;
+							}
+							.field{
+								width: 100%;
+								padding: 10px 0px;
+								input{
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+				.footer-middle{
+					width: 100%;
+					height: auto;
+					position: relative;
+					background-color: #FBFBFB;
+					top: 0px;
+					.footer-middle-cont{
+						width: 100%;
+						height: auto;
+						.collum{
+							position: relative;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							&.institucional{
+								&.help{
+									order: 1;
+									width: 50%;
+								}
+								order: 2;
+								width: 50%;
+								li{
+									margin: 0px;
+								}
+							}
+							&.atendimento{
+								order: 3;
+								width: 100%;
+								padding-left: 50px;
+								background-position: 18px 17px;	
+								min-height: auto;
+							}
+							&.social{
+								order: 5;
+								width: 100%;
+								text-align: center;
+								height: auto;
+								min-height: auto;
+								margin-bottom: 10px;
+								.title{
+									display: block;
+								}
+								ul{
+									text-align: center;
+									li{
+										a{
+											background: none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.footer-bottom{
+					position: relative;
+					top: 0;
+					height: auto;
+					.footer-bottom-cont{
+						text-align: center;
+						width: 100%;
+						height: auto;
+						.footer-payment{
+							ul{
+								text-align: center;
+							}
+						}
+						.security{
+							position: relative;
+							top: 0;
+							width: 100%;
+							ul{
+								text-align: center;
+							}
+						}
+						.info-cli{
+							position: relative;
+							top: 0;
+							width: 100%;
+						}
+					}
+				}
+				.copy{
+					position: relative;
+					top: 0px;
+					background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+					padding: 20px;
+				}
+			}
+		}
+	}
+}

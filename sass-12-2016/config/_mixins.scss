@@ -1,0 +1,211 @@
+/* -------------------------------------------------------*/
+/* -----------------*>>> MIXINS <<<-----------------------*/
+/* -------------------------------------------------------*/
+@mixin border-radius($radius: 5px){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin opacity($opacity: 1){
+    -webkit-opacity: $opacity;
+    -moz-opacity: $opacity;
+    -ms-opacity: $opacity;
+    -o-opacity: $opacity;
+    opacity: $opacity;
+}
+@mixin radiustl($radius: 5px){
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-top-left-radius: $radius;
+    -ms-border-top-left-radius: $radius;
+    -o-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+@mixin radiustr($radius: 5px){
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    -ms-border-top-right-radius: $radius;
+    -o-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+@mixin radiusbl($radius: 5px){
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-bottom-left-radius: $radius;
+    -ms-border-bottom-left-radius: $radius;
+    -o-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+@mixin radiusbr($radius: 5px){
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-bottom-right-radius: $radius;
+    -ms-border-bottom-right-radius: $radius;
+    -o-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+@mixin imgbt($img-name, $img-type,  $img-w, $img-h){
+    width: $img-w + px;
+    height: $img-h + px;
+    background: url("#{$path-img}/" + $img-name + "." + $img-type);
+    background: {
+        repeat: no-repeat;
+        color: transparent;
+    }
+    padding: 0px;
+    border: 0px;
+    text-indent: -999999px;
+    font-size: 0px;
+    color: transparent;
+}
+@mixin box-sizing( $type: border-box ) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    -o-box-sizing: $type;
+    -ms-box-sizing: $type;
+    box-sizing: $type;
+}
+@mixin bgimg($img-name, $img-type){
+    background: url("#{$path-img}/" + $img-name + "." + $img-type);
+}
+@mixin fonte($font-family: $font-def, $font-weight: "normal", $font-size: 12px, $font-color: #000){
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    color: $font-color;
+}
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $color;
+        -moz-box-shadow:inset $top $left $blur $color;
+        box-shadow:inset $top $left $blur $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+@mixin font-face($style-name, $file, $family, $category:"") {
+    $filepath: $font-url + "/" + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+    }
+    %#{$style-name} {
+        font: {
+            @if $category != "" {
+                family: "#{$style-name}", #{$category};
+            }
+            @else {
+                family: "#{$style-name}";
+                weight: normal;
+            }
+        }
+    }
+}
+@mixin text-shadow($horizOffset, $vertOffset, $blur, $color) {
+    -webkit-text-shadow: $horizOffset $vertOffset $blur $color;
+    -moz-text-shadow: $horizOffset $vertOffset $blur $color;
+    -ms-text-shadow: $horizOffset $vertOffset $blur $color; /* IE 10+ */
+    -o-text-shadow: $horizOffset $vertOffset $blur $color;
+    text-shadow: $horizOffset $vertOffset $blur $color;
+}
+@mixin bt-default( $bt-bg: $bt-bg-1, $bt-border: $bt-border-1){
+    @include box-sizing();
+    @include fonte($font-alt-1-bold, normal, 16px, #FFF);
+    @include border-radius(0px);
+    letter-spacing: 1px;
+    background: $bt-bg;
+    background-color: $bt-bg;
+    border: 0px;
+    border-bottom: 2px solid $bt-border;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    text-indent: 0px;
+    padding: 0px 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    width: auto;
+    display: inline-block;
+    height: auto;
+    &:hover {
+        background:darken($bt-bg,8%);
+        transition: all 0.3s ease;
+    }
+    &:active {
+        background:darken($bt-bg,25%);
+    }
+}
+@mixin bt-alt( $bt-bg: $color-theme-1){
+    @include box-sizing();
+    @include fonte($font-def, bold, 14px, #FFF);
+    @include border-radius(2px);
+    @include linear-gradient(#A1A1A1, #3E403F);
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    text-indent: 0px;
+    padding: 0px 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    width: auto;
+    display: inline-block;
+    height: auto;
+    border: 0px;
+    &:hover {
+        @include linear-gradient(#3E403F, #A1A1A1);
+        transition: all 0.3s ease;
+    }
+    &:active {
+     @include linear-gradient(#3E403F, #A1A1A1);
+ } 
+}
+@mixin bt-reverse( $main-color: $color-theme-1-alt, $hover-color: $color-theme-1){
+    background: $main-color;
+    border-bottom: 1px solid $hover-color;
+    &:hover {
+        background: $hover-color;
+        border-bottom: 1px solid $main-color;
+    }
+}
+@mixin reviewaggregate($img-name, $img-type, $star-height, $unit-width){
+    background: url("#{$path-img}/" + $img-name + "." + $img-type);
+    width: ($unit-width * 5) + px;
+    height: $star-height + px;
+    .rating{
+        background: url("#{$path-img}/" + $img-name + "." + $img-type);
+        background-position: 0px -14px;
+        //width: ($unit-width * 5) + px;
+        height: ($star-height - 3 ) + px;
+    }
+}
+@mixin flexbox($fb-display:flex, $fb-direction:row, $fb-wrap:wrap, $fb-justify:center){
+    //display: flex; /* or inline-flex */
+    display: -webkit-$fb-display;
+    display: -moz-$fb-display;
+    display: -ms-$fb-display;
+    display: -webkit-$fb-display;
+    display: $fb-display;
+    //flex-direction: row | row-reverse | column | column-reverse;
+    -webkit-flex-direction: $fb-direction;
+    -moz-flex-direction: $fb-direction;
+    -ms-flex-direction: $fb-direction;
+    -o-flex-direction: $fb-direction;
+    flex-direction: $fb-direction;
+    //flex-wrap: nowrap | wrap | wrap-reverse;
+    -webkit-flex-wrap: $fb-wrap;
+    -moz-flex-wrap: $fb-wrap;
+    -ms-flex-wrap: $fb-wrap;
+    -o-flex-wrap: $fb-wrap;
+    flex-wrap: $fb-wrap;
+    //justify-content: flex-start | flex-end | center | space-between | space-around;
+    -webkit-justify-content: $fb-justify;
+    -moz-justify-content: $fb-justify;
+    -ms-justify-content: $fb-justify;
+    -o-justify-content: $fb-justify;
+    justify-content: $fb-justify;
+}

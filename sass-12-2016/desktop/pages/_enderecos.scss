@@ -1,0 +1,48 @@
+/* -------------------------------------------------*/
+/* -----------------*>>> ENDEREÇOS <<<----------------*/
+/* ------------------------------------------------*/
+body{
+	&.checkout{
+		&.register{
+			.container{
+				.content{
+					h1{
+						@extend %placeholder-h1;
+						border: 0px;
+					}
+					.main-content{
+						.box{
+							.actions{
+								.edit{
+									@extend %bt-enderecos-edit;
+								}
+								.use{
+									@extend %bt-enderecos-use;
+								}
+								.delete{
+									@extend %bt-enderecos-delete;
+								}
+							}
+						}
+					}
+					.actions{
+						#p_LimparEndereco{
+							&.cancel{
+								@extend %bt-enderecos-delete;
+							}
+						}
+						#hypSalvar{
+							&.save{
+								@extend %bt-enderecos-use;
+							}
+							&.saveuse{
+								@extend %bt-enderecos-use;
+							}
+						}
+						
+					}
+				}
+			}
+		}
+	}
+}

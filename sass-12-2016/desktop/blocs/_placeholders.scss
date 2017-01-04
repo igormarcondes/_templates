@@ -1,0 +1,831 @@
+﻿  /* ------------------------------------------------------------*/
+ /* ------------------>>> PLACEHOLDERS <<<----------------------*/
+/* ------------------------------------------------------------*/
+
+/*
+* Arquivo criado para criação de pequenos padrões utilizados no projeto em geral:
+* Ex: Botões, Titulos, Grid de produtos, Aside etc..
+* Por se tratar apenas de Placeholders este arquivo não possui
+* a camada de estilos apenas config e Components
+*/
+
+//Config -----------------------------------------------------------------------------/
+//Owl Buttons
+$owl-bt-w: 20px;
+$owl-bt-h: 33px;
+
+//Components -----------------------------------------------------------------------/
+
+/* General Placeholders */
+%placeholder-owl-buttons{
+	div{
+		@include bgimg(arrows, png);
+		@include opacity(1);
+		&.owl-prev{
+			background-position: 0px 0px;
+			&:hover{
+				background-position: -34px 0px;
+			}
+		}
+		&.owl-next{
+			background-position: -97px 0px;
+			&:hover{
+				background-position: -64px 0px;
+			}
+		}
+		background-repeat: no-repeat;
+		width: $owl-bt-w;
+		height: $owl-bt-h;
+	}
+}
+%placeholder-owl-pagination{
+	text-align: center;
+	width: 100%;
+	.owl-page{
+		span{
+			@include box-sizing();
+			@include opacity(1);
+			@include border-radius(50px);
+			@include fonte($font-def, bold, 10.5px, #FFF);
+			background: transparent;
+			border: 1px solid #FFF;
+			width: 22px;
+			height: 22px;
+			line-height: 13px;
+			text-align: center;
+			margin: 0px 5px;
+		}
+		&.active{
+			span{
+				@include opacity(1);
+				background: #FFF;
+				color: #000;
+			}
+		}
+	}
+}
+%placeholder-h1{
+	@include fonte($font-alt-1, normal, 24px, #373435);
+	@include text-shadow(0px, 0px, 0px, #FFF);
+	text-decoration: underline;
+	background: #FFF;
+	padding: 10px;
+	text-align: center;
+	display: inline-block;
+	text-transform: uppercase;
+	span{
+		@include fonte($font-alt-1, normal, 24px, #373435);
+		@include text-shadow(0px, 0px, 0px, #FFF);
+		text-decoration: underline;
+		background: #FFF;
+		text-align: center;
+		display: inline-block;
+		text-transform: uppercase;
+	}	
+}
+%placeholder-h2{
+	@include fonte($font-def, normal, 20px, #373435);
+	@include text-shadow(0px, 0px, 0px, #FFF);
+	background: #FFF;
+	padding: 10px;
+	text-align: center;
+	display: inline-block;
+	text-transform: capitalize;
+	span{
+		@include fonte($font-def, normal, 20px, #373435);
+		@include text-shadow(0px, 0px, 0px, #FFF);
+		background: #FFF;
+		padding: 10px;
+		text-align: center;
+		display: inline-block;
+		text-transform: capitalize;
+	}	
+}
+%placeholder-heading{
+	height: 45px;
+	margin-bottom: 50px;
+	position: relative;
+	text-align: center;
+	span{
+		@include fonte($font-alt-1, normal, 24px, #373435);
+		@include text-shadow(0px, 0px, 0px, #FFF);
+		text-decoration: underline;
+		background: #FFF;
+		padding: 10px;
+		text-align: center;
+		display: inline-block;
+		text-transform: uppercase;
+	}
+	@media screen and (max-width: 979px) {
+		height: auto;
+		text-transform: none;
+		span{
+			font-size: 24px;
+			text-transform: none;
+		}
+	}
+}
+%placeholder-heading-2{
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	margin: 0px;
+	@include fonte($font-alt-1, 400, 25px, $color-title);
+	@include text-shadow(0px, 0px, 0px, #FFF);
+	@media screen and (max-width: 979px) {
+		padding-top: 10px;
+		span{
+			font-size: 24px;
+		}
+	}
+}
+%placeholder-breadcrumb{
+	#breadcrumbs{
+		background: transparent;
+		> span{
+			@include fonte($font-def, normal, 12px, $color-theme-2);
+			a{
+				span{
+					@include fonte($font-def, normal, 13px, #808080);
+					background-repeat: no-repeat;
+					background-position: right center;
+					padding-right: 15px;
+					margin-right: 3px;
+					&:after{
+						content: ">";
+						@include fonte($font-def, normal, 13px, #808080);
+						position: relative;
+						left: 10px;
+						top: 0px;
+					}
+				}
+			}
+			&[itemprop="title"],
+			&[itemprop="name"]{
+				@include fonte($font-def, normal, 13px, #373435);
+			}
+		}
+		> h1{
+			span{
+				@include fonte($font-def, normal, 13px, #373435);
+				text-transform: capitalize;
+				text-decoration: none;
+			}
+		}
+		&:before{
+			@include fonte($font-def, normal, 13px, #808080);
+			content: "Você está em: ";
+			float: left;
+			margin-right: 5px;
+			position: relative;
+			top: 0px;
+		}
+	}
+}
+%placeholder-reviewaggregate{
+	.reviewaggregate{
+		width: 136px;
+		margin: 0px auto;
+		> a{
+			@include reviewaggregate(stars, png, 14, 14);
+			position: relative;
+			top: -2px;
+			margin-right: 0px;
+			margin-bottom: 7px;
+		}
+		.count{
+			display: inline-block;
+			@include fonte($font-def, normal, 11px, #808080);
+			a{
+				@include fonte($font-def, normal, 11px, #808080);
+			}
+		}
+		@media screen and (max-width: 300px) {
+			max-width: 113px;
+			.count{
+				display: block;
+			}
+		}
+	}
+}
+%placeholder-rating-opinion{
+	.rating{
+		@include reviewaggregate(stars, png, 14, 14);
+		position: relative;
+		top: 0px;
+		margin-right: 0px;
+		height: 14px;
+		.value{
+			@include reviewaggregate(stars, png, 14, 14);
+			background-position: 0 -14px;
+			height: 14px;
+		}
+	}
+}
+%placeholder-fancybox-close{
+	#fancybox-close-2,
+	#fancybox-close{
+		@include imgbt(bt-fancybox-close, png,  21, 21);
+	}
+}
+%placeholder-sku-carousel{
+	.skus,
+	.skus-cores{
+		text-align: center;
+		> li{
+			float: none;
+			display: inline-block;
+		}
+		li{
+			@include box-sizing();
+			@include border-radius(0px);
+			width: $sku-cor-w + 4;
+			height: $sku-cor-h + 4;
+			border: 2px solid #DEDEDE;
+			overflow: hidden;
+			padding: 0px;
+			&:hover{
+				border-color: #c5c5c5;
+			}
+			a,
+			img{
+				width: 100%;
+				height: 100%;
+				border: 0px;
+			}
+		}
+		.owl-controls{
+			.owl-buttons{
+				position: absolute;
+				top: 7px;
+				div{
+					@include bgimg(arrows-sku, png);
+					@include opacity(1);
+					&.owl-prev{
+						background-position: 0px 0px;
+						&:hover{
+							background-position: -13px 0px;
+						}
+					}
+					&.owl-next{
+						background-position: -40px 0px;
+						&:hover{
+							background-position: -25px 0px;
+						}
+					}
+					background-repeat: no-repeat;
+					width: 10px;
+					height: 13px;
+				}
+			}
+			@media screen and (max-width: 979px){
+				margin-top: -21px;
+			}	
+		}
+	}
+}
+%placeholder-notifyme{
+	.notifyme{
+		@include border-radius();
+		background: #FFF;
+		padding: 10px;
+		> span{
+			display: none;
+		}
+		label{
+			> span{
+				@include fonte($font-alt-1, normal, 17px, #373435);
+				text-transform: uppercase;
+				&:before{
+					@include fonte($font-alt-1, normal, 17px, #d80000);
+					content: "PRODUTO INDISPONÍVEL.";
+					padding: 5px 0px;
+					text-transform: uppercase;
+					display: inline-block;
+					margin-right: 10px;
+				}
+				span{
+					@include fonte($font-alt-1, normal, 17px, #373435);
+					padding: 5px 0px;
+					text-transform: uppercase;
+					display: inline-block;
+				}
+			}
+			input{
+				@include box-sizing();
+				@include border-radius(0px);
+				border: 1px solid #353535;
+				background: #FFF;
+				height: 28px;
+				margin-right: 0px;
+				width: 280px !important;
+			}
+		}
+		.send{
+			@extend %bt-notifyme-send;
+		}
+		@media screen and (max-width: 979px) {
+			label{
+				input[type="text"]{
+					width: 100% !important;
+				}
+			}
+		}
+	}
+}
+%placeholder-load-button{
+	#main{
+		.load-button{
+			border: 0px;
+			background: $color-theme-1 !important;
+		}
+	}
+}
+%placeholder-catalog-pagination{
+	.pagination{
+		width: 100%;
+		text-align: right;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		margin: 0px;
+		position: relative;
+		top: -15px;
+		ul{
+			float: none;
+			display: inline-block;
+			overflow: visible;
+			height: auto;
+			.page{
+				line-height: 21px;
+				display: none;
+			}
+			.set-prev{
+				position: relative;
+				top: 3px;
+				width: 28px;
+				height: 16px;
+				a{
+					display: block;
+					@include imgbt(bt_pagination_set_prev, png, 28, 16);
+				}
+				&.off{
+					a{
+						@include imgbt(bt_pagination_set_prev_off, png, 28, 16);
+					}
+				}
+				display: none;
+			}
+			.set-next{
+				position: relative;
+				top: 3px;
+				width: 28px;
+				height: 16px;
+				a{
+					display: block;
+					@include imgbt(bt_pagination_set_next, png, 28, 16);
+				}
+				&.off{
+					a{
+						@include imgbt(bt_pagination_set_next_off, png, 28, 16);
+					}
+				}
+				display: none;
+			}
+			.prev{
+				position: relative;
+				top: 9px;
+				width: 74px;
+				height: 16px;
+				a{
+					display: block;
+					@include imgbt(bt_pagination_prev, png, 74, 13);
+				}
+				&.off{
+					a{
+						@include imgbt(bt_pagination_prev_off, png, 74, 13);
+					}
+				}
+			}
+			.next{
+				position: relative;
+				top: 9px;
+				width: 74px;
+				height: 16px;
+				a{
+					display: block;
+					@include imgbt(bt_pagination_next, png, 74, 13);
+				}
+				&.off{
+					a{
+						@include imgbt(bt_pagination_next_off, png, 74, 13);
+					}
+				}
+			}
+			.numbers{
+				height: auto;
+				a{
+					@include fonte($font-def, normal, 12px, #373435);
+					@include box-sizing();
+					background: #FAF9F7;
+					border: 1px solid #F1F1EF;
+					height: 30px;
+					line-height: 28px;
+					width: 30px;
+					text-align: center;
+					&:hover,
+					&.selected{
+						border-color: #353535;
+						background: #FFF;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* List Product Placeholders */
+%placeholder-prod-by-row{
+	> li{
+		@if $prod-by-row == 4 {
+			width: 24.75%;
+		} @else if $prod-by-row == 3 {
+			width: 33%;
+		}  
+	}
+}
+%placeholder-hproduct{
+	@include box-sizing();
+	@include border-radius(0px);
+	width: $ft-vitrine-w + 20;
+	padding: 10px;
+	border: 1px solid #FFF;
+	text-align: center;
+	&:hover{
+		@include border-radius(3px);
+		border-color: #DEDEDE;
+		a{
+			&.btn{
+				&.buy{
+					display: block;
+				}
+			}
+		}
+	}
+}
+%placeholder-mobile-hproduct{
+	@include box-sizing();
+	@include border-radius(0px);
+	padding: 5px;
+	border: 1px solid #FFF;
+	overflow: hidden;
+}
+%placeholder-list-prod-details{
+	padding: 5px;
+}
+%placeholder-list-prod-bt-quickview{
+	.quick-look-container{
+		width: 100%;
+		height: auto;
+		text-align: center;
+		left: 0px;
+		top: 50%;
+		margin-top: -30px;
+		.bt-quick-look{
+			@include imgbt('bt-quick', 'png', 94, 30);
+			margin: 0px auto;
+		}
+	}
+}
+%placeholder-list-prod-photo{
+	.link{
+		.photo{
+			border: 0px !important;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+%placeholder-list-prod-name{
+	.name{
+		@include fonte($font-def, normal, 13px, #373435);
+		text-align: center;
+		text-transform: none;
+	}
+}
+%placeholder-history-list-prod-name{
+	.name{
+		@include fonte($font-def, normal, 13px, #373435);
+		text-align: center;
+		text-transform: none;
+	}
+}
+%placeholder-list-prod-offers{
+	.offers{
+		text-align: center;
+		width: 100%;
+		span{
+			@include box-sizing();
+			margin: 0px 5px;
+			display: inline-block;
+			width: auto;
+			height: auto;
+			line-height: 20px;
+			vertical-align: middle;
+			text-align: center;
+			em{
+				line-height: 20px;
+				text-transform: capitalize;
+			}
+			&.regular{
+				position: relative;
+				em{
+					@include fonte($font-def, normal, 12px, #bebebe);
+					text-transform: capitalize;
+					text-decoration: line-through;
+				}
+				@include fonte($font-def, normal, 12px, #bebebe);
+				del{
+					position: relative;
+					@include fonte($font-def, normal, 12px, #bebebe);
+					text-transform: uppercase;
+				}
+				strong{
+					@include fonte($font-def, normal, 12px, #bebebe);
+					text-transform: uppercase;
+					span{
+						@include fonte($font-def, normal, 12px, #bebebe);
+						text-transform: uppercase;
+					}
+				}
+			}
+			&.sale{
+				em{
+					@include fonte($font-def, normal, 15px, $color-theme-2);
+					text-transform: capitalize;
+				}
+				@include fonte($font-def, normal, 15px, $color-theme-2);
+				strong{
+					@include fonte($font-def, normal, 15px, $color-theme-2);
+					text-transform: uppercase;
+				}
+			}
+		}
+		.percent-a-vista{
+			@include fonte($font-def, normal, 15px, $color-theme-2);
+			text-align: center;
+			span{
+				@include fonte($font-def, normal, 15px, $color-theme-2);
+				strong{
+					@include fonte($font-def, normal, 15px, $color-theme-1);
+				}
+			}
+			br{
+				display: none;
+			}
+		}
+	}
+}
+%placeholder-list-prod-look-offers{
+	.offers { 
+		span{
+			@include box-sizing();
+			margin: 0px 5px;
+			display: inline-block;
+			width: auto;
+			height: auto;
+			line-height: 20px;
+			vertical-align: middle;
+			text-align: center;
+			em{
+				line-height: 20px;
+				text-transform: capitalize;
+			}
+		}
+		.regular { 
+			em{
+				@include fonte($font-def, normal, 12px, #bebebe);
+				text-transform: capitalize;
+				text-decoration: line-through;
+				position: relative;
+				top: 2px;
+				&:after{
+					content: ":";
+					@include fonte($font-def, normal, 12px, #bebebe);
+				}
+
+			}
+			@include fonte($font-def, normal, 12px, #bebebe);
+			span{
+				@include fonte($font-def, normal, 12px, #bebebe);
+				display: inline;
+			}
+			del { 
+				position: relative;
+				top: 3px;
+				@include fonte($font-def, normal, 12px, #bebebe);
+				text-transform: uppercase;
+			}
+		}
+		.price { 
+			em{
+				@include fonte($font-def, normal, 15px, $color-theme-2);
+				text-transform: capitalize;
+			}
+			@include fonte($font-def, normal, 15px, $color-theme-2);
+			text-transform: uppercase;
+			span{
+				@include fonte($font-def, normal, 15px, $color-theme-2);
+				text-transform: uppercase;
+				display: inline;
+			}
+		}
+		.converted-price { 
+			@include fonte($font-def, normal, 12px, #bebebe);
+		}
+		.percent-a-vista {
+			@include fonte($font-def, normal, 15px, $color-theme-2);
+			text-transform: uppercase;
+			text-align: center;
+
+			.value-percentage {
+				@include fonte($font-def, normal, 15px, $color-theme-2);
+				text-transform: uppercase;
+				text-align: center;
+				display: inline;
+			}
+		}
+	}	
+}
+%placeholder-list-prod-parcel{
+	.parcel{
+		display: block;
+		width: 100%;
+		text-align: center;
+		span{
+			@include fonte($font-def, bold, 15px, #373435);
+			strong{
+				@include fonte($font-def, bold, 15px, #373435);
+				text-transform: uppercase;
+				span{
+					@include fonte($font-def, bold, 15px, #373435);
+				}
+			}
+			b{
+				@include fonte($font-def, bold, 15px, #373435);
+			}
+		}
+	}
+}
+%placeholder-list-prod-buy{
+	.btn{
+		&.buy{
+			@extend %bt-list-product-buy;
+			width: 170px;
+			margin: 10px auto 0px;
+			float: none;
+			display: inline-block;
+		}
+	}
+}
+%placeholder-list-prod-quantity{
+	.txtQuantity{
+		position: relative;
+		&:before{
+			content: " ";
+			display: block;
+			width: $ft-vitrine-w + 20;
+			border-bottom: 1px solid #D6D6D6;
+			margin-bottom: 10px;
+			margin-left: -11px;
+		}
+		.lbl-quantity{
+			@include fonte($font-def, 400, 12px, #646464);
+			position: absolute;
+			top: 10px;
+			left: 0px;
+		}
+		.ipt-quantity{
+			@include box-sizing();
+			position: absolute;
+			top: 26px;
+			left: 0px;
+			height: 30px;
+			width: 80px;
+		}
+	}
+}
+%placeholder-list-prod-compare{
+	.compare{
+		display: none !important;
+		&:before{
+			content: " ";
+			display: block;
+			width: $ft-vitrine-w + 20;
+			border-bottom: 1px solid #D6D6D6;
+			margin-bottom: 10px;
+		}
+		text-align: center;
+		width: $ft-vitrine-w + 20;
+		margin-left: -11px;
+		span,
+		label,
+		input{
+			float: none;
+			display: inline-block;
+		}
+		input{
+			position: relative;
+			top: 3px;
+		}
+		label{
+			position: relative;
+			top: -2px;
+			@include fonte($font-def, 700, 12px, #0055A8);
+			text-transform: uppercase;
+		}
+	}
+}
+%placeholder-list-prod-indisponivel{
+	.unavailable{
+		@include fonte($font-def, bold, 13px, $color-theme-1);
+		text-align: center;
+	}
+}
+%placeholder-list-prod-see-more{
+	.see-more{
+		display: none;
+		> span{
+			@include fonte($font-def, normal, 11px, $color-theme-2);
+			text-transform: uppercase;
+		}
+		a{
+			background: none;
+			padding-left: 3px;
+			@include fonte($font-def, normal, 12px, $color-theme-2);
+			&:before{
+				color: $color-theme-1;
+			}
+		}
+	}
+}
+%placeholder-list-prod-look-photo{
+	border: 0px !important;
+	width: $look-vitrine-w;
+	height: $look-vitrine-h;
+	img{
+		border: 0px !important;
+		width: $look-vitrine-w;
+		height: $look-vitrine-h;
+	}
+}
+%placeholder-history-list-prod-photo{
+	.link{
+		.photo{
+			border: 0px !important;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+/* List Product Placeholders [ RESPONSIVO ] */
+%placeholder-mobile-list-prod-photo{
+	.link{
+		.photo{
+			border: 0px !important;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+%placeholder-mobile-list-prod-compare{
+	.compare{
+		&:before{
+			content: " ";
+			display: block;
+			width: 100%;
+			border-bottom: 1px solid #D6D6D6;
+			margin-bottom: 10px;
+		}
+		text-align: center;
+		width: 100%;
+		margin-left: 0px;
+		span,
+		label,
+		input{
+			float: none;
+			display: inline-block;
+		}
+		input{
+			position: relative;
+			top: 3px;
+		}
+		label{
+			position: relative;
+			top: -2px;
+			@include fonte($font-def, 700, 12px, #0055A8);
+			text-transform: uppercase;
+		}
+	}
+}

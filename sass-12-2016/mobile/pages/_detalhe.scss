@@ -1,0 +1,411 @@
+/* ---------------------------------------------------------------------*/
+/* -------------------------*>>> DETALHE <<<---------------------------*/
+/* -------------------------------------------------------------------*/
+
+// Config ----------------------------------------------------------------------------------/
+
+// Components -----------------------------------------------------------------------------/
+%product-breadcrumb{
+	@extend %placeholder-breadcrumb;
+	#breadcrumbs{
+		text-transform: capitalize;
+		a,
+		h1{
+			color: $color-theme-2;
+			span{
+				color: $color-theme-2;
+			}
+			&:after{
+				display: none;
+			}
+		}
+		border-bottom: 1px solid $color-theme-1;
+	}
+}
+%product-details-name{
+	.name{
+		padding: 5px;
+		@include fonte($font-def, normal, 20px, #373435);
+		@include box-sizing();
+		text-align: center;
+		text-transform: none;
+	}
+}
+%product-details-fab-cod{
+	.fab-cod{
+		text-align: center;
+		padding: 5px;
+		li{
+			@include fonte($font-def, normal, 12px, #4F4F4F);
+			a{
+				@include fonte($font-def, normal, 12px, #4F4F4F);
+			}
+		}
+	}
+}
+%product-reviewaggregate{
+	@extend %placeholder-reviewaggregate;
+	.reviewaggregate{
+		width: 100%;
+		margin: {
+			top: 5px;
+			bottom: 5px;
+			right: 0px;
+			left: 0px;
+		}
+		text-align: center;
+		border: 0px;
+		#hplRating,
+		.count{
+			display: inline-block;
+			float: none;
+			margin-bottom: 0px;
+			.value{
+				@include fonte($font-def, normal, 11px, #808080);
+				float: right;
+				position: relative;
+				top: -8px;
+
+			}
+		}
+		#hplAmountAssessments{
+			@include fonte($font-def, normal, 12px, $color-theme-2);
+			background: none;
+			text-indent: 0px;
+			display: block;
+			width: 100%;
+			float: right;
+		}
+	}
+}
+%product-abas-description{
+	.responsive-abas-description{
+		.resp-abas{
+			h2{
+				@include fonte($font-def, normal, 14px, $color-theme-2);
+			}
+			> div{
+				@include fonte($font-def, normal, 12px, $color-theme-2);
+			}
+		}
+	}
+}
+%product-details-social{
+	.social {
+		.media{
+			&#Social_pnlGooglePlusButton{
+				width: 60px;
+			}
+			height: 30px;
+			vertical-align: middle;
+			line-height: 30px;
+		}
+	}
+}
+%product-details-stamp{
+	.stamp{
+		#ulSelos,
+		#lblOutros{
+			display: block;
+			text-align: center;
+			a{
+				img{
+					margin: 5px;
+				}
+			}
+		}
+	}
+}
+%product-details-info-prices{
+	#infoPrices{
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		> span{
+			display: block;
+			width: 100%;
+			float: none;
+			text-align: center;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+}
+%product-details-offers{
+	.offers{
+		span{
+			em{
+				display: none;
+			}
+			@include box-sizing();
+			margin: 0px auto;
+			display: inline-block;
+			width: auto;
+			line-height: 20px;
+			vertical-align: middle;
+			&.regular{
+				@include fonte($font-def, normal, 14px, #bebebe);
+				text-transform: uppercase;
+				text-decoration: line-through;
+				padding: 0px;
+				margin-left: 0px;
+				em{
+					@include fonte($font-def, normal, 14px, #bebebe);
+					text-transform: capitalize;
+					text-decoration: line-through;
+				}
+				span{
+					@include fonte($font-def, normal, 14px, #bebebe);
+					text-transform: uppercase;
+					text-decoration: line-through;
+				}
+			}
+			&.sale{
+				margin-left: 0px;
+				em{
+					@include fonte($font-def, normal, 22px, $color-theme-2);
+					text-transform: capitalize;
+				}
+				strong{
+					@include fonte($font-def, normal, 22px, $color-theme-2);
+					text-transform: uppercase;
+					span{
+						@include fonte($font-def, normal, 22px, $color-theme-2);
+						text-transform: uppercase;
+					}
+				}
+			}
+			&.percent-a-vist{
+				em{
+					display: inline;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+%product-details-parcel{
+	.parcel{
+		span{
+			@include fonte($font-def, bold, 22px, #373435);
+			strong{
+				@include fonte($font-def, bold, 22px, #373435);
+				span{
+					@include fonte($font-def, bold, 22px, #373435);
+				}
+			}
+			b{
+				@include fonte($font-def, normal, 22px, #373435);
+			}
+		}
+	}
+}
+%product-details-save{
+	.save{
+		em{
+			@include fonte($font-def, normal, 12px, #373435);
+		}
+		strong{
+			@include fonte($font-def, bold, 12px, $color-theme-2);
+		}
+	}
+}
+%product-skusproduct{
+	#skusproduct{
+		.field{
+			padding-bottom: 25px;
+			> label{
+				@include fonte($font-def, normal, 18px, $color-text-1);
+			}
+			> ul{
+				li{
+					a{
+						background: #FFF;
+						border: 1px solid #EFEFEF;
+						@include fonte($font-def, normal, 12px, $color-text-1);
+					}
+					&.selected,
+					&:hover{
+						a{
+							border: 1px solid $color-theme-1;
+							@include fonte($font-def, normal, 12px, $color-theme-1);
+						}
+					}	
+				}
+			}
+			.padrao-brasileiro{
+				margin: 10px;
+			}
+		}
+	}
+}
+%product-buy{
+	#ProductBuy{
+		text-align: center;
+		.buy{
+			@extend %bt-details-buy;
+		}
+		.notifyme{
+			.btn{
+				&.send{
+					&.ir{
+						@include bt-default(#000);
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+%product-details-tools{
+	.tools{
+		width: 100%;
+		text-align: center;
+		padding: {
+			top: 12px;
+			right: 0px;
+			bottom: 12px;
+			left: 0px;
+		}
+		li{
+			width: 100%;
+			@include fonte($font-def, normal, 13px, $color-theme-2);
+			&.delivery{
+				&:before{
+					@include bgimg(tool-icons, png);
+					background-position: 0px -100px;
+					background-repeat: no-repeat;
+				}
+			}
+			&.add{
+				&:before{
+					@include bgimg(tool-icons, png);
+					background-position: 0px -68px;
+					background-repeat: no-repeat;
+				}
+			}
+			&.rate{
+				&:before{
+					@include bgimg(tool-icons, png);
+					background-position: 0px -33px;
+					background-repeat: no-repeat;
+				}
+			}
+			&:before{
+				content: " ";
+				padding-left: 30px;
+				width: 0px;
+				height: 20px;
+				position: relative;
+				top: 5px;
+			}
+			a{
+				@include fonte($font-def, normal, 13px, $color-theme-2);
+				text-decoration: none;
+			}
+		}
+	}
+}
+%product-lognpage{
+	.longpage{
+		@include fonte($font-def, normal, 14px, $color-theme-2);
+		@include box-sizing();
+		padding: 10px;
+		width: 100%;
+	}
+}
+%product-combo{
+	.section{
+		h2{
+			@extend %placeholder-heading;
+		}
+		&.combo,
+		&.promo{
+			.list-products{
+				.hproduct{
+					.details{
+						@extend %placeholder-list-prod-name;
+					}
+					.skus-cross{
+						.field{
+							label{
+								> span{
+									@include fonte($font-def, normal, 12px, $color-theme-2);
+								}
+								select{
+									border: 1px solid $color-theme-2;
+								}
+							}
+						}
+					}
+				}
+				.result{
+					background: #FFF;
+					border-top: 1px solid $color-theme-1;
+					.details{
+						@extend %placeholder-list-prod-offers;
+						@extend %placeholder-list-prod-parcel;
+						.buy{
+							@extend %bt-details-combo-comprar-todos;
+						}
+					}
+				}
+				.open-combo{
+					span{
+						@include fonte($font-def, normal, 18px, $color-theme-1);
+					}
+				}
+			}
+		}
+	}
+}
+%product-section-list-products{
+	.section{
+		.list-products{
+			.hproduct{
+				.details{
+					@extend %placeholder-list-prod-name;
+					@extend %placeholder-list-prod-offers;
+					@extend %placeholder-list-prod-parcel;
+				}
+			}
+		}
+	}
+}
+
+// Style ---------------------------------------------------------------------------------/
+body{
+	&.product{
+		#main{
+			.container{
+				@extend %product-breadcrumb;
+				.content{
+					.main-content{
+						.hproduct{
+							.collum{
+								&.details{
+									@extend %product-details-name;
+									@extend %product-details-fab-cod;
+									@extend %product-reviewaggregate;
+									@extend %product-abas-description;
+									@extend %product-details-social;
+									@extend %product-details-stamp;
+									@extend %product-details-info-prices;
+									@extend %product-details-offers;
+									@extend %product-details-parcel;
+									@extend %product-details-save;
+									@extend %product-skusproduct;
+									@extend %product-buy;
+									@extend %product-details-tools;
+								}
+							}
+						}
+						@extend %product-lognpage;
+						@extend %product-combo;
+						@extend %product-section-list-products;
+					}
+				}
+			}
+		}
+	}
+}

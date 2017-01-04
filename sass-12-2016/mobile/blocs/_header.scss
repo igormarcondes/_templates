@@ -1,0 +1,127 @@
+/* -------------------------------------------------------*/
+/* -----------------*>>> HEADER <<<----------------------*/
+/* -----------------------------------------------------*/
+
+// Config -----------------------------------------------------------------------------/
+$header-h: 60px;
+
+// Components -----------------------------------------------------------------------/
+%header-logo{
+	#logo{
+		padding-left: 81px;
+		padding-right: 81px;
+		min-height: $header-h;
+	}
+}
+%header-search{
+	.search{
+		input[type="text"]{
+			border: 1px solid $color-theme-2;
+			@include fonte($font-def, normal, 12px, $color-theme-1);
+		}
+	}
+}
+%header-nav{
+	.wrap-nav-mobile{
+		background: $color-theme-1;
+		top: 60px;
+		overflow-x: scroll;
+		.welcome{
+			background: $color-theme-1;
+			#identificacao{
+				a{
+					@include fonte($font-def, normal, 12px, #FFF);
+				}
+			}
+		}
+		#nav{
+			> li{
+				> a{
+					@include fonte($font-alt-1, normal, 19px, #FFF);
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					&:before{
+						font-size: 18px;
+						color: #FFF;
+					}
+				}
+				.sub-nav{
+					background: #FAF9F7;
+					.cont-sub-nav{
+						.collum{
+							a{
+								@include fonte($font-alt-1, normal, 19px, $color-theme-1);
+							}
+						}
+					}
+				}
+				&:last-child{
+					> a{
+						@include fonte($font-alt-1, normal, 19px, #FFDB9C);
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		.help{
+			padding-top: 5px;
+			height: 100%;
+			opacity: 0.9;
+			li{
+				@include fonte($font-def, bold, 16px, $color-theme-1);
+				padding: 15px;
+				span,
+				a{
+					@include fonte($font-def, bold, 16px, $color-theme-1);
+					padding: 0px;
+				}
+			}
+		}
+	}
+}
+%header-float-toolbar{
+	#floatToolbar{
+		height: $header-h;
+		background: #FFF;
+		.logoFT{
+			padding-left: 81px;
+			padding-right: 81px;
+			min-height: $header-h;
+		}
+		&.active{
+			height: $header-h + 105;
+		}
+		.qtd-cart{
+			background: $color-theme-1;
+		}
+	}
+}
+%header-btn-mobile{
+	.header-btn-mobile{
+		.btn-cart-mobile{
+			.qtd-cart{
+				background: $color-theme-1;
+			}
+		}
+	}
+}
+
+
+// Style --------------------------------------------------------------------------/
+body{
+	#header{
+		height: $header-h;
+		background: #FFF;
+		&.active{
+			height: 110px;
+		}
+		.container{
+			height: $header-h;
+			@extend %header-logo;
+			@extend %header-search;
+			@extend %header-nav;
+			@extend %header-btn-mobile;
+		}
+		@extend %header-float-toolbar;
+	}
+}

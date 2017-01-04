@@ -1,0 +1,103 @@
+/* ---------------------------------------------------*/
+/* -----------------*>>> FECHAMENTO <<<----------------*/
+/* -------------------------------------------------*/
+body{
+	&.checkout{
+		&.close{
+			h2{
+				@extend %placeholder-h2;
+			}
+			.main-content{
+				h1{
+					@extend %placeholder-h1;
+					display: block;
+					text-align: left;
+					width: 100%;
+				}
+				padding: 10px;
+				background-color: #FFF;
+				.box-left{
+					.banners{
+						&.b-main,
+						&.b-top{
+							@extend %banner-fechamento;
+						}
+					}
+					.address{
+						.fl{
+							.actions{
+								a{
+									@extend %bt-close-change-adress;
+								}
+							}
+						}
+						.fr{
+							.actions{
+								a{
+									@extend %bt-close-change-service;
+								}
+							}
+						}
+					}
+					.conta-corrente{
+						p{
+							strong{
+								color: $color-theme-1;
+							}
+						}
+						.box{
+							&.payment{
+								.form{
+									div{
+										a{
+											color: $color-theme-1;
+										}
+										p{
+											color: $color-theme-1;
+										}
+									}
+								}
+							}
+						}	
+					}
+					#pnlPagamentos{
+						&.payment{
+							.form{
+								.option{
+									.block{
+										.finish{
+											a{
+												@extend %bt-close-finish-with;
+											}
+										}
+										.promo-credit{
+											&.promo-credit-mycards{
+												@include box-sizing();
+												text-align: left;
+												float: none;
+												width: 100%;
+												margin-left: 0px;
+												strong{
+													@extend %placeholder-heading-2;
+													@include fonte($font-def, bold, 22px, $color-theme-1);
+													text-transform: uppercase;
+													padding-bottom: 10px;
+													display: block;
+													text-align: left;
+												}
+												p{
+													@include fonte($font-def, normal, 16px, $color-theme-2);
+													text-transform: uppercase;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

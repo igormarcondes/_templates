@@ -1,0 +1,353 @@
+/* ----------------------------------------------------------------------------*/
+/* -----------------------------*>>> BASKET <<<-------------------------------*/
+/* --------------------------------------------------------------------------*/
+
+// Config ----------------------------------------------------------------------------------/
+$basket-icons-color: $color-theme-1;
+$basket-border: 1px solid #DCDBD7;
+$basket-no-border: 1px solid transparent;
+
+// Components -----------------------------------------------------------------------------/
+%basket-banner{
+	#banner_promocoes_atingir_pnlBannerPromocoesAtingir{
+		*{
+			@include box-sizing();
+		}
+		margin-top: 10px;
+		width: 100%;
+		.orbit-wrapper{
+			width: 100% !important;
+			height: 120px !important;
+			#banner-basket{
+				width: 100% !important;
+				height: 120px !important;
+				.promo{
+					@include fonte($font-alt-1, normal, 20px, #373435);
+					@include border-radius(0px);
+					@include box-sizing();
+					background: #FFF;
+					border: 5px solid #EDEAE5;
+					text-transform: uppercase;
+					width: 100%;
+					height: 120px;
+					text-align: center;
+				}
+			}
+			.orbit-bullets{
+				right: 10px;
+				bottom: 5px;
+				z-index: 9999;
+				li{
+					@include fonte($font-def, normal, 12px, #FFF);
+					@include border-radius(50px);
+					background: none;
+					background-color: $color-theme-2;
+					color: #FFF;
+					width: 20px;
+					height: 20px;
+					margin-top: 0px;
+					line-height: 19px;
+					&.active{
+						background-color: #777;
+					}
+				}
+			}
+		}
+	}
+}
+%basket-buttons-basket{
+	.buttons-basket{
+		text-align: center;
+		li{
+			display: inline-block;
+			width: 100%;
+			.buy-more{
+				@extend %bt-basket-buy-more;
+			}
+			.continue{
+				@extend %bt-basket-continue;
+			}
+		}
+	}
+}
+%basket-tbody-description{
+	.description{
+		.details{
+			.name{
+				@include fonte($font-def, normal, 13px, #373435);
+				text-align: left;
+				text-transform: none;
+			}
+			.cod,
+			.brand{
+				@include fonte($font-def, normal, 11px, #808080);
+				text-transform: uppercase;
+				display: inline-block;
+				width: 100%;
+			}
+			.skus{
+				@include fonte($font-def, normal, 13px, #373435);
+				text-transform: none;
+				margin-top: 5px;
+			}
+		}
+	}
+}
+%basket-tbody-titles{
+	tbody{
+		tr{
+			td{
+				&:before{
+					@include fonte($font-alt-1, normal, 16px, #373435);
+					text-transform: uppercase;
+					line-height: 15px;
+				}
+			}
+		}
+	}
+}
+%basket-tbody-icons{
+	tbody{
+		tr{
+			td{
+				.ico{
+					color: $basket-icons-color;
+					span{
+						&:after{
+							color: $basket-icons-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+%basket-tbody-unit-value{
+	.unit-value{
+		.regular{
+			@include fonte($font-def, normal, 12px, #acacac);
+		}
+		.sale{
+			@include fonte($font-def, normal, 14px, #373435);
+		}
+	}
+}
+%basket-tbody-unit-subtotal{
+	.subtotal{
+		.regular{
+			@include fonte($font-def, normal, 12px, #acacac);
+		}
+		.sale{
+			@include fonte($font-def, normal, 14px, #373435);
+		}
+	}
+}
+%basket-tfoot-info{
+	.info{
+		border:{
+			top: $basket-border;
+			right: $basket-no-border;
+			bottom: $basket-border;
+			left: $basket-no-border;
+		}
+		td{
+			background: #FFF;
+			padding: 5px 15px;
+			&.title{
+				@include fonte($font-alt-1, normal, 16px, #373435);
+				text-transform: uppercase;
+			}
+			&.subtotal{
+				@include fonte($font-alt-1, normal, 16px, #373435);
+				border-left: $basket-border;
+			}
+		}
+	}
+}
+%basket-tfoot-delivery{
+	.delivery{
+		border:{
+			top: $basket-border;
+			right: $basket-no-border;
+			bottom: $basket-border;
+			left: $basket-no-border;
+		}
+		td{
+			border-top: 0px;
+			background: #FFF;
+			&.subtotal{
+				border-left: $basket-border;
+				@include fonte($font-alt-1, normal, 16px, #373435);
+			}
+		}
+		.options{
+			dd{
+				.service-value{
+					label{
+						@include fonte($font-def, normal, 13px, #373435);
+					}
+					li{
+						@include fonte($font-def, normal, 13px, #373435);
+						&:first-child{
+							@include fonte($font-def, normal, 13px, #373435);
+						}
+					}
+				}
+			}
+		}
+		&.first{
+			border:{
+				top: $basket-border;
+				right: $basket-no-border;
+				bottom: $basket-no-border;
+				left: $basket-no-border;
+			}
+			td{
+				border-top: 0px;
+				&#tdZipCode{
+					.options-tit{
+						color: #5F5F5F;
+					}
+					.form{
+						label{
+							margin-right: 0px;
+							input{
+								@include box-sizing();
+								@include border-radius(0px);
+								@include fonte($font-def, normal, 12px, $color-text-1);
+								border: 1px solid #B2B2B2;
+								height: 32px;
+								line-height: 32px;
+								margin-right: 5px;
+							}
+						}
+						.calculate{
+							@extend %bt-basket-calcular-frete;
+						}
+					}
+					.title{
+						@include fonte($font-alt-1, normal, 16px, #373435);
+						text-transform:uppercase;
+					}
+				}
+				&.subtotal{
+					border-left: $basket-border;
+					@include fonte($font-def, normal, 12px, #000);
+				}
+			}
+		}
+	}
+}
+%basket-tfoot-coupon{
+	.coupon{
+		border:{
+			top: $basket-border;
+			right: $basket-no-border;
+			bottom: $basket-border;
+			left: $basket-no-border;
+		}
+		td{
+			background: #FFF;
+			border-top: $basket-border;
+			fieldset{
+				label{
+					margin-right: -1px;
+					span{
+						width: auto;
+						line-height: 19px;
+						@include fonte($font-def, normal, 12px, $color-theme-2);
+						strong{
+							@include fonte($font-def, normal, 12px, $color-theme-2);
+						}
+					}
+					input{
+						@include border-radius(0px);
+						@include fonte($font-def, normal, 12px, $color-text-1);
+						border: 1px solid #B2B2B2;
+						height: 31px;
+						line-height: 31px;
+						margin-right: 5px;
+					}
+				}
+				.utilize,
+				.cancel{
+					@extend %bt-basket-coupon-utilize;
+				}
+			}
+			&.subtotal{
+				border-left: $basket-border;
+				span{
+					@include fonte($font-def, bold, 13px, $color-theme-2);
+					&.coupon-ok{
+						@include fonte($font-def, bold, 13px, $color-theme-2);
+					}
+					&.coupon-off{
+						@include fonte($font-def, bold, 13px, #b82323);
+					}
+				}
+			}
+		}
+	}
+}
+%basket-tfoot-total{
+	.total{
+		border:{
+			top: $basket-border;
+			right: $basket-no-border;
+			bottom: $basket-border;
+			left: $basket-no-border;
+		}
+		td{
+			background: #FFF;
+			padding: 15px 15px;
+			&.title{
+				@include fonte($font-alt-1, normal, 24px, $color-theme-2);
+				text-transform: uppercase;
+			}
+			&.value{
+				border-left: $basket-no-border;
+				@include fonte($font-def, normal, 24px, $color-theme-2);
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+%basket-tfoot-stamps{
+	#trStamps{
+		#tdStamps{
+			background: #FFF;
+			padding: 10px;
+			text-align: center;
+		}
+	}
+}
+
+// Style ---------------------------------------------------------------------------------/
+body{
+	&.basketpage{
+		#main{
+			.container{
+				.content{
+					.main-content{
+						@extend %basket-banner;
+						#upBasket{
+							@extend %basket-buttons-basket;
+							.basket{
+								@extend %basket-tbody-description;
+								@extend %basket-tbody-titles;
+								@extend %basket-tbody-icons;
+								@extend %basket-tbody-unit-value;
+								@extend %basket-tbody-unit-subtotal;
+								@extend %basket-tfoot-info;
+								@extend %basket-tfoot-delivery;
+								@extend %basket-tfoot-coupon;
+								@extend %basket-tfoot-total;
+								@extend %basket-tfoot-stamps;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

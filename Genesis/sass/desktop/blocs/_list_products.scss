@@ -490,7 +490,6 @@ body {
                 height: 36px;
             }
             .btn.send {
-                @extend %btn;
                 @extend %btn-primary;
             }
         }

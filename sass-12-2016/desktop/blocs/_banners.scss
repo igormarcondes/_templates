@@ -1,0 +1,648 @@
+/* ------------------------------------------------------------*/
+/* -----------------*>>> BANNERS <<<---------------------------*/
+/* ------------------------------------------------------------*/
+
+/*
+* Arquivo criado exclusivamente para criação dos banners.
+* Tudo sera separado com Componentes (PlaceHolders) e inclusos onde for nescessarrio.
+*/
+
+//Config -----------------------------------------------------------------------------/
+//B-Top [ Pos 1 ]
+$b-top-pos-1-w: 1200px;
+$b-top-pos-1-h: auto;
+
+$b-top-pos-2-w: 1200px;
+$b-top-pos-2-h: auto;
+
+//Banner Submenu
+$b-submenu-w: 240px;
+$b-submenu-h: 240px;
+
+//B-Principal [ Pos 1 ]
+$b-main-pos-1-w: 592px;
+$b-main-pos-1-h: 600px;
+
+//B-Principal [ Pos 2 e 3 ]
+$b-main-pos-2-3-w: 592px;
+$b-main-pos-2-3-h: 292px;
+
+//B-Principal [ Pos 1 até 4 ]
+$b-principal-w: 238px;
+$b-principal-h: auto;
+
+//B-Special Store [ Pos 1 a 20 ]
+$b-special-store-w: 128px;
+$b-special-store-h: 64px;
+
+//B-Betwen Vit [ Pos 1 ]
+$b-between-vit-w: 1200px;
+$b-between-vit-h: auto;
+
+//B-Bottom [ Pos 1 ]
+$b-bottom-w: 1200px;
+$b-bottom-h: auto;
+
+//Categoria - B-top
+$cat-b-top-w: 1200px;
+$cat-b-top-h: auto;
+
+//Categoria - B-Principal
+$cat-b-principal-w: 960px;
+$cat-b-principal-h: auto;
+
+//Categoria - B-Lateral-Esquerda
+$cat-b-aside-w: 180px;
+$cat-b-aside-h: auto;
+
+//Categoria - B-Bottom
+$cat-b-bottom-w: 790px;
+$cat-b-bottom-h: auto;
+
+//Fechamento - B-Main
+$fechamento-box-left-w: 790px;
+$fechamento-box-left-h: auto;
+
+//B-Top [ Responsivo ]
+$b-top-mobile-w: 940px;
+$b-top-mobile-h: auto;
+
+//B-Principal [ Responsivo ]
+$b-principal-mobile-w: 465px;
+$b-principal-mobile-h: auto;
+
+//B-Betwen Vit [ Responsivo ]
+$b-between-vit-mobile-w: 940px;
+$b-between-vit-mobile-h: auto;
+
+//B-Bottom [ Responsivo ]
+$b-bottom-mobile-w: 940px;
+$b-bottom-mobile-h: auto;
+
+
+//Components -----------------------------------------------------------------------/
+%banner-topo-pos-1{
+	width: $b-top-pos-1-w;
+	height: $b-top-pos-1-h;
+	margin: 0px auto;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 15px;
+	.owl-item{
+		a{
+			img{
+				width: $b-top-pos-1-w;
+				height: $b-top-pos-1-h;
+			}
+		}
+	}
+	.owl-controls{
+		display: none !important;
+	}
+}
+%banner-topo-pos-2{
+	@include border-radius(0px);
+	width: $b-top-pos-2-w;
+	height: $b-top-pos-2-h;
+	position: relative;
+	margin: 0px auto;
+	overflow: hidden;
+	.owl-item{
+		text-align: center;
+		a{
+			img{
+				width: $b-top-pos-2-w;
+				height: $b-top-pos-2-h;
+			}
+		}
+	}
+	.owl-controls{
+		width: 100%;
+		.owl-buttons{
+			@extend %placeholder-owl-buttons;
+			position: absolute;
+			width: 100%;
+			.owl-next{
+				position: absolute;
+				right: 10px;
+				left: auto;
+			}
+			.owl-prev{
+				position: absolute;
+				left: 10px;
+				right: auto;
+			}
+		}
+		.owl-pagination{
+			@extend %placeholder-owl-pagination;
+		}
+	}
+}
+%banner-full-topo-detalhes{
+	width: $b-top-pos-1-w;
+	height: $b-top-pos-1-h;
+	> ul{
+		position: relative;
+		> li{
+			.owl-item{
+				a{
+					img{
+						@include border-radius(3px);
+						width: $b-top-pos-1-w;
+						height: $b-top-pos-1-h;
+					}
+				}
+			}
+			.owl-controls{
+				width: 100%;
+				.owl-buttons{
+					@extend %placeholder-owl-buttons;
+					position: absolute;
+					width: 100%;
+					.owl-next{
+						position: absolute;
+						right: 10px;
+						left: auto;
+					}
+					.owl-prev{
+						position: absolute;
+						left: 10px;
+						right: auto;
+					}
+				}
+				.owl-pagination{
+					@extend %placeholder-owl-pagination;
+				}
+			}
+		}
+	}
+}
+%banner-main{
+	width: $page-width;
+	margin: 0px auto;
+	float: none;
+	> ul{
+		text-align: center;
+		position: relative;
+		> li{
+			width: $b-principal-w !important;
+			width: $b-principal-h;
+			display: inline-block !important;
+			float: none;
+			position: relative;
+			margin: 0px;
+			img{
+				@include border-radius(3px);
+			}
+			.owl-controls{
+				width: 100%;
+				.owl-buttons{
+					@extend %placeholder-owl-buttons;
+					position: absolute;
+					width: 100%;
+					top: 0px;
+					.owl-next{
+						position: absolute;
+						right: 10px;
+						left: auto;
+					}
+					.owl-prev{
+						position: absolute;
+						left: 10px;
+						right: auto;
+					}
+				}
+				.owl-pagination{
+					@extend %placeholder-owl-pagination;
+				}
+			}
+		}
+	}
+}
+%banner-main-pos-1{
+	width: $b-main-pos-1-w !important;
+	height: $b-main-pos-1-h;
+	margin: 0px auto;
+	float: left;
+	position: relative;
+	> ul{
+		text-align: center;
+		position: relative;
+		> li{
+			width: $b-main-pos-1-w !important;
+			width: $b-main-pos-1-h;
+			display: inline-block !important;
+			float: none;
+			position: relative;
+			margin: 0px;
+		}
+	}
+	.owl-controls{
+		width: 100%;
+		.owl-buttons{
+			@extend %placeholder-owl-buttons;
+			position: absolute;
+			width: 100%;
+			top: 0px;
+			.owl-next{
+				position: absolute;
+				right: 10px;
+				left: auto;
+			}
+			.owl-prev{
+				position: absolute;
+				left: 10px;
+				right: auto;
+			}
+		}
+		.owl-pagination{
+			@extend %placeholder-owl-pagination;
+		}
+	}
+}
+%banner-main-pos-2-3{
+	width: $b-main-pos-2-3-w !important;
+	height: $b-main-pos-2-3-h;
+	margin: 0px auto;
+	float: right;
+	position: relative;
+	> ul{
+		text-align: center;
+		position: relative;
+		> li{
+			width: $b-main-pos-2-3-w !important;
+			width: $b-main-pos-2-3-h;
+			display: inline-block !important;
+			float: none;
+			position: relative;
+			margin: 0px;
+		}
+	}
+	.owl-controls{
+		width: 100%;
+		.owl-buttons{
+			@extend %placeholder-owl-buttons;
+			position: absolute;
+			width: 100%;
+			top: 0px;
+			.owl-next{
+				position: absolute;
+				right: 10px;
+				left: auto;
+			}
+			.owl-prev{
+				position: absolute;
+				left: 10px;
+				right: auto;
+			}
+		}
+		.owl-pagination{
+			@extend %placeholder-owl-pagination;
+		}
+	}
+}
+%banner-specialstore{
+	margin-top: 20px;
+	border: {
+		top: 1px solid #D9DDE2;
+		right: 0;
+		bottom: 1px solid #D9DDE2;
+		left: 0;
+	}
+	ul{
+		width: 950px;
+		height: auto;
+		> div{
+			@include box-sizing();
+			width: 100%;
+			&.owl-wrapper-outer{
+				margin-left: 30px;
+				.owl-item{
+					//width: 190px !important;
+				}
+			}
+		}
+		.owl-controls{
+			width: 100%;
+			.owl-buttons{
+				@extend %placeholder-owl-buttons;
+				position: absolute;
+				width: 100%;
+				top: 17px;
+				.owl-next{
+					position: absolute;
+					right: 0px;
+					left: auto;
+				}
+				.owl-prev{
+					position: absolute;
+					left: 0px;
+					right: auto;
+				}
+			}
+			.owl-pagination{
+				display: none !important;
+			}
+		}
+	}
+}
+%banner-between-vit{
+	background: transparent;
+	width: $b-between-vit-w;
+	height: $b-between-vit-h;
+	> ul{
+		position: relative;
+		> li{
+			.owl-item{
+				a{
+					img{
+						width: $b-between-vit-w;
+						height: $b-between-vit-h;
+					}
+				}
+			}
+			.owl-controls{
+				width: 100%;
+				.owl-buttons{
+					@extend %placeholder-owl-buttons;
+					position: absolute;
+					width: $b-between-vit-w;
+					.owl-next{
+						position: absolute;
+						right: 10px;
+						left: auto;
+					}
+					.owl-prev{
+						position: absolute;
+						left: 10px;
+						right: auto;
+					}
+				}
+				.owl-pagination{
+					width: $b-between-vit-w;
+					@extend %placeholder-owl-pagination;
+				}
+			}
+		}
+	}
+}
+%banner-bottom{
+	background: transparent;
+	width: $b-bottom-w;
+	height: $b-bottom-h;
+	margin: 0px auto;
+	> ul{
+		position: relative;
+		> li{
+			.owl-item{
+				a{
+					img{
+						width: $b-bottom-w;
+						height: $b-bottom-h;
+					}
+				}
+			}
+			.owl-controls{
+				width: 100%;
+				.owl-buttons{
+					@extend %placeholder-owl-buttons;
+					position: absolute;
+					width: $b-bottom-w;
+					.owl-next{
+						position: absolute;
+						right: 10px;
+						left: auto;
+					}
+					.owl-prev{
+						position: absolute;
+						left: 10px;
+						right: auto;
+					}
+				}
+				.owl-pagination{
+					width: $b-bottom-w;
+					@extend %placeholder-owl-pagination;
+				}
+			}
+		}
+	}
+}
+%banner-cat-topo{
+	width: $cat-b-top-w;
+	height: $cat-b-top-h;
+	> ul{
+		position: relative;
+		> li{
+			.owl-item{
+				a{
+					img{
+						width: $cat-b-top-w;
+						height: $cat-b-top-h;
+					}
+				}
+			}
+			.owl-controls{
+				width: 100%;
+				.owl-buttons{
+					@extend %placeholder-owl-buttons;
+					position: absolute;
+					width: $cat-b-top-w;
+					.owl-next{
+						position: absolute;
+						right: 10px;
+						left: auto;
+					}
+					.owl-prev{
+						position: absolute;
+						left: 10px;
+						right: auto;
+					}
+				}
+				.owl-pagination{
+					width: $cat-b-top-w;
+					@extend %placeholder-owl-pagination;
+				}
+			}
+		}
+	}
+}
+%banner-cat-main{
+	width: $cat-b-principal-w;
+	height: $cat-b-principal-h;
+	> ul{
+		position: relative;
+		> li{
+			width: $cat-b-principal-w !important;
+			margin: 0px;
+			.owl-item{
+				a{
+					img{
+						width: $cat-b-principal-w;
+						height: $cat-b-principal-h;
+					}
+				}
+			}
+			.owl-controls{
+				width: 100%;
+				.owl-buttons{
+					@extend %placeholder-owl-buttons;
+					position: absolute;
+					width: $cat-b-principal-w;
+					top: 0px;
+					.owl-next{
+						position: absolute;
+						right: 10px;
+						left: auto;
+					}
+					.owl-prev{
+						position: absolute;
+						left: 10px;
+						right: auto;
+					}
+				}
+				.owl-pagination{
+					width: $cat-b-principal-w;
+					@extend %placeholder-owl-pagination;
+				}
+			}
+		}
+	}
+}
+%banner-cat-bottom{
+	width: $cat-b-bottom-w;
+	height: $cat-b-bottom-h;
+	float: right;
+	> ul{
+		position: relative;
+		> li{
+			width: $cat-b-bottom-w !important;
+			margin: 0px;
+			.owl-item{
+				a{
+					img{
+						width: $cat-b-bottom-w;
+						height: $cat-b-bottom-h;
+					}
+				}
+			}
+			.owl-controls{
+				width: 100%;
+				.owl-buttons{
+					@extend %placeholder-owl-buttons;
+					position: absolute;
+					width: $cat-b-bottom-w;
+					top: 0px;
+					.owl-next{
+						position: absolute;
+						right: 10px;
+						left: auto;
+					}
+					.owl-prev{
+						position: absolute;
+						left: 10px;
+						right: auto;
+					}
+				}
+				.owl-pagination{
+					width: $cat-b-bottom-w;
+					@extend %placeholder-owl-pagination;
+				}
+			}
+		}
+	}
+}
+%banner-aside{
+	width: $cat-b-aside-w;
+	margin: 0px auto;
+	float: none;
+	> ul{
+		text-align: center;
+		position: relative;
+		> li{
+			width: $cat-b-aside-w !important;
+			height: $cat-b-aside-h;
+			display: inline-block !important;
+			float: none;
+			position: relative;
+			.owl-controls{
+				width: 100%;
+				.owl-buttons{
+					@extend %placeholder-owl-buttons;
+					position: absolute;
+					width: 100%;
+					top: 0px;
+					.owl-next{
+						position: absolute;
+						right: 10px;
+						left: auto !important;
+					}
+					.owl-prev{
+						position: absolute;
+						left: 10px;
+						right: auto;
+					}
+				}
+				.owl-pagination{
+					@extend %placeholder-owl-pagination;
+				}
+			}
+		}
+	}
+}
+%banner-aside-specialstore{
+	ul{
+		li{
+			width: $b-special-store-w;
+			margin: 10px auto;
+		}
+	}
+}
+%banner-fechamento{
+	width: 100%;
+	margin: 0px auto;
+	float: none;
+	> ul{
+		text-align: center;
+		position: relative;
+		> li{
+			width: 100% !important;
+			width: auto;
+			display: inline-block !important;
+			float: none;
+			position: relative;
+			.owl-item{
+				a{
+					img{
+						width: 100%;
+					}
+				}
+			}
+			.owl-controls{
+				width: 100%;
+				height: 100%;
+				.owl-buttons{
+					@extend %placeholder-owl-buttons;
+					position: absolute;
+					width: 100%;
+					top: 50%;
+					margin-top: -17px;
+					.owl-next{
+						position: absolute;
+						right: 10px;
+						left: auto;
+					}
+					.owl-prev{
+						position: absolute;
+						left: 10px;
+						right: auto;
+					}
+				}
+				.owl-pagination{
+					@extend %placeholder-owl-pagination;
+					position: absolute;
+					bottom: 25px;
+				}
+			}
+		}
+	}
+}

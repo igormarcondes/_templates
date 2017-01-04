@@ -13,12 +13,10 @@ body.basketpage {
             }
 
             .continue {
-                @extend %btn;
                 @extend %btn-primary;
             }
 
             .buy-more {
-                @extend %btn;
                 @extend %btn-secondary;
                 @extend %btn-sm;
             }
@@ -33,14 +31,11 @@ body.basketpage {
             border-top: 0;
             border-left: 0;
             border-right: 0;
-
-            @extend %btn;
             @extend %btn-primary;
             @extend %btn-sm;
         }
 
         a.cancel {
-            @extend %btn;
             @extend %btn-default;
             @extend %btn-sm;
             min-width: 70px;

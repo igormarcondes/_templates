@@ -106,7 +106,6 @@ body #main {
 
                     .btn {
                         &.buy {
-                             @extend %btn;
                              @extend %btn-primary;
                              @extend %btn-lg;
                              text-indent: 0;

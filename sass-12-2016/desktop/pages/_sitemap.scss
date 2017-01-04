@@ -1,0 +1,45 @@
+/* ---------------------------------------------------------------------------------------*/
+/* -----------------------------*>>> PAGES - SITEMAP <<<---------------------------------*/
+/* -------------------------------------------------------------------------------------*/
+
+body{
+	&.sitemap{
+		#main{
+			.container{
+				.content{
+					#main_content{
+						h1{
+							@extend %placeholder-h1;
+							margin-left: 0px !important;
+						}
+						.col{
+							margin: 0px;
+							strong{
+								@include fonte($font-def, normal, 18px, $color-theme-1);
+							}
+							ul{
+								li{
+									h2{
+										a{
+											@include fonte($font-def, bold, 16px, $color-theme-1);
+										}
+									}
+									ul{
+										li{
+											a{
+												@include fonte($font-def, normal, 12px, $color-theme-1);
+												&:hover{
+													color: $color-theme-1;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

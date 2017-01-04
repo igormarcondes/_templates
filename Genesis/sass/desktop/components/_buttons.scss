@@ -45,12 +45,10 @@
 }
 %btn-default {
     @extend %btn;
-    background: linear-gradient(to bottom,  #acacac 50%,#9d9d9d 50%); ;
-    border-color: #999;
+    background: linear-gradient(to bottom,  #acacac 50%,#9d9d9d 50%);;
     color: #fff;
     &:hover {
-        background: linear-gradient(to bottom,  #acacac 50%,#9d9d9d 50%); ;
-        border-bottom: 1px solid #999;
+        background: linear-gradient(to bottom,  #acacac 50%,#9d9d9d 50%);
     }
 }
 %btn-lg {

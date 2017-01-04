@@ -1,0 +1,293 @@
+﻿  /* -----------------------------------------------------------------------------------*/
+ /* ----------------------------*>>> BUSCA <<<--------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+
+
+//Config -----------------------------------------------------------------------------/
+$busca-aside-block-bg: #FFF;
+$busca-aside-border: 1px solid #D9DDE2;
+$busca-content-w: $page-width - $aside-w;
+
+
+//Components -----------------------------------------------------------------------/
+%busca-store-content{
+	width: $page-width;
+	max-width: $page-width;
+}
+%busca-multicomplete{
+	.panel-multicomplete-results{
+		padding: 0px;
+		width: 740px;
+		.results{
+			.group {
+				&.palavras{
+
+				}
+				&.Produtos{
+					.group-items{
+						.result{
+							.autocomplete-product{
+								.autocomplete-image{
+
+								}
+								.autocomplete-details{
+									float: right;
+									.autocomplete-price{
+										margin-top: 10px;
+										@include fonte($font-def, normal, 16px, $color-text-1);
+									}
+								}
+							}
+						}
+
+					}
+				}
+			}
+		}
+		
+	}
+}
+%busca-autocomplete{
+	.autocomplete-mais-buscadas{
+		width: 740px;
+		.title-maisbuscadas{
+			padding: 10px;
+			background: $color-theme-1;
+		}
+		ul{
+			li{
+				.item-maisbuscados{
+					.count{
+						background: $color-theme-2;
+					}
+				}
+			}
+		}
+	}
+}
+%busca-aside{
+	aside{
+		&.sidebar{
+			@include box-sizing();
+			width: $aside-w;
+			article{
+				@extend %aside-title;
+				background: #FFF;
+				border: $busca-aside-border;
+				margin-bottom: 15px;
+				.side-search{
+					background: #FFF;
+				}
+				.nav-side{
+					background: #FFF;
+					.link-list{
+						li{
+							background: none;
+							a{
+								border: none;
+								@include fonte($font-def, normal, 13px, $aside-link-colors);
+								&:hover{
+									background: #FFF;
+								}
+								i{
+									&:before{
+										font-size: 16px;
+										color: #231F20;
+									}
+								}
+							}
+						}
+					}
+					.show-more{
+						background: #FFF;
+						color: $color-theme-1;
+					}
+				}
+			}
+		}
+	}
+}
+%busca-breadcrumbs{
+	.breadcrumbs{
+		background: transparent;
+		@include fonte($font-def, normal, 11px, #666666);
+		text-transform: uppercase;
+	}
+}
+%busca-filters-ordenacao{
+	.ordenacao{
+		.title-order{
+			@include fonte($font-def, normal, 12px, $color-text-1);
+		}
+		.list-order{
+			li{
+				a{
+					text-decoration: none;
+					text-transform: capitalize;
+					@include fonte($font-def, normal, 12px, #777777);
+					&.selected{
+						@include fonte($font-def, bold, 12px, #4F577B);
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+%busca-resumo-resultado{
+	.resumo-resultado{
+		p{
+			@include fonte($font-def, normal, 12px, #555555);
+			strong{
+				@include fonte($font-def, bold, 12px, #555555);
+			}
+		}
+	}
+}
+%busca-visualizacao{
+	.visualizacao{
+		.vs-mode{
+			> span{
+				@include fonte($font-def, normal, 12px, #000);
+			}
+			.list-type{
+				li{
+					a{
+						&:hover{
+							color: $color-theme-2;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+} 
+%busca-refine-sua-busca{
+	.refine-sua-busca{
+		.title-refine{
+			.item-refine-busca{
+				@include bt-default();
+				@include linear-gradient(#F1F1F1, #E4E4E6);
+				@include fonte($font-def, 400, 12px, #949494);
+				text-transform: capitalize;
+				margin-top: -10px;
+				&:hover{
+					@include linear-gradient(#E4E4E6, #F1F1F1);
+					@include fonte($font-def, 400, 12px, #949494);
+				}
+			}
+		}
+		.form-refine{
+			margin-top: 1px;
+			margin-right: -5px;
+			background: #FFF;
+			border: 1px solid #CCCCCC;
+			.form-group{
+				.form-button{
+					background: none;
+					@include bt-default();
+					&:after{
+						content: "OK";
+						@include fonte($font-def, 400, 12px, #FFF);
+					}
+				}
+				#campoRefine{
+					padding: 6px;
+					margin-top: 2px;
+				}
+			}
+		}
+	}
+}
+%busca-list-products{
+	.catalogo{
+		.products{
+			@extend %placeholder-hproduct;
+			padding: 0px;
+			margin: 10px;
+			.product-image{
+				text-align: center;
+				a{
+					display: inline-block;
+				}
+			}
+			.product-seal{
+				min-height: 35px !important;
+				text-align: center;
+				img{
+					width: auto;
+					display: inline-block;
+				}
+			}
+			.details{
+				@extend %placeholder-list-prod-details;
+				@extend %placeholder-list-prod-name;
+				@extend %placeholder-list-prod-indisponivel;
+				.unavailable{
+					padding: 5px;
+				}
+				.offers{
+					.price{
+						> em{
+							display: none;
+						}
+						strong[itemprop="lowPrice"]{
+							@include fonte($font-def, bold, 16px, $color-text-1);
+							&:after{
+								content: " á vista";
+								@include fonte($font-def, normal, 16px, $color-text-1);
+								text-transform: uppercase;
+							}
+						}
+						small{
+							@include fonte($font-def, normal, 12px, $color-text-1);
+							width: 100%;
+							display: block;
+							margin: 5px 0px;
+							&:after{
+								content: ")";
+							}
+							&:before{
+								content: "(";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Style --------------------------------------------------------------------------/
+body{
+	@extend %busca-autocomplete;
+	@extend %busca-multicomplete;
+	&.rksearch{
+		.store-content{
+			&.wrapper{
+				@extend %busca-store-content;
+				.container-search{
+					@extend %busca-aside;
+					.content{
+						width: $busca-content-w;
+						@extend %busca-breadcrumbs;
+						@extend %busca-filters-ordenacao;
+						@extend %busca-resumo-resultado;
+						@extend %busca-visualizacao;
+						@extend %busca-refine-sua-busca;
+						@extend %busca-list-products;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//Style - mobile -------------------------------------------------------------------/
+.rksearch{
+	&.mobile-mode{
+		
+	}
+}

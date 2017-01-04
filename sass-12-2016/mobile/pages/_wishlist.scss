@@ -1,0 +1,222 @@
+/* ---------------------------------------------------------------------------------------*/
+/* ----------------------------*>>> LISTA DE DESEJOS <<<---------------------------------*/
+/* -------------------------------------------------------------------------------------*/
+
+//Config -----------------------------------------------------------------------------/
+
+
+//Components -----------------------------------------------------------------------/
+%wishlist-filter{
+	.m-order-list{
+		@include fonte($font-def, normal, 14px, $color-theme-1);
+		border: 1px solid #FFF;
+		position: relative;
+		top: 1px;
+		z-index: 15;
+		&.active{
+			border:{
+				top: 1px solid $color-theme-1;
+				right: 1px solid $color-theme-1;
+				bottom: 1px solid #FFF;
+				left: 1px solid $color-theme-1;
+			}
+			background: #FFF;
+		}
+	}
+	.open-mob-wishlist{
+		@include fonte($font-def, normal, 14px, $color-theme-1);
+		border: 1px solid #FFF;
+		position: relative;
+		top: 1px;
+		z-index: 15;
+		&.active{
+			border:{
+				top: 1px solid $color-theme-1;
+				right: 1px solid $color-theme-1;
+				bottom: 1px solid #FFF;
+				left: 1px solid $color-theme-1;
+			}
+			background-color: #FFF;
+		}
+	}
+	.filter-wish{
+		background: #FFF;
+		border: 1px solid $color-theme-1;
+		.search{
+			@extend %bt-wishlist-filter-pesqusiar;
+		}
+	}
+}
+%wishlist-photo{
+	.figure{
+		margin-bottom: 20px;
+	}
+}
+%wishlist-details{
+	.details{
+		.name{
+			@include fonte($font-def, normal, 20px, #373435);
+		}
+		.cod,
+		.brand{
+			@include fonte($font-def, normal, 11px, #808080);
+		}
+		.skus{
+			@include fonte($font-def, normal, 11px, #808080);
+		}
+		@extend %placeholder-reviewaggregate;
+		.reviewaggregate{
+			margin: 0px;
+			width: 100%;
+			.count{
+				position: relative;
+				left: 6px;
+				top: -5px;
+			}
+		}
+	}
+}
+%wishlist-details-box{
+	.details{
+		&.box{
+			background: #FFF;
+			position: relative;
+			border: 1px solid #CCC;
+			min-height: 220px;
+			.added{
+				a{
+					position: absolute;
+					right: -2px;
+					top: -2px;
+				}
+			}
+			.added,
+			.situation{
+				@include fonte($font-def, normal, 11px, #000);
+				text-transform: capitalize;
+				a{
+					@include fonte($font-def, normal, 11px, #000);
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+}
+%wishlist-details-box-offers{
+	.details{
+		&.box{
+			.offers{
+				text-align: center;
+				width: 100%;
+				span{
+					@include box-sizing();
+					margin: 0px 5px;
+					display: inline-block;
+					width: auto;
+					height: auto;
+					line-height: 20px;
+					vertical-align: middle;
+					text-align: center;
+					em{
+						line-height: 20px;
+						text-transform: capitalize;
+					}
+					&.regular{
+						@include fonte($font-def, normal, 14px, #bebebe);
+						text-transform: capitalize;
+						text-decoration: line-through;
+						padding: 0px;
+						margin-left: 0px;
+						em{
+							@include fonte($font-def, normal, 14px, #bebebe);
+							text-transform: capitalize;
+							text-decoration: line-through;
+						}
+						span{
+							@include fonte($font-def, normal, 14px, #bebebe);
+							text-transform: uppercase;
+							text-decoration: line-through;
+						}
+					}
+					&.sale{
+						margin-left: 0px;
+						@include fonte($font-def, normal, 20px, $color-theme-2);
+						text-transform: capitalize;
+						strong{
+							@include fonte($font-def, normal, 20px, $color-theme-2);
+							text-transform: uppercase;
+							span{
+								@include fonte($font-def, normal, 20px, $color-theme-2);
+								text-transform: uppercase;
+							}
+						}
+					}
+				}
+			}
+			.parcel{
+				@include fonte($font-def, bold, 16px, #373435);
+				strong{
+					@include fonte($font-def, bold, 16px, #373435);
+					span{
+						@include fonte($font-def, bold, 16px, #373435);
+					}
+				}
+				b{
+					@include fonte($font-def, normal, 16px, #373435);
+				}
+			}
+			.buy{
+				@extend %bt-wishlist-comprar;
+			}
+		}
+	}
+}
+
+//Style -----------------------------------------------------------------------------/
+
+body{
+	.container{
+		@extend %catalog-aside;
+		.main-content{
+			@extend %wishlist-filter;
+			#lblListaDesejos{
+				li{
+					@extend %wishlist-photo;
+					@extend %wishlist-details;
+					@extend %wishlist-details-box;
+					@extend %wishlist-details-box-offers;
+					@extend %placeholder-notifyme;
+					.notifyme{
+						label{
+							span{
+								width: 100%;
+								@include fonte($font-def, normal, 12px, #F46263);
+								&:before{
+									display: block;
+								}
+							}
+							input{
+								height: 32px;
+							}
+						}
+						.send{
+							width: 100%;
+						}
+					}
+					.coment{
+						.message{
+							display: block;
+						}
+					}
+					fieldset{
+						.actions{
+							a{
+								@extend %bt-wishlist-salvar;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

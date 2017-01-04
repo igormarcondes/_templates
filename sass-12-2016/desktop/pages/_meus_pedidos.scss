@@ -1,0 +1,133 @@
+/* -------------------------------------------------------------------------------------*/
+/* ------------------------*>>> PAGES - MEUS PEDIDOS <<<-------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+body{
+	&.search{
+		background: #FFF;
+		#main{
+			.container{
+				.content{
+					.main-content{
+						#panNenhumPedido{
+							.return{
+								&.text{
+									.buy{
+										@include bt_default();
+										@include fonte($font-def, bold, 14px, #FFF);
+										margin: 0px;
+									}
+								}
+							}
+						}
+						.request{
+							.box{
+								a{
+									color: $color-theme-1;
+								}
+							}
+						}
+						.form{
+							.actions{
+								.send{
+									@extend %bt-meuspedidos-enviar;
+								}
+							}
+						}
+						.pagination{
+							ul{
+								li{
+									a{
+										color: $color-theme-1;
+									}
+								}
+							}
+						}
+						.box{
+							a{
+								color: $color-theme-1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* -------------------------------------------------------------------------------------*/
+/* --------------------*>>> PAGES - MEUS PEDIDOS - DETALHES <<<------------------------*/
+/* -----------------------------------------------------------------------------------*/
+
+body{
+	&.meuspedidos{
+		background: #FFF;
+		#main{
+			.container{
+				.content{
+					.main-content{
+						.request{
+							.box{
+								float: none;
+								.info{
+									span{
+										color: $color-theme-1;
+									}
+									.actions{
+										a{
+											@extend %bt-confirmacao-imprimir;
+										}
+									}
+									.warning{
+										color: #000;
+									}
+									#hypEbit{
+										&.ebit{
+											display: none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}	
+			}
+		}
+	}
+}
+
+
+
+/* -------------------------------------------------------------------------------------*/
+/* --------------------*>>> PAGES - MEUS PEDIDOS - CODIGO <<<--------------------------*/
+/* -----------------------------------------------------------------------------------*/
+
+body{
+	&.simple{
+		.container{
+			.content{
+				h1{
+					color: $color-theme-1;
+				}
+				.request{
+					.box{
+						.info{
+							.title{
+								color: $color-theme-1;
+							}
+							.number{
+								color: $color-theme-1;
+							}
+							.description{
+								color: $color-theme-1;
+								text-transform: uppercase;
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

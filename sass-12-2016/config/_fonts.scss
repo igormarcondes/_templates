@@ -1,0 +1,15 @@
+/* -------------------------------------------------------*/
+/* -----------------*>>> FONTES <<<----------------------*/
+/* -------------------------------------------------------*/
+@include font-face("BebasNeueThin", "BebasNeueThin", "BebasNeueThin", "sans-serif");
+@include font-face("BebasNeueLight", "BebasNeueLight", "BebasNeueLight", "sans-serif");
+@include font-face("BebasNeueRegular", "BebasNeueRegular", "BebasNeueRegular", "sans-serif");
+@include font-face("BebasNeueBold", "BebasNeueBold", "BebasNeueBold", "sans-serif");
+@include font-face("BebasNeueBook", "BebasNeueBook", "BebasNeueBook", "sans-serif");
+
+
+$font-def:   'Lato', sans-serif;
+$font-alt-1: 'BebasNeueRegular', sans-serif;
+$font-alt-1-bold: 'BebasNeueBold', sans-serif;
+$font-alt-1-light: 'BebasNeueLight', sans-serif;
+$font-alt-2: 'BebasNeueRegular', sans-serif;

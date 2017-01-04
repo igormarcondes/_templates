@@ -1,0 +1,110 @@
+/* -------------------------------------------------------------------------------------*/
+/* -------------------------*>>> PAGES - QUICKBASKET <<<-------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+
+//Config -----------------------------------------------------------------------------/
+
+
+//Components -------------------------------------------------------------------------/
+
+
+
+
+//Style -----------------------------------------------------------------------------/
+
+body{
+	&.quickBasquet{
+		.item{
+			h3{
+				@extend %placeholder-h1;
+			}
+			ul{
+				li{
+					&.name{
+						@extend %placeholder-list-prod-name;
+						font-weight: normal;
+
+					}
+					&.price{
+						span{
+							@include fonte($font-def, normal, 22px, $color-theme-2);
+							&:first-child{
+								@include fonte($font-def, normal, 14px, #bebebe);
+							}
+						}
+						
+					}
+				}
+			}
+		}
+		.resumo{
+			h3{
+				@extend %placeholder-h1;
+			}
+			.subtotal{
+				background: transparent;
+				border: 1px dashed $color-theme-1;
+				.fl{
+					@include fonte($font-def, normal, 24px, $color-theme-2);
+					text-transform: uppercase;
+				}
+				.fr{
+					
+					@include fonte($font-def, normal, 24px, $color-theme-2);
+					text-transform: uppercase;
+				}
+			}
+			.actions{
+				.fl{
+					a{
+						@extend %bt-quickbasket-comprar-mais;
+					}
+				}
+				.fr{
+					a{
+						@extend %bt-quickbasket-fechar-pedido;
+					}
+				}
+			}
+		}
+		.section{
+			h2{
+				span{
+					@include fonte($font-def, normal, 25px, $color-theme-1);
+					text-shadow: none;
+				}
+			}
+			.list-products{
+				li{
+					.hproduct{
+						padding: 5px;
+						width: $ft_thumb_w + 20;
+					}
+					.figure{
+						.url{
+							border: 0px;
+						}
+						a{
+							img{
+								width: $ft_thumb_w;
+								height: auto;
+							}
+						}
+					}
+					.details{
+						background: transparent;
+						span{
+							background: transparent;
+						}
+						.link{
+							@extend %placeholder-list-prod-name;
+							@extend %placeholder-list-prod-offers;
+							@extend %placeholder-list-prod-parcel;
+						}
+						@extend %placeholder-list-prod-see-more;
+					}
+				}
+			}
+		}
+	}
+}

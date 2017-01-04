@@ -41,7 +41,6 @@
             min-height: 25px;
         }
         .btn.ir {
-            @extend %btn;
             @extend %btn-primary;
         }
         p,
@@ -90,17 +89,14 @@
                 }
             }
             .btn.ir.edit {
-                @extend %btn;
                 @extend %btn-primary;
                 @extend %btn-sm;
             }
             .btn.ir.use {
-                @extend %btn;
                 @extend %btn-primary;
                 @extend %btn-sm;
             }
             .btn.ir.delete {
-                @extend %btn;
                 @extend %btn-primary;
                 @extend %btn-sm;
             }
@@ -235,11 +231,9 @@
     form[action*="entrega.aspx"] {
         background: #fff;
         #upBasket .actions a.continue {
-            @extend %btn;
             @extend %btn-primary;
         }
         #upBasket .actions a.cancel {
-            @extend %btn;
             @extend %btn-primary;
         }
     }
