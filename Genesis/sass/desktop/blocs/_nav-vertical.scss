@@ -89,6 +89,9 @@ div.aside {
         a,
         span {
             background: none;
+            &:hover {
+                background: none;
+            }
         }
     }
 
@@ -177,7 +180,7 @@ div.aside {
             font-weight: bold;
         }
         .delete {
-            background: url("/static/locales/custom/img/ico_delete.gif") no-repeat;
+            background: url("/static/locales/global/img/ico_delete.gif") no-repeat;
             height: 19px;
             width: 19px;
         }

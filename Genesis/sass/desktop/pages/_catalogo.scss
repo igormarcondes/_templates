@@ -99,6 +99,7 @@ body {
                 margin-left: 10px;
                 padding-left: 10px;
                 border-left: 0;
+                position: relative;
 
                 a {
                     color: $font-c;
@@ -152,7 +153,6 @@ body {
     .vs-mode {
         font-family: $font-custom;
         > span {
-            text-transform: uppercase;
             font-weight: bold;
         }
         .ico {
@@ -187,7 +187,7 @@ body {
     
 
     #divSort .itens-page {
-        left: 200px;
+        left: 322px;
         top: 46px;
         text-transform: uppercase;
         height: 26px;
