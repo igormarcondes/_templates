@@ -1,41 +1,43 @@
-form[action*="login"] {
-	.main-content {
-		margin: 0 !important;
-	}
-    .login {
-        border: 1px dotted #cccccc;
-        margin-top: 50px !important;
-        margin-bottom: 50px !important;
-
-        .collum {
-            &.box {
-                .field {
-                    a {
-                        line-height: 32px;
-                        width: 99px;
-                    }
-                }
-            }
-            &.even {
-            	input.email {
-            		width: 100% !important;
-            	}
-            }
-        }
-        .btn.continue {
-        	margin: 5px 0 0 0 !important;
-        }
-        input[type="text"],
-        input[type="password"] {
-        	width: 100%;
-        	height: 35px !important;
-        	padding: 7px !important;
-        	box-sizing: border-box;
-        }
-    }
-}
 form[action*="loginafiliado"] {
     .login .btn.continue {
         margin: 22px 0 0 0 !important;
+    }
+}
+body {
+    &.loginpage {
+        .main-content {
+            margin: 0 !important;
+        }
+        .login {
+            border: 1px dotted #cccccc;
+            margin-top: 50px !important;
+            margin-bottom: 50px !important;
+
+            .collum {
+                &.box {
+                    .field {
+                        a {
+                            line-height: 32px;
+                            width: 99px;
+                        }
+                    }
+                }
+                &.even {
+                    input.email {
+                        width: 100% !important;
+                    }
+                }
+            }
+            .btn.continue {
+                margin: 5px 0 0 0 !important;
+            }
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                height: 35px !important;
+                padding: 7px !important;
+                box-sizing: border-box;
+            }
+        }
     }
 }

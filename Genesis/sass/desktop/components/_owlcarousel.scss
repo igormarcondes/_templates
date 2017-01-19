@@ -193,6 +193,45 @@ body {
     }
 }
 
+.lookDetalhe {
+    #main {
+        #piecesLook {
+            .jcarousel-skin-tango {
+                width: 160px;
+                padding: 0 17px;
+                margin: 0;
+                position: relative;
+                li a {
+                    border: 0;
+                }
+            }
+            .owl-buttons {
+                div {
+                    background: none;
+                    border-radius: 0;
+                    width: 13px;
+                    
+                    &.owl-next {
+                        left: 145px !important;
+                        right: auto;
+                        &::before {
+                            background-position: -23px 0;
+                        }
+                    }
+                    &:hover {
+                        background: none;
+                    }
+                    &::before {
+                        background: url("/static/locales/global/img/ico_arrows-sku.png") no-repeat;
+                        width: 7px;
+                        height: 14px;
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
 .owl-theme .owl-controls .owl-buttons .owl-next {
     background-position: right 0;
     left: auto;

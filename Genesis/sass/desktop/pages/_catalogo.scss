@@ -12,6 +12,12 @@ body {
     .hreview .rating .value {
         background-position: 0 -21px;
     }
+    .reviewaggregate a, 
+    .reviewaggregate .rating, 
+    .hreview .rating, 
+    .hreview .rating .value {
+        @extend %placeholder-reviewaggregate;
+    }
     #breadcrumbs {
         background: none;
         text-transform: uppercase;

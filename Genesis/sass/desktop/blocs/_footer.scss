@@ -24,6 +24,7 @@ body {
 
     .footerbuy #footer {
         @include box-sizing;
+        padding-bottom: 0;
 
         .bg-footer {
             border-radius: 0;

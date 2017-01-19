@@ -197,7 +197,8 @@ body {
                     color: $prod-price-to-c;
                     font-size: $prod-price-to-s;
 
-                    strong {
+                    strong,
+                    strong span {
                         color: $prod-price-to-c;
                         font-size: $prod-price-to-s;
                         font-weight: bold;
@@ -668,6 +669,9 @@ body {
                         font-weight: normal;
                         color: $prod-name-color;
                         font-size: $prod-name-font-s;
+                        a {
+                            color: $prod-name-color;
+                        }
                     }
 
                     .regular,
