@@ -1,0 +1,87 @@
+/* Local padrão das imagens */ 
+$base-url: "";
+$image-url: $base-url + "/static/locales/custom/img";
+$path-img: "/static/locales/custom/img";
+$path-buttons: "/static/locales/custom/img/botoes";
+$font-url: $base-url + "/static/locales/custom/fonts";
+
+/* 
+Listar formas de pagamento na ordem que deverá ser exibida,
+Nomes para utilização:
+ → aura
+ → bb
+ → banrisul
+ → boleto
+ → bradesco
+ → dinners
+ → elo
+ → hipercard
+ → hsbc
+ → itau
+ → mastercard
+ → paypal
+ → visa
+ → amex
+*/
+$payments:(visa,mastercard,amex,dinners,elo,boleto);
+
+/* Largura padrão do conteudo das páginas */
+$page-width: 1366px;
+$mobile-w: 979px;
+$aside-w : 220px;
+
+/* Quantidade de produtos por linha */
+$prod-by-row: 4;
+
+/* DOCUMENTAÇÃO DE IMAGENS */
+
+/* Vitrine */
+$ft-vitrine-w: 260px;
+$ft-vitrine-h: 470px;
+
+/* Vitrine - Vira */
+$ft-vitrine-vira-w: 260px;
+$ft-vitrine-vira-h: 470px;
+
+/* Detalhes */
+$ft-detalhes-w: 360px;
+$ft-detalhes-h: 651px;
+
+/* Ampliada */
+$ft-ampliada-w: 1100px;
+$ft-ampliada-h: 1988px;
+
+/* Thumb */
+$ft-thumb-w: 140px;
+$ft-thumb-h: 253px;
+
+/* look - vitrine */
+$look-vitrine-w: 260px;
+$look-vitrine-h: 470px;
+
+/* look - detalhes */
+$look-detalhes-w: 360px;
+$look-detalhes-h: 651px;
+
+/* Look - Ampliada */
+$look-ampliada-w: 1100px;
+$look-ampliada-h: 1988px;
+
+/* Look - Thumb */
+$look-thumb-w: 140px;
+$look-thumb-h: 253px;
+
+
+/* DOCUMENTAÇÃO DE SKU */
+
+/* Cor */
+$sku-cor-w: 30px;
+$sku-cor-h: 30px;
+
+/* Tamanho */
+$sku-tamanho-w: 30px;
+$sku-tamanho-h: 30px;
+
+/* Miniatura */
+$sku-miniatura-w: 36px;
+$sku-miniatura-h: 46px;

@@ -1,44 +1,45 @@
 body.basketpage {
+    #main .container {
+        padding-top: 90px;
+    }
     #upBasket {
+        #hypBuyMore {
+            @extend %btn-basket-comprar-produtos;
+        }
         #buy-to-list {
             border: 0;
         }
 
         .buttons-basket {
             padding-top: 20px;
+            padding-bottom: 29px;
 
             &.buttons-basket-bottom {
                 border: 0;
                 padding-top: 10px;
             }
-
-            .continue {
-                @extend %btn-primary;
-            }
-
             .buy-more {
-                @extend %btn-secondary;
-                @extend %btn-sm;
-            }
-        }
+                @extend %btn-basket-buymore;
+                min-width: 0;
+                line-height: 26px;
 
-        .basket {
-            border: 2px solid #f3f3f3;
+            }
+            .continue {
+                @extend %btn-basket-continuar;
+                padding: 0 50px;
+                min-width: 0;
+            }
         }
 
         a.btn.calculate,
-        a.btn.utilize {
-            border-top: 0;
-            border-left: 0;
-            border-right: 0;
-            @extend %btn-primary;
-            @extend %btn-sm;
+        a.btn.utilize,
+        a.cancel {
+            @extend %btn-basket-calcular;
+            margin: 0 !important;
         }
 
         a.cancel {
-            @extend %btn-default;
-            @extend %btn-sm;
-            min-width: 70px;
+
         }
 
         .basket {
@@ -47,15 +48,24 @@ body.basketpage {
             }
 
             th {
-                background: #f3f3f3;
-                color: #000;
-                font-weight: 300;
+                @extend %basket-title-th;
+                border-top: 1px solid #c9c9c9;
+                border-bottom: 1px solid #c9c9c9;
+                background: none;
+                padding: 0;
+                height: auto;
+                line-height: 38px;
+                &.description {
+                   span {
+                        display: none;
+                   }
+                }
             }
 
             tbody,
             tfoot {
                 tr td {
-                    border: 1px solid #f3f3f3;
+                    border-bottom: 1px solid #c9c9c9;
                 }
             }
 
@@ -74,21 +84,14 @@ body.basketpage {
 
                 &.total {
                     td {
-                        background: #fff;
-                        color: #000;
-                        min-width: 100px;
-                        font-family: $font-custom;
+                        background: #eeeeee;
 
                         &.value {
-                            color: $color-theme;
-                            font-weight: normal;
-                            font-size: 22px;
+                            @extend %basket-total;
                         }
 
                         &.title {
-                            font-weight: normal;
-                            color: $color-theme;
-                            font-size: 22px;
+                            @extend %basket-title-total;
                         }
                     }
                 }
@@ -98,10 +101,12 @@ body.basketpage {
                         border-top: 0;
                     }
 
+                    label {
+                        margin: 0;
+                    }
                     input.cep {
-                        height: 20px;
+                        @extend %basket-input-cep;
                         width: 140px;
-                        border: 1px solid #e7e7e7;
                     }
 
                     fieldset {
@@ -112,11 +117,20 @@ body.basketpage {
                         label {
                         }
                     }
+                    p.options-tit {
+                         @extend %basket-delivery-title;
+                    }
+                    dl.options {
+                        @extend %basket-delivery-options;
+                    }
                 }
 
                 &.coupon {
                     td {
                         background: #fff;
+                    }
+                    label {
+                        margin: 0;
                     }
 
                     #lblCoupon {
@@ -133,12 +147,11 @@ body.basketpage {
                     fieldset {
                         label > span {
                             width: 225px;
+                            @extend %basket-title-cupom;
                         }
 
                         input {
-                            height: 20px;
-                            width: 200px;
-                            border: 1px solid #e7e7e7;
+                            @extend %basket-input-cep;
                         }
                     }
 
@@ -164,48 +177,33 @@ body.basketpage {
                 }
 
                 &.subtotal {
-                    font-size: 15px;
-                    color: #000;
-                    font-weight: normal;
-                    text-shadow: 0 0 0 #000;
+                    @extend %basket-subtotal;
                 }
             }
         }
 
         .title {
-            font-family: $font-custom;
-            font-weight: 300;
-            text-transform: uppercase;
-            text-shadow: 0 0 0 #000;
-            font-size: 15px;
+            @extend %basket-title-label;
         }
 
         .delete {
-            a {
-                
-            }
+            @extend %basket-delete;
         }
 
         .description {
             .details {
-                .fn {
-                    &.name {
-                        font-family: $font-base;
-                        font-size: 13px;
-                        color: #6c6c6c;
-                    }
+                @extend %basket-produt-detail;
+                .name {
+                    @extend %basket-produt-name;
                 }
 
                 .cod {
-                    font-family: $font-base;
-                    font-size: 12px;
-                    color: #6c6c6c;
+                    @extend %basket-produt-cod;
                 }
-
-                .brand {
-                    font-family: $font-base;
-                    font-size: 12px;
-                    color: #6c6c6c;
+                @if $hide-fabricante != true {
+                    .brand {
+                        @extend %basket-produt-brand;
+                    }
                 }
 
                 .skus {
@@ -219,84 +217,7 @@ body.basketpage {
         }
 
         .quantity {
-            div {
-                width: 64px;
-                padding-left: 5px;
-
-                > span {
-                    width: 60px;
-                    height: 25px;
-                    position: relative;
-                    display: block;
-                    border: 1px solid #ccc;
-                }
-            }
-
-            .minus,
-            .plus {
-                text-indent: 0;
-                position: absolute;
-                font-size: 0;
-                background: none;
-                height: 10px;
-                margin: 0;
-                border: 1px solid #ccc;
-                padding: 1px;
-                width: 20px;
-
-                &:after {
-                    width: 0;
-                    height: 0;
-                    content: " ";
-                    display: inline-block;
-                    text-indent: 0;
-                    position: absolute;
-                    top: 3px;
-                    right: 7px;
-                }
-            }
-
-            .minus {
-                bottom: -1px;
-                right: -1px;
-
-                &:after {
-                    border-left: 4px solid transparent;
-                    border-right: 4px solid transparent;
-                    border-top: 4px solid #000;
-                }
-
-                &:hover {
-                    &:after {
-                        border-top-color: $color-theme;
-                    }
-                }
-            }
-
-            .plus {
-                top: -1px;
-                right: -1px;
-
-                &:after {
-                    border-left: 4px solid transparent;
-                    border-right: 4px solid transparent;
-                    border-bottom: 4px solid #000;
-                }
-
-                &:hover {
-                    &:after {
-                        border-bottom-color: $color-theme;
-                    }
-                }
-            }
-
-            input {
-                border: 0;
-                padding: 5px 0 0;
-                text-align: center;
-                width: 43px;
-                color: #545454;
-            }
+            @extend %basket-quantity;
         }
 
         .unit-value {
@@ -336,9 +257,7 @@ body.basketpage {
 
             .price {
                 &.sale {
-                    font-family: $font-base;
-                    font-size: 15px;
-                    color: #000;
+                   @extend %basket-subtotal;
                 }
             }
         }
@@ -354,23 +273,19 @@ body.basketpage {
 
                 .orbit-bullets {
                     bottom: 4px;
+                    @include banner-promo-bullets;
 
                     li {
-                        background: #fff;
+                        
                         border-radius: 10px;
                         font-size: 11px;
                         line-height: 17px;
                         height: 20px;
                         margin: 0 0 0 5px;
-                        border: 1px solid #ccc;
+                        
 
                         &.active {
-                            background: $color-theme;
-                            color: #fff;
-                            font-size: 11px;
-                            line-height: 17px;
-                            height: 20px;
-                            text-decoration: none;
+                            
                         }
                     }
                 }
@@ -388,22 +303,19 @@ body.basketpage {
 
                 .promo {
                 	@include box-sizing;
+                    @include banner-promo;
                     width: 100%;
                     padding: 0;
                     height: 74px;
                     background-image: none;
                     display: inline-block;
-                    background: #fff;
-                    font-family: $font-custom;
+                    
 
                     span {
-                        border: 3px solid #f3f3f3;
-                        color: #000;
+                        border: 0;
                         padding: 20px 0;
                         font-weight: bold;
-                        font-size: 17px;
                         line-height: 21px;
-                        font-family: $font-custom;
                         letter-spacing: 0.75px;
                     }
                 }

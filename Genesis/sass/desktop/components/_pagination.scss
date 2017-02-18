@@ -2,22 +2,25 @@
 .look {
     div.pagination {
         margin: 0;
-        padding: 0;
+        padding: 0 12px;
+        float: right;
+        background: #ed1849;
 
         ul {
             width: 100%;
-            text-align: right;
             float: none;
-            padding-bottom: 20px;
+            padding-bottom: 0;
+            padding-right: 7px;
 
             li {
                 float: none;
                 display: inline-block;
-                vertical-align: bottom;
-                color: $font-c;
+                vertical-align: top;
+                color: #fff;
                 font-family: $font-custom;
                 font-size: 11px;
                 height: auto;
+                line-height: 30px;
 
                 &.page {
                     display: none;
@@ -32,64 +35,89 @@
                         text-align: left;
                         display: block;
                         text-transform: uppercase;
-                        border: 1px solid #e5e5e5;
-                        background: #f3f3f3;
-                        color: $font-c;
+                        border: 0;
+                        background: none;
+                        color: #fff;
+                        line-height: 40px;
+
                         &:hover {
                             color: $color-theme;
                             text-decoration: none;
                         }
+
                     }
 
                 }
 
-                &.set-prev,
-                &.set-next {
-                    a {
-                        background: #f3f3f3;
-                    }
-
+                &:first-child,
+                &:last-child {
+                    display: none;
                 }
 
                 &.prev,
                 &.next {
                     a {
-                        
+                        background: url("/static/locales/global/img/arrow_paginacao.png") no-repeat 0 center;
+                        text-indent: -9000px;
+                        width: 10px;
+                        padding: 0;
+                        height: 41px;
                     }
 
+                }
+
+                &.next {
+                    a {
+                        background-position: -21px center;
+                    }
                 }
 
                 &.next,
                 &.set-next {
-                    
                 }
 
-                &.numbers {
                     a {
                         float: none;
                         display: inline-block;
                         vertical-align: bottom;
-                        color: $font-c;
+                        color: #fff;
                         font-family: $font-custom;
                         font-size: 14px;
-                        padding: 4px 8px;
-                        border: 1px solid #e5e5e5;
+                        padding: 0 2px;
+                        border: 0;
+                        height: auto;
+                        line-height: 41px;
+                        position: relative;
 
                         &.selected,
                         &:hover {
-                            font-weight: normal;
-                            background: #fff;
-                            border: 1px solid $color-theme;
-                            color: $color-theme;
+                            background: none;
+                            border: 0;
+                            color: #fff;
+                            font-weight: bold;
+                            text-decoration: none;
+                        }
+                        &:first-child {
+                            &::after {
+                                background: none;
+                            }
+                        }
+                        &::after {
+                            content: " ";
+                            background: url("/static/locales/global/img/arrow_paginacao.png") no-repeat -10px center;
+                            display: block;
+                            width: 10px;
+                            height: 41px;
+                            position: absolute;
+                            top: 0;
+                            right: 11px;
                         }
 
                         &:hover {
-
                         }
 
                     }
 
-                }
 
             }
 

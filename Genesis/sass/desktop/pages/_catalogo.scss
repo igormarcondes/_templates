@@ -1,4 +1,28 @@
 body {
+    &.catalog,
+    &.vitrine,
+    &.look:not(.look-detalhe) {
+        #main .container {
+            padding-top: 80px;
+        }
+        #main .banners + .container {
+            padding-top: 0;
+        }
+        .main-content {
+            padding-top: 20px;
+            &.filtro-selecionado {
+                padding-top: 60px;
+            }
+        }
+    }
+    &.vitrine {
+         #breadcrumbs {
+            margin: 0;
+         }
+         .main-content {
+            padding-top: 0;
+         }
+    }
     .chaordic:empty {
         display: none;
     }
@@ -8,22 +32,11 @@ body {
         height: 0;
         z-index: -1;
     }
-    .reviewaggregate .rating, 
-    .hreview .rating .value {
-        background-position: 0 -21px;
-    }
-    .reviewaggregate a, 
-    .reviewaggregate .rating, 
-    .hreview .rating, 
-    .hreview .rating .value {
-        @extend %placeholder-reviewaggregate;
-    }
     #breadcrumbs {
         background: none;
-        text-transform: uppercase;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 0;
         margin: 0;
-        padding: 5px 10px 10px;
+        padding: 20px 10px 20px;
         @at-root .product #breadcrumbs {
             border-bottom: 0;
         }
@@ -33,9 +46,11 @@ body {
             font-weight: normal;
             font-size: 12px;
             text-shadow: 0 0 0 #000;
+            float: left;
+            margin-right: 5px;
             &:last-child {
                 text-decoration: underline;
-                color: #000;
+                color: $color-theme;
             }
             &:first-child a span {
                 font-weight: bold;
@@ -52,15 +67,15 @@ body {
         }
 
         h1 span {
-            color: #000;
+            color: $color-theme;
             font-size: 11px;
-            text-transform: uppercase;
             font-weight: normal;
             text-decoration: none;
         }
     }
     &.vitrine .main-content {
         text-align: center;
+        clear: both;
         .section,
         .categ-desc {
             text-align: left;
@@ -71,50 +86,78 @@ body {
     }
     .see-category {
         text-transform: uppercase;
+        background: #fff;
         color: #000;
         font-family: $font-custom;
         display: inline-block;
         padding: 12px 40px;
         font-weight: bold;
-        border-bottom: 2px solid #b1ae0c;
         margin: 20px 0;
+        border: 2px solid #000;
+        &::before {
+            content: "Veja mais em: "
+        }
         &:hover {
             text-decoration: none;
-            background: darken(#ece810, 5%);
         }
     }
 
     .content {
-        div.filters {
-            background: #fff;
-            padding: 10px;
+        div#divSort,
+        div#ordena_produtos {
+            cursor: pointer;
+            float: left;
+            background: #f6f6f6;
+            padding: 0;
             border-radius: 3px;
             position: relative;
             z-index: 2;
             font-family: $font-custom;
+            margin: 0;
+            height: 40px;
+            border: 0;
+            border-radius: 0;
 
             > span {
+                height: 40px;
+                line-height: 40px;
                 font-weight: bold;
                 font-size: 12px;
                 text-shadow: none;
                 text-transform: uppercase;
+                padding: 0 15px;
                 color: #000;
+                &::after {
+                    background: url("/static/locales/global/img/ico_filtro_down.png") no-repeat center 14px;
+                    display: inline-block;
+                    position: static;
+                    margin-left: 5px;
+                    content: " ";
+                    height: 40px;
+                    width: 20px;
+                    vertical-align: middle;
+                 }
+                u {
+                    font-weight: normal;
+                    font-style: normal;
+                    text-transform: none;
+                    padding-left: 4px;
+                    text-decoration: none;
+                }
             }
 
             li {
-                margin-left: 10px;
-                padding-left: 10px;
+                margin-left: 0;
+                padding-left: 0;
                 border-left: 0;
                 position: relative;
 
                 a {
-                    color: $font-c;
+                    color: #000;
                     text-decoration: none;
-                    text-transform: uppercase;
+                    text-transform: none;
                     &.selected {
-                        color: #000;
-                        font-weight: normal;
-                        text-decoration: underline;
+                        display: none;
                     }
                     &:hover {
                         color: $color-theme;
@@ -123,26 +166,160 @@ body {
             }
 
             fieldset {
-                width: 670px;
+                width: 235px;
+                height: auto;
+                background: #fff;
+                display: none;
+                position: absolute;
+                top: 40px;
+                left: 0;
+                border: 1px solid #c9c9c9;
+                &.active {
+                    display: block;
+                }
+                ul {
+                    margin: 0;
+                    padding: 20px 0 20px 40px;
+                    width: 100%;
+                    @include box-sizing;
+                }
+                li {
+                    float: none;
+                    display: block;
+                    background: none;
+                }
             }
 
             #hypCompare {
-                @extend %btn;
                 @extend %btn-secondary;
                 @extend %btn-sm;
             }
         }
+        .itens-page {
+            float: left;
+            position: relative;
+            > span {
+                height: 40px;
+                line-height: 40px;
+                font-weight: bold;
+                font-size: 12px;
+                text-shadow: none;
+                text-transform: uppercase;
+                padding: 0 5px;
+                color: #000;
+                &::after {
+                    background: url("/static/locales/global/img/ico_filtro_down.png") no-repeat center 3px;
+                    display: inline-block;
+                    position: static;
+                    margin-left: 5px;
+                    content: " ";
+                    height: 14px;
+                    width: 12px;
+                    vertical-align: middle;
+                    position: absolute;
+                    top: 13px;
+                    right: 5px;
+                 }
+            }
+            select {
+                border: 0;
+                background: none;
+                box-shadow: none;
+                height: 32px;
+                width: 65px;
+                padding-left: 9px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border-radius: 0;
+            }
+        }
     }
+    .bg-filter {
+        @include clearfix;
+        background: #f6f6f6;
+        border-top: 1px solid #cacaca;
+        border-bottom: 1px solid #cacaca;
+        width: 100%;
+        height: 40px;
+        position: relative;
+    }
+    .filtro-horizontal {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background: #fff;
+        .horizontal-title {
+            display: none;
+        }
+        .horizontal-list {
+            padding: 0;
+            width: auto;
+            li {
+                .spnFiltro {
+                    border: 0;
+                    line-height: 40px;
+                    padding: 0 27px;
+                    border-right: 1px solid #eee;
+                    color: #000;
+                    font-family: $font-custom;
+                    text-align: center;
+                    font-weight: bold;
+                    text-transform: uppercase;
 
+                    &::after {
+                         background: url("/static/locales/global/img/ico_filtro_down.png") no-repeat center 14px;
+                         display: inline-block;
+                         position: static;
+                         margin-left: 5px;
+                         content: " ";
+                    }
+                }
+            }
+            .filterBlock {
+                border: 1px solid #c9c9c9;
+                li {
+                    line-height: 20px;
+                    color: #000;
+                    font-family: $font-custom;
+                    a {
+                        &:hover {
+                            text-decoration: none;
+                            color: $color-theme;
+                        }
+                    }
+                }
+            }
+            &.filterSku0 {
+                .filterBlock {
+                    padding: 28px 14px;
+                    li {
+                        text-indent: -9000px;
+                        min-width: 0;
+                        a {
+                            width: 30px;
+                            height: 30px;
+                        }
+                        img {
+                            margin-right: 0;
+                            border: 0;
+                            border-radius: 30px;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
     .filter-details {
         border: 0;
+        display: none;
         position: relative;
         overflow: visible;
-        padding: 0 0 52px 9px;
+        padding: 0;
         p {
-            position: absolute;
-            right: 20px;
-            top: 4px;
+            display: none;
             font-family: $font-custom;
             font-size: 12px;
             color: $font-c;
@@ -190,8 +367,49 @@ body {
             }
         }
     }
-    
+    #divMain {
+        float: left;
+        .horizontal-selecionados {
+            position: absolute;
+            top: 41px;
+            width: 100%;
+            border-bottom: 1px solid #c9c9c9;
+            padding: 7px 0 6px 30px;
+            margin: 0;
+            z-index: 2;
+            background: #fff;
+            .title {
+                font-weight: bold;
+                font-family: $font-custom;
+                font-style: 12px;
+                line-height: 29px;
+            }
+                > span {
+                    text-transform: none;
 
+                }
+            }
+            .type,
+            .item {
+                color: #5a5a5a;
+                font-family: $font-custom;
+                font-size: 12px;
+                text-decoration: none;
+                font-weight: normal;
+            }
+            .type {
+                &::after {
+                    content: ": ";
+                }
+            }
+            .item {
+                a {
+                    background: url("/static/locales/global/img/ico_excluir_filtro.png") no-repeat;
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+    }
     #divSort .itens-page {
         left: 322px;
         top: 46px;
@@ -205,6 +423,21 @@ body {
         span {
             font-weight: bold;
             line-height: 29px;
+        }
+    }
+    .categ-desc {
+        &.bg-seo {
+            @include box-sizing();
+            background: #4b63ae;
+            padding: 60px 40px;
+            color: #fff;
+            font-family: $font-custom;
+            clear: both;
+            width: 100%;
+            margin: 30px 0 0;
+            clear: both;
+            float: left;
+            line-height: 17px;
         }
     }
     &.vitrine {
@@ -249,11 +482,11 @@ body {
             .vitrine-4 {
                 clear: none;
             }
-            .list-products {
-                li {
-                    width: 33%;
-                }
-            }
         }    
-    } 
+    }
+    &.look {
+        .main-content {
+            clear: both;
+        }
+    }
 }

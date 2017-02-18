@@ -1,0 +1,562 @@
+/* -------------------------------------------------------*/
+/* -----------------*>>> HEADER <<<----------------------*/
+/* -----------------------------------------------------*/
+
+// Config -----------------------------------------------------------------------------/
+$header-h: 200px;
+$header-link-color: #000;
+$header-search-color: #000;
+$logo-img-w: 358px;
+$nav-height: 40px;
+$logo-position: 'center';
+
+// Components -----------------------------------------------------------------------/
+%header-head-promo{
+	.head-promo{
+		@include flexbox(inline-flex, row, wrap, space-between);
+		@include box-sizing();
+		padding: 0px 40px;
+		width: 100%;
+		height: 35px;
+		background-color: $color-theme-1;
+		li{
+			line-height: 35px;
+			height: 35px;
+			span,
+			a{
+				@include fonte($font-def, 400, 12px, #FFF);
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			a{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+%header-welcome{
+	.welcome{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		background: transparent;
+		padding: 0px;
+		width: auto;
+		#identificacao{
+			line-height: 30px;
+			padding-left: 0px;
+			@extend %text-header-help-link;
+			a{
+				@extend %text-header-help-link;
+				text-decoration: none;
+				padding: 0px;
+				display: inline-block;
+				&:hover{
+					@extend %text-header-help-link;
+				}
+			}
+			span{
+				@extend %text-header-help-link;
+				text-decoration: none;
+				padding: 0px 4px;
+				display: inline-block;
+			}
+		}		
+	}
+}
+%header-help{
+	.help{
+		background-color: transparent;
+		float: right;
+		height: 30px;
+		line-height: 30px;
+		width: auto;
+		display: inline-block;
+		top: 10px;
+		right: 25px;
+		left: auto;
+		position: relative;
+		> li{
+			width: auto;
+			list-style: none;
+			float: right;
+			width: auto;
+			height: 33px;
+			line-height: 33px;
+			padding: 0px 20px;
+			&.conta{
+				@include bgimg(ico-header-acc, png);
+				background-repeat: no-repeat;
+				background-position: left center;
+				padding-left: 30px;
+			}
+			&.list{
+				@include bgimg(ico-header-list, png);
+				background-repeat: no-repeat;
+				background-position: left center;
+				padding-left: 30px;
+			}
+			&.loja{
+				@include bgimg(ico-header-loja, png);
+				background-repeat: no-repeat;
+				background-position: left center;
+				padding-left: 20px;
+				position: absolute;
+				right: 1135px;
+				top: 53px;
+				a{
+					width: 120px;
+				}
+			}
+			a{
+				@extend %text-header-help-link;
+				height: 33px;
+				line-height: 33px;
+				display: block;
+				background-image: none;
+				padding: 0px;
+			}
+			span{
+				background: none;
+			}
+		}
+	}
+}
+%header-car{
+	.car{
+		display: inline-block;
+		float: right;
+		width: auto;
+		height: 33px;
+		line-height: 30px;
+		padding: 0px 5px;
+		&:hover{
+			background-color: #FFF;
+		}
+		.basket{
+			@include box-sizing();
+			@include bgimg(ico-header-car, png);
+			background-repeat: no-repeat;
+			background-position: left center;
+			padding-left: 30px;
+			width: auto;
+			height: 30px;
+			line-height: 30px;
+			position: relative;
+			right: 0px;
+			top: 0px;
+			z-index: 9;
+			display: inline-block;
+			text-align: right;
+			.title{
+				@extend %text-header-help-link;
+				height: 33px;
+				line-height: 33px;
+				padding: 0px;
+				display: inline-block;
+			}
+			.itens{
+				@extend %text-header-help-link;
+				display:inline-block;
+				height: 30px;
+				line-height: 30px;
+				text-align: left;
+				margin: 0;
+				padding: 0px;
+				.basket-count-number{
+					padding: 0px;
+				}
+				label{
+					@extend %text-header-help-link;
+				}
+				#cabecalho_lblResumoCesta{
+					display: none;
+				}
+			}
+		}
+	}
+}
+%header-newsletter{
+	.newsletter{
+		display: none;
+	}
+}
+%header-logo{
+	#logo{
+		position: absolute;
+		top: 107px;
+		width: $logo-img-w;
+		@if $logo-position == "left"{
+			left: 22px;
+		} @else if $logo-position == "center" {
+			left: 50%;
+			margin-left: -($logo-img-w / 2); 
+		} @else if $logo-position == "right" {
+			right: 22px;
+		}
+		h1{
+			margin: 0px;
+		}
+		a{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+%header-search{
+	.search{
+		@include box-sizing();
+		@include border-radius(0px);
+		-webkit-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+		-moz-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+		box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+		position: absolute;
+		right: 35px;
+		left: auto;
+		top: 90px;
+		border: 0px;
+		width: 220px;
+		height: auto;
+		padding: 0px;
+		background: transparent;
+		legend{
+			display: none;
+		}
+		.placeholder{
+			@include box-sizing();
+			@include border-radius(0px);
+			@extend %text-search-cont;
+			background-color: #FFF;
+			border: 1px solid #AEAEAE;
+			-webkit-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+			-moz-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+			box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+			width: 100%;
+			height: 30px;
+		}
+		.btn{
+			@extend %bt-home-header-busca;
+			position: absolute;
+			right: 11px;
+			top: 8px;
+		}
+	}
+}
+%header-summary-basket{
+	.mini-car{
+		top: 33px;
+		max-height: 365px;
+		@include box-shadow(0, 0, 0px, #cacaca, false);
+		@include box-sizing();
+		@include border-radius(0px);
+		border: 1px solid #000;
+		right: 0px;
+		width: 320px;
+		background-color: #FFF;
+		padding: 0px;
+		z-index: 11;
+		#emptyBasket{
+			.prod{
+				padding: 5px;
+				border: 0px !important;
+				p{
+					@extend %text-minicar-empty;
+				}
+			}
+			a{
+				@extend %bt-header-minicar-empty;
+			}
+		}
+		#basket_pop_container{
+			padding: 10px;
+			.prod{
+				padding: 10px;
+				border-bottom: 1px solid #F4F4F4;
+				overflow: hidden;
+				.photo{
+					border: 0px !important;
+				}
+				.descr{
+					margin: {
+						top: 0px;
+						right: 0px;
+						bottom: 0px;
+						left: 10px;
+					}
+					width: auto;
+					.name{
+						@extend %text-minicar-nome;
+						padding-bottom: 10px;
+					}
+					.cod{
+						@extend %text-minicar-cod;
+						margin: 0px !important;
+						line-height: 14px;
+						&:before{
+							content: "COD: ";
+							@extend %text-minicar-cod;
+						}
+					}
+				}
+			}
+			._skus{
+				clear: none;
+				display: inline-block;
+				padding-left: 10px;
+				p{
+					@extend %text-minicar-cod;
+					line-height: 14px;
+					margin: 0px;
+					padding: 0px;
+					&:last-of-type{
+						float: right;
+						position: relative;
+						top: 13px;
+					}
+					span{
+						@extend %text-minicar-cod;
+						line-height: 14px;
+						margin: 0px !important;
+						padding: 0px !important;
+					}
+				}
+				.total{
+					margin: {
+						top: 5px;
+						right: 0px;
+						bottom: 0px;
+						left: 0px;
+					}
+					position: relative;
+					@extend %text-minicar-price;
+					text-align: left;
+				}
+			}
+			.sum_container{
+				@include box-sizing();
+				height: 35px;
+				width: 100%;
+				border: 0px;
+				background: #FFF;
+				padding: {
+					top: 0px;
+					right: 10px;
+					bottom: 0px;
+					left: 10px;
+				}
+				margin-bottom: 5px;
+				border-top: 1px solid #000;
+				margin-top: -1px;
+				.qtde_prod{
+					@extend %text-minicar-sum-qtd;
+					line-height: 35px;
+				}
+				.subtotal{
+					@extend %text-minicar-sum-value;
+					line-height: 35px;
+					strong{
+						@extend %text-minicar-sum-value;
+					}
+				}
+			}
+			#btn_checkout{
+				padding: 10px 0px;
+				margin: 0px;
+				text-align: center;
+				overflow: hidden;
+				background: #FFF;
+				a{
+					display: inline-block;
+					&.bt-mini-car-continue{
+						@extend %bt-header-minicar-continue;
+						float: left;
+					}
+					&.bt-mini-car-concluir{
+						@extend %bt-header-minicar-finalizar;
+						float: right;
+					}
+				}
+			}
+		}
+	}
+}
+%header-nav{
+	#nav{
+		@include flexbox(inline-flex, row, wrap, space-between);
+		@include box-sizing();
+		position: absolute;
+		width: $page-width;
+		margin: 0px auto;
+		bottom: 5px;
+		padding: 0px 40px;
+		display: block;
+		> li{
+			padding: 0px;
+			position: static;
+			> a{
+				@extend %text-nav-item;
+				border: {
+					top: 0px;
+					right: 0px;
+					bottom: 1px solid transparent;
+					left: 0px;
+				}
+				text-transform: uppercase;
+				height: 40px;
+				line-height: 40px;
+				width: auto;
+				&:hover,
+				&.hover,
+				&:active{
+					@extend %text-nav-item;
+					background: #FFF;
+					border-color: #000;
+				}
+			}
+			&:last-child{
+				a{
+					color: #FF5D64;
+				}
+			}
+			.sub-nav{
+				top: 41px;
+				width: 100% !important;
+				border: 0px;
+				background: rgba(255,255,255,0.9);
+				padding: 35px;
+				@include box-sizing();
+				.collum{
+					width: auto;
+					> ul{
+						> li{
+							border: 0px;
+							a{
+								@extend %text-sub-nav-item;
+								&:hover{
+									color: $color-theme-1;
+									text-decoration: none;
+								}
+							}	
+						}
+					}
+					&.imagem{
+						@include box-sizing();
+						float: right;
+						width: auto;
+						max-width: 682px;
+						a{
+							img{
+								width: auto;
+								height: auto;
+								max-width: 682px;
+								max-height: 360px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+%header-float-toolbar{
+	#floatToolbar{
+		background: #FFF;
+		border-bottom: 0px solid #d1d1d1;
+		height: 50px;
+		padding: 0px;
+		.floatToolbar{
+			width: $page-width;
+			margin: 0px auto;
+			position: relative;
+			.closeHeader{
+				border-right: none;
+				margin-top: 15px;
+				padding: 5px;
+				span{
+					@include bgimg(seta-barra, png);
+					background-position: 0px 0px;
+					padding: 0px;
+					background-repeat: no-repeat;
+					width: 20px;
+					height: 20px;
+				}
+			}
+			.logoFT{
+				position: absolute;
+				top: 11px;
+				margin: 0px;
+				@if $logo-position == "left"{
+					left: 22px;
+				} @else if $logo-position == "center" {
+					left: 50%;
+					margin-left: -($logo-img-w / 2); 
+				} @else if $logo-position == "right" {
+					right: 22px;
+				}
+				img{
+					width: $logo-img-w;
+				}
+			}
+			.foneFT{
+				display: none;
+			}
+			@extend %header-search;
+			.search{
+				position: absolute;
+				left: 0px;
+				right: auto;
+				top: 5.5px;
+			}
+			@extend %header-car;
+			.car{
+				position: absolute;
+				right: 0px;
+				top: 9px;
+				padding-bottom: 10px;
+				@extend %header-summary-basket;
+				.mini-car{
+					top: 41px;
+				}
+			}
+		}
+	}
+}
+%header-headerbuy{
+	&.headerbuy{
+		position: relative;
+		height: 100px;
+		border-bottom: 1px solid #D1D1D1;
+		.container{
+			height: 100px;
+			padding: 0px;
+			#logo{
+				position: absolute;
+				top: 35px;
+			}
+		}
+	}
+}
+// Style --------------------------------------------------------------------------/
+#header{
+	position: relative;
+	height: $header-h;
+	background-image: none;
+	.container{
+		width: $page-width;
+		height: $header-h;
+		margin: 0px auto;
+		@extend %header-head-promo;
+		@extend %header-logo;
+		@extend %header-help;
+		@extend %header-welcome;
+		@extend %header-newsletter;
+		@extend %header-search;
+		@extend %header-car;
+		@extend %header-summary-basket;
+	}
+	@extend %header-nav;
+	@extend %header-float-toolbar;
+	@extend %header-headerbuy;
+}

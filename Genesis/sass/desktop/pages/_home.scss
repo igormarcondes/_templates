@@ -2,7 +2,7 @@
 /* ----------------------*>>> PAGES - HOME <<<--------------------------*/
 /* --------------------------------------------------------------------*/
 body {
-    &:not(.globalId):not(.home) #header:not(.headerbuy) ~ {
+    &:not(.globalId):not(.home):not(.register) #header:not(.headerbuy) ~ {
         /*que nao seja checkout e nem pagina de cadastro*/
         #main .container {
             width: $larguraPadrao;

@@ -7,13 +7,15 @@
         #fancybox-wrap {
             border: 0px solid #FFF;
         }
-
+        #fancybox-content:empty + #fancybox-close {
+            display: none !important;
+        }
         #fancybox-close,
         #fancybox-close-2 {
             background: none;
             height: 14px;
             width: 14px;
-            display: block;
+            display: none;
             &::after,
             &::before {
                 position: absolute;
@@ -36,7 +38,9 @@
                 transform: rotate(-45deg);
             }
         }
-
+        #fancybox-close {
+            display: block;
+        }
         &.alterarSenha {
         }
     }
@@ -56,8 +60,8 @@
         }
         .cep .field input {
             border: 1px solid #000;
-            height: 20px;
-            min-height: 20px;
+            height: 25px;
+            min-height: 25px;
         }
         input[type="text"],
         textarea {
@@ -66,7 +70,7 @@
             border-width: 1px;
         }
         .btn.ir {
-            @extend %btn-primary;
+            @extend %btn-modal-consultar-prazo-consultar;
         }
         p,
         label {
@@ -77,6 +81,9 @@
 
 /* inicio - Alterar Endereco */
     .delivery-address {
+        #main .container {
+            padding: 0 !important;
+        }
         .form .title {
             font-size: 18px;
         }
@@ -114,17 +121,21 @@
                 }
             }
             .btn.ir.edit {
-                @extend %btn-primary;
-                @extend %btn-sm;
+                @extend %btn-modal-editar-endereco;
             }
             .btn.ir.use {
-                @extend %btn-primary;
-                @extend %btn-sm;
+                @extend %btn-modal-usar-endereco;
             }
             .btn.ir.delete {
-                @extend %btn-primary;
-                @extend %btn-sm;
+                @extend %btn-modal-deletar-endereco;
             }
+            
+        }
+        #hypSalvar {
+            @extend %btn-modal-salvar-usar-endereco;
+        }
+        #p_LimparEndereco {
+            @extend %btn-modal-endereco-cancelar
         }
     }
 /* fim    - Alterar Endereco */
@@ -188,6 +199,11 @@
                 margin: 18px 0 0;
             }
         }
+        #pnlStoreDelivery h1.tit-frete {
+            font-weight: bold;
+            font-size: 12px;
+            margin: 0 0 5px;
+        }
     }
 /* fim    - Consultar Prazo de entrega */
 
@@ -199,6 +215,9 @@
             input {
                 height: 25px;
             }
+        }
+        .btn.continue {
+            @extend %btn-modal-alterar-senha-continue;
         }
     }
 /* fim    - Esqueci Minha Senha */
@@ -265,13 +284,13 @@
 /* fim    - Alterar Senha */
 
 /* inicio - Servico de Entrega */
-    form[action*="entrega.aspx"] {
+    body.delivery-service.delivery {
         background: #fff;
-        #upBasket .actions a.continue {
-            @extend %btn-primary;
+        #upBasket .actions a.change {
+            @extend %btn-modal_servico-alterar-endereco;
         }
-        #upBasket .actions a.cancel {
-            @extend %btn-primary;
+        #upBasket .actions a.continue {
+            @extend %btn-modal_servico-salvar;
         }
     }
 /* fim    - Servico de Entrega */

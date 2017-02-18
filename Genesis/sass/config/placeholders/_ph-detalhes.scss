@@ -1,0 +1,175 @@
+%detail-name {
+	font-family: $font-custom;
+	color: $prod-name-color;
+	font-size: 20px;
+	font-weight: normal;
+	margin-bottom: 10px;
+
+}
+
+%detail-fabricante {
+	li {
+		border-left: 0;
+		padding-left: 0;
+		margin-left: 0;
+		color: #5a5a5a;
+		font-family: $font-custom;
+	}
+
+	#ghcliBrand {
+
+	}
+	#contentPartNumber {
+		@extend %rk-hide;
+	}
+
+}
+
+%detail-reviewaggregate {
+	display: block;
+}
+
+%detail-price-from {
+	color: $prod-price-from-c;
+	font-size: $prod-price-from-s;
+	font-family: $prod-price-font;
+	display: inline-block;
+}
+
+%detail-price-to {
+	color: $prod-price-to-c;
+	font-size: $prod-price-to-s;
+
+	strong,
+	strong span {
+		color: $prod-price-to-c;
+		font-size: $prod-price-to-s;
+		font-weight: 500;
+	}
+
+}
+
+%detail-parcel {
+	color: $prod-parcel-c;
+	font-size: 17px;
+	font-weight: 500;
+
+	strong {
+		color: $prod-parcel-c;
+		font-weight: 500;
+	}
+
+	b {
+		font-weight: 500;
+		display: none;
+	}
+
+}
+
+%detail-price-offer {
+	font-size: 12px;
+	font-family: $prod-default-font;
+	display: block;
+	color: $prod-parcel-c;
+
+	em {
+		font-family: $prod-default-font;
+		font-size: 12px;
+		text-align: left;
+		padding: 5px 0 0;
+	}
+
+}
+
+%detail-stamp {
+	padding: 0;
+	margin-bottom: 10px;
+
+	&.unavailable {
+		padding: 8px 0;
+		color: $color-theme2;
+		text-transform: uppercase;
+	}
+
+}
+
+%detail-tools {
+	li {
+		background: none;
+
+		a {
+			background: url("/static/locales/global/img/ico_detalhes.png") no-repeat;
+			padding-left: 22px;
+			text-decoration: underline;
+			font-family: $font-custom;
+			font-size: 12px;
+			color: #000;
+			line-height: 16px;
+			display: inline-block;
+		}
+
+		&.add a {
+			background-position: 0 -34px;
+		}
+
+	}
+
+}
+%detail-description-preview {
+	.description {
+		font-family: $font-custom;
+		line-height: 16px;
+		font-size: 12px;
+		color: #000;
+		border: 0;
+		a {
+			color: #000;
+			text-decoration: underline;
+			font-family: $font-custom;
+		}
+	}
+}
+%detail-description-full {
+	font-family: $font-custom;
+	color: #000;
+	line-height: 16px;
+	font-size: 13px;
+}
+%detail-review {
+	font-family: $font-custom;
+	p.reviewer {
+		color: $color-theme;
+		font-size: 12px;
+	}
+}
+%detail-social {
+	width: 100%;
+	clear: both;
+	.listSocial {
+	    float: right;
+	    &::before {
+	        content: "Compartihar ";
+	        font-family: $font-custom;
+	        color: #5a5a5a;
+	        font-size: 12px;
+	        float: left;
+	        display: block;
+	        margin: 9px 0 0 0;
+	    }
+	}
+	.media {
+	    &.invite {
+
+	    }
+	}
+	li {
+	    float: left;
+	    margin-left: 10px;
+	    &:hover {
+	        opacity: 0.5;
+	    }
+	    a {
+	    	background: none;
+	    }
+	}
+}

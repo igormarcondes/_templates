@@ -1,7 +1,9 @@
+body.home #main .history {
+    margin: 0 auto 0;
+    width: $larguraPadrao;
+}
 #main {
     .history {
-        margin-top: 0px;
-
         .prod-view {
             border-top: 2px solid #fff;
             width: 100%;

@@ -1,0 +1,351 @@
+/* Inicio - Produto */
+    $prod-default-font: $font-custom;              //Produto Fonte Family Geral
+
+	$prod-name-color: #000;						//Produto Title - Color
+	$prod-name-font: $font-custom;				//Produto Title - Font
+	$prod-name-font-s: 14px;						//Produto Title - Font Size
+
+	$prod-price-font: $font-custom;	  		     	//Produto Price - Font
+	$prod-price-font-c: #9f9f9f;					//Produto Price - Color
+	$prod-price-font-s: 15px;						//Produto Price - Size
+
+	$prod-price-from-c: #9f9f9f;		 			//Produto Price From (de) - Font Color
+	$prod-price-from-s: $prod-price-font-s; 		//Produto Price From (de) - Font Size
+
+	$prod-price-to-c:  #4b63ae; 			        //Produto Price To (por) - Font Color
+	$prod-price-to-s: 19px; 						//Produto Price To (por) - Font Size
+
+	$prod-parcel-c:  #4b63ae; 						//Produto Parcelamento - Font Color
+	$prod-parcel-s: 12px; 							//Produto Parcelamento - Font Size
+
+	$hide-button-buy-home: true;
+	$hide-button-buy-catalog: true;
+	$hide-review-home: true;
+	$hide-review-catalog: true;
+	$hide-filtro-lista: true;
+	$hide-compare-catalog: true;
+	$hide-sigla-depor: true;
+	$hide-fabricante: true;
+/* fim    - Produto */
+/*----------------------------RATING -----------------------------------*/
+
+
+@if $hide-button-buy-home {
+	body.home #main .list-products .details .btn.buy {
+		@extend %rk-hide;
+	}
+}
+@if $hide-button-buy-catalog {
+	body.catalog .list-products .btn.buy,
+	body.vitrine .list-products .btn.buy,
+	body.look:not(.lookDetalhe) .list-products .btn.buy {
+		@extend %rk-hide;
+	}
+}
+@if $hide-review-home {
+	body.home #main .list-products .details .reviewaggregate {
+		@extend %rk-hide;
+	}
+}
+@if $hide-review-catalog {
+	body.catalog #main .list-products .reviewaggregate,
+	body.vitrine #main .list-products .reviewaggregate,
+	body.look:not(.lookDetalhe) .list-products .reviewaggregate {
+		@extend %rk-hide;
+	}
+}
+@if $hide-filtro-lista {
+	body #main .vs-mode {
+		@extend %rk-hide;
+	}
+}
+@if $hide-compare-catalog {
+	.content .filters .btn.compare.ir,
+	.list-products li .hproduct .compare {
+		@extend %rk-hide;
+	}
+}
+@if $hide-sigla-depor {
+
+	body #main .list-products .details .regular em:not(.value-sight), 
+	body #main .list-products .details .price em:not(.value-sight),
+	#info-product .offers .price-to em,
+	#info-product .offers .price-from em {
+		@extend %rk-hide;
+	}
+}
+@if $hide-fabricante {
+	body.basketpage .basket .brand,
+	body ul.fab-cod #ghcliBrand {
+		@extend %rk-hide;
+	}
+}
+
+$ratingHeight : 15px;
+$ratingWidth : 18px * 5;
+$ratingColor : #000;
+$ratingIMG: "star.png";
+
+
+
+%reviewaggregate {
+    .reviewaggregate{
+        text-transform:none;
+        margin: 0 auto;
+        text-align:center;
+        > a{   
+            background: url("/static/locales/global/img/#{$ratingIMG}") repeat-x 0 0;                  
+            height: $ratingHeight;
+            width: $ratingWidth;
+            margin-right: 5px;
+            display: inline-block;
+            float: none;
+            text-align: left;
+            span{
+                height: $ratingHeight;
+                background-image: url("/static/locales/global/img/#{$ratingIMG}");
+                background-position: 0 -#{($ratingHeight)};                           
+            }
+        }
+        .count,
+        .count * {
+            color: $ratingColor;
+            font-size: 12px;
+            font-weight: normal;
+            height: auto;
+            line-height: $ratingHeight;
+            display: inline-block;      
+            vertical-align: top;
+            width: auto;
+        }
+    }
+    .hreview {
+        .rating{            
+            width: $ratingWidth;
+            height: $ratingHeight;
+            background-position: 0 0;
+            .value{                
+                width: $ratingWidth;
+                height: $ratingHeight;
+                background-position: 0 -#{($ratingHeight)};
+            }
+        }
+    }
+}
+%placeholder-reviewaggregate {
+		width: 106px;
+		margin: 0px auto;
+		> a{
+			@include reviewaggregate(star, png, 15, 18);
+			position: relative;
+			top: -2px;
+			margin-right: 0px;
+			margin-bottom: 7px;
+		}
+		.count {
+			display: inline-block;
+			font-family: $font-base;
+			font-size: 11px;
+			color: #000;
+			a{
+				font-family: $font-base;
+				font-size: 11px;
+				color: #000;;
+			}
+		}
+}
+%title-vitrine {
+	color: #000;
+	font-family: $font-custom;
+	text-align: center;
+	position: relative;
+	margin-bottom: 10px;
+	text-shadow: none;
+	&::before {
+		height: 1px;
+		width: 100%;
+		content: " ";
+		border-bottom: 1px solid #c9c9c9;
+		display: block;
+		position: absolute;
+        top: 50%;
+	}
+	span {
+        font-family: $font-custom;
+        color: #000;
+        display: inline-block;
+        font-size: 25px;
+        @if $desktop-mode == false {
+        	font-size: 14px;
+        }
+        font-weight: bold;
+        text-transform: uppercase;
+        background: #fff;
+        padding: 8px 20px;
+        position: relative;
+        z-index: 2;
+	}
+}
+%title-detalhes-vitrine {
+	@extend %title-vitrine;
+}
+%title-checkout {
+	font-weight: bold;
+	color: #000;
+	font-family: $font-custom;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+%title2 {
+	color: #000;
+}
+%product-name {
+	font-family: $font-custom;
+	color: $prod-name-color;
+	font-size: 13px;
+	font-weight: normal;
+	text-align: center;
+}
+%product-price-from {
+	color: $prod-price-from-c;
+	font-size: $prod-price-from-s;
+	font-family: $prod-price-font;
+	display: inline-block;
+}
+%product-price-to {
+	color: $prod-price-to-c;
+    font-size: $prod-price-to-s;
+
+	strong,
+	strong span {
+	    color: $prod-price-to-c;
+	    font-size: $prod-price-to-s;
+	    font-weight: 500;
+	}
+}
+%product-parcel {
+	color: $prod-parcel-c;
+	font-size: $prod-parcel-s;
+	font-weight: 500;
+	strong {
+		color: $prod-parcel-c;
+		font-weight: 500;
+	}
+
+	b {
+		font-weight: 500;
+		display: none;
+	}
+}
+%product-price-offer {
+	font-size: 12px;
+	font-family: $prod-default-font;
+	display: block;
+	color: $prod-parcel-c;
+
+	em {
+		font-family: $prod-default-font;
+		font-size: 12px;
+		text-align: left;
+		padding: 5px 0 0;
+	}
+}
+%product-stamp {
+	padding: 0;
+    margin-bottom: 10px;
+    text-align: center;;
+    &.unavailable {
+        padding: 8px 0;
+        color: $color-theme2;
+        text-transform: uppercase;
+    }
+}
+%product-skus {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	.skus {
+		@include box-sizing;
+	    background: #efefef;
+	    border: 0;
+	    padding: 7px 0 0 60px;
+	    width: 100%;
+	    height: 50px;
+	    position: relative;
+
+	    * {
+	        box-sizing: content-box;
+	    }
+	    &::before {
+	        content: "CORES";
+	        display: block;
+	        position: absolute;
+			top: 18px;
+			left: 7px;
+	    }
+
+	    @include clearfix;
+
+	    img,
+	    a {
+	        width: 30px;
+	        height: 30px;
+	        border-radius: 30px;
+	    }
+
+	    li {
+	        margin-right: 3px;
+	        width: auto;
+	        height: auto;
+	        clear: none;
+	        overflow: hidden;
+	    }
+	    a {
+	    	&.selected {
+	    		border: 2px solid $color-theme;
+	    	}
+	    }
+	}
+}
+
+%carrosel-arrow-1 {
+	background: url("/static/locales/global/img/ico_arrows.png") no-repeat 0 center;
+	width: 30px;
+	height: 40px;
+	opacity: 0.5;
+	 &.owl-next {
+        right: 0;
+        background-position: -38px center;
+        left: auto;
+    }
+    &:hover {
+    	opacity: 1;
+    }
+}
+%carrosel-arrow-2 {
+	background: none;
+    border-radius: 0;
+    opacity: 1;
+    height: 120px;
+    width: 60px;
+    margin-top: -70px;
+    &::before {
+        background: url("/static/locales/global/img/arrow_banner.png") no-repeat;
+        background-position: 0 0;
+        content: " ";
+        height: 44px;
+        width: 25px;
+        display: block;
+        margin: 39px auto;
+    }
+    &.owl-prev {
+        left: 0;
+    }
+    &.owl-next {
+        right: 0;
+        &::before {
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+    }
+}

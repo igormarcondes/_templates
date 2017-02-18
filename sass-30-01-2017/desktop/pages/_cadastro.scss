@@ -1,0 +1,61 @@
+  /* --------------------------------------------------------------------------*/
+ /* --------------------------*>>> CADASTRO <<<-------------------------------*/
+/* --------------------------------------------------------------------------*/
+
+
+//Config -----------------------------------------------------------------------------/
+
+
+//Components -----------------------------------------------------------------------/
+
+
+//Style -----------------------------------------------------------------------------/
+body{
+	&.register{
+		#main{
+			.container{
+				.content{
+					.banners{
+						&.b-top{
+							padding-top: 15px;
+							@extend %banner-full-topo-cadastro;
+						}
+					}
+					h1{
+						@extend %placeholder-h1;
+					}
+					.atention{
+						//color: $color-theme-1;
+					}
+					.form{
+						#spanMsgValidacaoDataNascimento{
+							z-index: 9999;
+						}
+						.dados{
+							div,
+							fieldset,
+							.box{
+								background: #FFF;
+							}
+						}
+						.validacao{
+							//color: $color-theme-1;
+						}
+						.actions{
+							#formcadastro_btnSalvar{
+								&.save{
+									@extend %bt-cadastro-salvar;
+								}
+							}
+						}
+						.box{
+							&.even{
+								background: #FFF;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

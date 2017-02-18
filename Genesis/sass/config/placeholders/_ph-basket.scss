@@ -1,0 +1,147 @@
+@mixin banner-promo {
+	background: $color-theme;
+	font-family: $font-custom;
+	color: #fff;
+	font-size: 16px;
+}
+@mixin banner-promo-bullets {
+	font-family: $font-custom;
+	color: #fff;
+	font-size: 16px;
+	li {
+		border: 1px solid #ccc;
+		background: #fff;
+		&.active {
+			background: $color-theme;
+            color: #fff;
+            font-size: 11px;
+            line-height: 17px;
+            height: 20px;
+            text-decoration: none;
+		}
+	}
+}
+%basket-title-th {
+	color: $color-theme;
+	font-weight: bold;
+	font-family: $font-custom;
+}
+
+%basket-produt-detail {
+	font-family: $font-custom;
+}
+
+%basket-produt-name {
+	color: $prod-name-color;
+	font-size: 13px;
+	font-weight: normal;
+	color: #000;
+}
+
+%basket-produt-cod {
+	color: #5a5a5a;
+	font-size: 11px;
+	text-transform: lowercase;
+}
+
+%basket-quantity {
+	> div {
+		border: 1px solid #4b63ae;
+		width: 84px;
+	}
+	a {
+		width: 29px;
+		height: 29px;
+		background: url("/static/locales/global/img/sprite-basket.png") no-repeat 6px 4px;
+		margin: 0;
+		&.plus {
+			background-position:  -42px 4px;
+		}
+	}
+	input {
+		border: 0;
+		height: 26px;
+		margin: 0;
+	}
+}
+
+%basket-delete {
+	a {
+		background: url("/static/locales/global/img/sprite-basket.png") no-repeat 0 -25px;
+		width: 24px;
+		height: 24px;
+	}
+}
+%basket-input-cep {
+	@include box-sizing();
+	border: 1px solid $color-theme;
+	font-family: $font-custom;
+	color: #5a5a5a;
+	border-radius: 0;
+    height: 30px;
+    vertical-align: top;
+    float: left;
+}
+%basket-delivery-title {
+	color: $color-theme;
+	font-family: $font-custom;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+%basket-delivery-options {
+	dt {
+		font-weight: bold;
+		text-transform: uppercase;
+		font-family: $font-custom;
+		color: #000;
+	}
+	.service-value {
+		li {
+			font-family: $font-custom;
+			font-weight: normal;
+			&:first-child {
+				color: $color-theme2;
+			}
+		}
+	}
+}
+%basket-title-cupom {
+	color: $color-theme;
+	font-family: $font-custom;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+%basket-input-cupom {
+	@extend %basket-input-cep;
+}
+%basket-valor-unitario {
+	font-family: $font-custom;
+	color: $color-theme;
+	font-weight: bold;
+}
+%basket-title-label {
+	font-family: $font-custom;
+	color: #000;
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+%basket-subtotal {
+	font-family: $font-custom;
+	color: #000;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+%basket-title-total {
+	font-family: $font-custom;
+	color: $color-theme;
+	font-weight: bold;
+	font-size: 18px;
+}
+%basket-total {
+	font-family: $font-custom;
+	color: $color-theme;
+	font-weight: bold;
+	font-size: 18px;
+}

@@ -2,8 +2,20 @@ body #header .mini-car {
     z-index: 5;
     top: 20px;
     width: 400px;
-    background: #fff;
-
+    background: none;
+    box-shadow: none;
+    padding: 0 10px 10px;
+    border: 0;
+    overflow: visible;
+    .basket_pop_container {
+        float: left;
+        width: 100%;
+        margin-top: 32px;
+        background: rgba(255,255,255,0.9);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        max-height: 370px;
+        overflow-y: auto;
+    }
     .mid {
         .prod {
             .photo {
@@ -11,12 +23,35 @@ body #header .mini-car {
             }
         }
         .sum_container {
-            background: none;
+            background: #eeeeee;
+            .qtde_prod {
+                color: #5a5a5a;
+            }
+            .subtotal {
+                color: #4b63ae;
+            }
         }
     }
     #btn_checkout a {
         @extend %btn-success;
         width: auto;
         display: inline-block;
+        &.bt-mini-car-continue {
+            font-family: $font-custom; 
+            font-size: 13px;
+            font-weight: bold;
+            background: none;
+            text-decoration: underline;
+            color: #000;
+            padding: 0 13px;
+        }
+    }
+    #emptyBasket {
+        a {
+            @extend %btn-success;
+            display: inline-block;
+            width: auto;
+            margin: 0 0 20px;
+        }
     }
 }

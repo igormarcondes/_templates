@@ -5,6 +5,9 @@ form[action*="loginafiliado"] {
 }
 body {
     &.loginpage {
+        .main-content h1 {
+            @extend %title-checkout;
+        }
         .main-content {
             margin: 0 !important;
         }
@@ -28,7 +31,11 @@ body {
                     }
                 }
             }
+            .btn.enter {
+                @extend %btn-login-entrar;
+            }
             .btn.continue {
+                @extend %btn-login-continuar;
                 margin: 5px 0 0 0 !important;
             }
             input[type="text"],
@@ -39,5 +46,18 @@ body {
                 box-sizing: border-box;
             }
         }
+    }
+    &.loginpage.request {
+        .form {
+            .title {
+                background: none;
+            }
+            input[type="text"] {
+                width: 100% !important;
+            }
+        }
+    }
+    #formcadastro_btnSalvar {
+        @extend %btn-salvar-cadastro;
     }
 }

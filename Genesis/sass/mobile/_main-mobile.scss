@@ -28,16 +28,35 @@ span.go-top-btn {
 	    .banners.b-main .posicao2,
 	    .banners.b-main-mobile .posicao2 {
 	        width: 100%;
-	    }    
+	    }
+	    .banners.b-top,
+	    .banners.b-main, 
+	    .banners.b-main-mobile {
+	    	padding: 0 0 10px;
+	    }
+	    .banners.b-main .posicao1, .banners.b-main-mobile .posicao1 {
+	    	padding: 0 0 10px;
+	    }
+	    &.home #main .container,
+		&.catalog #main .container,
+		&.vitrine #main .container {
+			padding-top: 60px;
+		}
+	    #main .banners + .container {
+	    	padding-top: 0 !important;
+	    }
 	}
 /* fim    - Banners */
 
 /* inicio - Titulos */
 	.section {
 		h2 {
-			font-family: $title-font;
-			font-size: $title-font-size;
-			color: $title-font-color;
+			@extend %title-vitrine;
+		}
+	}
+	.prod-view {
+		.title {
+			@extend %title-vitrine;
 		}
 	}
 /* fim - Titulos */
@@ -49,18 +68,24 @@ span.go-top-btn {
 	        	.hproduct {
 	        		.details {
 	        			.name {
-							color: $prod-name-color;
+							@extend %product-name;
 	        			}
 	        			.offers {
 	        				.regular {
-	        					color: $prod-price-from-c;
+	        					@extend %product-price-from;
 	        				}
-	        				.sale {
-	        					color: $prod-price-to-c;
+	        				.price {
+	        					@extend %product-price-to;
 	        				}
+	        				.percent-a-vista {
+			                    @extend %product-price-offer;
+			                }
 	        			}
 	        			.parcel {
-	        				color: $prod-parcel-c;
+	        				@extend %product-parcel;
+	        			}
+	        			.stamp {
+	        				@extend %product-stamp;
 	        			}
 	        		}
 	        	}
@@ -83,39 +108,10 @@ span.go-top-btn {
 	 html body:not(.institucional) .catalog-filters .content-filters .horizontal-list span:before {
 		color: $link-color;
 	 }
+	 .field.itens-page {
+	 	display: none;
+	 }
 /* fim    - filtros*/
-
-/* inicio - Esconder Elementos*/
-	%rk-hide {
-		display: none !important;
-	}
-	@if $hide-review-vitrine {
-		body .list-products .reviewaggregate {
-			@extend %rk-hide;
-		}
-	}
-	@if $hide-button-buy-vitrine {
-		body:not(.product) .list-products li .hproduct .details .buy {
-			@extend %rk-hide;
-		}
-	}
-	@if $hide-compare-catalog {
-		.content .filter-details .btn-mob-compare,
-		.list-products li .hproduct .compare {
-			@extend %rk-hide;
-		}
-	}
-	@if $hide-newsletter-footer {
-		div#footer .container .newsletter {
-			@extend %rk-hide;
-		}
-	}
-	@if $hide-sigla-DePor {
-		 body #main .list-products .details .price:not(.percent-a-vista) em {
-			@extend %rk-hide;
-		}
-	}
-/* fim - Esconder Elementos*/
 
 /* inicio - Confirmacao */
     html {

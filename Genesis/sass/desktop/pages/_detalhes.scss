@@ -2,41 +2,47 @@ body {
     #info-product {
         * {
             @include box-sizing;
-            font-family: $detail-default-font;
+            
         }      
         /* inicio - Collum Details */
             .collum.details {
-                width: calc(100% - #{$ft_detalhes_w +15} );
+                width: 400px;
+                margin-right: 50px;
+                float: right;
             }
             /* Product name :start */
                 .name {
-                    font-family: $detail-name-font;
-                    font-size: $detail-name-font-s;
-                    color: $detail-name-color;
+                    @extend %detail-name;
                 }
             /* Product name:end */
 
             /* Fabricante:start */
                 .fab-cod {
-
+                    @extend %detail-fabricante;
                 }
             /* Fabricante:end */
 
             /* rating:start */
-                .reviewaggregate {
-
-                }
+                @extend %reviewaggregate;
             /* rating:end */
 
             /* Stamps:start */
                 .stamp {
-
+                    float: right;
+                    max-width: 120px;
                 }
             /* Stamps:end */
 
             /* Box Prices:start */
+                .box-price {
+                    @include clearfix;
+                    border-bottom: 1px solid #c9c9c9;
+                    padding-bottom: 25px;
+                    margin-bottom: 20px;
+                }
                 #infoPrices {
-
+                    float: left;
+                    max-width: 260px;
                 }
                 .offers {
                     width: 100%;
@@ -49,12 +55,14 @@ body {
 
                 }
                 .price-to {
-
+                    @extend %detail-price-to;
                 }
                 .desconto-avista {
-
+                    @extend %detail-price-offer;
+                    margin-bottom: 5px;
                 }
                 .parcel {
+                     @extend %detail-parcel;
                     width: 100%;
                     margin: 0;
                     padding: 0;
@@ -88,13 +96,67 @@ body {
                     border: 0;
                     .field {
                         background: none;
-                        margin: 0;
+                        margin: 0 0 10px;
                         padding: 0;
+                        clear: both;
+                        @include clearfix;
+                    }
+                    label {
+                        float: left;
+                        margin: 5px 10px 0 0;
+                        padding: 5px 0 0 0;
+                        font-weight: bold;
+                        font-family: $font-custom;
+                        text-transform: uppercase;
+                        width: 70px;
+                        text-align: right;
+                        color: #000;
+                        text-indent: 4px;
+                        overflow: hidden;
+                        span {
+                            display: none;
+                        }
                     }
                     ul {
+                        float: left;
+                        width: auto;
+                        margin: 0;
+                        max-width: 300px;
                         li {
+                            margin-right: 7px;
+                            margin-bottom: 10px;
+                            opacity: 1;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                            &.selected,
+                            &:hover {
+                                a {
+                                    background: #fff;
+                                    border-color: $color-theme;
+                                    color: $color-theme;
+                                }
+                            }
+                            &.warn {
+                                .ico.ir {
+                                    top: 2px;
+                                }
+                            }
                             a {
-
+                                width: 30px;
+                                height: 30px;
+                                display: block;
+                                border-radius: 30px;
+                                overflow: hidden;
+                                line-height: 25px;
+                                font-family: $font-custom;
+                                border-width: 2px;
+                                background: #eee;
+                                opacity: 1;
+                                img {
+                                    width: 30px;
+                                    height: 30px;
+                                }
                             }
                         }
                     }
@@ -106,46 +168,107 @@ body {
 
                 }
                 .action {
+                    margin: 0 0 35px;
                     .btn.buy {
-
+                        @extend %btn-detalhes-comprar;
+                        width: 100%;
                     }
                 }
                 .notifyme.form  {
+                    background: #eee;
+                    @include box-sizing();
+                    padding: 20px;
                     span {
+                        color: #000;
+                        font-family: $font-custom;
                         strong {
+                            border-right: 1px solid #ccc;
+                            padding-right: 3px;
+                            margin-right: 3px;
+                            display: none;
                         }
-
+                    }
+                    > span {
+                        &::before {
+                            content: "INDISPONIVEL";
+                            color: #000;
+                            font-size: 11px;
+                            font-weight: bold;
+                            margin-right: 5px;
+                            border-right: 1px solid #ccc;
+                            padding-right: 3px;
+                        }
+                        &::after {
+                            content: "Avise-me quando chegar.";
+                            text-transform: uppercase;
+                            font-family: $font-custom;
+                            font-size: 11px;
+                        }
                     }
 
                     label {
+                        position: relative;
                         span {
+                            position: absolute;
+                            top: -24px;
+                            left: 140px;
+                            width: 240px;
+                            display: none;
                         }
 
                         input {
+                            border: 1px solid $color-theme;
+                            margin: 0;
+                            border-radius: 0;
+                            height: 30px;
                         }
 
                     }
 
                     .btn {
+                        @extend %btn-enviar-notify;
+                        line-height: 30px;
+                        width: auto;
                     }
                 }                
             /* Comprar:start */
 
             /* Descricao preview:start */
                 #ajaxDescriptionPreview {
-
+                    @extend %detail-description-preview;
+                    padding-bottom: 38px;
+                    border-bottom: 1px solid #c9c9c9;
+                    @include clearfix;
+                    width: 100%;
+                    float: left;
                 }
             /* Descricao preview:end */
             
             /* tools:start */
                 .tools {
-
+                    @extend %detail-tools;
+                    #ajaxCommentsReview {
+                        margin-left: 5px;
+                        float: left;
+                    }
+                    li {
+                        width: auto;
+                        margin-left: 5px;
+                        padding: 0;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        &.add {
+                            float: right;
+                        }
+                    }
                 }
             /* tools:start */
 
             /* Disponibilidade:start*/
                 .time {
-                    display: none;
+                   font-family: $font-custom;
+                   color: #000;
                 }
             /* Disponibilidade:end*/
         /* fim    - Details */
@@ -153,13 +276,14 @@ body {
         /* inicio - Collum Imagem */
             .collum.images {
                 @include box-sizing(content-box);
-                width: $ft_detalhes_w;
+                width: 560px;
                 margin-right: 15px;   
             }
             .photo {
                 width: $ft_detalhes_w;
                 height: $ft_detalhes_h;
                 border: 0 !important;
+                float: right;
                 .main {
                     width: $ft_detalhes_w;
                     height: $ft_detalhes_h;
@@ -167,6 +291,7 @@ body {
             }
             .zoom {
                 background: none;
+                display: none !important;
                 
                 .mouseover {
                     background: none;
@@ -176,19 +301,58 @@ body {
 
                 }
             }
-            .thumbs {
-
-            }
-            #thumbs {
-
-            }
-            .social {
-                .media {
-                    &.invite {
-
+            ul.thumbs {
+                float: left;
+                width: 60px;
+                margin-left: 44px;
+                margin-top: 0;
+                li {
+                    width: 57px;
+                    height: 103px;
+                    margin: 0 0 8px;
+                    border: 0;
+                    border-bottom: 1px solid #c9c9c9;
+                    padding-bottom: 8px;
+                    @include box-sizing(content-box);
+                    img {
+                        width: 57px;
+                        height: 103px;
+                    }
+                    &:last-child {
+                        border-bottom: 0;
+                        padding-bottom: 0;
                     }
                 }
             }
+            #videoDetalhe {
+                margin: 0;
+                border: 0;
+                width: auto;
+            }
+            .social {
+               @extend %detail-social;
+            }
         /* fim    - Collum Imagem */
+    }
+    @extend %reviewaggregate;
+    .section {
+        h2 {
+            @extend %title-detalhes-vitrine;
+        }
+        &.description {
+            #descriptionContent {
+                @extend %detail-description-full;
+            }
+        }
+        &.especificacion {
+            #specificationContent {
+                @extend %detail-description-full;
+            }
+        }
+        &.about {
+            .hreview  {
+                @extend %detail-review;
+            }
+        }
     }
 }

@@ -1,0 +1,101 @@
+/* ---------------------------------------------------------------------*/
+/* -------------------------*>>> QUICKVIEW <<<---------------------------*/
+/* -------------------------------------------------------------------*/
+
+// Config ----------------------------------------------------------------------------------/
+$page-quick-w: 1000px;
+$page-quick-h: 780px;
+
+// Components -----------------------------------------------------------------------------/
+
+
+// Style ---------------------------------------------------------------------------------/
+body{
+	&.catalog,
+	&.vitrine,
+	&.home{
+		#fancybox-wrap{
+			@include box-sizing();
+			width: auto !important;
+			height: auto !important;
+			border: 5px solid #FFF;
+			#fancybox-content{
+				@include box-sizing();
+				width: 1100px !important;
+				height: 780px !important;
+				overflow-x: hidden;
+			}
+		}
+	}
+	&.quickview{
+		#main{
+			@include box-sizing();
+			width: $page-quick-w;
+			margin: 0px auto;
+			padding: {
+				top: 10px;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+			.container{
+				@include box-sizing();
+				width: $page-quick-w;
+				margin: 0px auto;
+				padding: 0px;
+				.content{
+					.main-content{
+						.collum{
+							&.images{
+								width: $ft-detalhes-w + 75;
+								margin: {
+									top: 0px;
+									right: 0px;
+									bottom: 0px;
+									left: 0px;
+								}
+								position: relative;
+								@extend %product-images-photo;
+								@extend %product-images-zoom;
+								@extend %product-images-thumbs-vertical;
+								@extend %product-images-social;
+							}
+							&.details{
+								width: 510px;
+								float: right;
+								.info-prices{
+									border-bottom: 1px solid #DDDCDA;
+									overflow: hidden;
+									padding-bottom: 10px;
+									margin-bottom: 10px;
+								}
+								@extend %product-details-name;
+								@extend %product-details-fab-cod;
+								.reviewaggregate{
+									display: none;
+								}
+								@extend %product-coments-review;
+								@extend %product-details-stamp;
+								@extend %product-details-resumo-desc;
+								@extend %product-details-offers;
+								@extend %product-details-desconto-a-vista;
+								@extend %product-details-parcel;
+								@extend %product-details-save;
+								@extend %product-details-sku;
+								@extend %product-details-buy;
+								@extend %product-details-tab-desc;
+								@extend %product-details-disponibilidade;
+								@extend %product-details-tools;
+								.tools{
+									&.rate{
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

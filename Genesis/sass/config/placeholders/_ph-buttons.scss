@@ -1,0 +1,242 @@
+@mixin btn {
+    border-width: 0;
+    border-radius: 0;
+    line-height: 40px;
+    height: auto;
+    text-align: center;
+    font-family: $font-custom; 
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0 20px;
+    text-transform: uppercase;
+    text-indent: 0;
+    &:hover {
+        text-decoration: none;
+    }
+}
+%btn-primary {
+    @include btn;
+    background: $color-theme;
+    color: #fff;
+    &:hover {
+        background: darken($color-theme, 10%);
+    }
+}
+%btn-secondary {
+    @include btn;
+    background: none;
+    color: #000;
+    border: 2px solid #000;
+    &:hover {
+        background: none;
+    }
+}
+%btn-success {
+    @include btn;
+    background: #ed1849;
+    color: #fff;
+    &:hover {
+        background: darken(#ed1849, 5%);
+    }
+}
+%btn-default {
+    @include btn;
+    background: linear-gradient(to bottom,  #acacac 50%,#9d9d9d 50%);;
+    color: #fff;
+    &:hover {
+        background: linear-gradient(to bottom,  #acacac 50%,#9d9d9d 50%);
+    }
+}
+%btn-lg {
+    line-height: 40px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    &:hover {
+        
+    }
+}
+%btn-sm {
+    line-height: 30px;
+    height: 30px;
+    padding: 0 20px;
+    font-size: 10px;
+    padding: 0 10px;
+    &:hover {
+       
+    }
+}
+/*Inicio - Botoes gerais */
+    %btn-enviar {
+        @extend %btn-primary;
+    }
+    %btn-salvar {
+        @extend %btn-success;
+    }
+    %btn-comprar {
+        @extend %btn-success;
+    }
+    %btn-listproduct-buy {
+        @extend %btn-comprar;
+    }
+/*fim - Botoes gerais */
+
+/* inicio - Botoes Detalhes */
+    %btn-detalhes-comprar {
+        @extend %btn-success;
+    }
+    %btn-combo-comprartodos {
+        @extend %btn-success;
+    }
+    %btn-enviar-notify {
+        @extend %btn-enviar;
+    }
+/* fim    - Botoes Detalhes */
+
+/* inicio - Botoes Look */
+    %btn-look-comprar-produtos {
+        @extend %btn-comprar;
+    }
+    %btn-look-selecionar-produtos {
+        @extend %btn-secondary;
+    }
+/* inicio - Botoes Look */
+
+/* inicio - Botoes Basket */
+    %btn-basket-enviar {
+        @extend %btn-success;
+    }
+    %btn-basket-buymore {
+        @extend %btn-secondary;
+    }
+    %btn-basket-continuar {
+        @extend %btn-success;
+    }
+    %btn-basket-calcular {
+        @extend %btn-primary;
+        font-size: 11px;
+        line-height: 30px;
+    }
+    %btn-basket-cupom {
+        @extend %btn-primary;
+    }
+    %btn-basket-cancelar {
+        @extend %btn-primary;
+    }
+    %btn-basket-comprar-produtos {
+        @extend %btn-basket-continuar;
+    }    
+/* fim    - Botoes Basket */
+
+/* inicio - Botoes Login */
+    %btn-login-entrar {
+        @extend %btn-primary;   
+    }
+    %btn-login-continuar {
+        @extend %btn-primary;
+    }
+    %btn-salvar-cadastro {
+        @extend %btn-salvar;   
+    }
+/* inicio - Botoes Login */
+
+/* inicio - Botoes checkout */
+    %btn-checkout-editar-endereco {
+        @extend %btn-primary;
+        @extend %btn-sm;
+    }
+    %btn-checkout-alterar-servico {
+        @extend %btn-primary;
+        @extend %btn-sm;
+    }
+    %btn-checkout-fecharpedido {
+        @extend %btn-success;
+        line-height: 22px;
+        padding: 9px 30px;  
+    }
+    %btn-checkout-fecharpedido-inativo {
+        @extend %btn-checkout-fecharpedido;
+        background: #bbb;
+        &:hover{
+            background: #bbb;
+        }
+    }
+/* inicio - Botoes checkout */
+
+/* inicio - Modais */
+    /* inicio - modal - Alterar endereco */
+        %btn-modal-editar-endereco {
+            @extend %btn-checkout-editar-endereco;
+        }
+        %btn-modal-usar-endereco {
+            @extend %btn-checkout-editar-endereco;
+        }
+        %btn-modal-deletar-endereco {
+            @extend %btn-checkout-editar-endereco;
+            background: #ff0000;
+            &:hover {
+                background: #ff0000;
+            }
+        }
+        %btn-modal-salvar-usar-endereco {
+            @extend %btn-success;
+            @extend %btn-lg;
+        }
+        
+        %btn-modal-endereco-cancelar {
+            @extend %btn-primary;
+            @extend %btn-lg;
+        }
+    /* fim - modal - Alterar endereco */
+
+    /* inicio - modal - Alterar Servico */
+        %btn-modal_servico-alterar-endereco {
+            @extend %btn-modal-editar-endereco;
+        }
+        %btn-modal_servico-salvar {
+            @extend %btn-salvar;
+            @extend %btn-sm;
+        }
+    /* fim   - modal - Alterar Servico */
+
+      %btn-modal-alterar-senha-continue {
+         @extend %btn-primary;
+      }
+      %btn-modal-consultar-prazo-consultar {
+        @extend %btn-primary; 
+      }
+/* fim    - Modais */
+
+/* inicio - Meus cartoes */ 
+    %btn-meuscartoes-comprar-produtos {
+        @extend %btn-basket-comprar-produtos;
+    }
+/* fim   - Meus cartoes */ 
+
+/* inicio - lista de desejos */
+    %btn-listadesejo-comprar {
+        @extend %btn-comprar;
+    }
+    %btn-listadesejo-salvar {
+        @extend %btn-salvar;
+    }
+    %btn-listadesejo-pesquisar {
+        @extend %btn-primary;
+    }
+/* fim   - lista de desejos */    
+
+/* inicio - confirmacao  */
+    %btn-confirmacao-imprimir-boleto {
+        @extend %btn-success;
+        @extend %btn-lg;
+    }
+/* fim    - confirmacao  */
+
+/* inicio - meus pedidos  */
+    %btn-meuspedidos-enviar {
+        @extend %btn-primary;
+    }
+    %btn-meuspedidos-imprimir {
+        @extend %btn-confirmacao-imprimir-boleto;
+    }
+/* fim    - meus pedidos  */

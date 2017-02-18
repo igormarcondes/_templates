@@ -1,13 +1,15 @@
 /* -------------------------------------------------------*/
 /* ------------*>>> CONFIGURAÇÕES <<<---------------------*/
 /* -------------------------------------------------------*/
-$color-theme: #00a651;
-$color-theme2: #000;
+$desktop-mode: true !default;
+$mobile: false;
+$color-theme: #4b63ae;
+$color-theme2: #ed1849;
 $font-c: #6c6c6c;
 $link-c: $color-theme;
 $link-ch: $color-theme;
 $font-base: Arial,Helvetica,sans-serif;
-$font-custom: 'Roboto Condensed', sans-serif;
+$font-custom: 'Raleway', sans-serif;
 
 $m-font: $font-custom;				//Menu - Font Family
 $m-font-s: 15px;					//Menu - Font Size
@@ -18,34 +20,6 @@ $m-bg-ch:  #f1f4f7;					//Menu - Background Color Hover
 
 $mv-title-color: $color-theme;		//Menu Vertical Title - Color
 $mv-title-font: $font-custom;		//Menu Vertical - Font Family
-
-
-$vit-title-font: $font-custom;					// Vitrine Title - Font Family
-$vit-title-font-c: #000;						// Vitrine Title - Font Color
-
-
-
-	/* Inicio - Produto */
-	    $prod-default-font: $font-base;              //Produto Fonte Family Geral
-
-		$prod-name-color: #666;						//Produto Title - Color
-		$prod-name-font: $font-custom;				//Produto Title - Font
-		$prod-name-font-s: 14px;						//Produto Title - Font Size
-
-		$prod-price-font: $font-custom;	  		     	//Produto Price - Font
-		$prod-price-font-c: #9f9f9f;					//Produto Price - Color
-		$prod-price-font-s: 15px;						//Produto Price - Size
-
-		$prod-price-from-c: #9f9f9f;		 			//Produto Price From (de) - Font Color
-		$prod-price-from-s: $prod-price-font-s; 		//Produto Price From (de) - Font Size
-
-		$prod-price-to-c:  #00a651; 			        //Produto Price To (por) - Font Color
-		$prod-price-to-s: 19px; 						//Produto Price To (por) - Font Size
-
-		$prod-parcel-c:  #000; 							//Produto Parcelamento - Font Color
-		$prod-parcel-s: 13px; 							//Produto Parcelamento - Font Size
-	/* fim    - Produto */
-
 
 	/* Inicio - Detalhes */
 	    $detail-default-font: $font-base;
@@ -71,14 +45,14 @@ $vit-title-font-c: #000;						// Vitrine Title - Font Color
 /*
 * Largura padrão do conteudo das páginas;
 */
-$larguraPadrao: 990px;
+$larguraPadrao: 1260px;
 $largura_quickview: 890px;
 $altura_quickview: 690px;
 $largura-look-aside: 340px;
 
 
 /*Quantidade de produtos por linha */
-$prod-by-row: 3;
+$prod-by-row: 4;
 $prod-by-row-home: 4;
 $prod-by-row-history: 4;
 $prod-by-row-product: 5;
@@ -87,16 +61,16 @@ $prod-by-row-product: 5;
 * DOCUMENTAÇÃO DE IMAGENS
 */
 /* Vitrine */
-$ft_vitrine_w: 200px;
-$ft_vitrine_h: 200px;
+$ft_vitrine_w: 260px;
+$ft_vitrine_h: 470px;
 
 /* Vitrine - Vira */
 $ft_vitrine_vira_w: 200px;
 $ft_vitrine_vira_h: 200px;
 
 /* Detalhes */
-$ft_detalhes_w: 410px;
-$ft_detalhes_h: 410px;
+$ft_detalhes_w: 388px;
+$ft_detalhes_h: 701px;
 
 /* Thumb */
 $ft_thumb_w: 75px;
@@ -119,7 +93,7 @@ $ft_history_h: 146px;
 
 /* Quem viu viu tmb e quem viu Look*/
 $ft_suggest_w: 146px;
-$ft_suggest_h: 146px;
+$ft_suggest_h: 264px;
 
 
 /* Inicio - Mobile*/

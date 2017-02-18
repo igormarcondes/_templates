@@ -6,43 +6,54 @@
 		text-indent: 0;
 	}
 	%icon-menu {
-		color: $icon-nav-color;
-		content: "\f039";
-		font-size: 31px;
-		margin: 17px 0 0 18px;
+		background: url("/static/locales/global/img/icon_header.png") no-repeat -130px center;
+		height: 52px;
+        width: 24px;
+        content: " ";
 	}
 	%icon-search {
-		color: $icon-search-color;
-		content: "\f002";
-		font-size: 26px;
-		margin-top: 25px;
+		background: url("/static/locales/global/img/icon_header.png") no-repeat 3px center;
+		height: 52px;
+        width: 24px;
+        content: " ";
 	}
 	%icon-cart {
-		color: $icon-basket-color;
-		content: "\f07a";
-		font-size: 26px;
-		margin-top: 25px;
+		background: url("/static/locales/global/img/icon_header.png") no-repeat -102px center;
+		height: 52px;
+        width: 24px;
+        content: " ";
 	}
 /* ICONES */
-
+.home #header,
+.catalog #header,
+.vitrine #header {
+	width: 100%;
+	position: absolute;
+	z-index: 3;
+	left: 0;
+	top: 0;
+}
 /* inicio - Header */
 	.wrapper {
 	    div#header {
-	    	background: #fff;
-	    	height: $header-height;
+	    	background-color: rgba(0, 0, 0, 0.6);
+	    	height: 57px;
 	    	&.active {
-	    		height: $header-height + 58px;
+	    		height: 57px + 58px;
 	    	}
-			#logo,
+	    	#logo,
 			.logoFT {
-				padding: 10px 90px 17px 66px;
+				padding: 10px 113px 17px 42px;
+			}
+			.tool {
+				@extend %rk-hide;
 			}
 			.btn-nav-mobile {
 				.nav-click {
 					background: none;
 					font-size: 0;
-					height: $header-height;
-					width: $header-height;
+					height: 57px;
+					width: 57px;
 					&::before {
 						@extend %icons-header;
 						@extend %icon-menu;
@@ -64,10 +75,9 @@
 			.header-btn-mobile-float {
 				.btn-search-top {
 					background: none;
-					text-align: center;
 					&::before {
 						@extend %icons-header;
-						@extend %icon-search;
+						@extend %icon-search;						
 					}
 				}
 				.btn-cart-mobile {
@@ -96,7 +106,7 @@
 			}
 			#floatToolbar {
 				background: #fff;
-				height: $header-height;
+				height: 57px;
 				&.active {
 					height: 120px;
 				}
@@ -124,30 +134,33 @@
     div.wrap-nav-mobile {
         width: 100%;
         font-family: $font-base;
-        top: $header-height;
-        max-height: calc(100vh - #{$header-height});
+        top: 57px;
+        max-height: calc(100vh - #{57px});
         .welcome{
-        	background-color: #767676;
+        	background-color: $color-theme2;
+        	height: 40px;
         }
         #nav {
 			li {
 		        border-bottom-color: #ccc;
 		        font-weight: normal;
-		        text-transform: uppercase;
 			}
 			> li {
+				text-transform: uppercase;
 				background-color: $menu-bg-color;
 				color: $menu-link-color;
 				font-size: $menu-font-size;
-				border-bottom-color: #ccc;
+				border-bottom: 0;
 				font-family: $menu-font-family;
 				> a,
 				> span {
 				 	color: $menu-link-color;
 				}
 				&:last-child {
-					background: $menu-last-bg-color;
-					border-bottom-color: $menu-last-bg-color;
+					
+					a {
+						color: $color-theme2;
+					}
 				}
 				.sub-parent {
 					color: #000;
@@ -159,6 +172,27 @@
         	padding-top: 0;
         	font-family: $font-custom;
         	padding-bottom: 60px;
+        	background: $color-theme;
+        	li {
+        		border-bottom: 0;
+        		position: static !important;
+        		color: #fff;
+        		font-weight: normal;
+        		text-transform: uppercase;
+        		font-size: 12px;
+        		strong {
+        			font-weight: normal;
+        		}
+        		span {
+        			color: #fff;
+        			font-weight: normal;
+        		}
+        		a {
+        			color: #fff;
+        			font-weight: normal;
+        			font-family: $font-custom;
+        		}
+        	}
         }
         .help-user {
 

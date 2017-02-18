@@ -2,6 +2,9 @@ body #main {
     .section {
         &.promo,
         &.combo {
+            h2 {
+                margin-bottom: 30px;
+            }
             li {
                 background: none;
                 position: relative;
@@ -9,13 +12,13 @@ body #main {
                 margin-bottom: 0;
 
                 &.open-combo {
-                    @extend .rk-hide;
+                    @extend %rk-hide;
                 }
 
                 &:first-child,
                 &.result {
                     &:after {
-                        @extend .rk-hide;
+                        @extend %rk-hide;
                     }
                 }
 
@@ -32,18 +35,18 @@ body #main {
 
                 &::after {
                     content: "+";
-                    font-size: 23px;
+                    font-size: 21px;
                     font-weight: normal;
                     left: -20px;
                     position: absolute;
                     top: 46px;
-                    color: $color-theme;
-                    font-family: $font-custom;
-                    background: #fff;
+                    color: #000;
+                    font-family: verdana;
+                    background: #eee;
                     line-height: 30px;
                     width: 30px;
                     padding: 0;
-                    border: 1px solid #ccc;
+                    border: 0;
                     border-radius: 50px;
                     text-align: center;
                 }
@@ -106,8 +109,8 @@ body #main {
 
                     .btn {
                         &.buy {
-                             @extend %btn-primary;
-                             @extend %btn-lg;
+                             @extend %btn-combo-comprartodos;
+                             width: auto;
                              text-indent: 0;
                              float: none;
                              font-size: 15px;
@@ -157,11 +160,12 @@ body #main {
                             > span {
                                 font-weight: bold;
                                 text-transform: capitalize;
-                                color: #000;
+                                color: $color-theme;
                             }
                             select {
                                 background: none;
                                 border-radius: 0;
+                                border: 1px solid $color-theme;
                             }
                         }
                     }

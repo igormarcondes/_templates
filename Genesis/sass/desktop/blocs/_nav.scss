@@ -4,20 +4,26 @@
 
 body {
     #nav {
-        background: #000;
-        height: 40px;
+        background: none;
+        height: 30px;
+        top: 28px;
+        left: 270px;
+        bottom: auto;
         margin: 0 auto;
-        width: $larguraPadrao;
+        width: 838px;
         text-align: center;
 
         > li {
             float: left;
+            position: static;
             > a {
                 background: none;
                 font-family: $font-custom;
-                font-size: 1.4em;
-                height: 40px;
-                padding: 0 25px;
+                font-weight: bold;
+                font-size: 12px;
+                height: 30px;
+                line-height: 30px;
+                padding: 0 14px;
                 color: #fff;
                 position: relative;
                 text-transform: uppercase;
@@ -27,17 +33,26 @@ body {
                    background: none;
                 }
                 &.hover {
-                    background: #f3f3f3;
-                    color: #000;
+                    background: #ed1849;
+                    color: #fff;
                 }
             }
+            .bg-menu {
+                margin: 0;
+                background: #fafbfb;
+                float: left;
+                width: 100%;
+                padding: 20px;
+            }
             .sub-nav {
-                background-color: #f3f3f3;
+                background: none;
                 border-top: none;
                 border-bottom: 0;
-                padding: 20px 0;
-                top: 40px;
+                padding: 22px 0 0;
+                top: 30px;
                 width: 100% !important;
+                @include box-sizing;
+                border: 0;
 
                 .collum {
                     margin-left: 20px;
@@ -61,11 +76,11 @@ body {
                 }
 
                 a {
-                    color: #6c6c6c;
+                    color: #000;
                     font-family: $font-custom;
-                    font-size: 14px;
+                    font-size: 13px;
                     height: auto;
-                    text-transform: uppercase;
+                    text-transform: normal;
                     text-indent: 0;
                     width: auto;
                     &:hover {

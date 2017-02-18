@@ -1,11 +1,17 @@
 @import "config/mixins";
 @import "config/config";
+$desktop-mode: false;
+$mobile: true;
+@import "config/placeholders/main";
 
 @import "mobile/buttons-mobile";
 @import "mobile/header-mobile";
 @import "mobile/footer-mobile";
 @import "mobile/main-mobile";
 @import "mobile/pages-mobile";
+@import "mobile/pages/detalhes-mobile";
+@import "mobile/pages/basket-mobile";
+
 
 
 

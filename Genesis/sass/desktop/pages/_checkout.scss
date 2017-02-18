@@ -10,6 +10,20 @@ body {
 		font-size: 24px;
 	}
 	&.checkout.close {
+		.actions {
+			.change-adress {
+				@extend %btn-checkout-editar-endereco;
+			}
+			.change-service {
+				@extend %btn-checkout-alterar-servico;
+			}
+		}
+		#pnlPagamentos .finish .button-inactive {
+			@extend %btn-checkout-fecharpedido-inativo;	
+		}
+		#pnlPagamentos .finish a {
+			@extend %btn-checkout-fecharpedido;	
+		}
 		div.basket.box {
 			.stamp {
 				img {
@@ -20,13 +34,21 @@ body {
 	}
 	&.confirmacao {
 		#main .container {
-			
+			 .request .actions a {
+			 	@extend %btn-confirmacao-imprimir-boleto;
+			 }
 		}
 	}
 	&.meuspedidos {
 		#main {
 			.container {
-				width: 980px !important
+				width: 980px !important;
+			}
+			@at-root body.search #panCentro .actions .btn.send {
+				@extend %btn-meuspedidos-enviar;
+			}
+			.request .actions a {
+				@extend %btn-meuspedidos-imprimir;
 			}
 		}
 	}

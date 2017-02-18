@@ -4,31 +4,7 @@ body {
             .owl-theme {
                 .owl-controls .owl-buttons {
                     div {
-                        background: rgba(0, 0, 0, 0.5);
-                        border-radius: 0;
-                        opacity: 1;
-                        height: 120px;
-                        width: 60px;
-                        margin-top: -70px;
-                        &::before {
-                            background: url("/static/locales/custom/img/arrow_banner.png") no-repeat;
-                            background-position: 0 0;
-                            content: " ";
-                            height: 44px;
-                            width: 25px;
-                            display: block;
-                            margin: 39px auto;
-                        }
-                        &.owl-prev {
-                            left: 0;
-                        }
-                        &.owl-next {
-                            right: 0;
-                            &::before {
-                                -webkit-transform: rotate(-180deg);
-                                transform: rotate(-180deg);
-                            }
-                        }
+                        @extend %carrosel-arrow-2;
                     }
                 }
                 .owl-controls {
@@ -70,34 +46,13 @@ body {
                     position: static;
 
                     div {
+                        @extend %carrosel-arrow-1 ;
                         position: absolute;
                         top: 50%;
                         left: 0;
-                        height: 60px;
                         margin-top: -25px;
-                        width: 30px;
-                        height: 50px;
                         border-radius: 0;
                         font-size: 0;
-                        background: #f3f3f3;
-                        opacity: 1;
-
-                        &::before {
-                            background: url("/static/locales/custom/img/ico_arrows.png") no-repeat center -28px;
-                            content: " ";
-                            height: 22px;
-                            display: block;
-                            margin-top: 12px;
-                        }
-
-                        &.owl-next {
-                            right: 0;
-                            &::before {
-                                background-position: center 3px;
-                            }
-
-                            left: auto;
-                        }
                     }
                 }
             }
@@ -128,12 +83,13 @@ body {
                     .owl-buttons {
                         div {
                             background: none;
-                            top: 0 !important;
+                            top: 18px !important;
                             width: 13px !important;
                             margin: 0;
-                            height: 28px !important;
-                            left: 2px;
-                            background: url("/static/locales/custom/img/arrow_left.gif") no-repeat 0 center;
+                            height: 15px !important;
+                            left: 56px;
+                            background: rgba(0,0,0,0.6) url("/static/locales/global/img/arrow_tools.png") no-repeat 3px center;
+                            border-radius: 30px;
 
                             &.owl-next {
                                 left: auto !important;

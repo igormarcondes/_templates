@@ -1,0 +1,466 @@
+/* ----------------------------------------------------------------*/
+/* -----------------*>>> TEXT - STANDARD <<<----------------------*/
+/* --------------------------------------------------------------*/
+
+//TITLES ***************************************************************************/
+%text-title-list-prod{
+	@include fonte($font-def, 600, 18px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+//HEADER **************************************************************************/
+%text-header-help-link{
+	@include fonte($font-def, 400, 10px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-search-cont{
+	@include fonte($font-def, normal, 10px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-nav-item{
+	@include fonte($font-def, 600, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-sub-nav-item{
+	@include fonte($font-def, 400, 11px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+//MINI-CAR **************************************************************************/
+%text-minicar-empty{
+	@include fonte($font-def, 400, 12px, $color-theme-1);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-minicar-nome{
+	@include fonte($font-def, 400, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-minicar-cod{
+	@include fonte($font-def, 400, 11px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-minicar-price{
+	@include fonte($font-def, 400, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-minicar-sum-qtd{
+	@include fonte($font-def, 400, 12px, #767676);
+	letter-spacing: 1px;
+	text-transform: lowercase;
+}
+%text-minicar-sum-value{
+	@include fonte($font-def, 600, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+// LIST PRODUCTS *******************************************************************/
+%text-list-prod-name{
+	@include fonte($font-def, 300, 12px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-list-prod-price-reg{
+	@include fonte($font-def, normal, 13px, #929292);
+	text-transform: uppercase;
+}
+%text-list-prod-price-sale{
+	@include fonte($font-def, 600, 14px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-list-prod-percent-a-vista-normal{
+	@include fonte($font-def, normal, 12px, $color-theme-2);
+	text-transform: none;
+}
+%text-list-prod-percent-a-vista-strong{
+	@include fonte($font-def, bold, 11px, $color-theme-1);
+	text-transform: uppercase;
+}
+%text-prod-save-normal{
+	@include fonte($font-def, normal, 12px, $color-theme-2);
+}
+%text-prod-save-strong{
+	@include fonte($font-def, bold, 11px, $color-theme-1);
+}
+%text-list-prod-parcel{
+	@include fonte($font-def, 600, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-list-prod-parcel-strong{
+	@include fonte($font-def, 600, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+// FOOTER **************************************************************************/
+%text-footer-insta-strong{
+	@include fonte($font-def, 600, 18px, #000);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+%text-footer-insta-span{
+	@include fonte($font-def, 400, 12px, #767676);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+%text-footer-collum-title{
+	@include fonte($font-def, 600, 12px, #000);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+%text-footer-collum-item{
+	@include fonte($font-def, 400, 12px, #767676);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+%text-footer-info-cli{
+	@include fonte($font-def, normal, 12px, $color-theme-2);
+	line-height: 13px;
+}
+// ASIDE **************************************************************************/
+%text-aside-title{
+	@include fonte($font-def, 600, 14px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-aside-subtitle{
+	@include fonte($font-def, 600, 11px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-aside-item{
+	@include fonte($font-def, 600, 11px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+// FILTRO - CATALOGO ***************************************************************/
+%text-filter-ordernar-por{
+	@include fonte($font-def, 600, 11px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-filter-opts{
+	@include fonte($font-def, normal, 11px, #767676);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+// BREADCRUMB *********************************************************************/
+%text-bread-before{
+	@include fonte($font-def, 400, 12px, #767676);
+}
+%text-bread-item{
+	@include fonte($font-def, 400, 12px, #767676);
+}
+%text-bread-item-last{
+	@include fonte($font-def, 400, 12px, #000);
+}
+// DETALHE DO PRODUTO **************************************************************/
+%text-det-prod-name{
+	@include fonte($font-def, 400, 16px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-det-prod-fabcod{
+	@include fonte($font-def, 400, 10px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-det-prod-ratting{
+	@include fonte($font-def, 400, 11px, #000);
+	text-transform: capitalize;
+}
+%text-det-prod-review-link{
+	@include fonte($font-def, 400, 11px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+%text-det-prod-quantity{
+	@include fonte($font-def, 400, 11px, #000);
+	text-transform: uppercase;
+}
+%text-det-prod-resumo-title{
+	@include fonte($font-def, bold, 12px, #4d4d4d);
+	text-transform: uppercase;
+}
+%text-det-prod-resumo-cont{
+	@include fonte($font-def, 400, 12px, #767676);
+	text-transform: none;
+}
+%text-det-prod-resumo-link{
+	@include fonte($font-def, bold, 12px, #000);
+	text-transform: capitalize;
+	text-decoration: underline;
+}
+%text-det-prod-offers-preco-de{
+	@include fonte($font-def, 400, 17px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-det-prod-offers-preco-por{
+	@include fonte($font-def, 600, 20px, #000);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+%text-det-prod-parcel{
+	@include fonte($font-def, 400, 16px, #000);
+	letter-spacing: 1px;
+}
+%text-det-prod-parcel-strong{
+	@include fonte($font-def, 600, 16px, #000);
+	letter-spacing: 1px;
+}
+%text-det-prod-percent-a-vista-normal{
+	@include fonte($font-def, normal, 12px, #000);
+	text-transform: uppercase;
+}
+%text-det-prod-percent-a-vista-strong{
+	@include fonte($font-def, bold, 12px, #000);
+	text-transform: uppercase;
+}
+%text-det-prod-sku-title{
+	@include fonte($font-def, normal, 11px, #767676);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+%text-det-prod-sku-padrao-brasileiro{
+	@include fonte($font-def, 400, 11px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+%text-det-prod-tools-link{
+	@include fonte($font-def, 400, 11px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+%text-det-prod-time-desc{
+	@include fonte($font-def, 400, 12px, #000);
+	text-transform: none;
+}
+%text-det-prod-time-days{
+	@include fonte($font-def, 400, 12px, #767676);
+	text-transform: none;
+}
+%text-det-prod-combo-price-regular{
+	@include fonte($font-def, 400, 14px, #bebebe);
+	letter-spacing: 1px;
+	text-transform: uppercase;	
+}
+%text-det-prod-combo-price-sale{
+	@include fonte($font-def, 600, 20px, #000);
+	letter-spacing: 2px;
+	text-transform: uppercase;	
+}
+%text-det-prod-combo-compre-por{
+	@include fonte($font-def, 400, 14px, #767676);
+	text-transform: uppercase;	
+}
+%text-det-prod-combo-compre-por-strong{
+	@include fonte($font-def, 600, 14px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;	
+}
+// PRODUTO INDISPONIVEL **************************************************************/
+%text-notifyme-indisponivel{
+	@include fonte($font-def, 600, 11px, #ff5e5e);
+	letter-spacing: 1px;
+	text-transform: uppercase;	
+}
+%text-notifyme-avise{
+	@include fonte($font-def, 400, 11px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;	
+}
+%text-notifyme-input{
+	@include fonte($font-def, 400, 11px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;	
+}
+// LOOK DETALHES *********************************************************************/
+%text-look-aside-title{
+	@include fonte($font-def, 400, 14px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;	
+}
+%text-look-aside-name{
+	@include fonte($font-def, 400, 12px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;	
+}
+//BASKET ****************************************************************************/
+%text-basket-banner{
+	@include fonte($font-def, 400, 14px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;	
+}
+%text-basket-thead-title{
+	@include fonte($font-def, 600, 11px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-prod-name{
+	@include fonte($font-def, 400, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-prod-fabcod{
+	@include fonte($font-def, 400, 10px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-prod-sku{
+	@include fonte($font-def, 400, 12px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-prod-unit-reg{
+	@include fonte($font-def, 400, 12px, #bebebe);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-prod-unit-sale{
+	@include fonte($font-def, 400, 13px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-prod-subtotal-reg{
+	@include fonte($font-def, 400, 11px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-prod-subtotal-sale{
+	@include fonte($font-def, 600, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-tfoot-info-title{
+	@include fonte($font-def, 400, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-tfoot-info-subtotal{
+	@include fonte($font-def, 600, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-delivery-service-title{
+	@include fonte($font-def, 400, 11px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-delivery-service-title{
+	@include fonte($font-def, 400, 11px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-delivery-service-basket{
+	@include fonte($font-def, 400, 11px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-delivery-service-value-first{
+	@include fonte($font-def, 600, 11px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-delivery-service-value-last{
+	@include fonte($font-def, 400, 11px, #767676);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-cupom-title{
+	@include fonte($font-def, 600, 11px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-total-title{
+	@include fonte($font-def, 600, 20px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-basket-total-value{
+	@include fonte($font-def, 600, 20px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+//LOGIN ****************************************************************************/
+%text-login-filed-spans{
+	@include fonte($font-def, 400, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-login-link-remember{
+	@include fonte($font-def, 400, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-login-info-login{
+	@include fonte($font-def, 400, 11px, #767676);
+	text-transform: uppercase;
+}
+//MINHA CONTA ****************************************************************************/
+%text-minhaconta-links{
+	@include fonte($font-def, 400, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-minhaconta-desc{
+	@include fonte($font-def, 400, 11px, #767676);
+	text-transform: uppercase;
+}
+//WISHLIST *******************************************************************************/
+%text-wishlist-added{
+	@include fonte($font-def, 400, 11px, #000);
+	text-transform: uppercase;
+}
+//ENDERECOS *******************************************************************************/
+%text-enderecos-name{
+	@include fonte($font-def, 600, 12px, #000);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+%text-enderecos-info{
+	@include fonte($font-def, 400, 11px, #767676);
+	text-transform: uppercase;
+}
+%text-enderecos-info-strong{
+	@include fonte($font-def, 600, 11px, #000);
+	text-transform: uppercase;
+}
+%text-enderecos-atention{
+	@include fonte($font-def, 600, 11px, #e00);
+	text-transform: uppercase;
+}
+//CHEKOUT *******************************************************************************/
+%text-checkout-general-span{
+	@include fonte($font-def, 400, 12px, #767676);
+	text-transform: uppercase;
+}
+%text-checkout-general-strong{
+	@include fonte($font-def, 600, 12px, #000);
+	text-transform: uppercase;
+}
+//CONFIRMACAO *******************************************************************************/
+%text-confirm-num-title{
+	@include fonte($font-def, 600, 14px, #767676);
+	text-transform: uppercase;
+}
+%text-confirm-number{
+	@include fonte($font-def, 600, 55px, #000);
+	text-transform: uppercase;
+}
+//MAPA DO SITE *******************************************************************************/
+%text-sitemap-categories{
+	@include fonte($font-def, 600, 18px, #000);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
