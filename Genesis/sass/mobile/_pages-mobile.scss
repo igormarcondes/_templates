@@ -110,3 +110,25 @@
 			}		
 	}
 /* fim - modais*/
+
+/* inicio - Afiliados */
+body {
+	&.institucional.internal {
+		.nav {
+			.block {
+				.title {
+					color: $color-theme;
+					border-bottom: 1px solid  #b3b3b3;
+				}
+				ul {
+					li {
+						a::before {
+							color: $color-theme;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* fim    - Afiliados */

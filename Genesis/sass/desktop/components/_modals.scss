@@ -12,44 +12,13 @@
         }
         #fancybox-close,
         #fancybox-close-2 {
-            background: none;
-            height: 14px;
-            width: 14px;
-            display: none;
-            &::after,
-            &::before {
-                position: absolute;
-                display: block;
-                top: 4px;
-                left: 0;
-                width: 100%;
-                height: 4px;
-                background-color: $color-theme;
-                content: "";
-            }
-            &::before {
-                -ms-transform: translate(45deg); 
-                -webkit-transform: translate(45deg);
-                transform: rotate(45deg);
-            }
-            &::after {
-                -ms-transform: translate(-45deg); 
-                -webkit-transform: translate(-45deg); 
-                transform: rotate(-45deg);
-            }
+            @extend %fancy-close;
         }
         #fancybox-close {
             display: block;
         }
-        &.alterarSenha {
-        }
     }
-    %title-modal {
-        font-family: $font-custom;
-        color: #000;
-        font-size: 22px;
-        margin: 0 0 15px;
-    }
+    
     body.indicate-friend,
     body.consult-delivery,
     body.rate  {
@@ -135,7 +104,7 @@
             @extend %btn-modal-salvar-usar-endereco;
         }
         #p_LimparEndereco {
-            @extend %btn-modal-endereco-cancelar
+            @extend %btn-modal-endereco-cancelar;
         }
     }
 /* fim    - Alterar Endereco */
@@ -209,13 +178,17 @@
 
 /* inicio - Esqueci Minha Senha */
     body.forget,
-    body.email {
+    body.email,
+    body.alterarSenha {
         background: #fff;
         .form {
             input {
                 height: 25px;
+                border-color: #000;
+                border-width: 1px;
             }
         }
+        @at-root  body.alterarSenha .form fieldset { padding: 0 10px;}
         .btn.continue {
             @extend %btn-modal-alterar-senha-continue;
         }
@@ -271,13 +244,8 @@
 /* inicio - Alterar Senha */
     body {
         &.alterarSenha {
-            .form {
-                fieldset {
-                    .continue {}
-                }
-                .collum {
-                    span {}
-                }
+            h1 {
+                @extend %title-modal;
             }
         }
     }

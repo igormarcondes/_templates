@@ -1,6 +1,6 @@
 form[action*="loginafiliado"] {
-    #main .login .btn.continue {
-        margin: 22px 0 0 0 !important;
+    .login .btn.continue {
+       
     }
 }
 body {
@@ -9,25 +9,22 @@ body {
             @extend %title-checkout;
         }
         .main-content {
-            margin: 0 !important;
+            
         }
         .login {
-            border: 1px dotted #cccccc;
-            margin-top: 50px !important;
-            margin-bottom: 50px !important;
+
 
             .collum {
                 &.box {
                     .field {
                         a {
-                            line-height: 32px;
-                            width: 99px;
+
                         }
                     }
                 }
                 &.even {
                     input.email {
-                        width: 100% !important;
+                        
                     }
                 }
             }
@@ -36,24 +33,21 @@ body {
             }
             .btn.continue {
                 @extend %btn-login-continuar;
-                margin: 5px 0 0 0 !important;
+
             }
             input[type="text"],
             input[type="password"] {
-                width: 100%;
-                height: 35px !important;
-                padding: 7px !important;
-                box-sizing: border-box;
+
             }
         }
     }
     &.loginpage.request {
         .form {
             .title {
-                background: none;
+
             }
             input[type="text"] {
-                width: 100% !important;
+
             }
         }
     }
@@ -71,7 +65,7 @@ body {
         }
     }
     &.partner {
-        .btn.continue {
+        #main .btn.continue {
             @extend %btn-login-continuar;
         }
     }

@@ -1,0 +1,151 @@
+/* -------------------------------------------------------*/
+/* --------------------*>>> MODALS <<<--------------------*/
+/* -----------------------------------------------------*/
+
+/* inicio - Configuracoes Gerais*/
+    body.modal-mobile {
+        #fancybox-close,
+        #fancybox-close-2 {
+            @extend %fancy-close;
+        }
+    }
+    body.indicate-friend,
+    body.consult-delivery,
+    body.rate  {
+        .btn.ir {
+            @extend %btn-modal-consultar-prazo-consultar;
+        }
+    }
+/* fim    - Configuracoes Gerais */
+
+/* inicio - Alterar Endereco */
+    .delivery-address {
+
+        .address.box {
+
+            .btn.ir.edit {
+                @extend %btn-modal-editar-endereco;
+            }
+            .btn.ir.use {
+                @extend %btn-modal-usar-endereco;
+            }
+            .btn.ir.delete {
+                @extend %btn-modal-deletar-endereco;
+            }
+            
+        }
+        #hypSalvar {
+            @extend %btn-modal-salvar-usar-endereco;
+        }
+        #p_LimparEndereco {
+            @extend %btn-modal-endereco-cancelar;
+        }
+    }
+/* fim    - Alterar Endereco */
+
+/* inicio - Avalie este produto*/
+
+/* fim    - Avalie este produto */
+
+/* inicio - Cep Nao Cadastrado */
+    body .actions .bt-yes,
+    body .actions .bt-no {
+
+    }
+
+    body .actions .bt-yes {
+        
+    }
+
+    body .actions .bt-no {
+
+    }
+
+    .addressNotFound .form .actions {
+       
+    }
+/* fim    - Cep Nao Cadastrado */
+
+/* inicio - Consultar Prazo de entrega */
+    body.consult-delivery {
+
+    }
+/* fim    - Consultar Prazo de entrega */
+
+/* inicio - Esqueci Minha Senha */
+    body.forget,
+    body.email,
+    body.alterarSenha {
+        #fancybox-close-2 {
+            display: block;
+        }
+        .btn.continue {
+            @extend %btn-modal-alterar-senha-continue;
+        }
+    }
+/* fim    - Esqueci Minha Senha */
+
+/* inicio - Indique um amigo*/
+    form[action*="indique.aspx"] {
+
+    }
+/* fim    - Indique um amigo */
+
+/* inicio - Login Ja existente*/
+    body.loginexistente {
+        #main {
+
+            .btn {
+
+            }
+        }
+    }
+/* fim    - Login Ja existente*/
+
+/* inicio - Alterar Senha */
+    body {
+        &.alterarSenha {
+            h1 {
+                @extend %title-modal;
+            }
+        }
+    }
+/* fim    - Alterar Senha */
+
+/* inicio - Servico de Entrega */
+    body.delivery-service.delivery {
+        #upBasket .actions a.change {
+            @extend %btn-modal_servico-alterar-endereco;
+        }
+        #upBasket .actions a.continue {
+            @extend %btn-modal_servico-salvar;
+        }
+    }
+/* fim    - Servico de Entrega */
+
+/* inicio - Termos */
+    body {
+        &.term {
+            #divTerm {
+                #hypContinue {}
+                #lnkCancel {
+                }
+            }
+        }
+    }
+/* fim    - Termos */
+
+
+
+/* Endereço de entrega */
+    #pnlStoreDelivery { 
+        .address { 
+            .info { 
+                .actions { 
+                    #hypStoreDelivery { 
+
+                    }
+                }
+            }
+        }
+    }

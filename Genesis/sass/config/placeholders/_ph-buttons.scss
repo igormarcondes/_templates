@@ -52,19 +52,16 @@
     height: 40px;
     padding: 0 20px;
     font-size: 16px;
-    &:hover {
-        
-    }
 }
 %btn-sm {
-    line-height: 30px;
-    height: 30px;
-    padding: 0 20px;
-    font-size: 10px;
-    padding: 0 10px;
-    &:hover {
-       
+    @if $desktop-mode {
+        line-height: 30px;
+        height: 30px;
+        padding: 0 20px;
+        font-size: 10px;
+        padding: 0 10px;
     }
+    text-indent: 0;
 }
 /*Inicio - Botoes gerais */
     %btn-enviar {
@@ -136,7 +133,7 @@
         @extend %btn-primary;
     }
     %btn-salvar-cadastro {
-        @extend %btn-salvar;   
+        @extend %btn-salvar;
     }
 /* inicio - Botoes Login */
 
@@ -205,6 +202,7 @@
       %btn-modal-consultar-prazo-consultar {
         @extend %btn-primary; 
       }
+
 /* fim    - Modais */
 
 /* inicio - Meus cartoes */ 
@@ -240,3 +238,15 @@
         @extend %btn-confirmacao-imprimir-boleto;
     }
 /* fim    - meus pedidos  */
+
+/* inicio - Afiliados */
+    %btn-afiliado-salvar {
+        @extend %btn-salvar;
+    }
+    %btn-afiliado-pesquisar-relatorio {
+        @extend %btn-primary;
+        @extend %btn-sm;
+    }
+/* fim    - Afiliados  */    
+
+
