@@ -173,3 +173,10 @@
 	    }
 	}
 }
+%detail-titile-vitrine {
+	@extend %title-vitrine;
+}
+%detail-titile-vitrine-mobile {
+	color: #000;
+	font-family: $font-custom;
+}

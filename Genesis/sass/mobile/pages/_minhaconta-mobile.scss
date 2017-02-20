@@ -1,0 +1,98 @@
+body {
+    /* inicio - Minha conta Pagina inicial */
+	    &.account {
+	        .nav {
+	            a {
+	                font-family: $font-custom;
+
+	                &:hover {
+	                    color: $link-ch;
+	                }
+	            }
+	        }
+	    }
+    /* fim    - Minha conta Pagina inicial */
+
+    /* inicio - Lista de desejos*/
+	    .desired-products {
+	    	span {
+	    		a {
+	    			color: $link-c;
+	    			&::before {
+	    				color: $link-c !important;
+	    			}
+	    		}
+	    	}
+	    	.details {
+	    		.offers {
+	    			.sale {
+	    				display: block !important;
+	    				font-size: 12px !important;
+	    				> * {
+	    					font-size: 14px !important;
+	    				}
+	    				&.percent-a-vista {
+	    					@extend %detail-price-offer;
+	    				}
+	    			}
+	    		}
+		        .btn.ir.buy {
+		            
+		        }
+	    	}
+	    	&#lblListaDesejos .notifyme {
+    			.btn.send {
+    			    @extend %btn-listadesejo-enviar-notify
+    			}
+    		}
+    		&#lblListaDesejos .btn.ir.save {
+    			@extend %btn-listadesejo-salvar;
+    		}
+	    }
+	    .filter-wish {
+	    	.btn.ir.search {
+	    		@extend %btn-listadesejo-pesquisar;
+	    	}
+	    }
+    /* fim    - Lista de desejos*/
+
+    /* inicio - Conta Corrente*/
+	    &.contaCorrente {
+	    	.box.form {
+	    		
+	    	}
+
+	    }
+    /* fim    - Conta Corrente*/
+
+    /* incio - Meus Pedidos */
+    	&.search {
+    		a.description {
+    			color: $link-c;
+    			font-family: $font-custom;
+				font-size: 13px;
+    		}
+    		.result {
+    			td {
+    				a {
+    					color: $link-c;
+    					text-decoration: underline;
+    				}
+    			}
+    		}
+    	}
+    	&.meuspedidos {
+    		.request .warning {
+    			color: #ff1e00;
+    			font-family: $font-custom;
+    			font-size: 14px;
+    		}
+    	}
+    /* fim   - Meus Pedidos */
+
+    /*inicio - Meus Cartoes*/
+	    .internal .return .btn.buy {
+	    	@extend %btn-meuscartoes-comprar-produtos;
+	    }
+    /*fim - Meus Cartoes*/
+}

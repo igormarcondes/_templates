@@ -221,6 +221,9 @@
     %btn-listadesejo-pesquisar {
         @extend %btn-primary;
     }
+    %btn-listadesejo-enviar-notify {
+        @extend %btn-enviar-notify
+    }
 /* fim   - lista de desejos */    
 
 /* inicio - confirmacao  */

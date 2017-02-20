@@ -77,40 +77,6 @@
 	}
 /* fim - Lista de desejos */
 
-/* inicio - modais*/
-	body.modal-mobile {
-		h1 {
-			font-family: $font-custom;
-		}		
-		/* Modal Consultar prazo de entrega*/
-			&.consult-delivery {
-				#pnlHomeDelivery {
-					.cep .field {
-						width: 160px;
-						display: inline-block;
-						float: none;
-						margin: 0;
-						label > span {
-							height: 20px;
-							margin: 0;
-						}
-					}
-					.actions {
-						display: inline-block;
-						float: none;
-						vertical-align: bottom;
-						margin: 0 !important;
-					}
-					input[type="text"] {
-						width: 98% !important;
-						border-radius: 0;
-						height: 29px;
-					}
-				}
-			}		
-	}
-/* fim - modais*/
-
 /* inicio - Afiliados */
 body {
 	&.institucional.internal {

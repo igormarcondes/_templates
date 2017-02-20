@@ -425,16 +425,7 @@ body {
             }
         }
     }
-    .list-products.desired-products {
-        .notifyme {
-            input[type="text"] {
-                height: 36px;
-            }
-            .btn.send {
-                @extend %btn-primary;
-            }
-        }
-    }
+    
     &.comparepage {
         h1 {
             font-family: $font-custom;

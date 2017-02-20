@@ -65,7 +65,6 @@ span.go-top-btn {
 	body {
 	    .list-products {
 	        li {
-	        	.hproduct {
 	        		.details {
 	        			.name {
 							@extend %product-name;
@@ -87,8 +86,13 @@ span.go-top-btn {
 	        			.stamp {
 	        				@extend %product-stamp;
 	        			}
+	        			.btn.buy {
+	        				@extend %btn-listproduct-buy;
+	        			}
+	        			.reviewaggregate {
+	        			     @extend %placeholder-reviewaggregate;
+	        			}
 	        		}
-	        	}
 	        }
 	    }
 	}
@@ -109,6 +113,9 @@ span.go-top-btn {
 		color: $link-color;
 	 }
 	 .field.itens-page {
+	 	display: none;
+	 }
+	 .m-btn-order u {
 	 	display: none;
 	 }
 /* fim    - filtros*/

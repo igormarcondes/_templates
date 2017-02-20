@@ -38,6 +38,12 @@
 	    div#header {
 	    	background-color: rgba(0, 0, 0, 0.6);
 	    	height: 57px;
+	    	&.headerbuy {
+	    		background: #000;
+	    		#logo {
+	    			padding: 10px 80px;
+	    		}
+	    	}
 	    	&.active {
 	    		height: 57px + 58px;
 	    	}

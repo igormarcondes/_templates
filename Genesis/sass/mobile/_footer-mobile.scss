@@ -44,6 +44,30 @@ div#footer {
 	}
 
 	.container {
+		div.instagram {
+			text-align: center;
+		    background: #eee;
+		    padding: 20px 0;
+		    .title {
+		    	display: block;
+		    	width: 100%;
+		    }
+		    strong {
+		    	font-family: $font-custom;
+		    	font-size: 20px;
+		    }
+		    span {
+		    	color: #5b5b5b;
+	    	    font-weight: normal;
+	    	    display: block;
+	    	    text-transform: none;
+	    	    font-size: 13px;
+	    	    width: 100%;
+		    }
+		    .lightwidget--grid.lightwidget--grid-6 li {
+		    	padding: 5px;
+		    }
+		}
 		.newsletter {
 			background: #2e2e2e;
 			padding: 40px 30px;

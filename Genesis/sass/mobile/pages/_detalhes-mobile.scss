@@ -248,25 +248,24 @@ body {
             }
         /* fim    - Collum Imagem */
     }
-    @extend %reviewaggregate;
-    .section {
+    
+    #main .responsive-abas-description {
+        @extend %reviewaggregate-avalicao-dos-clientes;
         h2 {
-            @extend %title-detalhes-vitrine;
+            @extend %detail-titile-vitrine-mobile;
         }
-        &.description {
+        .description {
             #descriptionContent {
                 @extend %detail-description-full;
             }
         }
-        &.especificacion {
+        .especificacion {
             #specificationContent {
                 @extend %detail-description-full;
             }
         }
-        &.about {
-            .hreview  {
-                @extend %detail-review;
-            }
+        .hreview  {
+            @extend %detail-review;
         }
     }
 }

@@ -1,13 +1,7 @@
 body {
 	.form .title,
 	.form .even .title {
-		font-family: $font-custom;
-		background: none;
-		text-indent: 0;
-		height: auto;
-		font-weight: normal;
-		color: #000;
-		font-size: 24px;
+		@extend %title-checkout2;
 	}
 	&.checkout.close {
 		.actions {

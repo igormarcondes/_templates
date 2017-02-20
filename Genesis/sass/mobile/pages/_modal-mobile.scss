@@ -8,6 +8,11 @@
         #fancybox-close-2 {
             @extend %fancy-close;
         }
+        &.consult-delivery {
+            #fancybox-close-2 {
+                display: block;
+            }
+        }
     }
     body.indicate-friend,
     body.consult-delivery,
@@ -67,8 +72,30 @@
 /* fim    - Cep Nao Cadastrado */
 
 /* inicio - Consultar Prazo de entrega */
-    body.consult-delivery {
-
+    body.consult-delivery.modal-mobile {
+        #pnlHomeDelivery {
+            .cep .field {
+                width: 160px;
+                display: inline-block;
+                float: none;
+                margin: 0;
+                label > span {
+                    height: 20px;
+                    margin: 0;
+                }
+            }
+            .actions {
+                display: inline-block;
+                float: none;
+                vertical-align: bottom;
+                margin: 0 !important;
+            }
+            input[type="text"] {
+                width: 98% !important;
+                border-radius: 0;
+                height: 40px;
+            }
+        }
     }
 /* fim    - Consultar Prazo de entrega */
 

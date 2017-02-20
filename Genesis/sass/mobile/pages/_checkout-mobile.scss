@@ -1,0 +1,65 @@
+body {
+	#main .container .content .main-content > h1{
+		@extend %title-checkout2;
+	}
+	&.checkout.close {
+		#main {
+			.actions {
+				.change-adress {
+					@extend %btn-checkout-editar-endereco;
+				}
+				.change-service {
+					@extend %btn-checkout-alterar-servico;
+				}
+			}
+			#pnlPagamentos .finish .button-inactive {
+				@extend %btn-checkout-fecharpedido-inativo;	
+			}
+			#pnlPagamentos .finish a {
+				@extend %btn-checkout-fecharpedido;	
+			}
+		}
+	}
+	&.confirmacao {
+		#main .container {
+			 .request .actions a {
+			 	@extend %btn-confirmacao-imprimir-boleto;
+			 }
+		}
+	}
+	&.meuspedidos {
+		#main {
+			@at-root body.search #panCentro .actions .btn.send {
+				@extend %btn-meuspedidos-enviar;
+			}
+			.request .actions a {
+				@extend %btn-meuspedidos-imprimir;
+			}
+		}
+	}
+	&.alterarSenha {
+		background: #fff;
+	}
+	&.partner {
+		.main-content {
+			
+		}
+	}
+	&.simple .request a.description {
+		font-family: $font-base;
+		font-size: 13px;
+		color: #332222;
+	}
+	&.quickBasquet {
+		.actions {
+			li {
+				a {
+					@extend %btn-success;
+					&.ContinuarComprando {
+						@extend %btn-secondary;
+					}
+				}
+			}
+		}
+	}
+}

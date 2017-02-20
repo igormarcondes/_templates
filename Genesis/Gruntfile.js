@@ -7,8 +7,8 @@ module.exports = function(grunt) {
 
 	 grunt.initConfig({
 	 	paths: {
-			//custom:    'R:/IKCLoja/Genesis/Repository/Genesis/' 
-			custom:    'W:/Genesis/Repository/Zinco/',
+			custom:    'R:/IKCLoja/Genesis/Repository/Zinco/' 
+			//custom:    'W:/Genesis/Repository/Zinco/',
         },
 		// Sass: compiles SCSS files
 		sass : {

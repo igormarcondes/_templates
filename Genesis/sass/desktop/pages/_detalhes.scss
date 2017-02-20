@@ -337,7 +337,7 @@ body {
     @extend %reviewaggregate;
     .section {
         h2 {
-            @extend %title-detalhes-vitrine;
+            @extend %detail-titile-vitrine;
         }
         &.description {
             #descriptionContent {
@@ -353,6 +353,7 @@ body {
             .hreview  {
                 @extend %detail-review;
             }
+            @extend %reviewaggregate-avalicao-dos-clientes;
         }
     }
 }

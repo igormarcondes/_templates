@@ -20,7 +20,7 @@ body {
                 &.box {
                     .field {
                         a {
-                            line-height: 32px;
+                            line-height: 35px;
                             width: 99px;
                         }
                     }
@@ -28,6 +28,12 @@ body {
                 &.even {
                     input.email {
                         width: 100% !important;
+                        margin-bottom: 10px;
+                    }
+                }
+                &:not(.even) {
+                    dl {
+                        position: static;
                     }
                 }
             }
@@ -45,6 +51,10 @@ body {
                 padding: 7px !important;
                 box-sizing: border-box;
             }
+            #txtEmail {
+                width: 100% !important;
+            }
+            
         }
     }
     &.loginpage.request {
@@ -54,6 +64,7 @@ body {
             }
             input[type="text"] {
                 width: 100% !important;
+                margin-bottom: 10px;
             }
         }
     }

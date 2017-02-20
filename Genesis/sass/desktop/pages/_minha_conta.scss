@@ -52,6 +52,19 @@ body {
     		.btn.ir.save {
     			@extend %btn-listadesejo-salvar;
     		}
+    		.notifyme {
+    			width: 3000px;
+    			margin: 0 auto;
+    			input[type="text"] {
+    			    height: 40px;
+    			}
+    			.btn.send {
+    			    @extend %btn-listadesejo-enviar-notify
+    			}
+    		}
+    		.btn.send.ir {
+    			width: auto;
+    		}
 	    }
 	    .filter-wish {
 	    	.btn.ir.search {
