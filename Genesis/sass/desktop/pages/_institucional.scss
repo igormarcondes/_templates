@@ -61,10 +61,23 @@ body {
                     background: none;
                     border: 0;
                 }
+                .actions {
+                    .btn {
+                        @extend %btn-faleconosco-enviar;
+                        margin: 10px 225px 0 0px;
+                    }
+                }
             }
+
         }
+
         &.search .internal {
 
+        }
+    }
+    &.internal {
+        .return .buy {
+            @extend %btn-faleconosco-comprar-produtos;
         }
     }
     /* Mapa do site */

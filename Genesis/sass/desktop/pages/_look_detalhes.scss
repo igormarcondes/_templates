@@ -74,12 +74,17 @@ body.lookDetalhe {
                 line-height: 38px;
             }
             .pieces {
+                @include clearfix;
+                padding-top: 20px;
                 background: none;
                 width: 100%;
                 clear: both;
                 .title {
                     background: none;
                     color: #000;
+                }
+                ul {
+                    @include clearfix;
                 }
                 .name {
                     background: none;
@@ -88,6 +93,15 @@ body.lookDetalhe {
                         font-weight: normal;
                         font-family: $font-custom;
                      }
+                }
+                .field {
+                    label span {
+                        color: $color-theme;
+                    }
+                }
+                .info {
+                    float: right;
+                    width: 220px;
                 }
                 .skus-cores {
                     width: 200px !important;
@@ -110,9 +124,9 @@ body.lookDetalhe {
                         float: left;
                         display: inline-block;
                         width: 50%;
-                        padding-right: 45px;
                         &:nth-child(2n +1) {
                             clear: left;
+                            padding-right: 30px;
                         }
                     }
                 }
@@ -123,9 +137,18 @@ body.lookDetalhe {
                 .notifyme {
                     background: none;
                     padding: 0;
+                    width: 160px;
+                    float: right;
                     label {
                         @include clearfix;
                         width: 100%;
+                        &::before{
+                            content: "Avise-me quando chegar";
+                            font-weight: 500;
+                            color: $color-theme;
+                            display: block;
+                            padding-bottom: 5px;
+                        }
                         input {
                             width: 100% !important;
                             clear: both;

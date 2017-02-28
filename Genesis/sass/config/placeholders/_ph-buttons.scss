@@ -209,6 +209,9 @@
     %btn-meuscartoes-comprar-produtos {
         @extend %btn-basket-comprar-produtos;
     }
+    %btn-meuscartoes-cadastrar-cartao {
+        @extend %btn-success;
+    }
 /* fim   - Meus cartoes */ 
 
 /* inicio - lista de desejos */
@@ -252,4 +255,13 @@
     }
 /* fim    - Afiliados  */    
 
+/* inicio - institucional */
+    %btn-faleconosco-enviar {
+         @extend %btn-enviar;
+          @extend %btn-lg;
+    }
+    %btn-faleconosco-comprar-produtos {
+         @extend %btn-comprar;
+    }
+/* fim    - institucional */
 

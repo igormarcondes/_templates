@@ -56,7 +56,7 @@ module.exports = function(grunt) {
         		tasks : ['copy:img']
         	},
         	img2: {
-        		files: 'assets/imagens/**/*',
+        		files: ['assets/imagens/**/*.{jpg,gif,png,ico}'],
         		tasks : ['copy:img2']
         	}
 	    } // watch

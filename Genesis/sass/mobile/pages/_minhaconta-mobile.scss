@@ -94,5 +94,26 @@ body {
 	    .internal .return .btn.buy {
 	    	@extend %btn-meuscartoes-comprar-produtos;
 	    }
+	    &.mycards {
+	    	h1.mycards-title {
+	    		@extend %title-checkout2;
+	    	}
+	    	p.mycards-txt {
+				line-height: 20px;
+				font-size: 12px;
+	    	}
+	    	.new-card {
+	    		h2 {
+	    			text-align: center;
+	    		}
+	    	}
+	    	.main-content .add-new-card {
+	    		@extend  %btn-meuscartoes-cadastrar-cartao;
+	    		font-size: 10px;
+	    	}
+	    	.accordion-header:before {
+	    		color: #9D9D9D !important;
+	    	}
+	    }
     /*fim - Meus Cartoes*/
 }

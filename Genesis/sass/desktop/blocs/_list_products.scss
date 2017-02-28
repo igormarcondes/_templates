@@ -141,7 +141,8 @@ body {
 
                 .photo {
                     width: 100%;
-                    height: $ft_vitrine_h;
+                    height: auto;
+                    max-height: $ft_vitrine_h;
                     border: 0 !important;
                     margin: 0;
                 }
@@ -425,7 +426,7 @@ body {
             }
         }
     }
-    
+
     &.comparepage {
         h1 {
             font-family: $font-custom;
