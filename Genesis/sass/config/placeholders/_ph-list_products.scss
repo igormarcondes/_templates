@@ -70,7 +70,9 @@
 	body #main .list-products .details .regular em:not(.value-sight), 
 	body #main .list-products .details .price em:not(.value-sight),
 	#info-product .offers .price-to em,
-	#info-product .offers .price-from em {
+	#info-product .offers .price-from em,
+	body.product.por-sku .price-to em,
+	body.product.por-sku .price-from em {
 		@extend %rk-hide;
 	}
 }
@@ -279,26 +281,32 @@ $ratingIMG: "star.png";
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	.skus {
+	 ul {
 		@include box-sizing;
 	    background: #efefef;
 	    border: 0;
-	    padding: 7px 0 0 60px;
+	    @if $desktop-mode {
+	    	padding: 7px 0 0 60px;
+	    }
 	    width: 100%;
 	    height: 50px;
 	    position: relative;
+	     @if $mobile {
+	     	height: 30px;
+	     }
 
 	    * {
 	        box-sizing: content-box;
 	    }
-	    &::before {
-	        content: "CORES";
-	        display: block;
-	        position: absolute;
-			top: 18px;
-			left: 7px;
-	    }
-
+	    @if $desktop-mode {
+		    &::before {
+		        content: "CORES";
+		        display: block;
+		        position: absolute;
+				top: 18px;
+				left: 7px;
+		    }
+		}
 	    @include clearfix;
 
 	    img,
@@ -306,8 +314,11 @@ $ratingIMG: "star.png";
 	        width: 30px;
 	        height: 30px;
 	        border-radius: 30px;
+	         @if $mobile {
+	         	width: 22px;
+	         	height: 22px;
+	         }
 	    }
-
 	    li {
 	        margin-right: 3px;
 	        width: auto;
@@ -322,7 +333,9 @@ $ratingIMG: "star.png";
 	    }
 	}
 }
-
+%product-economize {
+	@extend %rk-hide;
+}
 %carrosel-arrow-1 {
 	background: url("/static/locales/global/img/ico_arrows.png") no-repeat 0 center;
 	width: 30px;

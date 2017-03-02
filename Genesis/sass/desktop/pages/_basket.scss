@@ -1,7 +1,4 @@
 body.basketpage {
-    #main .container {
-        padding-top: 90px;
-    }
     #upBasket {
         #hypBuyMore {
             @extend %btn-basket-comprar-produtos;
@@ -207,6 +204,7 @@ body.basketpage {
                 }
 
                 .skus {
+                    max-width: 280px;
                     font-family: $font-base;
                     font-size: 11px;
                     color: #6c6c6c;

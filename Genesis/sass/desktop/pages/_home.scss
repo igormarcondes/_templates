@@ -25,6 +25,10 @@ body {
                 .content {
                     margin: 0 auto;
                     width: $larguraPadrao; 
+                    padding-top: 100px;
+                }
+                .banners ~ .content {
+                    padding-top: 0;
                 }
 
                 .section {

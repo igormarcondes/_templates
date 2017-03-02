@@ -50,32 +50,17 @@
 	    .sitemap #main_content .col > strong {
 	        color: $color-theme;
 	    }
+	    .internal {
+	        .return .buy {
+	            @extend %btn-faleconosco-comprar-produtos;
+	        }
+	        &.institucional .form .actions .btn {
+	        	@extend %btn-faleconosco-enviar;
+	        }
+	    }
+
 	}
 /* fim 	  - Institucional */
-
-/* inicio - Lista de desejos */
-	html {
-		ul.desired-products {
-			/*link alterar*/
-			&.list-products li .details.box>span.situation a {
-				color: $link-color;
-			}
-			/*excluir*/
-			&.list-products li .details.box>span.added a {
-				background: none;
-				font-size: 0;
-				&::before {
-					content: "\f00d";
-					font-family: "FontAwesome";
-					display: block;
-					text-indent: 0;
-					font-size: 33px;
-					color: #4e4e4e;
-				}
-			}
-		}
-	}
-/* fim - Lista de desejos */
 
 /* inicio - Afiliados */
 body {

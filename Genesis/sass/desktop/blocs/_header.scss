@@ -14,8 +14,12 @@ html body {
             width: $larguraPadrao;
         }
     }
+    @at-root .ie8 #header .container { 
+        width: $larguraPadrao;
+    }
 
     #header {
+        background: #000;
         background: rgba(0, 0, 0, 0.6);
         position: fixed;
         top: 0;

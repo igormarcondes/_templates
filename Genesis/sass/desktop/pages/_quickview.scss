@@ -1,20 +1,60 @@
+body {
+	&.home,
+	&.catalog,
+	&.vitrine {
+		#fancybox-wrap {
+			@include box-sizing;
+			width: auto !important;
+			height: auto !important;
+			border: 5px solid #FFF;
+			left: 50% !important;
+			margin-left: -650px;
+
+			#fancybox-content {
+				box-sizing: border-box;
+				width: 1300px !important;
+				height: 780px !important;
+				overflow-x: hidden;
+			}
+
+		}
+
+		a#fancybox-close {
+			display: none;
+		}
+
+	}
+
+}
+
 body.quickview {
 	background: none;
+
 	#main .container {
 		width: 100%;
 		@include box-sizing;
 	}
+
 	#info-product {
 		min-height: 10px !important;
+
 		.box-tools {
 			margin: 10px 0 0;
 			float: left;
 		}
+
 		.reviewaggregate {
 			display: none;
 		}
-		 #infoPrices {
-		 	margin-top: 5px !important;
-		 }
+
+		#infoPrices {
+			margin-top: 5px !important;
+		}
+		.social {
+			padding: 0;
+			margin: 0;
+		}
+
 	}
+
 }

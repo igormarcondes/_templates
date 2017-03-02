@@ -52,7 +52,7 @@ body {
                     }
                 }
                 .price-from {
-
+                    @extend %detail-price-from;
                 }
                 .price-to {
                     @extend %detail-price-to;
@@ -60,6 +60,9 @@ body {
                 .desconto-avista {
                     @extend %detail-price-offer;
                     margin-bottom: 5px;
+                    #lblFormaPagamentoAVista {
+                        display: block;
+                    }
                 }
                 .parcel {
                      @extend %detail-parcel;
@@ -68,7 +71,7 @@ body {
                     padding: 0;
                 }
                 .save {
-                    display: none;
+                     @extend %detail-economize;
                 }
             /* Box Prices:end */
             

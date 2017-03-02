@@ -189,6 +189,9 @@ body {
                     @extend %product-parcel;
                     padding: 0 0 5px;
                 }
+                .save {
+                     @extend %product-economize;
+                }
 
                 /*(preco com desconto)*/
                 .percent-a-vista {
@@ -574,6 +577,9 @@ body {
 
             .tools {
                 @extend %product-skus;
+            }
+            .save {
+                 @extend %product-economize;
             }
 
 

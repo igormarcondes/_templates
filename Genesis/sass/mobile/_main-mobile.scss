@@ -65,34 +65,38 @@ span.go-top-btn {
 	body {
 	    .list-products {
 	        li {
-	        		.details {
-	        			.name {
-							@extend %product-name;
-	        			}
-	        			.offers {
-	        				.regular {
-	        					@extend %product-price-from;
-	        				}
-	        				.price {
-	        					@extend %product-price-to;
-	        				}
-	        				.percent-a-vista {
-			                    @extend %product-price-offer;
-			                }
-	        			}
-	        			.parcel {
-	        				@extend %product-parcel;
-	        			}
-	        			.stamp {
-	        				@extend %product-stamp;
-	        			}
-	        			.btn.buy {
-	        				@extend %btn-listproduct-buy;
-	        			}
-	        			.reviewaggregate {
-	        			     @extend %placeholder-reviewaggregate;
-	        			}
-	        		}
+        		.details {
+        			.name {
+						@extend %product-name;
+        			}
+        			.offers {
+        				.regular {
+        					@extend %product-price-from;
+        				}
+        				.price {
+        					@extend %product-price-to;
+        				}
+        				.percent-a-vista {
+		                    @extend %product-price-offer;
+		                }
+        			}
+        			.parcel {
+        				@extend %product-parcel;
+        			}
+        			.stamp {
+        				@extend %product-stamp;
+        			}
+
+        			.btn.buy {
+        				@extend %btn-listproduct-buy;
+        			}
+        			.reviewaggregate {
+        			     @extend %placeholder-reviewaggregate;
+        			}
+        		}
+        		.tools {
+        		    @extend %product-skus;
+        		}
 	        }
 	    }
 	}

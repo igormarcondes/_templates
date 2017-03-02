@@ -130,6 +130,16 @@
     }
 /* fim    - Avalie este produto */
 
+/* inicio - Modal promocao produto gratis*/
+    .basket-gift {
+        .bt-container {
+            a.btn {
+                @extend %btn-modal-basket-produto-gratis-continue;
+            }
+        }
+    }
+/* inicio - Modal promocao produto gratis */    
+
 /* inicio - Cep Nao Cadastrado */
     body .actions .bt-yes,
     body .actions .bt-no {

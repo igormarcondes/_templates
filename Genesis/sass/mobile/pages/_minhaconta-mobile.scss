@@ -15,6 +15,23 @@ body {
 
     /* inicio - Lista de desejos*/
 	    .desired-products {
+	    	/*link alterar*/
+	    	&.list-products li .details.box>span.situation a {
+	    		color: $link-color;
+	    	}
+	    	/*excluir*/
+	    	&.list-products li .details.box>span.added a {
+	    		background: none;
+	    		font-size: 0;
+	    		&::before {
+	    			content: "\f00d";
+	    			font-family: "FontAwesome";
+	    			display: block;
+	    			text-indent: 0;
+	    			font-size: 33px;
+	    			color: #4e4e4e;
+	    		}
+	    	}
 	    	span {
 	    		a {
 	    			color: $link-c;

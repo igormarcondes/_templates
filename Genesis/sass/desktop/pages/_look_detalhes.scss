@@ -57,6 +57,18 @@ body.lookDetalhe {
                 font-family: $font-custom;
                 font-size: 14px;
                 text-transform: uppercase;
+                position: relative;
+                padding-bottom: 10px;
+                &::after {
+                    height: 1px;
+                    width: 632px;
+                    border-bottom: 1px solid #c9c9c9;
+                    display: inline-block;
+                    content: " ";
+                    position: relative;
+                    top: -4px;
+                    left: 20px;
+                }
             }
             .photo {
                 width: 120px;
