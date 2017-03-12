@@ -27,6 +27,13 @@ body.lookDetalhe {
             }
             .reviewaggregate {
                 border: 0;
+                .count {
+                    a {
+                        text-decoration: underline;
+                        font-family: $font-custom;
+                        line-height: 16px;
+                    }
+                }
             }
             .tools {
                 margin: 0;
@@ -46,29 +53,19 @@ body.lookDetalhe {
             .thumbs {
                 margin: 0;
             }
+            #videoDetalhe {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
 
         div.aside {
             display: block;
             width: 750px;
             span.title {
-                font-weight: bold;
-                color: $color-theme2;
-                font-family: $font-custom;
-                font-size: 14px;
-                text-transform: uppercase;
-                position: relative;
-                padding-bottom: 10px;
-                &::after {
-                    height: 1px;
-                    width: 632px;
-                    border-bottom: 1px solid #c9c9c9;
-                    display: inline-block;
-                    content: " ";
-                    position: relative;
-                    top: -4px;
-                    left: 20px;
-                }
+                @extend %look-title-pecas;
             }
             .photo {
                 width: 120px;
@@ -100,11 +97,7 @@ body.lookDetalhe {
                 }
                 .name {
                     background: none;
-                     span {
-                        background: none;
-                        font-weight: normal;
-                        font-family: $font-custom;
-                     }
+                    @extend %look-piece-name;
                 }
                 .field {
                     label span {
@@ -116,19 +109,7 @@ body.lookDetalhe {
                     width: 220px;
                 }
                 .skus-cores {
-                    width: 200px !important;
-                    margin-bottom: 10px !important;
-                    li {
-                        border-radius: 30px;
-                        width: 30px;
-                        height: 30px;
-                        overflow: hidden;
-                        img {
-                            width: 30px;
-                            height: 30px;
-                            border: 0;
-                        }
-                    }
+                    @extend %look-sku-cores;
                 }
                 > ul {
                     > li {
@@ -147,28 +128,7 @@ body.lookDetalhe {
                     clear: both;
                 }
                 .notifyme {
-                    background: none;
-                    padding: 0;
-                    width: 160px;
-                    float: right;
-                    label {
-                        @include clearfix;
-                        width: 100%;
-                        &::before{
-                            content: "Avise-me quando chegar";
-                            font-weight: 500;
-                            color: $color-theme;
-                            display: block;
-                            padding-bottom: 5px;
-                        }
-                        input {
-                            width: 100% !important;
-                            clear: both;
-                        }
-                    }
-                    .btn {
-                        margin: 0;
-                    }
+                    @extend %look-notify;
                 }
             }
         }

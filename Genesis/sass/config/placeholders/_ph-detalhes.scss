@@ -4,7 +4,6 @@
 	font-size: 20px;
 	font-weight: normal;
 	margin-bottom: 10px;
-
 }
 
 %detail-fabricante {
@@ -17,8 +16,8 @@
 	}
 
 	#ghcliBrand {
-
 	}
+
 	#contentPartNumber {
 		@extend %rk-hide;
 	}
@@ -79,6 +78,10 @@
 		padding: 5px 0 0;
 	}
 
+	span {
+		color: $prod-parcel-c;
+	}
+
 }
 
 %detail-stamp {
@@ -92,9 +95,29 @@
 	}
 
 }
+
 %detail-economize {
-	display: none !important;
+	@extend %rk-hide;
 }
+
+%detail-tabela-medida {
+	font-family: $font-custom;
+	color: #000;
+	font-size: 12px;
+	text-decoration: underline;
+	position: absolute;
+	bottom: 5px;
+	@if $desktop-mode {
+		left: 80px;
+		bottom: 0;
+	}
+	~ ul {
+		padding-bottom: 20px;
+	}
+
+
+}
+
 %detail-tools {
 	li {
 		background: none;
@@ -117,6 +140,31 @@
 	}
 
 }
+
+%detail-disponibilidade {
+	font-family: $font-custom;
+	color: #000;
+}
+
+%detail-quantidade {
+	margin: 0 0 20px;
+
+	.lbl-quantity {
+		font-weight: bold;
+		font-family: $font-custom;
+		text-transform: uppercase;
+		color: #000;
+		margin-right: 10px;
+	}
+
+	input[type="text"] {
+		width: 35px;
+		border: 1px solid $color-theme;
+		border-radius: 0;
+	}
+
+}
+
 %detail-description-preview {
 	.description {
 		font-family: $font-custom;
@@ -124,61 +172,158 @@
 		font-size: 12px;
 		color: #000;
 		border: 0;
+
 		a {
 			color: #000;
 			text-decoration: underline;
 			font-family: $font-custom;
 		}
+
 	}
+
 }
+
 %detail-description-full {
 	font-family: $font-custom;
 	color: #000;
-	line-height: 16px;
+	line-height: 20px;
 	font-size: 13px;
 }
+
 %detail-review {
 	font-family: $font-custom;
+
 	p.reviewer {
 		color: $color-theme;
 		font-size: 12px;
 	}
+
 }
+
 %detail-social {
 	width: 100%;
 	clear: both;
-	.listSocial {
-	    float: right;
-	    &::before {
-	        content: "Compartihar ";
-	        font-family: $font-custom;
-	        color: #5a5a5a;
-	        font-size: 12px;
-	        float: left;
-	        display: block;
-	        margin: 9px 0 0 0;
-	    }
-	}
-	.media {
-	    &.invite {
+	@include clearfix;
 
-	    }
+	.listSocial {
+		float: right;
+
+		@if $mobile {
+			float: none;
+		}
+
+		&::before {
+			content: "Compartihar ";
+			font-family: $font-custom;
+			color: #5a5a5a;
+			font-size: 12px;
+			float: left;
+			display: block;
+			margin: 9px 0 0 0;
+		}
+
 	}
+
+	.media {
+		&.invite {
+		}
+
+	}
+
 	li {
-	    float: left;
-	    margin-left: 10px;
-	    &:hover {
-	        opacity: 0.5;
-	    }
-	    a {
-	    	background: none;
-	    }
+		float: left;
+		margin-left: 10px;
+
+		&:hover {
+			opacity: 0.5;
+		}
+
+		.invite {
+			a {
+				height: auto;
+				width: auto;
+			}
+
+		}
+
+		a {
+			background: none;
+
+			img {
+				display: block;
+			}
+
+		}
+
 	}
+
 }
+
 %detail-titile-vitrine {
 	@extend %title-vitrine;
 }
+
 %detail-titile-vitrine-mobile {
 	color: #000;
 	font-family: $font-custom;
+}
+
+%detail-notify {
+	@include box-sizing();
+
+	span {
+		color: #000;
+		font-family: $font-custom;
+
+		strong {
+			border-right: 1px solid #ccc;
+			padding-right: 3px;
+			margin-right: 3px;
+			display: none;
+		}
+
+	}
+
+	> span {
+		&::before {
+			content: "INDISPONIVEL";
+			color: #000;
+			font-size: 11px;
+			font-weight: bold;
+			margin-right: 5px;
+			border-right: 1px solid #ccc;
+			padding-right: 3px;
+		}
+
+		&::after {
+			content: "Avise-me quando chegar.";
+			text-transform: uppercase;
+			font-family: $font-custom;
+			font-size: 11px;
+		}
+
+	}
+
+	label {
+		position: relative;
+
+		> span {
+			display: none;
+		}
+
+		input {
+			border: 1px solid $color-theme;
+			margin: 0;
+			border-radius: 0;
+			height: 30px;
+		}
+
+	}
+
+	.btn {
+		@extend %btn-enviar-notify;
+		line-height: 30px;
+		width: auto;
+	}
+
 }

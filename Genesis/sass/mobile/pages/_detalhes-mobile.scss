@@ -25,11 +25,19 @@ body {
 
             /* rating:start */
                 @extend %reviewaggregate;
+                .reviewaggregate {
+                    text-align: center;
+                }
+                .see-review,
+                .rate {
+                   display: none;
+                }
             /* rating:end */
 
             /* Stamps:start */
                 .stamp {
                 	clear: both;
+                    margin-bottom: 20px;
                 }
             /* Stamps:end */
 
@@ -95,6 +103,9 @@ body {
                     .field {
 
                     }
+                    .padrao-brasileiro {
+                        @extend %detail-tabela-medida;
+                    }
                     label {
 
                         span {
@@ -132,7 +143,9 @@ body {
 
             /* Comprar:start */
                 #ProductBuy {
-
+                    .txtQuantity {
+                        @extend %detail-quantidade;
+                    }
                 }
                 .action {
 
@@ -199,8 +212,7 @@ body {
 
             /* Disponibilidade:start*/
                 .time {
-                   font-family: $font-custom;
-                   color: #000;
+                   @extend %detail-disponibilidade;
                 }
             /* Disponibilidade:end*/
         /* fim    - Details */
@@ -255,6 +267,7 @@ body {
             @extend %detail-titile-vitrine-mobile;
         }
         .description {
+            text-align: left;
             #descriptionContent {
                 @extend %detail-description-full;
             }

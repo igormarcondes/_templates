@@ -47,7 +47,7 @@
 %basket-quantity {
 	> div {
 		border: 1px solid #4b63ae;
-		width: 84px;
+		width: 86px;
 		min-height: 26px;
 		line-height: 26px;
 	}
@@ -106,6 +106,17 @@
 			}
 		}
 	}
+	.service-basket {
+		padding: 5px;
+	}
+}
+%basket-cupom {
+	font-size: 12px;
+	font-family: $font-custom;
+	color: #0ccf8b;
+}
+%basket-cupom-off {
+	color: #c20000;
 }
 %basket-title-cupom {
 	color: $color-theme;
@@ -133,7 +144,7 @@
 	color: #000;
 	font-size: 13px;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: bold;
 }
 %basket-title-total {
 	font-family: $font-custom;

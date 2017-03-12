@@ -94,7 +94,6 @@ $ratingIMG: "star.png";
     .reviewaggregate{
         text-transform:none;
         margin: 0 auto;
-        text-align:center;
         > a{   
             background: url("/static/locales/global/img/#{$ratingIMG}") repeat-x 0 0;                  
             height: $ratingHeight;

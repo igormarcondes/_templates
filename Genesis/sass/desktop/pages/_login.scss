@@ -71,6 +71,11 @@ body {
     #formcadastro_btnSalvar {
         @extend %btn-salvar-cadastro;
     }
+    &.register {
+        #spanMsgValidacaoNumero {
+            left: 0;
+        }
+    }
     &.affiliates {
         .btn.ir.save {
             @extend %btn-afiliado-salvar;

@@ -29,13 +29,13 @@
         .address.box {
 
             .btn.ir.edit {
-                @extend %btn-modal-editar-endereco;
+                
             }
             .btn.ir.use {
-                @extend %btn-modal-usar-endereco;
+               
             }
             .btn.ir.delete {
-                @extend %btn-modal-deletar-endereco;
+                
             }
             
         }
@@ -141,10 +141,10 @@
 
 /* inicio - Servico de Entrega */
     body.delivery-service.delivery {
-        #upBasket .actions a.change {
+        #main #upBasket .actions a.change {
             @extend %btn-modal_servico-alterar-endereco;
         }
-        #upBasket .actions a.continue {
+        #main #upBasket .actions a.continue {
             @extend %btn-modal_servico-salvar;
         }
     }

@@ -1,0 +1,112 @@
+body.lookDetalhe {
+    #info-product {
+        span:empty {
+            display: none;
+        }
+        .description {
+        }
+
+        .reviewaggregate {
+            .count {
+                a {
+                }
+
+            }
+        }
+        .tools {
+        }
+
+    }
+
+
+    div.collum.images {
+        .thumbs {
+        }
+
+    }
+
+    div.aside {
+        span.title {
+            @extend %look-title-pecas;
+        }
+
+        .photo {
+        }
+
+        #piecesLook .btn.ir.select-look {
+            @extend %btn-look-selecionar-produtos;
+        }
+
+        .buy.selected.ir.btn {
+            @extend %btn-look-comprar-produtos;
+        }
+
+        #piecesLook {
+            .title {
+            }
+
+            ul {
+            }
+
+            .name {
+                @extend %look-piece-name;
+            }
+
+            .field {
+                label span {
+                }
+
+            }
+
+            .info {
+                float: right;
+            }
+
+            .skus-cores {
+                @extend %look-sku-cores;
+                li {
+                    a {
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+
+            > ul {
+                > li {
+                    &:nth-child(2n +1) {
+                    }
+
+                }
+
+            }
+
+            .details {
+                width: 100%;
+                clear: both;
+                float: left;
+                text-align: center;
+                margin-top: 20px;
+                .price-from {
+                    @extend %detail-price-from;
+                }
+                .price-to {
+                    @extend %detail-price-to;
+                }
+                .desconto-avista {
+                    @extend %detail-price-offer;
+                    #lblFormaPagamentoAVista {
+                        display: block;
+                    }
+                }
+            }
+
+            .notifyme {
+                @extend %look-notify;
+            }
+
+        }
+
+    }
+
+}

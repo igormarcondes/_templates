@@ -100,6 +100,14 @@ body {
     				}
     			}
     		}
+    		#panCentro {
+    			.field.checkbox {
+    				padding: 5px; /* safari bug fix*/
+    				input[type="radio"] {
+    					margin: 6px 6px 0 0;
+    				}
+    			}
+    		}
     	}
     	&.meuspedidos {
     		.request .warning {
@@ -131,6 +139,9 @@ body {
 	    	.add-new-card {
 	    		@extend  %btn-meuscartoes-cadastrar-cartao;
 	    		display: inline-block;
+	    	}
+	    	.save.btn.ir {
+	    		@extend  %btn-meuscartoes-cadastrar;
 	    	}
 	    }
     /*fim - Meus Cartoes*/

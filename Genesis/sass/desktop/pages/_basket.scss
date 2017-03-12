@@ -131,13 +131,11 @@ body.basketpage {
                     }
 
                     #lblCoupon {
+                        @extend %basket-cupom;
                         display: block;
-                        min-width: 125px;
-                        text-transform: uppercase;
-                        font-family: $font-custom;
 
-                        &.coupon-ok {
-                            color: $color-theme;
+                        &.coupon-off {
+                           @extend %basket-cupom-off;
                         }
                     }
 
@@ -233,9 +231,10 @@ body.basketpage {
 
             .price {
                 &.sale {
-                    font-family: $font-base;
+                    font-family: $font-custom;
                     font-size: 12px;
-                    color: #6c6c6c;
+                    color: #000;
+                    font-weight: 500;
                 }
             }
         }

@@ -1,4 +1,8 @@
+* {
+	-webkit-overflow-scrolling:touch;
+}
 body {
+
 	&.home,
 	&.catalog,
 	&.vitrine {
@@ -15,6 +19,7 @@ body {
 				width: 1300px !important;
 				height: 780px !important;
 				overflow-x: hidden;
+				
 			}
 
 		}

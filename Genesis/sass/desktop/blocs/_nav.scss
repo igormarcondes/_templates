@@ -23,7 +23,7 @@ body {
                 font-size: 12px;
                 height: 30px;
                 line-height: 30px;
-                padding: 0 14px;
+                padding: 0 20px;
                 color: #fff;
                 position: relative;
                 text-transform: uppercase;
@@ -97,6 +97,14 @@ body {
 
                     &::first-child {
                         border-top: 0;
+                    }
+                }
+            }
+            &:last-child {
+                > a {
+                    color: #ffc562;
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }

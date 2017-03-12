@@ -6,7 +6,7 @@ body {
         }      
         /* inicio - Collum Details */
             .collum.details {
-                width: 400px;
+                width: 424px;
                 margin-right: 50px;
                 float: right;
             }
@@ -24,6 +24,25 @@ body {
 
             /* rating:start */
                 @extend %reviewaggregate;
+                .reviewaggregate {
+                    border-bottom: 0;
+                    float: left;
+                }
+                #ajaxReviewAggregate {
+                    @include clearfix;
+                    .see-review,
+                    .rate {
+                        float: left;
+                        margin: 6px 0 0 20px;
+                        text-decoration: underline;
+                        font-family: $font-custom;
+                    }
+                    .see-review.no0 {
+                        display: none;
+                    }
+                }
+                
+
             /* rating:end */
 
             /* Stamps:start */
@@ -65,7 +84,7 @@ body {
                     }
                 }
                 .parcel {
-                     @extend %detail-parcel;
+                    @extend %detail-parcel;
                     width: 100%;
                     margin: 0;
                     padding: 0;
@@ -97,12 +116,18 @@ body {
                 .skus-product {
                     background: none;
                     border: 0;
+                    padding: 10px 0;
                     .field {
                         background: none;
                         margin: 0 0 10px;
                         padding: 0;
                         clear: both;
                         @include clearfix;
+                        position: relative;
+                        overflow: visible;
+                    }
+                    .padrao-brasileiro {
+                        @extend %detail-tabela-medida;
                     }
                     label {
                         float: left;
@@ -168,7 +193,9 @@ body {
 
             /* Comprar:start */
                 #ProductBuy {
-
+                    .txtQuantity {
+                        @extend %detail-quantidade;
+                    }
                 }
                 .action {
                     margin: 0 0 35px;
@@ -178,61 +205,9 @@ body {
                     }
                 }
                 .notifyme.form  {
+                    @extend %detail-notify;
                     background: #eee;
-                    @include box-sizing();
                     padding: 20px;
-                    span {
-                        color: #000;
-                        font-family: $font-custom;
-                        strong {
-                            border-right: 1px solid #ccc;
-                            padding-right: 3px;
-                            margin-right: 3px;
-                            display: none;
-                        }
-                    }
-                    > span {
-                        &::before {
-                            content: "INDISPONIVEL";
-                            color: #000;
-                            font-size: 11px;
-                            font-weight: bold;
-                            margin-right: 5px;
-                            border-right: 1px solid #ccc;
-                            padding-right: 3px;
-                        }
-                        &::after {
-                            content: "Avise-me quando chegar.";
-                            text-transform: uppercase;
-                            font-family: $font-custom;
-                            font-size: 11px;
-                        }
-                    }
-
-                    label {
-                        position: relative;
-                        span {
-                            position: absolute;
-                            top: -24px;
-                            left: 140px;
-                            width: 240px;
-                            display: none;
-                        }
-
-                        input {
-                            border: 1px solid $color-theme;
-                            margin: 0;
-                            border-radius: 0;
-                            height: 30px;
-                        }
-
-                    }
-
-                    .btn {
-                        @extend %btn-enviar-notify;
-                        line-height: 30px;
-                        width: auto;
-                    }
                 }                
             /* Comprar:start */
 
@@ -256,7 +231,6 @@ body {
                     }
                     li {
                         width: auto;
-                        margin-left: 5px;
                         padding: 0;
                         &:first-child {
                             margin-left: 0;
@@ -270,8 +244,7 @@ body {
 
             /* Disponibilidade:start*/
                 .time {
-                   font-family: $font-custom;
-                   color: #000;
+                   @extend %detail-disponibilidade;
                 }
             /* Disponibilidade:end*/
         /* fim    - Details */
@@ -343,7 +316,7 @@ body {
             @extend %detail-titile-vitrine;
         }
         &.description {
-            #descriptionContent {
+            > div {
                 @extend %detail-description-full;
             }
         }

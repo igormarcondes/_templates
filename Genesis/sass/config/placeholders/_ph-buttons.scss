@@ -215,6 +215,9 @@
     %btn-meuscartoes-cadastrar-cartao {
         @extend %btn-success;
     }
+    %btn-meuscartoes-cadastrar {
+        @extend %btn-salvar;
+    }
 /* fim   - Meus cartoes */ 
 
 /* inicio - lista de desejos */

@@ -149,12 +149,6 @@
         height: 28px;
         line-height: 28px;
         font-size: 13px;
-        -webkit-border-radi: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        -webkit-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.6);
-        -moz-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.6);
-        box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.6);
     }
 
     body .actions .bt-yes {
@@ -168,6 +162,9 @@
 
     .addressNotFound .form .actions {
         padding: 5px !important;
+    }
+    h1.mH1 {
+        margin: 0 0 20px;
     }
 /* fim    - Cep Nao Cadastrado */
 

@@ -4,6 +4,7 @@ body {
         background: #fff;
         display: block;
         border: 0;
+        margin-bottom: 60px;
         .container {
             width: $larguraPadrao;
         }
@@ -105,7 +106,7 @@ body {
             &.ajuda {
                 top: 120px;
                 left: 225px;
-                min-width: 730px;
+                min-width: 785px;
             }
             &.institucional  {
                 top: 90px;
@@ -222,6 +223,9 @@ body {
                     }
                 }
             }
+        }
+        .info-cli {
+            width: auto;
         }
         .copy {
             border-top: 0;

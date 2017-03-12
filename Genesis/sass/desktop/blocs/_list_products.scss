@@ -348,9 +348,8 @@ body {
                         width: $ft_history_w;
 
                         .photo {
-                            width: auto;
-                            max-width: $ft_history_w;
-                            height: $ft_history_h;
+                            width: 100%;
+                            height: auto;
                         }
                     }
 

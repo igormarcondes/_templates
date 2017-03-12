@@ -9,6 +9,15 @@ html body {
             position: static;
         }
     }
+    &:not(.globalId):not(.home):not(.register) #header:not(.headerbuy) ~ {
+        /*que nao seja checkout e nem pagina de cadastro*/
+        #main .container {
+            width: $larguraPadrao;
+            background: #fff;
+            @include box-sizing;
+            padding-bottom: 20px;
+        }
+    }
     #header:not(.headerbuy) {
         .container {
             width: $larguraPadrao;
@@ -123,7 +132,7 @@ html body {
 
         .tool {
             position: absolute;
-            top: 28px;
+            top: 32px;
             right: 10px;
 
             li {
@@ -133,6 +142,9 @@ html body {
                 > a {
                     text-indent: -9000px;
                     display: block;
+                    &:hover {
+                        background-position: 0 -58px;
+                    }
                 }
 
                 &.ico {
@@ -145,11 +157,17 @@ html body {
                     }
 
                     &.acc a {
-                        background-position: -32px center;
+                        background-position: -32px 0;
+                        &:hover {
+                            background-position: -32px -58px;
+                        }
                     }
 
                     &.whitelist a {
-                        background-position: -67px center;
+                        background-position: -67px 0;
+                        &:hover {
+                            background-position: -67px -58px;
+                        }
                     }
 
                 }
@@ -161,7 +179,7 @@ html body {
         .ico-search {
             width: 24px;
             height: 24px;
-            background: url("/static/locales/global/img/icon_header.png") no-repeat 3px center;
+            background: url("/static/locales/global/img/icon_header.png") no-repeat;
             text-indent: -9000px;
             cursor: pointer;
             display: block;
@@ -223,9 +241,16 @@ html body {
             }
 
         }
-
+        div.car:hover {
+            .basket {
+                background-position: -102px -58px !important;
+            }
+            .itens {
+                color: #fff;
+            }
+        }
         .basket {
-            background: url("/static/locales/global/img/icon_header.png") no-repeat -102px 2px;
+            background: url("/static/locales/global/img/icon_header.png") no-repeat -102px 0;
             padding: 0;
             height: 52px;
             width: 24px;
@@ -233,6 +258,7 @@ html body {
             display: block;
 
             &:hover {
+                background-position: -102px -58px;
             }
 
             &::before {
@@ -247,7 +273,7 @@ html body {
                 text-align: center;
                 display: block;
                 margin: 0;
-                line-height: 31px;
+                line-height: 26px;
                 color: #4b63ae;
                 font-size: 12px;
                 font-family: $font-custom;

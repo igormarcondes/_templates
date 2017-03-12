@@ -20,6 +20,12 @@
 	    body .service-basket .services tr td label {
 	        width: calc(100% - 30px);
 	    }
+	    body .service-basket tr#trScheduling td label {
+	    	max-width: calc(100% - 58px);
+	    }
+	    body #main .service-basket #tbScheduling input {
+	    	border: 1px solid #000;
+	    }
 	    body .form-new-card .field.full label>img {
 			width: 25px;
 	    }    

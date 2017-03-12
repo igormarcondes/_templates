@@ -113,7 +113,10 @@
                         margin: 0;
                     }
                     #lblCoupon {
-                        &.coupon-ok {
+                        @extend %basket-cupom;
+
+                        &.coupon-off {
+                           @extend %basket-cupom-off;
                         }
                     }
 
