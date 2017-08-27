@@ -1,9 +1,9 @@
 /* ----------- CONFIGURAÇÕES ------------ */
 @import "config/config";
-//@import "config/fonts";
+@import "config/fonts";
 @import "config/normalize";
 @import "config/mixins";
-@import "config/placeholders/main";
+@import "config/placeholders/placeholders";
 
 /*
 /* ----------- COMPONENTES ------------ */
@@ -31,6 +31,7 @@
 /* ----------- PAGINAS------------ */ 
 @import "desktop/pages/basket";
 @import "desktop/pages/catalogo";
+@import "desktop/pages/busca";
 @import "desktop/pages/checkout";
 @import "desktop/pages/detalhes";
 @import "desktop/pages/home";

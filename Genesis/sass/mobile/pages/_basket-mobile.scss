@@ -1,293 +1,39 @@
-/* inicio - Basket */
-	body.basketpage {
+body.basketpage {
     #upBasket {
-        #hypBuyMore {
-            @extend %btn-basket-comprar-produtos;
-        }
-        #buy-to-list {
-            border: 0;
-        }
-
-        .buttons-basket {
-            
-
-            &.buttons-basket-bottom {
-                
-            }
-            .buy-more {
-                @extend %btn-basket-buymore;
-
-
-            }
-            .continue {
-                @extend %btn-basket-continuar;
-
-            }
-        }
-
-        a.btn.calculate,
-        a.btn.utilize,
-        a.cancel {
-            @extend %btn-basket-calcular;
-        }
-
-        a.cancel {
-
-        }
-
-        .basket {
-            table {
-                font-family: $font-base;
-            }
-
-            th {
-                @extend %basket-title-th;
-                &.description {
-                   span {
-                        display: none;
-                   }
-                }
-            }
-
-            tr {
-                &.even {
-                    td {
-                        background: #fff;
-                    }
-                }
-
-                &.info {
-                    td {
-                        background: #fff;
-                    }
-                }
-
-                &.total {
-                    td {
-                        background: #eeeeee;
-
-                        &.value {
-                            @extend %basket-total;
-                        }
-
-                        &.title {
-                            @extend %basket-title-total;
-                        }
-                    }
-                }
-
-                &.delivery {
-                    td {
-                        border-top: 0;
-                    }
-
-                    label {
-                    }
-                    input.cep {
-                        @extend %basket-input-cep;
-
-                    }
-
-                    fieldset {
-                        margin-left: 0;
-                    }
-
-                    &.first {
-                        label {
-                        }
-                    }
-                    p.options-tit {
-                         @extend %basket-delivery-title;
-                         font-size: 13px;
-                    }
-                    dl.options {
-                        @extend %basket-delivery-options;
-                    }
-                }
-
-                &.coupon {
-                    td {
-                        background: #fff;
-                    }
-                    label {
-                        margin: 0;
-                    }
-                    #lblCoupon {
-                        @extend %basket-cupom;
-
-                        &.coupon-off {
-                           @extend %basket-cupom-off;
-                        }
-                    }
-
-                    fieldset {
-                        label > span {
-                            @extend %basket-title-cupom;
-                        }
-
-                        input {
-                            @extend %basket-input-cep;
-                        }
-                    }
-                }
-            }
-
-            td {
-
-                &.subtotal {
-                    @extend %basket-subtotal;
-                }
-            }
-        }
-
-        .title {
-            @extend %basket-title-label;
-        }
-
-        .delete {
-            @extend %basket-delete;
-            a::after {
-                display: none;
-            }
-        }
-
-        .description {
-            .details {
-                @extend %basket-produt-detail;
-                .name {
-                    @extend %basket-produt-name;
-                }
-
-                .cod {
-                    @extend %basket-produt-cod;
-                }
-                @if $hide-fabricante != true {
-                    .brand {
-                        @extend %basket-produt-brand;
-                    }
-                }
-
-            }
-
-            .stamp {}
-        }
-
-        .quantity {
-            @extend %basket-quantity;
-            a::after {
-                display: none;
-            }
-            > div {
-                width: 107px;
-                text-align: center;
-            }
-            a {
-                vertical-align: top;
-            }
-        }
-
-        .unit-value {
-            .regular {
-                font-family: $font-base;
-                font-size: 12px;
-                color: #6c6c6c;
-
-                del {
-                    font-family: $font-base;
-                    font-size: 12px;
-                    color: #6c6c6c;
-                }
-            }
-
-            .price {
-                &.sale {
-                    font-family: $font-base;
-                    font-size: 12px;
-                    color: #6c6c6c;
-                }
-            }
-        }
-
-        .subtotal {
-            .regular {
-                font-family: $font-base;
-                font-size: 12px;
-                color: #6c6c6c;
-
-                del {
-                    font-family: $font-base;
-                    font-size: 12px;
-                    color: #6c6c6c;
-                }
-            }
-
-            .price {
-                &.sale {
-                   @extend %basket-subtotal;
-                }
-            }
-        }
-
-        #banner_promocoes_atingir_pnlBannerPromocoesAtingir {
-            .orbit-wrapper {
-                width: 100% !important;
-                z-index: 1;
-
-                * {
-                    @include box-sizing;
-                }
-
-                .orbit-bullets {
-                    bottom: 4px;
-                    @include banner-promo-bullets;
-
-                    li {
-                        
-                        border-radius: 10px;
-                        font-size: 11px;
-                        line-height: 17px;
-                        height: 20px;
-                        margin: 0 0 0 5px;
-                        
-
-                        &.active {
-                            
-                        }
-                    }
-                }
-
-                #banner-basket {
-                	@include box-sizing;
-                    width: 100% !important;
-                    height: auto !important;
-                    overflow: visible;
-                    text-align: center;
-                    border: 0;
-                    border-radius: 0px;
-                    font-family: $font-custom;
-                }
-
-                .promo {
-                	@include box-sizing;
-                    @include banner-promo;
-                    width: 100%;
-                    padding: 0;
-                    height: 74px;
-                    background-image: none;
-                    display: inline-block;
-                    
-
-                    span {
-                        border: 0;
-                        padding: 10px 0 0;
-                        font-weight: bold;
-                        line-height: 16px;
-                        letter-spacing: 0.75px;
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
+        @extend %basket;
+    	table {
+    		tr.even {
+    			background: none; 
+    		}
+    	}
     }
 }
-/* fim    - Basket */
+/*gift*/
+.basket-gift{
+	h1{
+		@extend %title-modal;
+		span{
+			@extend %title-modal;
+		}
+	}
+	.bt-container{
+		.btn{
+			@extend %btn-primary;
+		}
+	}
+}
+/*cep*/
+#form1{
+	.mH1{
+		@extend %title-modal;
+		span{
+			@extend %title-modal;
+		}
+	}
+}
+.form{
+	.actions{
+		.bt-yes{@extend %btn-primary;}
+		.bt-no{@extend %btn-primary; background: #333;}
+	}
+}

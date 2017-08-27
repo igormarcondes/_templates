@@ -7,16 +7,68 @@
         #fancybox-wrap {
             border: 0px solid #FFF;
         }
-        #fancybox-content:empty + #fancybox-close {
+        #fancybox-content:empty + a#fancybox-close {
             display: none !important;
         }
-        #fancybox-close,
-        #fancybox-close-2 {
+        a#fancybox-close,
+        a#fancybox-close-2 {
             @extend %fancy-close;
         }
-        #fancybox-close {
-            display: block;
+        a#fancybox-close {
+            display: none;
         }
+        &.forget{
+            .form{
+                .field input[type=text]{
+                    border: 1px solid #ccc;
+                    height: 35px;
+                    font-size: 13px;
+                    text-indent: 10px; 
+                }
+            }
+        }
+        &.email{
+            .form .radio input{
+                height:17px;
+            }
+            #DadosPessoaJuridica{
+                input{
+                    border:1px solid #ccc;
+                    border-radius: 35px;
+                    //text-indent:10px; 
+                    font-size:13px;
+                }
+                #btnContinuarPJ{
+                    top: -40px;
+                    position: relative;
+                }
+                .form{
+                    .validacao{
+                        top: 40px;
+                        left: 0;
+                    }
+                }
+            }
+            #DadosPessoaFisica{
+                .field {
+                    width: 50%;
+                    float: left;
+                    input{
+                        border:1px solid #ccc;
+                        border-radius: 35px;
+                        //text-indent:10px; 
+                        font-size:13px;
+                    }
+                }
+                .form{
+                    .validacao{
+                        top: 40px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+
     }
     
     body.indicate-friend,
@@ -28,13 +80,13 @@
             @extend %title-modal;
         }
         .cep .field input {
-            border: 1px solid #000;
+            border: 1px solid #ccc;
             height: 25px;
             min-height: 25px;
         }
         input[type="text"],
         textarea {
-            border-color: #666;
+            border-color: #ccc;
             min-height: 25px;
             border-width: 1px;
         }
@@ -91,6 +143,7 @@
             }
             .btn.ir.edit {
                 @extend %btn-modal-editar-endereco;
+                width: 124px;
             }
             .btn.ir.use {
                 @extend %btn-modal-usar-endereco;
@@ -120,11 +173,22 @@
                     }
                 }
             }
+            .rating {
+                .validacao {
+                    right: 0;
+                    left: 0;
+                    top: 17px;
+                    padding: 0;
+                }
+            }
 
             fieldset {
                 @include box-sizing;
                 width: 100%;
                 overflow: hidden;
+            }
+            #txtMensagem {
+                height: 50px;
             }
         }
     }
@@ -175,10 +239,16 @@
                 margin: 18px 0 0;
             }
         }
+        .field > label > span {
+            height: 17px;
+        }
         #pnlStoreDelivery h1.tit-frete {
             font-weight: bold;
             font-size: 12px;
             margin: 0 0 5px;
+        }
+        #txtZipCode {
+            height: 38px;
         }
     }
 /* fim    - Consultar Prazo de entrega */
@@ -212,7 +282,7 @@
 
 /* inicio - Login Ja existente*/
     body.loginexistente {
-        #fancybox-close {
+        a#fancybox-close {
             display: none;
         }
         input[type="text"],

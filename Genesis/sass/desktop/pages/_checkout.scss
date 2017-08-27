@@ -1,7 +1,7 @@
 body {
 	.form .title,
 	.form .even .title {
-		@extend %title-checkout2;
+		@extend %title-checkout;
 	}
 	&.checkout.close {
 		.actions {
@@ -33,19 +33,7 @@ body {
 			 }
 		}
 	}
-	&.meuspedidos {
-		#main {
-			.container {
-				width: 980px !important;
-			}
-			@at-root body.search #panCentro .actions .btn.send {
-				@extend %btn-meuspedidos-enviar;
-			}
-			.request .actions a {
-				@extend %btn-meuspedidos-imprimir;
-			}
-		}
-	}
+
 	&.alterarSenha {
 		background: #fff;
 	}
@@ -55,18 +43,49 @@ body {
 		}
 	}
 	&.simple .request a.description {
-		font-family: $font-base;
+		font-family: $font-def;
 		font-size: 13px;
 		color: #332222;
 	}
 	&.quickBasquet {
+		.photo {
+			width: 100px;
+		}
+		.section {
+			margin: 0;
+		}
+		.list-products {
+			> li {
+				width: 25%;
+			}
+			.hproduct {
+			    width: 150px !important;
+			}
+			.name {
+			    @extend %product-name;
+			    font-size: 12px;
+			}
+			.regular {
+			    @extend %product-price-from;
+			}
+			.price {
+			    @extend %product-price-to;
+			    font-size: 12px;
+			}
+			.parcel {
+			    @extend %product-parcel;
+			    font-size: 11px;
+			    span {
+			    	font-family: $font-custom;
+			    }
+			}
+		}
 		.actions {
 			li {
 				a {
-					@extend %btn-success;
-					width: 120px;
+					@extend %btn-modal-quickbasket-fecharpedido;
 					&.ContinuarComprando {
-						@extend %btn-secondary;
+						@extend %btn-modal-quickbasket-comprarmais;
 					}
 				}
 			}

@@ -1,0 +1,91 @@
+%fancy-close {
+	background: #fff;
+ 	height: 30px;
+    width: 30px;
+    position: absolute;
+    border-radius: 0;	
+	&::after,
+	&::before {
+	    position: absolute;
+	    display: block;
+	    top: 11px;
+	    left: 6px;
+	    width: 52%;
+	    height: 1px;
+	    background-color:#000;
+	    content: "";
+	}
+	&::before {
+	    -ms-transform: translate(45deg); 
+	    -webkit-transform: translate(45deg);
+	    transform: rotate(45deg);
+	}
+	&::after {
+	    -ms-transform: translate(-45deg); 
+	    -webkit-transform: translate(-45deg); 
+	    transform: rotate(-45deg);
+	}
+}
+
+%title-modal {
+    font-family: $font-custom;
+    color: #000;
+    font-size: 22px;
+    margin: 0 0 15px;
+}
+%subtitle-modal {
+    font-family: $font-custom;
+    color: #000;
+    font-size: 18px;
+    margin: 0 0 15px;
+}
+#fancybox-overlay {
+	opacity: 0.9 !important;
+	background: #000 !important;
+}
+/*cep*/
+#form1{
+	.mH1{
+		@extend %title-modal;
+		span{
+			@extend %title-modal;
+		}
+	}
+}
+.modal-mobile {
+	h1 {
+		@extend %title-modal;
+	}
+}
+.form{
+	.actions{
+		.bt-yes{@extend %btn-primary;}
+		.bt-no{@extend %btn-primary; background: #333;}
+	}
+}
+.term {
+	#fancybox-close-2 {
+		position: relative;
+	}
+}
+/* inicio - Termos */
+    body {
+        &.term {
+        	#fancybox-close-2 {
+        		display: none;
+        	}
+            #divTerm {
+            	padding: 10px;
+                h1 {
+                    @extend %title-modal;
+                }
+                #hypContinue {
+                    @extend %btn-modal-detalhe-termoaceite-continue;
+                }
+                #lnkCancel {
+                    @extend %btn-modal-detalhe-termoaceite-cancel;
+                }
+            }
+        }
+    }
+/* fim    - Termos */

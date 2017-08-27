@@ -1,37 +1,3 @@
-* {
-	-webkit-overflow-scrolling:touch;
-}
-body {
-
-	&.home,
-	&.catalog,
-	&.vitrine {
-		#fancybox-wrap {
-			@include box-sizing;
-			width: auto !important;
-			height: auto !important;
-			border: 5px solid #FFF;
-			left: 50% !important;
-			margin-left: -650px;
-
-			#fancybox-content {
-				box-sizing: border-box;
-				width: 1300px !important;
-				height: 780px !important;
-				overflow-x: hidden;
-				
-			}
-
-		}
-
-		a#fancybox-close {
-			display: none;
-		}
-
-	}
-
-}
-
 body.quickview {
 	background: none;
 
@@ -39,10 +5,49 @@ body.quickview {
 		width: 100%;
 		@include box-sizing;
 	}
-
+	div.thumbs{
+		width: auto !important;
+		border:none !important;
+	}
 	#info-product {
 		min-height: 10px !important;
+		margin: 20px 20px 20px 0;
+		.skus-product{
+			width: 100%;
+		}
+		.fab-cod {
+			margin-bottom: 0;
+		}
+		.stamp {
+			float: right;
+			width: 100px;
+			a {
+				display: inline-block;
+				vertical-align: top;
+			}
+			max-width: 100%;
+		}
+		.photo {
+			float: right;
+			.main{
+				
+			}
+		}
 
+		.collum.images{
+			.thumbnail{
+				
+			}
+		}
+		.collum.details {
+			width: 480px;
+			width: calc(100% - 460px);
+			.quick-box{
+				border: 1px solid #ebebeb;
+			    padding: 0 15px;
+			    margin: 10px 0;
+			}
+		}
 		.box-tools {
 			margin: 10px 0 0;
 			float: left;
@@ -58,8 +63,43 @@ body.quickview {
 		.social {
 			padding: 0;
 			margin: 0;
+			clear: both;
+		}
+		ul.thumbs {
+			
 		}
 
 	}
 
 }
+body{
+    &.home,
+    &.catalog,
+    &.vitrine{
+        #fancybox-wrap{
+            left: 0 !important;
+            width: 100% !important; 
+            background-color: transparent;
+            #fancybox-outer{
+                width: $page-width!important; 
+                max-width: 100%;
+                margin: 0 auto;
+                #fancybox-close{
+                    right: 20px;
+                }
+            }
+            #fancybox-content{                
+                width: 100%!important; 
+                border-width: 0 !important;  
+                min-height: 600px;             
+            }
+        }
+        &.mobile-mode{
+            #fancybox-wrap{
+                #fancybox-content{                
+                    min-height: inherit!important;             
+                }
+            }
+        }
+    }
+} 

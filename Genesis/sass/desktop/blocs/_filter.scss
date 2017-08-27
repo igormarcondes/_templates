@@ -9,7 +9,7 @@ body {
 		margin: 0 auto;
 		padding: 15px;
 		@include box-sizing;
-		width: $larguraPadrao;
+		width: $page-width;
 		.rk-autoparts-content {
 			float: left;
 			width: auto;

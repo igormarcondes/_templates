@@ -1,0 +1,187 @@
+$colorCheckout : $colorDefault;
+$colorCheckoutDestaque : $color-theme;
+$colorNumeroPedido : $color-theme;
+$fontSizeCheckout : 12px;
+
+
+body {
+	h1,
+	h1 span{
+	    @extend %title-checkout; 
+	}
+}
+body.institucional {
+	h2 {
+		@include title-checkout;
+
+		span {
+			@include title-checkout;
+		}
+
+	}
+
+	&.internal {
+		#main {
+			.container {
+				@if $desktop {
+					width: $page-width !important;
+				}
+
+				.main-content {
+					padding: 0 10px;
+				}
+
+			}
+
+		}
+
+		
+
+		#main .nav {
+			.box {
+				@if $desktop {
+					width: 90%;
+					margin: 10px;
+				}
+
+			}
+
+		}
+
+		.contactsInformation {
+			p {
+				margin: 0;
+			}
+
+		}
+
+		.contactsAtentions {
+			font-weight: normal;
+		}
+
+		.form {
+			&.box {
+				border: none;
+				background: none;
+
+				select {
+					padding: 4px 0;
+				}
+
+			}
+
+		}
+
+		.return .buy {
+			@extend %btn-faleconosco-comprar-produtos;
+		}
+
+	}
+
+	h1 {
+		@if $desktop {
+			margin: 30px 0 20px;
+			font-size: 20px;
+		}
+	}
+
+	#main .nav {
+		h2 {
+			@extend %sub-title-checkout;
+			span {
+				@extend %sub-title-checkout;
+			}
+		}
+
+		a:hover,
+		li a:hover {
+			color: $colorCheckoutDestaque;
+		}
+
+		.box {
+			background: #f7f7f7;
+			border: none;
+			border-bottom: 2px solid #d4d4d4;
+			border-radius: 5px;
+			@if $desktop {
+				float: left;
+				margin-left: -1px;
+				width: 22.8%;
+				height: auto;
+				min-height: 250px;
+				margin: 0 1%;
+			}@else {
+				margin-bottom: 15px;
+				h2 {
+					padding: 12px 5px 0;
+					border: none;
+				}
+			}
+
+			li {
+				color: #000;
+				font-weight: bold;
+				a {
+					color: #000;
+					font-weight: bold;
+					&::before {
+						color: $color-theme;
+					}
+				}
+
+				span {
+					font-weight: normal;
+					color: $colorDefault;
+				}
+
+			}
+
+		}
+
+	}
+
+	#main .text {
+		input,
+		textarea,
+		select {
+			border-color: #666;
+		}
+		h2.contactsSubTitle {
+			span {
+				@extend %sub-title-checkout;
+			}
+		}
+		.actions {
+			.btn {
+				@extend %btn-faleconosco-enviar;
+				@if $desktop {
+					display: inline-block;
+					float: none !important;
+					margin: 0 auto 0 25%;
+				}
+			}
+
+		}
+
+	}
+}
+
+body.internal {
+	form[action="./faleconosco_retorno.aspx"] {
+		#main {
+			.container {
+				.content {
+					.main-content {
+						.return {
+							.btn {
+								&.buy {
+									@extend %btn-faleconosco-comprar-produtos;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

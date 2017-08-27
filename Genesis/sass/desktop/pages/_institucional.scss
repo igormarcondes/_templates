@@ -1,91 +1,12 @@
 body {
-    h1,
-    h2 {
-        font-family: $font-custom, arial;
-        color: #000;
-    }
-
-    &.institucional {
-        #main h1,
-        #main h2 {
-            font-family: $font-custom;
-        }
-
-        .main-content {
-            .nav {
-                margin-top: 33px;
-
-                li {
-                    font-family: $font-base;
-                    height: auto;
-                    min-height: 210px;
-
-                    li {
-                        min-height: 1px;
-                    }
-
-                    a {}
-
-                    a:hover {
-                        color: $color-theme;
-                    }
-                }
-            }
-        }
-
-        &.internal {
-            #main {
-                
-            }
-
-            .nav {
-                margin-right: 20px;
-                margin-top: 0;
-
-                li {
-                    a {
-                        &:hover {
-                            color: $color-theme;
-                        }
-                    }
-                }
-            }
-
-            .send {
-                margin-right: 163px;
-                line-height: 23px;
-            }
-
-            .text {
-                .form.box {
-                    background: none;
-                    border: 0;
-                }
-                .actions {
-                    .btn {
-                        @extend %btn-faleconosco-enviar;
-                        margin: 10px 225px 0 0px;
-                    }
-                }
-            }
-
-        }
-
-        &.search .internal {
-
-        }
-    }
-    &.internal {
-        .return .buy {
-            @extend %btn-faleconosco-comprar-produtos;
-        }
-    }
+   
     /* Mapa do site */
     &.sitemap {
         h1 {
             font-family: $font-custom;
             font-weight: 300;
             color: #000;
+            margin: 10px 0 20px 0 !important;
         }
 
         h2 a {

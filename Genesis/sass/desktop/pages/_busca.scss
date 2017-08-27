@@ -1,0 +1,65 @@
+body.rksearch {
+	.container-search {
+		margin: 0 auto;
+		&::before {
+			content: " ";
+			margin-top: 20px;
+			display: block;
+		}
+	}
+	aside.sidebar {
+		@extend %nav-vertical-sidebar;
+		.side-blocks {
+			.title {
+				@extend %nav-vertical-title;
+				.fa {
+					@extend %rk-hide;
+				}
+			}
+		}
+		.nav-side {
+			background: none;
+			padding: 0;
+		}
+		.link-list {
+			li {
+				a {
+					&:hover {
+						background: none !important;
+					}
+					i {
+						color: $color-theme2 !important;
+					}
+				}
+			}
+		}
+	}
+	a {
+		transition:none;
+	}
+	section.ordenacao {
+		@extend %busca-ordenacao;
+	}
+	section.resumo-resultado {
+		font-family: $font-custom;
+		strong {
+			color: #000;
+		}
+	}
+	ul.lista-paginacao {
+		@extend %busca-paginacao;
+	}
+	section.refine-sua-busca {
+		@extend %busca-refina;	
+	}
+}
+/*inicio - autocomplete */
+body {
+	.autocomplete-mais-buscadas {
+		@extend %autocomplete-mais-buscadas;
+	}
+	.panel-multicomplete-results {
+		@extend %autocomplete-box-semresultado;
+	}
+}
+/*fim - autocomplete */

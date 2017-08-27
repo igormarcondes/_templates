@@ -1,0 +1,12 @@
+body {
+    .bottom {
+        #footer {
+            @extend %footer;
+        }
+    }
+    .footerbuy {
+        #footer {
+            @extend %footer-buy;
+        }
+    }
+}

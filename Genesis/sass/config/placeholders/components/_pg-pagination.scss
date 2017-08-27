@@ -1,0 +1,96 @@
+﻿$colorPagination: $colorDefault;
+$colorPaginationDestaque: $colorDefault;
+$heightPagination: 16px;
+
+%buttons-pagination {
+  @include bgimg("arrows", "png");
+  background-position:0 center;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: $heightPagination;
+  height: $heightPagination;
+  display: inline-block;
+}
+
+%pagination {
+  ul {
+    color: $colorPagination;
+
+    li {
+      height: $heightPagination;
+      line-height: $heightPagination;
+      margin: 0;
+      display: inline-block;
+      float: none;
+      vertical-align: middle;
+      font-family: $font-custom;
+
+      a {
+        color: $colorPagination;
+        font-size: 12px;
+        border: none;
+        padding: 0px;
+        margin: 0;
+        height: $heightPagination;
+        line-height: $heightPagination;
+        &:hover {
+          color: $colorPaginationDestaque;
+        }
+      }
+
+      &.page {
+        color: $colorPagination;
+        display: inline-block;
+      }
+
+      &.numbers {
+        margin: 0px;
+      }
+
+      .item {
+        padding: 0 2px;
+        margin: 0 2px;
+      }
+      &:hover,
+      .selected {
+        color: $colorPaginationDestaque;
+        background-color: transparent;
+        text-decoration: none;
+      }
+      &:hover {
+        color: $color-theme;
+      }
+      &:first-child a,
+      &:last-child a{
+        @extend %buttons-pagination;
+      }
+      &:last-child a {
+        background-position: right center;
+      }
+      &.prev, 
+      &.next {
+        a {
+          color: $color-theme2;
+        }
+      }
+      &.prev a,
+      &.next a,
+      #lnkAnterior,
+      #lnkProxima {
+        
+      }
+
+      &.next a,
+      #lnkProxima {
+        margin-left: 8px;
+      }
+
+    }
+
+  }
+
+}
+
+body .pagination {
+    @extend %pagination;
+}

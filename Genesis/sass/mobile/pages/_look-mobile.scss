@@ -1,112 +1,81 @@
 body.lookDetalhe {
-    #info-product {
+    #main {
         span:empty {
-            display: none;
+            display: none !important; 
         }
-        .description {
-        }
-
-        .reviewaggregate {
-            .count {
-                a {
-                }
-
+        .social .listSocial{
+    		width: auto;
+    		display: inline-block;
+    	}
+        .collum.details {
+            .fab-cod {
+                padding-bottom: 5px;
             }
-        }
-        .tools {
-        }
-
-    }
-
-
-    div.collum.images {
-        .thumbs {
-        }
-
-    }
-
-    div.aside {
-        span.title {
-            @extend %look-title-pecas;
-        }
-
-        .photo {
-        }
-
-        #piecesLook .btn.ir.select-look {
-            @extend %btn-look-selecionar-produtos;
-        }
-
-        .buy.selected.ir.btn {
-            @extend %btn-look-comprar-produtos;
-        }
-
-        #piecesLook {
-            .title {
+            .stamp {
+                margin: 0;
             }
-
-            ul {
+            .txtQuantity {
+                display: none;
             }
-
-            .name {
-                @extend %look-piece-name;
+            .reviewaggregate {
+                margin-top: 10px; 
             }
-
-            .field {
-                label span {
-                }
-
-            }
-
-            .info {
-                float: right;
-            }
-
-            .skus-cores {
-                @extend %look-sku-cores;
+            .tools {
                 li {
-                    a {
-                        width: auto;
-                        height: auto;
-                    }
+                    min-width: 251px;
                 }
-            }
-
-            > ul {
-                > li {
-                    &:nth-child(2n +1) {
-                    }
-
-                }
-
-            }
-
-            .details {
-                width: 100%;
-                clear: both;
-                float: left;
-                text-align: center;
-                margin-top: 20px;
-                .price-from {
-                    @extend %detail-price-from;
-                }
-                .price-to {
-                    @extend %detail-price-to;
-                }
-                .desconto-avista {
-                    @extend %detail-price-offer;
-                    #lblFormaPagamentoAVista {
-                        display: block;
-                    }
-                }
-            }
-
-            .notifyme {
-                @extend %look-notify;
             }
 
         }
+    	.aside{
+    		.info .details{
+    			margin-top: 20px;
+    			text-align: left;
+    			span[id*="lblUnavailableSku"]{
+    				.stamp{
+    					text-align: left;
+    				}
+    			}
+    		}
+            .pieces {
+                .title {
+                    @extend %look-pieces-title;
+                }
+                .btn.ir.select-look {
+                    @extend %look-pieces-select-look;
+                }
+            }
+            .name {
+                @extend %look-pieces-name;
+                 + .field label span {
+                    @extend %look-pieces-sku-name;
+                }
+            }
+            .price-to {
+                @extend %detail-price-to;
+                strong span {
+                    font-size: 16px;
+                }
+            }
+            .txtQuantity {
+                display: none;
+            }
+            .jcarousel-skin-tango {
+                padding: 0 20px;
+                width: 195px;
+                .owl-controls {
+                    width: 170px
+                }
+            }
+            .skus-cores {
 
+            }
+            .notifyme {
+                @extend %look-notifyme;
+            }
+            .buy.selected {
+                @extend %btn-look-comprar-produtos;
+            }
+    	}
     }
-
 }

@@ -1,138 +1,230 @@
 body.lookDetalhe {
-    #info-product {
-        width: 100%;
-
-        div.collum.details {
-            width: 100%;
-            margin: 0;
-            float: left;
-            @include clearfix;
-
-            .box-middle {
-                float: left;
-                width: 33%;
-                padding: 0 20px;
+    .pieces {
+        background: none;
+        .title {
+            background: none;
+            color: #000;
+        }
+        .name {
+            background: none;
+        }
+        > ul {
+            > li {
+                background: none;
             }
+        }
+    }
 
-            span:empty {
+    #info-product {
+         .collum.details {
+            width: 100%;
+            float: left;
+            clear: both;
+            border-bottom: 1px solid #b6b6b6;
+            padding-bottom: 20px;
+         }
+         .box-desc {
+            float: left;
+            width: 430px;
+         }
+         .box-price {
+            float: left;
+            width: 253px;
+            margin-left: 20px;
+            text-align: center;
+         }
+         .box-buy {
+            float: right;
+            width: 246px;
+         }
+
+         div.details {
+            span.look.converted-price:empty,
+            .txtQuantity {
                 display: none;
             }
-            .description {
-                padding: 0;
-                margin: 0;
-                color: #000;
-                border: 0;
-                font-family: $font-custom;
-                line-height: 14px;
-            }
+            @extend %detail-description-preview;
+
             .reviewaggregate {
-                border: 0;
-                .count {
-                    a {
-                        text-decoration: underline;
-                        font-family: $font-custom;
-                        line-height: 16px;
-                    }
-                }
+                margin-top: 30px;
             }
             .tools {
+                position: absolute;
+                top: 75px;
+                right: 7px;
                 margin: 0;
-            }
-
-        }
-
-        .box-full {
-            @include clearfix;
-            float: left;
-            width: 100%;
-            padding-top: 20px;            
-        }
-
-        div.collum.images {
-            width: 470px;
-            .thumbs {
-                margin: 0;
-            }
-            #videoDetalhe {
-                img {
-                    width: 100%;
-                    height: auto;
+                li {
+                    border: 0;
                 }
-            }
-        }
-
-        div.aside {
-            display: block;
-            width: 750px;
-            span.title {
-                @extend %look-title-pecas;
-            }
-            .photo {
-                width: 120px;
-                height: auto;
-            }
-            .btn.select-look {
-                @extend %btn-look-selecionar-produtos;
-                margin: 0;
-                line-height: 26px;
-            }
-            .buy.selected.btn {
-                @extend %btn-look-comprar-produtos;
-                margin: 0;
-                float: right;
-                line-height: 38px;
-            }
-            .pieces {
-                @include clearfix;
-                padding-top: 20px;
-                background: none;
-                width: 100%;
-                clear: both;
-                .title {
-                    background: none;
-                    color: #000;
+                .rate {
+                    display: none;
                 }
-                ul {
-                    @include clearfix;
-                }
-                .name {
-                    background: none;
-                    @extend %look-piece-name;
-                }
-                .field {
-                    label span {
-                        color: $color-theme;
+                .delivery {
+                    a {
+                        font-size: 10px;
                     }
                 }
-                .info {
-                    float: right;
-                    width: 220px;
+            }
+        }
+        div.collum.images {
+            width: 387px;
+            .photo {
+                float: left;
+                img[name="ProdutoImagem"] {
+                    width: $look_detalhes_w;
+                    height: $look_detalhes_h;
                 }
-                .skus-cores {
-                    @extend %look-sku-cores;
+            }
+            .thumbs {
+                clear: both;
+                li {
+                    float: left;
+                    margin: 0 5px 0 0;
+                    clear: none;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
                 }
-                > ul {
+            }
+            #videoDetalhe {
+                clear: none;
+                margin-left: 5px;
+            }
+        }
+        .aside {
+            float: right;
+            width: 590px;
+            .buy.ir.selected {
+                @extend %btn-look-comprar-produtos;
+                line-height: 27px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 8px 21px;
+                width: 240px;
+            }
+            hr {
+                display: block;
+                border: 0;
+                border-top: 1px solid #ccc;
+                height: 1px;
+                margin: 1em 0;
+                padding: 0;
+            }
+            #hplBuy {
+                float: right;
+                line-height: 26px;
+                position: static;
+                width: 210px;
+            }
+            .pieces {
+                background: none;
+                clear: both;
+                width: 100%;
+                @include clearfix;
+                .title {
+                    @extend %look-pieces-title;
+                }
+                .btn.ir.select-look {
+                    @extend %look-pieces-select-look;
+                }
+                .jcarousel-skin-tango {
+                    width: 175px;
+                    padding: 0 17px;
+                    margin: 0;
+                    position: relative;
+                    li a {
+                        border: 1px solid #fff;
+                    }
                     > li {
-                        background: none;
-                        float: left;
-                        display: inline-block;
-                        width: 50%;
-                        &:nth-child(2n +1) {
-                            clear: left;
-                            padding-right: 30px;
+                        margin: 5px 3px 0 0;
+                    }
+                }
+                label {
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        border: 1px solid #d2d2d2;
+                        &:hover {
+                            
+                        }
+                    }
+                    .selected {
+                        border: 0 !important;
+                        a {
+                            border: 1px solid #ccc;
+                        }
+                        img {
+                            border: 1px solid #d2d2d2;
                         }
                     }
                 }
-                .details {
-                    width: 100%;
-                    clear: both;
+                .figure {
+                    .photo {
+                        width: 100%;
+                        height: auto;
+                    }
+
                 }
-                .notifyme {
-                    @extend %look-notify;
+                > ul {
+                    clear: both;
+                    width: 100%;
+                    @include clearfix;
+                    > li {
+                        float: left;
+                        background: none;
+                        width: 50%;
+                        @include box-sizing;
+                        padding-right: 20px;
+                        &:nth-child(2n +1) {
+                            clear: left;
+                        }
+                    }
+                    .field {
+                        width: 175px;
+                        margin: 0;
+                        padding: 0;
+
+                        select {
+                            width: 100%;
+                            border-radius: 5px;
+                            padding: 8px 0;
+                        }
+                    }
+                }
+                .name {
+                    background: none;
+                    @extend %look-pieces-name;
+                    span {
+                        width: calc(100% - 20px);
+                    }
+                     + .field label span {
+                        @extend %look-pieces-sku-name;
+                    }
+                    input[type="checkbox"] {
+                        position: relative;
+                        top: 3px;
+                    }
+                }
+                .txtQuantity {
+                    display: none;
+                }
+                .price-to {
+                    @extend %look-pieces-price;
+                }
+                #lblUnavailableSku {
+                    .stamp > img {
+                        display: none;
+                    }
+                }
+                .notifyme.form {
+                    @extend %look-notifyme;
                 }
             }
+            .btn.send.ir {
+                margin: 6px 0 0;
+            }
         }
-
     }
-
-}
+}	

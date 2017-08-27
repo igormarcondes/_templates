@@ -1,0 +1,137 @@
+body {
+    &.loginpage {
+        #main {
+            .container {
+                @if $desktop {
+                    width: 966px;
+                }
+            }
+        }
+        .main-content h1 {
+            @extend %title-checkout;
+        }
+        .main-content {
+            margin: 0 !important;
+        }
+        .login {
+            @if $desktop {
+                border: 1px dotted #cccccc;
+                margin-top: 50px !important;
+                margin-bottom: 50px !important;
+            }
+
+            .collum {
+                &.box {
+                    .field {
+                        a {
+                            @if $desktop {
+                                line-height: 32px;
+                                width: 149px;
+                            }
+                        }
+                    }
+                }
+                &.even {
+                    input.email {
+                        @if $desktop {
+                            width: 100% !important;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                &:not(.even) {
+                    dl {
+                        position: static;
+                    }
+                }
+            }
+            .btn.enter {
+                @extend %btn-login-entrar;
+            }
+            .btn.continue {
+                @extend %btn-login-continuar;
+                 @if $desktop {
+                    margin: 21px 0px 0px 0px !important;
+                }
+            }
+            input[type="text"],
+            input[type="password"] {
+                @if $desktop {
+                    width: 100%;
+                    height: 35px !important;
+                    padding: 7px !important;
+                    box-sizing: border-box;
+                }
+            }
+            #txtEmail {
+                width: 100% !important;
+            }
+            
+        }
+    }
+    &.loginpage.request {
+        .form {
+            .title {
+                background: none;
+            }
+            input[type="text"] {
+                @if $desktop {
+                    width: 100% !important;
+                    margin-bottom: 10px;
+                }
+            }
+            .btn.continue.ir {
+                @if $desktop{
+                    margin: 5px 0px 0px 0px !important;
+                }
+            }
+        }
+    }
+    #formcadastro_btnSalvar {
+        @extend %btn-salvar-cadastro;
+    }
+    &.register {
+        #main .container {
+            @if $desktop {
+                width: 966px;
+                .form .field:not(.person) {
+                    height: 65px;
+                }
+                .form .field div .validacao,
+                .form .field div .alert,
+                .form .field label .validacao,
+                .form .field label .validacao.alert {
+                    bottom: 3px;
+                }
+            }
+        }
+        #spanMsgValidacaoNumero {
+            left: 0;
+        }
+        &.delivery-address {
+            #main .container .content .main-content #pnlHomeDelivery {
+                .cadaster {
+                    .fr-dados {
+                        float: left;
+                        margin-left: 22px;
+                    }
+                }
+            }
+        }
+    }
+    &.affiliates {
+        .btn.ir.save {
+            @extend %btn-afiliado-salvar;
+        }
+    }
+    .reports {
+        .btn.ir.search {
+            @extend %btn-afiliado-pesquisar-relatorio;
+        }
+    }
+    &.partner {
+        .btn.continue {
+            @extend %btn-login-continuar;
+        }
+    }
+}

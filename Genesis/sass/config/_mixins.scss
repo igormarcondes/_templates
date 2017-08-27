@@ -33,11 +33,45 @@
         box-shadow: $top $left $blur $color;
     }
 }
-@mixin flexbox() {
+//https://github.com/mastastealth/sass-flex-mixin
+//https://codepen.io/terrymun/pen/cKxwu
+
+@mixin flexbox {
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+}
+
+%flexbox { @include flexbox; }
+
+@mixin inline-flex {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+%inline-flex { @include inline-flex; }
+
+@mixin flex($fg: 1, $fs: null, $fb: null) {
+    
+    // Set a variable to be used by box-flex properties
+    $fg-boxflex: $fg;
+
+    // Box-Flex only supports a flex-grow value so let's grab the
+    // first item in the list and just return that.
+    @if type-of($fg) == 'list' {
+        $fg-boxflex: nth($fg, 1);
+    }
+
+    -webkit-box-flex: $fg-boxflex;
+    -webkit-flex: $fg $fs $fb;
+    -moz-box-flex: $fg-boxflex;
+    -moz-flex: $fg $fs $fb;
+    -ms-flex: $fg $fs $fb;
+    flex: $fg $fs $fb;
 }
 
 @mixin opacity($opacity: 1){
@@ -107,19 +141,9 @@
 @mixin bgimg($img-name, $img-type){
     background: url("#{$path-img}/" + $img-name + "." + $img-type);
 }
-@mixin bt-reverse( $main-color: $color-theme-1-alt, $hover-color: $color-theme-1){
-    background: $main-color;
-    border-bottom: 1px solid $hover-color;
-    &:hover {
-        background: $hover-color;
-        border-bottom: 1px solid $main-color;
-    }
-}
 
 @mixin fonte($font-family: $font-def, $font-weight: "normal", $font-size: 12px, $font-color: #000){
-    font-family: $font-family;
-    font-weight: $font-weight;
-    font-size: $font-size;
+    font: $font-weight  #{$font-size} $font-family;
     color: $font-color;
 }
 
@@ -148,11 +172,27 @@
     height: $star-height + px;
     .rating{
         background: url("/static/locales/global/img/" + $img-name + "." + $img-type);
-        background-position: 0px -15px;
+        background-position: 0 (-($star-height)+px);
         //width: ($unit-width * 5) + px;
         height: ($star-height) + px;
     }
 }
+@mixin icons($iconCode: f00b, $fontSize:28px, $color: $colorIcons) {
+    $contentValue: "\"\\#{$iconCode}\"";
+    content:  unquote($contentValue);
+    font: normal $fontSize/1 $font-icon;
+    color: $color;
+    @extend %icons;
+}
+
+%icons{
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    float: left;
+    text-indent: 0;
+}
+
 %rk-hide {
     display: none !important;
 }

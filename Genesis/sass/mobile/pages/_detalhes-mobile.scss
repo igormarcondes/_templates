@@ -1,284 +1,224 @@
-body {
+body:not(.quickview) {
+    .main-look * {
+        @include box-sizing;
+    }
     #info-product {
         * {
             @include box-sizing;
-            
-        }      
-        /* inicio - Collum Details */
-            .collum.details {
-            	text-align: center;
+        }
+
+        .collum.details {
+            text-align: center;
+        }
+
+        .name {
+            @extend %detail-name;
+        }
+
+        .fab-cod {
+            @extend %detail-fabricante;
+
+            li::before {
+                display: none;
             }
-            /* Product name :start */
-                .name {
-                    @extend %detail-name;
-                }
-            /* Product name:end */
 
-            /* Fabricante:start */
-                .fab-cod {
-                    @extend %detail-fabricante;
-                    li::before {
-                    	display: none;
-                    }
-                }
-            /* Fabricante:end */
+        }
 
-            /* rating:start */
-                @extend %reviewaggregate;
-                .reviewaggregate {
-                    text-align: center;
-                }
-                .see-review,
-                .rate {
-                   display: none;
-                }
-            /* rating:end */
+        @extend %detail-reviewaggregate;
+        .reviewaggregate {
+            text-align: center;
+            margin-bottom: 10px;
+        }
 
-            /* Stamps:start */
-                .stamp {
-                	clear: both;
-                    margin-bottom: 20px;
-                }
-            /* Stamps:end */
-
-            /* Box Prices:start */
-                .box-price {
-                    @include clearfix;
-                    border-bottom: 1px solid #c9c9c9;
-                    padding-bottom: 25px;
-                    margin-bottom: 20px;
-                }
-                #infoPrices {
-
-                }
-                .offers {
-                    width: 100%;
-                    margin: 0;
-                    span {
-                        margin: 0;
-                    }
-                }
-                .price-from {
-
-                }
-                .price-to {
-                    @extend %detail-price-to;
-                }
-                .desconto-avista {
-                    @extend %detail-price-offer;
-                    margin-bottom: 5px;
-                }
-                .parcel {
-                     @extend %detail-parcel;
-                    width: 100%;
-                    margin: 0;
-                    padding: 0;
-                }
-                .save {
-                    display: none;
-                }
-            /* Box Prices:end */
-            
-            /* Tabs:start */
-                #ajaxTabs {
-                    width: 100%;
-                }
-                .tabs {
-                    .tab-link {
-                        h2 {
-                            &.active {
-
-                            }
-                        }
-                    }
-                    .tab-content {
-
-                    }
-                }
-            /* Tabs:end */
-
-            /* Skus:start */
-                .skus-product {
-
-                    .field {
-
-                    }
-                    .padrao-brasileiro {
-                        @extend %detail-tabela-medida;
-                    }
-                    label {
-
-                        span {
-                            
-                        }
-                    }
-                    ul {
-
-                        li {
-
-                            &:last-child {
-                               
-                            }
-                            &.selected,
-                            &:hover {
-                                a {
-
-                                }
-                            }
-                            &.warn {
-                                .ico.ir {
-                                    
-                                }
-                            }
-                            a {
-
-                                img {
-
-                                }
-                            }
-                        }
-                    }
-                }
-            /* Skus:end */
-
-            /* Comprar:start */
-                #ProductBuy {
-                    .txtQuantity {
-                        @extend %detail-quantidade;
-                    }
-                }
-                .action {
-
-                    .btn.buy {
-                        @extend %btn-detalhes-comprar;
-
-                    }
-                }
-                .notifyme.form  {
-
-                    span {
-
-                        strong {
-
-                        }
-                    }
-                    > span {
-                        &::before {
-
-                        }
-                        &::after {
-
-                        }
-                    }
-
-                    label {
-
-                        span {
-
-                        }
-
-                        input {
-
-                        }
-
-                    }
-
-                    .btn {
-                    	@extend %btn-enviar-notify;
-                    }
-                }                
-            /* Comprar:start */
-
-            /* Descricao preview:start */
-                #ajaxDescriptionPreview {
-                    @extend %detail-description-preview;
-
-                }
-            /* Descricao preview:end */
-            
-            /* tools:start */
-                .tools {
-                    @extend %detail-tools;
-                    #ajaxCommentsReview {
-
-                    }
-                    li {
-                    	&::before {
-                    		@extend %rk-hide;
-                    	}
-                    }
-                }
-            /* tools:start */
-
-            /* Disponibilidade:start*/
-                .time {
-                   @extend %detail-disponibilidade;
-                }
-            /* Disponibilidade:end*/
-        /* fim    - Details */
-
-        /* inicio - Collum Imagem */
-            .collum.images {
-                @include box-sizing(content-box);
+        .see-review {
+            display: none;
+        }
+        .responsive-prod-images {
+            padding-top: 0;
+            margin-top: 0;
+        }
+        .stamp {
+            clear: both;
+            margin-bottom: 5px;
+            a {
+                margin: 0 5px 10px;
+                display: inline-block;
             }
-            .photo {
+        }
 
-                .main {
+        #infoPrices {
+        }
 
-                }
+        .offers {
+            width: 100%;
+            margin: 0;
+
+            span {
+                margin: 0;
             }
-            .zoom {
+
+        }
+
+        .price-from {
+        }
+
+        .price-to {
+            @extend %detail-price-to;
+        }
+
+        .desconto-avista {
+            @extend %detail-price-offer;
+            margin-bottom: 5px;
+        }
+
+        .parcel {
+            @extend %detail-parcel;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .save {
+            display: none;
+        }
+
+        #ajaxTabs {
+            width: 100%;
+        }
+
+        .skus-product {
+            .field {
+            }
+
+            .padrao-brasileiro {
+                @extend %detail-tabela-medida;
+            }
+
+        }
+
+        #ProductBuy {
+            .txtQuantity {
+                @extend %detail-quantidade;
+            }
+
+        }
+
+        .action {
+            .btn.buy {
+                @extend %btn-detalhes-comprar;
+                width: 200px;
+            }
+
+        }
+
+        .sucess2 {
+            background: #e9fbdb;
+            color: #1f4500;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 5px 0 10px;
+            padding: 10px;
+        }
+
+       .notifyme.form  {
+           @extend %detail-notify;
+       }
+
+        #ajaxDescriptionPreview {
+            @extend %detail-description-preview;
+        }
+
+        .tools {
+            @extend %detail-tools;
+
+            li {
+                &::before {
+                    @extend %rk-hide;
+                }
+
+            }
+
+        }
+        #ajaxCommentsReview {
+             @extend %rk-hide;
+        }
+        .time {
+            @extend %detail-disponibilidade;
+        }
+
+
+        .zoom {
+            background: none;
+            display: none !important;
+
+            .mouseover {
                 background: none;
-                display: none !important;
-                
-                .mouseover {
-                    background: none;
+            }
 
+            #hplAmpliar {
+            }
+
+        }
+
+        ul.thumbs {
+            li {
+                @include box-sizing(content-box);
+
+                img {
                 }
-                #hplAmpliar {
 
+                &:last-child {
                 }
-            }
-            ul.thumbs {
-
-                li {
-
-                    @include box-sizing(content-box);
-                    img {
-
-                    }
-                    &:last-child {
-
-                    }
-                }
-            }
-            #videoDetalhe {
 
             }
-            .social {
-                @extend %detail-social;
-            }
-        /* fim    - Collum Imagem */
+
+        }
+
+        #videoDetalhe {
+        }
+
+        .social {
+            @extend %detail-social;
+        }
+
     }
-    
+
     #main .responsive-abas-description {
         @extend %reviewaggregate-avalicao-dos-clientes;
+
         h2 {
-            @extend %detail-titile-vitrine-mobile;
+            @extend %detail-titile-vitrine;
         }
+
         .description {
-            text-align: left;
             #descriptionContent {
                 @extend %detail-description-full;
             }
+
         }
+
         .especificacion {
             #specificationContent {
                 @extend %detail-description-full;
             }
+
         }
-        .hreview  {
+
+        .hreview {
             @extend %detail-review;
+        }
+
+    }
+}
+body.product {
+    #main .list-products {
+        li.open-combo {
+            color: $color-theme;
+        }
+        .result {
+            .details {
+                text-align: center;
+            }
         }
     }
 }

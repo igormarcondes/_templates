@@ -1,13 +1,14 @@
 @import "config/mixins";
 @import "config/config";
-$desktop-mode: false;
+@import "config/fonts";
+$desktop: false;
 $mobile: true;
-@import "config/placeholders/main";
+@import "config/placeholders/placeholders";
 
-@import "mobile/buttons-mobile";
-@import "mobile/header-mobile";
-@import "mobile/footer-mobile";
-@import "mobile/main-mobile";
+@import "mobile/blocs/header-mobile";
+@import "mobile/blocs/footer-mobile";
+@import "mobile/blocs/main-mobile";
+@import "mobile/blocs/banners";
 
 
 @import "mobile/pages-mobile";
@@ -18,6 +19,7 @@ $mobile: true;
 @import "mobile/pages/modal-mobile";
 @import "mobile/pages/minhaconta-mobile";
 @import "mobile/pages/checkout-mobile";
+@import "mobile/pages/busca-mobile";
 
 
 

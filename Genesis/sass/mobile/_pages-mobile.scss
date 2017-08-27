@@ -1,15 +1,5 @@
 /* inicio - Checkout */
 	html {
-	    body .login .collum fieldset .title {
-	        font: bold 17px $font-custom, Arial, Sans-serif;
-	        color: #303030;
-	        text-transform: uppercase;
-	    }
-
-	    .login .collum .remember {
-	        margin-top: 20px;
-	    }
-
 	    .checkout.close .main-content #BlocoNP .field input[type=text] {
 	        /*campo cpf*/
 	        border: 1px solid #000 !important;
@@ -41,32 +31,6 @@
 		}
 	}
 /* Fim    - Cadastro */
-
-/* inicio - Institucional */
-	html {
-	    .institucional .nav > ul .box h2 {
-	        color: $color-theme;
-	    }
-
-	    .institucional .nav > ul .box ul li a:before,
-	    .sitemap #main_content .col > ul li a:before {
-	        color: $color-theme;
-	    }
-
-	    .sitemap #main_content .col > strong {
-	        color: $color-theme;
-	    }
-	    .internal {
-	        .return .buy {
-	            @extend %btn-faleconosco-comprar-produtos;
-	        }
-	        &.institucional .form .actions .btn {
-	        	@extend %btn-faleconosco-enviar;
-	        }
-	    }
-
-	}
-/* fim 	  - Institucional */
 
 /* inicio - Afiliados */
 body {

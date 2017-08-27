@@ -14,6 +14,7 @@ body {
             li {
                 img {
                     width: auto;
+                    margin: 0 auto;
                 }
             }
         }
@@ -22,25 +23,24 @@ body {
     &.home {
         .banners {
             &.b-top {
+                width: 1080px;
+                margin: 0 auto;
+                padding-bottom: 10px;
                 .owl-item {
-                    margin-bottom: 5px;
+                    margin-bottom: 0;
                 }
                 li {
                     width: 100%;
-                    margin: 0 auto 0;
 
-                    &.posicao1 {
-                        width: 100%;
+                    &.posicao2 {
+                        margin-top: 0;
                     }
 
+                    &.posicao3,
+                    &.posicao4,
                     &.posicao5,
-                    &.posicao6,
-                    &.posicao7 {
-                        float: none;
-                        width: 100%;
-                        display: none;
-                        margin-right: 13px;
-                        overflow: hidden;
+                    &.posicao6 {
+                        
                     }
                     img {
                         width: 100%;
@@ -50,23 +50,52 @@ body {
             }
 
             &.b-bottom {
-                @extend .b-top;
+                li {
+                    &.posicao1,
+                    &.posicao2,
+                    &.posicao3 {
+                        width: 406px;
+                        float: left;
+                        margin: 0 0 10px;
+                    }
+                    &.posicao2 {
+                        margin: 0 11px 10px;
+                    }
+                }
             }
             &.b-main {
-                width: 100%;
                 margin: 0 auto;
+                width: $page-width;
+                padding-bottom: 7px;
+                ul{
+                    float:none;
+                }
+                
                 .posicao1,
-                .posicao2,
-                .posicao3,
-                .posicao4 {
-                    width: 100% !important;
+                .posicao2 {
+                    width: 490px !important;
                     float: left;
+                    margin: 0;
+                    margin-right: 10px;
+                }
+                .posicao3,
+                .posicao4,
+                .posicao5,
+                .posicao6 {
+                    width: 240px !important;
+                }
+                .posicao6 {
                     clear: none;
+                    margin-right: 0;
+                }
+                .posicao4 {
+                    
                 }
                 li {
-                    margin: 0 0 10px;
-                    &:nth-child(2n-1) {
-                        
+                    
+                    &:nth-child(2) {
+                        float: right;
+                        margin-right: 0;
                     }
                 }
             }
@@ -75,21 +104,16 @@ body {
                 margin: 0 auto;
 
                 li {
-                    width: 100% !important;
-                    margin: 0 0 10px !important;
-
                     .owl-item img {
-                        width: auto !important;
-                    }
-
-                    &.posicao3,
-                    &.posicao4,
-                    &.posicao5 {
-                        
-                    }
-
-                    &.posicao5 {
                        
+                    }
+
+                    &.posicao6,
+                    &.posicao7 {
+                       
+                    }
+                    &.posicao7 {
+                        
                     }
                 }
             }
@@ -101,21 +125,50 @@ body {
             }
 
             &.special-store {
-                background: url("/static/locales/custom/img/bg_lojas-especiais.png") repeat;
+                background: #f2f2f2;
                 width: 100%;
-                height: 97px;
-                border: 0;
+                height: 101px;
+                border-top: 1px solid #d2d2d2;
+                border-bottom: 1px solid #d2d2d2;
+
 
                 .title {
-                    display: none;
+                    float: left;
+                    color: $colorDefault;
+                    font-family: $font-custom;
+                    font-size: 18px;
+                    display: block;
+                    width: 210px;
+                    padding: 25px 31px 0;
+
+                    @include box-sizing;
+                    &::before {
+                        content: "Grandes Marcas para sua Casa";
+                        text-transform: none;
+                    }
+                    span {
+                        display: none;
+                    }
                 }
 
                 ul {
-                    width: 100%;
-                    margin: 24px 0 0;
-                    padding: 0 20px 0 50px;
+                    width: 780px;
+                    height: 101px;
+                    background: #fff;
+                    float: left;
+                    margin: 0;
+                    padding: 20px 50px 0 70px;
                     @include box-sizing;
-
+                    li {
+                        border-left: 1px solid #d2d2d2;
+                    }
+                    .owl-wrapper-outer {
+                        div.owl-item:first-child {
+                            li {
+                                border-left: 0;
+                            }
+                        }
+                    }
                     .owl-next {
                         left: auto !important;
                     }
@@ -132,8 +185,12 @@ body {
                 }
             }
             &.full.b-bottom {
-                width: $larguraPadrao;
                 margin: 0 auto;
+                width: $page-width;
+                .posicao1 {
+                    float: none;
+                    width: 100%;
+                }
             }
         }
     }
@@ -159,6 +216,9 @@ body {
                         clear: none;
                     }
                 }
+            }
+            &.b-bottom {
+                margin: 20px 0px 10px 0px;
             }
         }
     }

@@ -1,0 +1,17 @@
+.banners {
+	&.b-main {
+		li {
+			&.posicao1,
+			&.posicao2 {
+				width: 50%;
+				float: left;
+			}
+			&.posicao3,
+			&.posicao4,
+			&.posicao5,
+			&.posicao6 {
+				width: 25%;
+			}
+		}
+	}
+}

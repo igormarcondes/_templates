@@ -5,20 +5,15 @@ body {
     &.home {
         #main {
             .container {
-                padding: 0;
-                width: 100%;
                 @include box-sizing;
-                
-                .aside {
-                    display: none;
-                }
+                width: 100%;
                 .content {
                     margin: 0 auto;
-                    width: $larguraPadrao; 
-                    padding-top: 100px;
+                    width: $page-width;
                 }
-                .banners ~ .content {
-                    padding-top: 0;
+                
+                .aside {
+                    @extend %rk-hide;
                 }
 
                 .section {
@@ -31,6 +26,12 @@ body {
                     text-align: justify;
                 }
             }
+        }
+    }
+    &.home,
+    &.vitrine {
+        .section {
+            border-bottom: 0;
         }
     }
 }

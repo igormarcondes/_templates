@@ -1,0 +1,336 @@
+$nav-vertical-bg: #fff;
+
+%nav-vertical-sidebar {
+	width: 180px;
+	background: $nav-vertical-bg;
+	padding: 0;
+	margin-right: 20px;
+	@include box-sizing;
+}
+
+%nav-vertical-title {
+	background: $color-theme2;
+	font-family: $font-custom;
+	color: #fff;
+	border-bottom: 1px solid #c9c9c9;
+	text-transform: none;
+	font-size: 12px;
+}
+
+%nav-vertical-block-ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+%nav-vertical-title-sku {
+	background: #fff;
+	padding-top: 0;
+	margin: 0;
+
+	> span {
+		background: #f2f2f2;
+		@include fonte($font-custom, 600, 12px, #6e6e6e);
+		padding: 9px 10px;
+		line-height: 22px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+}
+
+%nav-vertical-filterBlock {
+	padding: 0 21px;
+}
+
+%nav-vertical-title-minha-navegacao {
+	font-family: $font-custom;
+	background: $color-theme2;
+	font-weight: normal;
+	color: #fff;
+	font-size: 13px;
+	margin: 0;
+	padding: 8px 13px;
+}
+
+%nav-aside-desktop {
+	@extend %nav-vertical-sidebar;
+
+	.nav {
+		width: 100%;
+		@include box-sizing;
+	}
+
+	.block {
+		background: none;
+		border: 1px solid #c9c9c9;
+		margin-bottom: 10px;
+
+		h3.title {
+			
+		}
+
+		.title {
+			@extend %nav-vertical-title;
+
+			.ico {
+				background: none;
+				padding-left: 0;
+			}
+
+		}
+
+		> ul {
+			@extend %nav-vertical-block-ul;
+			&.side-filters {
+				border-bottom: 1px solid #ccc;
+			}
+
+			> li {
+				@extend %nav-vertical-title-sku;
+
+				> a {
+					font-weight: bold;
+					text-transform: uppercase;
+					color: $font-c;
+					font-size: 12px;
+					padding: 10px 10px 5px;
+
+				}
+
+				a {
+					background: none;
+
+					&:hover {
+						background: none;
+						color: $color-theme;
+						text-decoration: none;
+					}
+
+				}
+
+				li {
+					border-bottom: 0;
+					line-height: 22px;
+					padding: 3px 0;
+
+					a {
+						color: #5d5d5d;
+						padding: 0;
+					}
+
+				}
+
+			}
+
+			ul {
+				padding: 0 10px;
+			}
+
+		}
+
+		li {
+			list-style: none;
+			font-family: $font-custom;
+		}
+
+		.sub {
+			color: #5d5d5d;
+			padding-left: 0;
+		}
+
+		a {
+			&:hover {
+				background: none;
+			}
+
+		}
+		&.custom {
+			li {
+				a {
+					background: transparent;
+				}
+			}
+		}
+	}
+
+	.filterBlock {
+		@extend %nav-vertical-filterBlock;
+	}
+
+	#divOptionsSearch {
+		h3 {
+			display: block;
+			color: #fff;
+			font-weight: normal;
+		}
+
+	}
+
+	.newsletter {
+		@extend %rk-hide;
+	}
+
+	.special-store {
+		background: none;
+		border: 1px solid #dfdfdf;
+
+		.title {
+			background: $color-theme2;
+			font-family: $font-custom;
+			color: #fff;
+			font-size: 0;
+			text-transform: none;
+
+			span {
+				background: none;
+				padding: 0;
+				&::before {
+					content: "Grande Marcas";
+					font-size: 12px; 
+				}
+			}
+
+		}
+		ul {
+			padding: 0;
+			margin: 0;
+		}
+
+		li {
+			text-align: center;
+			border-top: 1px solid #ccc;
+			padding: 8px 0;
+			margin: 0;
+			&:first-child {
+				border-top: 0; 
+			}
+			
+			img {
+				display: inline-block;
+			}
+
+		}
+
+	}
+
+	.filters {
+		background: none;
+		border-bottom: 1px solid #bcbcbc;
+		margin: 0;
+		font-family: $font-custom;
+
+		.title {
+			@extend %nav-vertical-title-minha-navegacao;
+		}
+
+		fieldset {
+			border: 1px solid #ccc;
+			margin-bottom: 10px;
+			ul {
+				margin: 10px;
+				color: #5d5d5d;
+			}
+
+			li {
+				background: none;
+				margin: 0;
+
+				.item .item {
+					padding-right: 20px;
+				}
+
+			}
+
+		}
+
+		> ul,
+		p {
+			margin: 0;
+			padding: 11px 10px;
+			color: $colorDefault;
+			border-bottom: 1px solid #bcbcbc;
+			font-size: 12px;
+			background: #f2f2f2;
+		}
+
+		.item {
+			margin-top: 2px;
+			padding: 0 20px 5px 0;
+		}
+
+		.type {
+			background: none;
+			padding-left: 0;
+			font-weight: normal;
+			color: $color-theme;
+			font-weight: bold;
+			padding: 5px 0;
+			font-size: 13px;
+		}
+
+		.delete {
+			background: url("/static/locales/global/img/ico_delete.gif") no-repeat;
+			height: 13px;
+			width: 13px;
+			margin-top: 5px;
+		}
+
+	}
+
+	.skuFiltro {
+		li li a {
+			&:hover {
+				border: 0px;
+			}
+
+		}
+
+		li ul li {
+			overflow: hidden;
+			margin: 5px 4px;
+
+			&:hover {
+			}
+
+			a {
+				border: 1px solid #ccc;
+				width: 30px;
+				height: 30px;
+				@include box-sizing;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+		}
+
+		~ .skuFiltro {
+			li ul li {
+				border-radius: 0;
+				min-width: 30px;
+				width: auto;
+
+				&:hover {
+				}
+
+				a {
+					min-width: 30px;
+					width: auto;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@if $desktop {
+	div.aside {
+		@extend %nav-aside-desktop;
+	}
+
+}

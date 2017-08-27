@@ -1,45 +1,49 @@
 /* -------------------------------------------------------*/
 /* ------------*>>> CONFIGURAÇÕES <<<---------------------*/
 /* -------------------------------------------------------*/
-$desktop-mode: true !default;
+$desktop: true !default;
 $mobile: false;
-$color-theme: #4b63ae;
-$color-theme2: #ed1849;
-$font-c: #6c6c6c;
-$link-c: $color-theme;
-$link-ch: $color-theme;
-$font-base: Arial,Helvetica,sans-serif;
-$font-custom: 'Raleway', sans-serif;
 
-$m-font: $font-custom;				//Menu - Font Family
-$m-font-s: 15px;					//Menu - Font Size
-$m-font-c: #808080;					//Menu - Font Color
-$m-font-cv: $color-theme;			//Menu - Font Color Hover
-$m-bg-c: #fff;						//Menu - Background Color
-$m-bg-ch:  #f1f4f7;					//Menu - Background Color Hover
+$path-img: "/static/locales/global/img";
 
-$mv-title-color: $color-theme;		//Menu Vertical Title - Color
-$mv-title-font: $font-custom;		//Menu Vertical - Font Family
+$color-theme: #dc252c;
+$color-theme2: #0677bd;
+$colorBorder: #d2d2d2;
+$colorIcons: #000;
+
+$font-c: #000;
+$link-c: #0677bd;
+$link-color: #0677bd; 
+
+$font-def: Arial,Helvetica,sans-serif;
+$font-size-def: 12px;
+
+$font-custom: 'Open Sans', sans-serif;
+$font-custom2: 'Open Sans', sans-serif;
+$font-icon:   'FontAwesome'; 
+
+$colorDefault: #6e6e6e;
+$color-theme: #ee2f36;
+$color-theme2: #0677bd;
+$color-theme3: #db2f63;
+$color-theme4: #0094ae;
+$color-theme5: #565656; 
+
 
 /* Largura padrão do conteudo das páginas */
-$larguraPadrao: 1260px;
+$page-width: 990px;
 
-/*Quantidade de produtos por linha */
-$prod-by-row: 4;
-$prod-by-row-home: 4;
-$prod-by-row-history: 4;
-$prod-by-row-product: 5;
 
 /* DOCUMENTAÇÃO DE IMAGENS* /
 
 /* Vitrine */
-$ft_vitrine_w: 260px;
-$ft_vitrine_h: 470px;
+$ft_vitrine_w: 253px;
+$ft_vitrine_h: 253px;
 
 
 /* Detalhes */
-$ft_detalhes_w: 388px;
-$ft_detalhes_h: 701px;
+$ft_detalhes_w: 387px;
+$ft_detalhes_h: 387px;
 
 /* Thumb */
 $ft_thumb_w: 75px;
@@ -47,36 +51,17 @@ $ft_thumb_h: 75px;
 
 
 /* look - detalhes */
-$look_detalhes_w: 364px;
-$look_detalhes_h: 364px;
+$look_detalhes_w: 387px;
+$look_detalhes_h: 387px;
 
 /* Look - Thumb */
 $look_thumb_w: 72px;
 $look_thumb_h: 72px;
 
-$ft_history_w: 140px;
-$ft_history_h: 253px;
+$ft_history_w: 130px;
+$ft_history_h: 130px;
 
 /* Quem viu viu tmb e quem viu Look*/
-$ft_suggest_w: 146px;
-$ft_suggest_h: 264px;
+$ft_suggest_w: 130px;
+$ft_suggest_h: 130px;
 
-
-/* Inicio - Mobile*/
-	$link-color: #4e4e4e; 
-
-    /* Inicio - Menu */
-    	$header-height: 67px;
-		$menu-bg-color: #fff;
-		$menu-link-color: #000;
-		$menu-font-size: 14px;
-		$menu-font-family: Arial;
-		$menu-last-bg-color: darken($menu-bg-color, 5%);
-		$menu-last-font-color: darken($menu-bg-color, 5%);
-		$submenu-icon-color: #000;
-
-		$menu-help-bg: #e9e9e9;
-		$menu-help-font-color: #505050;
-	/* Fim    - Menu */
-
-/* fim    - Mobile */

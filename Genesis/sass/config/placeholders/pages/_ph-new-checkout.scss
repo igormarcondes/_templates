@@ -1,0 +1,107 @@
+body {
+	.form {
+		.validacao {
+			@include fonte($font-def, bold, 10px!important, red);
+		}
+	}
+	&.checkout {
+		.gift {
+			.btn.continue {
+				@extend  %btn-checkout-gift-continue;
+			}
+		}
+	}
+}
+.op-checkout {
+	#main {
+		.bt {
+			padding: 0;
+			@extend %btn-success;
+		}
+		.bt-login {
+			@extend  %btn-checkoutnew-login;
+			line-height: normal;
+			padding: 9px 10px;
+		}
+		.bt-cadastro {
+			@extend  %btn-checkoutnew-login-cadastro;
+			line-height: normal;
+			padding: 9px 10px;
+		}
+		.send-bt {
+			@extend %btn-checkoutnew-login-entrar;
+		}
+		.unavailable .send-bt {
+			background: #666;
+			color: #fff;
+			box-shadow: none;
+			border: 0;
+		}
+		.bt-full {
+			@extend %btn-checkoutnew-cancelar;
+		}
+		.send-bt.finish-bt,
+		.send-bt.button-buy {
+			@extend %btn-checkoutnew-finalizar-compra;
+		}
+		.abas-address {
+			.item-aba input:checked+label {
+				border-top-color: $color-theme;
+			}
+		}
+		/* endereco de entrega*/
+		.address-datas {
+			.my-address {
+				legend + span.form-group {
+					select:first-child {
+						margin-left: 26px;
+					}
+				}
+			}
+		}
+		/* pagamento */ 
+		.payment-methods {
+			.active .accordion-title  {
+				color: $color-theme;
+			}
+			.txt-opc {
+				p {
+					color: #6c6c6c;
+				}
+			}
+			.preco-por {
+				color: $prod-price-to-c;
+			}
+		}
+		/* Resumo do pedido */ 
+		.summary, {
+			.total-price {
+				color: $prod-price-to-c; 
+			}
+		}
+	}
+}
+/*Confirmcao*/
+.op-confirmation {
+	#main {
+		.title-type,
+		.title-address,
+		.summary-title {
+			color: $color-theme;
+			font-family: $font-custom;
+		}
+		.print-boleto {
+			padding: 0px;
+			@extend %btn-checkoutnew-imprimirboleto;
+			a{
+				display: inline-block;
+				padding: 10px 30px;
+			}
+		}
+		.summary-confirm {
+			.total-price {
+				color: $prod-price-to-c; 
+			}
+		}
+	}
+}

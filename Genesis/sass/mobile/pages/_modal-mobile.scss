@@ -4,12 +4,12 @@
 
 /* inicio - Configuracoes Gerais*/
     body.modal-mobile {
-        #fancybox-close,
-        #fancybox-close-2 {
+        a#fancybox-close,
+        a#fancybox-close-2 {
             @extend %fancy-close;
         }
         &.consult-delivery {
-            #fancybox-close-2 {
+            a#fancybox-close-2 {
                 display: block;
             }
         }
@@ -49,7 +49,18 @@
 /* fim    - Alterar Endereco */
 
 /* inicio - Avalie este produto*/
-
+    body {
+        &.rate {
+            .rating {
+                .validacao {
+                    right: 0;
+                    left: 0;
+                    top: 17px;
+                    padding: 0;
+                }
+            }
+        }
+    }
 /* fim    - Avalie este produto */
 
 /* inicio - Cep Nao Cadastrado */
@@ -103,7 +114,7 @@
     body.forget,
     body.email,
     body.alterarSenha {
-        #fancybox-close-2 {
+        a#fancybox-close-2 {
             display: block;
         }
         .btn.continue {
@@ -149,18 +160,6 @@
         }
     }
 /* fim    - Servico de Entrega */
-
-/* inicio - Termos */
-    body {
-        &.term {
-            #divTerm {
-                #hypContinue {}
-                #lnkCancel {
-                }
-            }
-        }
-    }
-/* fim    - Termos */
 
 
 

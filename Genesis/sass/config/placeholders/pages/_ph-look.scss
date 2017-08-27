@@ -1,0 +1,93 @@
+%look-pieces-title {
+	color: $color-theme;
+	font-weight: bold;
+	font-family: $font-custom;
+	padding: 0;
+	@if $mobile {
+		font-size: 12px;
+	}
+}
+%look-pieces-name {
+	span {
+		font-family: $font-custom;
+		font-weight: normal;
+		font-size: 14px;
+		color: $prod-name-color;
+	}
+}
+%look-pieces-select-look {
+	background: #fff;
+	color: #6e6e6e;
+	font-family: $font-custom;
+	font-weight: normal;
+	text-transform: none;
+	font-size: 12px;
+	padding: 3px 0 0;
+	margin: 0 0 10px;
+	&:hover {
+	    color: #1d1d1d;
+	    text-decoration: none;
+	}
+	&::before {
+		content: " ";
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border: 1px solid #d2d2d2;
+		border-radius: 3px;
+		margin: -2px 5px 0 0;
+		vertical-align: middle;
+	}
+}
+%look-pieces-price {
+	strong {
+		span {
+			font-size: 16px;
+		}
+	}
+}
+%look-pieces-sku-name {
+	color: $color-theme;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: $font-custom;
+	margin: 0 0 3px;
+}
+%look-notifyme {
+	.notifyLabel {
+		&::before {
+		    display: inline-block;
+			content: "Indispon\00edvel";
+			color: $color-theme;
+			font-family: $font-custom;
+			font-size: 21px;
+			font-weight: bold;
+		    height: 23px;
+		}
+	}
+	span {
+	    font-size: 0px;
+	    margin-bottom: 0px;
+	    @if $mobile{
+	    	padding-bottom: 4px;
+	    }
+	    &::before {
+	    	content: "Avise-me quando chegar";
+	    	font-size: 13px;
+	    }
+	}
+	label {
+	    input {
+	    	@if $desktop {
+	    		width: 175px !important;
+	    	}
+	    	border-radius: 5px;
+	    	border: 1px solid #cfd1d0;
+	    	height: 35px;
+	        margin: 0;
+	    }
+	}
+	.btn.send.ir {
+		@extend %btn-success;
+	}
+}

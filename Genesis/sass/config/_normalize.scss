@@ -11,7 +11,7 @@
  */
 
 html {
-  font-family: $font-base;
+  font-family: $font-def;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -21,7 +21,7 @@ html {
  */
 
 body {
-  font-family: $font-base;
+  font-family: $font-def;
   margin: 0;
 }
 
@@ -330,6 +330,12 @@ input::-moz-focus-inner {
 input {
   line-height: normal;
 }
+
+  :focus{
+    outline:none !important;
+    outline:0 !important;
+    box-shadow:none;
+  }
 
 /**
  * It's recommended that you don't attempt to style these elements.

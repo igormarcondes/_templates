@@ -1,42 +1,51 @@
+$btn-primary-color: #000;
+$btn-secondary-color: #727272;
+$btn-success-color: #ee2f36;
+
 @mixin btn {
     border-width: 0;
-    border-radius: 0;
-    line-height: 40px;
+    border-radius: 5px;
+    line-height: 35px;
     height: auto;
     text-align: center;
-    font-family: $font-custom; 
-    font-size: 13px;
-    font-weight: bold;
+    font-family: $font-custom2; 
+    font-size: 18px;
     padding: 0 20px;
-    text-transform: uppercase;
     text-indent: 0;
+    font-weight: 600;
+    text-transform: none;
+    @include box-sizing;
     &:hover {
         text-decoration: none;
     }
 }
+
 %btn-primary {
     @include btn;
-    background: $color-theme;
+    background: $btn-primary-color;
     color: #fff;
     &:hover {
-        background: darken($color-theme, 10%);
+        background: darken($btn-primary-color, 10%);
     }
 }
 %btn-secondary {
     @include btn;
-    background: none;
-    color: #000;
-    border: 2px solid #000;
+    background: $btn-secondary-color;
+    border-bottom: 4px solid darken($btn-secondary-color, 10%);
+    border-right: 4px solid darken($btn-secondary-color, 10%);
+    color: #fff;
     &:hover {
-        background: none;
+        background: darken($btn-secondary-color, 10%);
     }
 }
 %btn-success {
     @include btn;
-    background: #ed1849;
+    border-bottom: 4px solid darken($btn-success-color, 10%);
+    border-right: 4px solid darken($btn-success-color, 10%);
+    background: $btn-success-color;
     color: #fff;
     &:hover {
-        background: darken(#ed1849, 5%);
+        background: darken($btn-success-color, 5%);
     }
 }
 %btn-default {
@@ -48,24 +57,31 @@
     }
 }
 %btn-lg {
-    line-height: 40px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 16px;
+    line-height: 56px;
+    height: 60px;
+    padding: 0 40px;
+    font-size: 24px;
 }
 %btn-sm {
-    @if $desktop-mode {
-        line-height: 30px;
-        height: 30px;
-        padding: 0 20px;
-        font-size: 10px;
+    @if $desktop {
+        line-height: 27px;
+        height: 27px;
+        font-size: 13px;
         padding: 0 10px;
     }
     text-indent: 0;
 }
+@mixin icon-comprar(){
+    content: " ";
+    background: url("/static/locales/global/img/ico-buy.png") no-repeat;
+    width: 24px;
+    height: 19px;
+    float: left;
+    display: block;
+}
 /*Inicio - Botoes gerais */
     %btn-enviar {
-        @extend %btn-primary;
+        @extend %btn-success;
     }
     %btn-salvar {
         @extend %btn-success;
@@ -76,23 +92,31 @@
     %btn-listproduct-buy {
         @extend %btn-comprar;
     }
+    %btn-catalog-compare {
+        @extend %btn-success;
+        @extend %btn-sm;
+    }
 /*fim - Botoes gerais */
 
 /* inicio - Botoes Detalhes */
     %btn-detalhes-comprar {
         @extend %btn-success;
+        @extend %btn-lg;
     }
     %btn-combo-comprartodos {
         @extend %btn-success;
     }
     %btn-enviar-notify {
-        @extend %btn-enviar;
+        @extend %btn-success;
+    }
+    %btn-garantia-continuar {
+        @extend %btn-success;
     }
 /* fim    - Botoes Detalhes */
 
 /* inicio - Botoes Look */
     %btn-look-comprar-produtos {
-        @extend %btn-comprar;
+        @extend %btn-success;
     }
     %btn-look-selecionar-produtos {
         @extend %btn-secondary;
@@ -101,7 +125,7 @@
 
 /* inicio - Botoes Basket */
     %btn-basket-enviar {
-        @extend %btn-success;
+        @extend %btn-primary;
     }
     %btn-basket-buymore {
         @extend %btn-secondary;
@@ -111,8 +135,6 @@
     }
     %btn-basket-calcular {
         @extend %btn-primary;
-        font-size: 11px;
-        line-height: 30px;
     }
     %btn-basket-cupom {
         @extend %btn-primary;
@@ -122,15 +144,15 @@
     }
     %btn-basket-comprar-produtos {
         @extend %btn-basket-continuar;
-    }    
+    } 
 /* fim    - Botoes Basket */
 
 /* inicio - Botoes Login */
     %btn-login-entrar {
-        @extend %btn-primary;   
+        @extend %btn-success;   
     }
     %btn-login-continuar {
-        @extend %btn-primary;
+        @extend %btn-success;
     }
     %btn-salvar-cadastro {
         @extend %btn-salvar;
@@ -139,15 +161,15 @@
 
 /* inicio - Botoes checkout */
     %btn-checkout-editar-endereco {
-        @extend %btn-primary;
+        @extend %btn-success; 
         @extend %btn-sm;
     }
     %btn-checkout-alterar-servico {
-        @extend %btn-primary;
+        @extend %btn-success; 
         @extend %btn-sm;
     }
     %btn-checkout-fecharpedido {
-        @extend %btn-success;
+        @extend %btn-success; 
         line-height: 22px;
         padding: 9px 30px;  
     }
@@ -158,7 +180,31 @@
             background: #bbb;
         }
     }
+    %btn-checkout-gift-continue {
+         @extend %btn-success;
+    }
 /* inicio - Botoes checkout */
+
+/* inicio - new checkout */
+    %btn-checkoutnew-login {
+        @extend %btn-success;
+    }
+    %btn-checkoutnew-login-cadastro {
+        @extend %btn-success; 
+    }
+    %btn-checkoutnew-login-entrar {
+         @extend %btn-success;
+    }
+    %btn-checkoutnew-cancelar {
+        @extend %btn-primary;
+    }
+    %btn-checkoutnew-finalizar-compra {
+        @extend %btn-success;
+    }
+    %btn-checkoutnew-imprimirboleto {
+        background-color: $btn-success-color;
+    }
+/* fim - new checkout */
 
 /* inicio - Modais */
     /* inicio - modal - Alterar endereco */
@@ -170,19 +216,15 @@
         }
         %btn-modal-deletar-endereco {
             @extend %btn-checkout-editar-endereco;
-            background: #ff0000;
             &:hover {
-                background: #ff0000;
             }
         }
         %btn-modal-salvar-usar-endereco {
-            @extend %btn-success;
-            @extend %btn-lg;
+             @extend %btn-success;
         }
         
         %btn-modal-endereco-cancelar {
             @extend %btn-primary;
-            @extend %btn-lg;
         }
     /* fim - modal - Alterar endereco */
 
@@ -195,16 +237,28 @@
             @extend %btn-sm;
         }
     /* fim   - modal - Alterar Servico */
-
-      %btn-modal-alterar-senha-continue {
-         @extend %btn-primary;
-      }
-      %btn-modal-consultar-prazo-consultar {
-        @extend %btn-primary; 
-      }
-      %btn-modal-basket-produto-gratis-continue {
-        @extend %btn-primary; 
-      }
+    %btn-modal-quickbasket-fecharpedido {
+       @extend %btn-success;
+       @extend %btn-sm;
+    }
+    %btn-modal-quickbasket-comprarmais {
+        @extend %btn-secondary;
+    }
+    %btn-modal-alterar-senha-continue {
+        @extend %btn-success;
+    }
+    %btn-modal-consultar-prazo-consultar {
+        @extend %btn-success;
+    }
+    %btn-modal-basket-produto-gratis-continue {
+        @extend %btn-success; 
+    }
+    %btn-modal-detalhe-termoaceite-continue {
+        @extend %btn-success;
+    }
+    %btn-modal-detalhe-termoaceite-cancel {
+        @extend %btn-secondary;
+    }
 
 /* fim    - Modais */
 
@@ -213,7 +267,7 @@
         @extend %btn-basket-comprar-produtos;
     }
     %btn-meuscartoes-cadastrar-cartao {
-        @extend %btn-success;
+        @extend %btn-primary;
     }
     %btn-meuscartoes-cadastrar {
         @extend %btn-salvar;
@@ -228,7 +282,7 @@
         @extend %btn-salvar;
     }
     %btn-listadesejo-pesquisar {
-        @extend %btn-primary;
+        @extend %btn-success;
     }
     %btn-listadesejo-enviar-notify {
         @extend %btn-enviar-notify
@@ -241,6 +295,12 @@
         @extend %btn-lg;
     }
 /* fim    - confirmacao  */
+
+/* inicio - conta corrente  */
+    %btn-contacorrente-pesquisar {
+        @extend %btn-primary;
+    }
+/* fim    - conta corrente  */
 
 /* inicio - meus pedidos  */
     %btn-meuspedidos-enviar {
@@ -264,7 +324,6 @@
 /* inicio - institucional */
     %btn-faleconosco-enviar {
          @extend %btn-enviar;
-          @extend %btn-lg;
     }
     %btn-faleconosco-comprar-produtos {
          @extend %btn-comprar;
