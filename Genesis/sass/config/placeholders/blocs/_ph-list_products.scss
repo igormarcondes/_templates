@@ -1,29 +1,29 @@
     $prod-default-font: $font-custom;              //Produto Fonte Family Geral
 
-	$prod-name-color: $color-theme2;						//Produto Title - Color
+	$prod-name-color: #4d4d4d;						//Produto Title - Color
 	$prod-name-font: $font-custom;				//Produto Title - Font
-	$prod-name-font-s: 14px;						//Produto Title - Font Size
+	$prod-name-font-s: 13px;						//Produto Title - Font Size
 
 	$prod-price-font: $font-custom;	  		     	//Produto Price - Font
 	$prod-price-font-c: #9f9f9f;					//Produto Price - Color
 	$prod-price-font-s: 12px;						//Produto Price - Size
 
-	$prod-price-from-c: #6e6e6e;		 			//Produto Price From (de) - Font Color
-	$prod-price-from-s: $prod-price-font-s; 		//Produto Price From (de) - Font Size
+	$prod-price-from-c: #b7b7b7;		 			//Produto Price From (de) - Font Color
+	$prod-price-from-s: 9px; 		//Produto Price From (de) - Font Size
 
 	$prod-price-to-c:  $color-theme; 			        //Produto Price To (por) - Font Color
-	$prod-price-to-s: 21px; 						//Produto Price To (por) - Font Size
+	$prod-price-to-s: 14px; 						//Produto Price To (por) - Font Size
 
-	$prod-parcel-c:  #666; 						//Produto Parcelamento - Font Color
-	$prod-parcel-s: 11px; 							//Produto Parcelamento - Font Size
+	$prod-parcel-c:  #484848; 						//Produto Parcelamento - Font Color
+	$prod-parcel-s: 9px; 							//Produto Parcelamento - Font Size
 
 	$hide-button-buy-home: false;
 	$hide-button-buy-catalog: false;
 	$hide-review-home: true;
-	$hide-review-catalog: false;
+	$hide-review-catalog: true;
 	$hide-filtro-lista: false;
-	$hide-compare-catalog: false;
-	$hide-sigla-depor: true;
+	$hide-compare-catalog: true;
+	$hide-sigla-depor: false;
 	$hide-fabricante: true;
 /*----------------------------RATING -----------------------------------*/
 
@@ -84,37 +84,29 @@
 }
 @if $hide-fabricante {
 	body.basketpage .basket .brand,
-	body ul.fab-cod #ghcliBrand {
+	body ul.fab-cod #ghcliBrand,
+	div.aside .block>ul.side-filters.filterBrand {
 		@extend %rk-hide;
 	}
 }
 /* inicio - Titulos */
 	%title-vitrine {
-		color: $color-theme2;
-		font-family: $font-custom;
-		font-weight: 600;
+		color: #4d4d4d;
+		font-family: $font-custom2;
 		position: relative;
-		margin-bottom: 50px;
-		margin-top: 15px;
+		margin-bottom: 20px;
 		text-shadow: none;
 		padding: 0;
-		text-transform: none;
-		@if $mobile {
-			text-align: center;
-		 }
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 300;
+		font-size: 12px;
 		span {
-	        font-family: $font-custom;
-	        color: $color-theme2;
-	        font-weight: 600;
+	        font-family: $font-custom2;
+	        color: #4d4d4d;
 	        display: inline-block;
-	        @if $desktop{
-				line-height: 38px;
-				font-size: 21px;
-	        }@else {
-	        	font-size: 16px;
-	        	line-height: 26px;
-	        }
-	        
+	        font-size: 12px;
+	        font-weight: 300;
 		}
 	}
 	$color-title-checkout: #000;
@@ -123,7 +115,7 @@
 		font-weight: bold;
 		color: $color-title-checkout;
 		font-family: $font-custom;
-		font-size: 20px;
+		font-size: 14px;
 		text-transform: uppercase;
 	}
 	@mixin title-checkout($important: false, $color:$color-title-checkout ){
@@ -139,13 +131,13 @@
 		height: auto;
 		font-weight: normal;
 		color: $color-title-checkout;
-		font-size: 20px;
+		font-size: 14px;
 		@if $mobile {
-	    	font-size: 18px;
+	    	font-size: 12px;
 	    }
 	}
 	%sub-title-checkout {
-		font-size: 16px;
+		font-size: 12px;
 		font-weight: bold;
 		text-transform: uppercase;
 		font-family: $font-custom;
@@ -240,10 +232,11 @@ $ratingIMG: "star.png";
 %product-name {
 	font-family: $font-custom;
 	color: $prod-name-color;
-	font-weight: normal;
-	font-style: normal;
+	font-weight: 200;
+	text-transform: capitalize;
 	@if $desktop {
-		font-size: 16px;
+		font-size: $prod-name-font-s;
+		margin-bottom: 6px;
 	}@else {
 		font-size: 14px;
 	}
@@ -254,34 +247,44 @@ $ratingIMG: "star.png";
 %product-price-from {
 	color: $prod-price-from-c;
 	font-size: $prod-price-from-s;
-	font-family: $prod-price-font;
-	display: inline-block;
+	font-family: $font-custom;
+	span {
+		color: $prod-price-from-c;
+	}
+	del {
+		text-decoration: none;
+	}
 }
 %product-price-to {
 	color: $prod-price-to-c;
     font-size: $prod-price-to-s;
+    font-family: $font-custom;
+    line-height: 14px;
 
 	strong,
 	strong span {
 	    color: $prod-price-to-c;
 	    font-size: $prod-price-to-s;
-	    font-weight: 700;
+	    font-weight: 400;
+	}
+	em {
+		display: none;
 	}
 }
 %product-parcel {
 	color: $prod-parcel-c;
 	font-size: $prod-parcel-s;
-	font-weight: normal;
+	font-family: $font-custom;
 	@if $mobile {
 		font-size: 11px;
 	}
 	strong {
-		color: $color-theme;
-		font-weight: 600;
+		color: $prod-parcel-c;
+		font-weight: 300;
 	}
 
 	b {
-		font-weight: normal;
+		font-weight: 300;
 		color: $prod-parcel-c;
 	}
 }
@@ -300,18 +303,16 @@ $ratingIMG: "star.png";
 }
 %product-stamp {
 	padding: 0;
-    margin-bottom: 10px;
-    text-align: left;
+    margin-bottom: 0;
+    text-align: center;
     &.unavailable {
         padding: 8px 0;
         color: $color-theme;
         text-transform: uppercase;
-        font-size: 12px;
         margin-bottom: 0;
     }
     > a {
-    	display: inline-block;
-    	vertical-align: top;
+    	display: block;
     	margin: 0 5px 5px 0;
     	padding: 0;
     	&:first-child {
@@ -326,7 +327,6 @@ $ratingIMG: "star.png";
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	display: none;
 	 ul.skus {
 		@include box-sizing;
 	    border: 0;
@@ -390,8 +390,8 @@ $ratingIMG: "star.png";
 		li {
 			.details {
 			    font-family: $prod-default-font;
-			    text-align: left;
-			    margin-top: 5px;
+			    text-align: center;
+			    margin-top: 10px;
 
 			    .link:hover {
 			        text-decoration: none;
@@ -407,27 +407,33 @@ $ratingIMG: "star.png";
 			    .regular,
 			    .price {
 			    	@if $desktop {
-			    		display: inline-block;
-			    		vertical-align: bottom;
-			    		font-family: $prod-price-font;
+			    		
 			    	}
 			    }
 
 			    .regular {
 			        @extend %product-price-from;
+			        margin-bottom: 5px;
 			    }
 			    .price {
 			        @extend %product-price-to;
 			    }
 			    .parcel {
 			        @extend %product-parcel;
+			        > span {
+			        	margin-bottom: 5px;
+			        	display: inline-block;
+			        }
 			        > span:first-child {
 			        	&::before {
-			        		content: "Cart\00e3o ";
+			        		
 			        	}
 			        }
 			        @if $desktop {
-			        	padding: 0 0 5px;
+			        	padding: 0;
+			        }
+			        b {
+			        	display: none;
 			        }
 			    }
 			    .save {
@@ -435,11 +441,18 @@ $ratingIMG: "star.png";
 			    }
 			    .percent-a-vista {
 			        @extend %product-price-offer;
+			        &::after {
+			        	display: none;
+			        }
+			    }
+			    .see-more {
+			        display: none;
 			    }
 			    .btn.buy {
 			        @extend %btn-listproduct-buy;
 			        width: 100%;
 			        margin: 0;
+			        text-shadow: 0 0 0 #000; 
 			    }
 
 			}
@@ -447,9 +460,7 @@ $ratingIMG: "star.png";
 			    @extend %product-stamp;
 			}
 			.tools {
-			    @if $desktop{
-			    	@extend %product-skus;
-			    }
+			    display: none;
 			}
 			.reviewaggregate {
 			    @extend %placeholder-reviewaggregate;

@@ -1,17 +1,27 @@
 %history-desktop {
+    border-top: 1px solid #c4c4c4;
+    margin-top: 30px;
+    padding-top: 30px;
+    overflow: visible;
+    .prod-view {
+       
+    }
     .list-products {
         .hproduct {
-            width:$ft_history_w;
-            padding: 15px;
+            width: ($ft_history_w - 5px);
+            padding: 0;
             @include box-sizing(content-box);
             border-left: 0;
             .photo {
-                width:$ft_history_w;
-                height: $ft_history_h;
+                width: ($ft_history_w - 5px);
+                height: ($ft_history_h - 5px);
+            }
+            .regular {
+                @extend %product-price-from;
             }
         }
         li {
-            border-left: 1px solid #d2d2d2;
+            
         }
         .owl-item {
             li {
@@ -30,7 +40,7 @@
             }
         }
         &.owl-carousel > .owl-controls .owl-buttons > div {
-            top: 40px !important;
+           
         }
     }
 }
@@ -38,7 +48,8 @@ body {
     #main {
         .history {
             .title {
-                @extend %title-vitrine;                     
+                @extend %title-vitrine;
+                text-align: left;
             }
            @if $desktop {
                 @extend %history-desktop
