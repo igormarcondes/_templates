@@ -22,7 +22,7 @@ body {
 
     /* inicio - Lista de desejos*/
     	#main .filter-wish {
-    		height: 26px;
+    		min-height: 26px;
     		select {
     			height: 28px;
     		}
@@ -52,6 +52,12 @@ body {
 	    		.offers {
 	    			.sale {
 	    				display: block !important;
+	    				@if $mobile{
+	    					font-size: 12px;
+	    					strong {
+	    						font-size: 12px;
+	    					}
+	    				}
 	    				&.percent-a-vista {
 	    					@extend %detail-price-offer;
 	    				}
@@ -60,10 +66,15 @@ body {
 	    		.btn.ir.buy {
 	    			@extend %btn-listadesejo-comprar;
 	    			@if $desktop {
-	    				float:left;
+	    				width: auto;
+	    				margin: 0 auto;
+	    				float: none;
 	    			}@else {
 	    				width: 100%;
 	    				@include box-sizing;
+	    			}
+	    			&::after {
+	    				display: none;
 	    			}
 	    		}
 	    	}
@@ -114,7 +125,10 @@ body {
     			}
     			input[type="text"] {
     			    @if $desktop {
-    			    	height: 40px;
+    			    	height: 35px;
+    			    	width: 194px !important;
+    			    	margin-right: 0;
+    			    	border-radius: 0;
     			    }
     			    border: 1px solid #ccc;
     			}
@@ -130,6 +144,29 @@ body {
 	    	.btn.ir.search {
 	    		@extend %btn-listadesejo-pesquisar;
 	    		@extend %btn-sm;
+	    		@if $desktop{
+	    			margin-top: 0px !important;
+	    		}
+	    	}
+	    }
+	    &.page-listadesejo {
+	    	.aside {
+	    		.block {
+	    			li {
+	    				a::before {
+	    					color: #000;
+	    				}
+	    			}
+	    		}
+	    	}
+	    	.m-order-list,
+	    	.open-mob-filters {
+	    		text-transform: uppercase;
+	    		font-family: $font-custom2;
+	    		font-size: 10px;
+	    	}
+	    	.open-mob-filters {
+	    		display: none;
 	    	}
 	    }
     /* fim    - Lista de desejos*/
@@ -169,7 +206,7 @@ body {
     			.field.checkbox {
     				padding: 5px; /* safari bug fix*/
     				input[type="radio"] {
-    					margin: 6px 6px 0 0;
+    					
     				}
     			}
     			.info .title strong,
@@ -214,6 +251,9 @@ body {
     			font-family: $font-custom;
     			font-size: 14px;
     			display: block;
+    			@if $mobile{
+    				padding-top: 15px;
+    			}
     		}
     		.request .collum .info .title strong,
     		.request .collum .info .number strong {
@@ -229,6 +269,7 @@ body {
     /*inicio - Meus Cartoes*/
 	    .internal .return .btn.buy {
 	    	@extend %btn-meuscartoes-comprar-produtos;
+	    	width: auto;
 	    }
 	    &.mycards {
 	    	h1.mycards-title {

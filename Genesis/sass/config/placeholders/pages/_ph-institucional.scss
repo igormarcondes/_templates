@@ -9,6 +9,12 @@ body {
 	h1 span{
 	    @extend %title-checkout; 
 	}
+	&.internal {
+		.return .buy {
+			@extend %btn-faleconosco-comprar-produtos;
+			line-height: 42px;
+		}
+	}
 }
 body.institucional {
 	h2 {
@@ -72,9 +78,7 @@ body.institucional {
 
 		}
 
-		.return .buy {
-			@extend %btn-faleconosco-comprar-produtos;
-		}
+		
 
 	}
 
@@ -119,11 +123,14 @@ body.institucional {
 			}
 
 			li {
-				color: #000;
-				font-weight: bold;
+				color: #4d4d4d;
+				font-weight: normal;
+				font-family: $font-custom;
+				font-size: 10px;
 				a {
 					color: #000;
-					font-weight: bold;
+					font-weight: normal;
+					font-size: 10px;
 					&::before {
 						color: $color-theme;
 					}
@@ -131,6 +138,7 @@ body.institucional {
 
 				span {
 					font-weight: normal;
+					font-size: 10px;
 					color: $colorDefault;
 				}
 
@@ -164,24 +172,5 @@ body.institucional {
 		}
 
 	}
-}
 
-body.internal {
-	form[action="./faleconosco_retorno.aspx"] {
-		#main {
-			.container {
-				.content {
-					.main-content {
-						.return {
-							.btn {
-								&.buy {
-									@extend %btn-faleconosco-comprar-produtos;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 }

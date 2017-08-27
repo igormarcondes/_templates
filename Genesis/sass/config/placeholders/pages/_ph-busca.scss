@@ -14,10 +14,81 @@
 		@extend %rk-hide
 	}
 }
+%busca-aside {
+	 .title {
+	 	@if $desktop{
+	 		margin-bottom: 15px;
+	 	}
+	 }
+	.filters {
+		@if $mobile{
+			border-bottom: 1px solid #ccc;
+			border-top: 1px solid #ccc;
+		}
+		.clean-btn-por {
+			color: #f76e6e;
+			padding-left: 0;
+			margin-bottom: 5px;
+			display: block;
+		}
+		fieldset {
+			padding-bottom: 10px;
+		}
+		ul {
+			li {
+				border: 0;
+				padding: 0;
+			}
+		}
+	}
+	.link-list {
+		> li {
+			@if $mobile{
+				border-top: 0;
+			}
+			span {
+				display: none;
+			}
+			a {
+				&:before {
+					display: none;
+				}
+			}
+		}
+		ul {
+			padding: 0;
+		}
+	}
+	.side-blocks {
+		@if $mobile{
+			border: 1px solid #ccc;
+		}
+		.title {
+			text-transform: uppercase;
+			color: #9ea0a0;
+			font-size: 10px;
+			font-weight: bold;
+		}
+		.clean-btn {
+			color: #f76e6e;
+			@if $mobile{
+				display: none;
+			}
+		}
+	}
+}
 %busca-refina {
+	@if $mobile{
+		text-align: center;
+		float: none;
+	}
 	.title-refine {
 		font-family: $font-custom;
 		text-transform: uppercase;
+		font-size: 10px;
+		@if $mobile{
+			text-align: center;
+		}
 		a {
 			color: #000;
 		}
@@ -25,9 +96,20 @@
 	.form-refine {
 		background: #fff;
 		border: 1px solid #ccc;
+		@if $mobile{
+			right: auto;
+			margin-left: -141px;
+			position: absolute;
+			left: 50%;
+		}
+		.lbl-form {
+			font-family: $font-custom;
+			font-size: 10px;
+		}
 	}
 	input#campoRefine {
-		width: 153px;
+		width: 200px;
+		height: 23px;
 		border: 1px solid #ccc;
 		border-radius: 0;
 	}
@@ -35,6 +117,7 @@
 		@extend %btn-success;
 		background-image: none !important;
 		padding: 0;
+		height: 33px !important;
 		&::before {
 			content: "Ok";
 			text-indent: 0;
@@ -45,33 +128,137 @@
 		}
 	}
 }
+%filtros-mobile {
+	.open-mob-filters {
+	    margin: 0 -58px 0 0;
+	    top: -9px;
+	    min-width: 122px;
+	}
+}
+%vs-mode {
+	display: none;
+}
+%busca-resumo-resultado {
+	font-family: $font-custom;
+	font-size: 10px;
+	@if $mobile{
+		clear: both;
+		text-align: center;
+		width: 100%;
+	}
+	strong {
+		color: #000;
+	}
+}
 %autocomplete-mais-buscadas {
 	@if $desktop {
-		width: 796px !important;
+		width: 666px !important;
+		margin: 15px 0 0;
 	} @else {
 		width: calc(100% - 20px);
   	}
 	border: 1px solid #ccc;
-	margin: -2px 0 0;
+	margin: 15px 0 0;
 	ul {
 		padding-bottom: 0;
 		li {
+			font-family: $font-custom;
 			a {
 				.count {
 					background: $color-theme;
+				}
+				&:hover {
+					text-decoration: none;
+					color: #000;
 				}
 			}
 		}
 	}
 }
 %autocomplete-box-semresultado {
+	margin: 15px 0 0;
 	@if $desktop {
-		width: 796px !important;
+		width: 666px !important;
 	} @else {
 		width: calc(100% - 20px);
   	}
   	@include box-sizing;
   	padding: 10px;
-  	background: #fff;
+  	background: #fbfbfb;
   	font-size: 12px;
+  	font-family: $font-custom;
+  	.results {
+  		background: #fbfbfb;
+  	}
+  	.result {
+  		background: #fbfbfb;
+  		a {
+  			&:hover {
+  				text-decoration: none;
+  				color: #000;
+  			}
+  		}
+  		.autocomplete-price {
+  			text-align: left !important; 
+  			color: #000 !important; 
+  		}
+  	}
+}
+
+
+
+
+body.type-busca {
+	#main {
+		.container {
+			@if $desktop{
+				width: 100%;
+				max-width: 1920px;
+				@include box-sizing;
+			}
+		}
+		
+		div.sidebar {
+			@extend %busca-aside;
+		}
+		@if $mobile{
+			@extend %filtros-mobile;
+		}
+		.vs-mode {
+			@extend %vs-mode;
+		}
+	}
+	section.ordenacao {
+		@extend %busca-ordenacao;
+	}
+	section.resumo-resultado {
+		@extend %busca-resumo-resultado;
+	}
+	ul.lista-paginacao {
+		@extend %busca-paginacao;
+	}
+	section.refine-sua-busca {
+		@extend %busca-refina;	
+	}
+}
+
+
+
+
+body {
+	.autocomplete-mais-buscadas {
+		@extend %autocomplete-mais-buscadas;
+	}
+	.panel-multicomplete-results {
+		@extend %autocomplete-box-semresultado;
+	}
+	&.rksearch {
+		.naoencontrado .result-naoencontrado .form-comment .form-group .form-button {
+			background: $btn-primary-color;
+			font-family: $font-custom;
+			font-weight: normal;
+			text-transform: uppercase;
+			border-radius: 0;
+		}
+	}
 }

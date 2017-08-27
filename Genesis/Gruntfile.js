@@ -7,8 +7,8 @@ module.exports = function(grunt) {
 
 	 grunt.initConfig({
 	 	paths: {
-			custom:    'R:/IKCLoja/Genesis/Repository/TVLar/',
-			custom2:    'W:/Genesis/Repository/TVLar/'
+			//custom:    'R:/IKCLoja/Genesis/Repository/Genesis/' 
+			custom:    'W:/Genesis/Repository/treinamentoagencia/'
         },
 		// Sass: compiles SCSS files
 		sass : {
@@ -17,8 +17,8 @@ module.exports = function(grunt) {
 			files : {
 			  '<%= paths.custom %>locales/custom/css/global.css' : 'sass/global.scss',
 			  '<%= paths.custom %>locales/custom/css/mobile.css' : 'sass/mobile.scss',
-			  '<%= paths.custom2 %>locales/custom/css/global.css' : 'sass/global.scss',
-			  '<%= paths.custom2 %>locales/custom/css/mobile.css' : 'sass/mobile.scss'
+			  //'<%= paths.custom2 %>locales/custom/css/global.css' : 'sass/global.scss',
+			  //'<%= paths.custom2 %>locales/custom/css/mobile.css' : 'sass/mobile.scss'
 			}
 		  }
 		}, // sass
