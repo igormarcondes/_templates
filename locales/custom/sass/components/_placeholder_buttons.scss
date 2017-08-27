@@ -1,0 +1,104 @@
+/* botoes Gerais */
+	%btn-salvar {
+		@extend %btn-primary;
+	}
+	%btn-cancelar {
+		@extend %btn-primary;
+	}
+
+/* Login */
+	%btn-login-entrar {
+		@extend %btn-primary;
+	}
+	%btn-login-continuar {
+		@extend %btn-primary;
+	}
+
+/* Basket */
+	%btn-basket-continuar {
+		@extend %btn-primary;
+	}
+	%btn-basket-comprarmais {
+		@extend %btn-secondary;		
+	}
+	%btn-basket-calcularfrete {
+		@extend %btn-primary;	
+	}
+	%btn-basket-cupom {
+		@extend %btn-primary;
+	}
+
+/* fechamento */
+	%btn-checkout-alterar-endereco {
+		@extend %btn-primary;
+	}
+	%btn-checkout-alterar-servico {
+		@extend %btn-primary;
+	}
+	%btn-checkout-fecharpedido-cartao {
+		@extend %btn-primary;
+	}
+	%btn-checkout-fecharpedido-boleto {
+		@extend %btn-primary;
+	}
+
+/* Modal alterar endereco */ 
+	%btn-modal_alterarend-editar-endereco {
+		@extend %btn-primary;
+	}
+	%btn-modal_alterarend-usar-endereco {
+		@extend %btn-primary;
+	}
+	%btn-modal_alterarend-salvar-usar {
+		@extend %btn-primary;
+	}
+
+/* Modal alterar servico */
+	%btn-modal_alterarserv-salvar {
+		@include %btn-salvar;
+	}
+	%btn-modal_alterarserv-alterar-serv {
+		@extend %btn-primary;
+	}
+
+/* Modal adicionar novo endereco */ 
+	%btn-modal_addend-sim {
+		@extend %btn-primary;
+	}
+	%btn-modal_addend-nao {
+		@extend %btn-primary;
+	}
+
+/* Lista de desejo */
+	%btn-listadesejo-pesquisar {
+
+	}
+	%btn-listadesejo-comprar {
+		
+	}
+	%btn-listadesejo-salvar {
+		
+	}
+	%btn-listadesejo-adicionarprodutos {
+
+	}
+
+/* Meu Enderecos */	
+	%btn-enderecos-editar-endereco {
+
+	}
+	%btn-enderecos-editar-endereco {
+			
+	}
+
+/* Meus Pedidos */
+	%btn-meuspedidos-enviar {
+
+	}
+
+/* Meus Pedidos Detalhes*/
+
+	%btn-meuspedidos-imprimir-boleto {
+		
+	}
+

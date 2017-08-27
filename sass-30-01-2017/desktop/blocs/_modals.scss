@@ -1,0 +1,165 @@
+  /* ------------------------------------------------------------------------*/
+ /* --------------------------*>>> MODALS <<<-------------------------------*/
+/* ------------------------------------------------------------------------*/
+// GENERAL *******************************************************************/
+
+//→ Modal Borders
+#fancybox-wrap{
+	border: 5px solid #FFF !important;
+}
+//→ Close Buttons
+body{
+	@extend %placeholder-load-button;
+	&.modal-mobile{
+		#fancybox-close-2,
+		#fancybox-close{
+			@include imgbt(bt-fancybox-close, png,  13, 13);
+		}
+	}
+	#fancybox-close-2,
+	#fancybox-close{
+		@include imgbt(bt-fancybox-close, png,  13, 13);
+	}
+}
+//→ H1 Titles
+body{
+	#fancybox-close-2{
+		& + h1{
+			@extend %placeholder-h1;
+		}
+	}
+}
+//→ Form Field borders
+.form{
+	.field{
+		input,
+		textarea,
+		select{
+			border: 1px solid #000 !important;
+			box-shadow: inset 0px 0px 0px 0px red !important;
+		}
+	}
+}
+
+
+// ESQUECEU SUA SENHA? *******************************************************************/
+body{
+	&.indicate-friend{
+		#indicate{
+			.form{
+				#send{
+					@extend %bt-modal-indicate;
+				}
+			}
+		}
+	}
+}
+// CONSULTA PRAZO DE ENTREGA *******************************************************************/
+body{
+	&.consult-delivery{
+		#frm{
+			#pnlHomeDelivery{
+				.cep{
+					.actions{
+						margin-top: 21px;
+						#btnCalculateShipping{
+							@extend %bt-prazo-entrega-consulta;
+						}
+					}
+				}	
+			}
+		}
+	}
+}
+// AVALIE ESTE PRODUTO *******************************************************************/
+body{
+	&.rate{
+		#rating{
+			.form{
+				.actions{
+					#send{
+						@extend %bt-rate-enviar-opiniao;
+					}
+				}
+			}
+		}
+	}
+}
+// ESQUECEU SUA SENHA? *******************************************************************/
+body{
+	&.forget{
+		#frm{
+			.field{
+				.continue{
+					@extend %bt-forget-continuar;
+				}
+			}
+		}
+	}
+}
+// ALTERAR SENHA *******************************************************************/
+body{
+	&.alterarSenha{
+		#frm{
+			fieldset{
+				padding: 0px 18px;
+				.field{
+					label{
+						> span{
+							font-size: 12px;
+						}
+					}
+					.continue{
+						@extend %bt-forget-continuar;
+					}
+				}
+			}
+		}
+	}
+}
+// SERVIÇO DE ENTREGA *******************************************************************/
+body{
+	&.delivery-service{
+		#frm{
+			#main{
+				.container{
+					.main-content{
+						h1{
+							@extend %placeholder-h1;
+							border: 0px;
+						}
+						#upBasket{
+							.actions{
+								#hypChangeAddress{
+									@extend %bt-delivery-change;
+								}
+								#lnkContinue{
+									@extend %bt-delivery-save;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// CEP NÃO CADASTRADO *******************************************************************/
+body{
+	#form1{
+		h1{
+			&.mH1{
+				@extend %placeholder-h1;
+				border: 0px;
+			}
+		}
+		.actions{
+			.bt-yes{
+				@extend %bt-cep-yes;
+			}
+			.bt-no{
+				@extend %bt-cep-no;
+			}
+		}
+	}
+}

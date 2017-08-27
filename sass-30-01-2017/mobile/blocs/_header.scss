@@ -1,0 +1,186 @@
+/* -------------------------------------------------------*/
+/* -----------------*>>> HEADER <<<----------------------*/
+/* -----------------------------------------------------*/
+
+// Config -----------------------------------------------------------------------------/
+$header-h: 60px;
+
+// Components -----------------------------------------------------------------------/
+%header-logo{
+	#logo{
+		padding-left: 60px;
+		padding-right: 80px;
+		padding-top: 16px;
+		min-height: $header-h;
+	}
+}
+%header-search{
+	.search{
+		input[type="text"]{
+			border: 1px solid #AEAEAE;
+			@extend %text-search-cont;
+		}
+	}
+}
+%header-nav{
+	.wrap-nav-mobile{
+		background: #FFF;
+		top: 60px;
+		width: 100%;
+		overflow-x: scroll;
+		.welcome{
+			background: #000;
+			#identificacao{
+				a{
+					@extend %text-header-help-link;
+					color: #FFF;
+				}
+				strong{
+					&:after{
+						display: none;
+					}
+				}
+			}
+		}
+		#nav{
+			> li{
+				border: 1px solid #FFF;
+				> a{
+					@extend %text-nav-item;
+					&:before{
+						font-size: 18px;
+						color: #000;
+					}
+				}
+				.sub-nav{
+					background: #FFF;
+					.collum{
+						a{
+							@extend %text-sub-nav-item;
+						}
+					}
+				}
+				&:last-child{
+					a{
+						color: #FF5D64;
+					}
+				}
+			}
+		}
+		.help{
+			padding-top: 5px;
+			height: 100%;
+			opacity: 0.9;
+			background: #F4F4F4;
+			li{
+				padding: 0px;
+				border: 0px;
+				@extend %text-header-help-link;
+				&.conta{
+					a{
+						@include bgimg(ico-header-acc, png);
+						background-repeat: no-repeat;
+						background-position: 15px center;
+						padding-left: 45px;
+					}
+				}
+				&.list{
+					a{
+						@include bgimg(ico-header-list, png);
+						background-repeat: no-repeat;
+						background-position: 15px center;
+						padding-left: 45px;
+					}
+				}
+				&.loja{
+					a{
+						@include bgimg(ico-header-loja, png);
+						background-repeat: no-repeat;
+						background-position: 15px center;
+						padding-left: 45px;
+					}
+				}
+				span,
+				a{
+					@extend %text-header-help-link;
+					padding: 0px;
+					padding: 15px;
+					border-bottom: solid 1px transparent;
+					margin: 0px;
+				}
+			}
+		}
+	}
+}
+%header-btn-mobile{
+	.header-btn-mobile,
+	.header-btn-mobile-float{
+		.btn-search-top{
+			float: right;
+		}
+		.btn-cart-mobile{
+			position: relative;
+			left: 3px;
+			top: 2px;
+			.qtd-cart{
+				@include border-radius(50px);
+				background: #000;
+				width: 10px;
+				height: 14px;
+				line-height: 12px;
+				text-align: center;
+				position: relative;
+				top: 14px;
+				left: 3px;
+			}
+		}
+	}
+}
+
+%header-float-toolbar{
+	#floatToolbar{
+		height: $header-h;
+		background: #FFF;
+		#navFloatMenu{
+			display: none;
+		}
+		@extend %header-search;
+		.logoFT{
+			padding-left: 60px;
+			padding-right: 80px;
+			padding-top: 16px;
+
+			min-height: $header-h;
+		}
+		&.active{
+			height: 120px;
+		}
+		.qtd-cart{
+			background: $color-theme-1;
+		}
+		.foneFTH{
+			display: none;
+		}
+		@extend %header-btn-mobile;
+	}
+}
+
+
+// Style --------------------------------------------------------------------------/
+body{
+	#header{
+		height: $header-h;
+		background: #FFF;
+		&.active{
+			height: 110px;
+		}
+		.container{
+			height: $header-h;
+			@extend %header-logo;
+			@extend %header-search;
+			@extend %header-nav;
+			@extend %header-btn-mobile;
+		}
+		@extend %header-float-toolbar;
+	}
+}

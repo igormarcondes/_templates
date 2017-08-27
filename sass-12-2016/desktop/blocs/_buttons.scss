@@ -1,0 +1,413 @@
+  /* ---------------------------------------------------------------*/
+ /* ------------------>>> BUTTONS GENERAL <<<----------------------*/
+/* ---------------------------------------------------------------*/
+
+// GENERAL *******************************************************************/
+%bt-notifyme-send{
+	@include bt-default();
+}
+%bt-general-buy-more{
+	@include bt-default();
+}
+
+// HOME - HEADER *************************************************************/
+%bt-home-header-busca{
+	@include bt-default();
+}
+%bt-header-minicar-continue{
+	@include bt-default($bt-bg-3, $bt-border-3);
+	@include fonte($font-alt-1-bold, normal, 14px, #373435);
+}
+%bt-header-minicar-finalizar{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 14px, #FFF);
+}
+
+// FOOTER *************************************************************/
+%bt-footer-enviar{
+	@include bt-default();
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 25px;
+	margin-top: 16px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// LIST PRODUCT *************************************************************/
+%bt-list-product-buy{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 14px, #FFF);
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// DETALHES *************************************************************/
+%bt-details-buy{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 22px, #FFF);
+	letter-spacing: 1px;
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+}
+%bt-details-combo-comprar-todos{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// LOOK *************************************************************/
+%bt-look-comprar-selecionados{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: 280px;
+	height: 40px;
+	line-height: 40px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-look-aside-bt-select-all{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 13px, #FFF);
+	letter-spacing: 1px;
+	width: 250px;
+	height: 25px;
+	line-height: 25px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// BASKET *************************************************************/
+%bt-basket-buy-more{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 14px, #FFF);
+	letter-spacing: 1px;
+	width: 180px;
+	height: 30px;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-basket-continue{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 22px, #FFF);
+	letter-spacing: 1px;
+	width: 180px;
+	height: 40px;
+	line-height: 40px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-basket-calcular-frete{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 15px, #FFF);
+	letter-spacing: 1px;
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+}
+%bt-basket-coupon-utilize{
+	@include bt-default();
+	@include fonte($font-alt-1, normal, 15px, #FFF);
+	letter-spacing: 1px;
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// PRESENTE *************************************************************/
+%bt-basket-presente-fechar{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 22px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// LOGIN ****************************************************************/
+%bt-login-entrar{
+	@include bt-default();
+	@include fonte($font-alt-1, normal, 16px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-login-cadastro{
+	@include bt-default();
+	@include fonte($font-alt-1, normal, 16px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// CADASTRO ****************************************************************/
+%bt-cadastro-salvar{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 22px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// WISHLIST ****************************************************************/
+%bt-wishlist-filter-pesqusiar{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 15px, #FFF);
+	letter-spacing: 1px;
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-wishlist-comprar{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 22px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-wishlist-salvar{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 15px, #FFF);
+	letter-spacing: 1px;
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// MEUS ENDEREÇOS ****************************************************************/
+%bt-enderecos-edit{
+	@include bt-default();
+	@include fonte($font-alt-1, normal, 16px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-enderecos-use{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1, normal, 16px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-enderecos-delete{
+	@include bt-default(#7F2F2F, #BB4343);
+	@include fonte($font-alt-1, normal, 16px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	&:before{
+		display: none;
+	}
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// FECHAMENTO ****************************************************************/
+%bt-close-change-adress{
+	@include bt-default();
+	@include fonte($font-alt-1, normal, 16px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-close-change-service{
+	@include bt-default();
+	@include fonte($font-alt-1, normal, 16px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-close-finish-with{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 22px, #FFF);
+	span{
+		@include fonte($font-alt-1, normal, 22px, #FFF);
+	}
+	letter-spacing: 1px;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+	padding: 5px 20px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// CONFIRMACAO ****************************************************************/
+%bt-confirmacao-imprimir{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 22px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+}
+
+// MEUS PEDIDOS ****************************************************************/
+%bt-meuspedidos-enviar{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 22px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+// MODALS *********************************************************************/
+//→ Indicate
+%bt-modal-indicate{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+}
+//→ Calcule sua entrega
+%bt-prazo-entrega-consulta{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+}
+//→ Avalie este produto
+%bt-rate-enviar-opiniao{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+}
+//→ Esqueceu sua senha?
+%bt-forget-continuar{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+}
+//→ Serviço de entrega
+%bt-delivery-change{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+}
+%bt-delivery-save{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+}
+//→ QuickBasket
+%bt-quickbasket-comprar-mais{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+}
+%bt-quickbasket-fechar-pedido{
+	@include bt-default($bt-bg-2, $bt-border-2);
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+}

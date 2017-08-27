@@ -1,0 +1,236 @@
+/* -------------------------------------------------------------------------------------*/
+/* ------------------------*>>> PAGES - MEUS PEDIDOS <<<-------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+body{
+	&.search{
+		background: #FFF;
+		#main{
+			.container{
+				.content{
+					.main-content{
+						#panCentro{
+							> p{
+								@extend %text-checkout-general-span;
+								strong{
+									@extend %text-checkout-general-strong;
+								}
+							}
+						}
+						#panNenhumPedido{
+							.return{
+								&.text{
+									.buy{
+										@include bt_default();
+										@include fonte($font-def, bold, 14px, #FFF);
+										margin: 0px;
+									}
+								}
+							}
+						}
+						.request{
+							.info{
+								.title{
+									span{
+										@extend %text-confirm-num-title;
+									}
+								}
+								.number{
+									strong{
+										@extend %text-confirm-number;
+									}
+									& + span{
+										@extend %text-checkout-general-span;
+										a{
+											@extend %text-checkout-general-strong;
+										}
+									}
+								}
+								.description{
+									@extend %text-checkout-general-strong;
+								}
+								> ul{
+									li{
+										@extend %text-checkout-general-span;
+										strong{
+											@extend %text-checkout-general-strong;
+										}
+									}
+								}
+							}
+						}
+						.form{
+							.actions{
+								.send{
+									@extend %bt-meuspedidos-enviar;
+								}
+							}
+						}
+						.pagination{
+							ul{
+								li{
+									a{
+										color: $color-theme-1;
+									}
+								}
+							}
+						}
+						#tblResultado{
+							table{
+								th{
+									span{
+										@extend %text-checkout-general-strong;
+									}
+								}
+								tbody{
+									td{
+										@extend %text-checkout-general-span;
+										a{
+											@extend %text-checkout-general-span;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* -------------------------------------------------------------------------------------*/
+/* --------------------*>>> PAGES - MEUS PEDIDOS - DETALHES <<<------------------------*/
+/* -----------------------------------------------------------------------------------*/
+
+body{
+	&.meuspedidos{
+		background: #FFF;
+		#main{
+			.container{
+				.content{
+					.main-content{
+						.request{
+							.box{
+								float: none;
+								.info{
+									.title{
+										span{
+											@extend %text-confirm-num-title;
+										}
+									}
+									.number{
+										strong{
+											@extend %text-confirm-number;
+										}
+										& + span{
+											@extend %text-checkout-general-span;
+											a{
+												@extend %text-checkout-general-strong;
+											}
+										}
+									}
+									#spaWarning{
+										@extend %text-checkout-general-span;
+									}
+									.actions{
+										a{
+											@extend %bt-confirmacao-imprimir;
+										}
+									}
+									> ul{
+										li{
+											@extend %text-checkout-general-span;
+											strong{
+												@extend %text-checkout-general-strong;
+											}
+										}
+									}
+									.warning{
+										color: #000;
+									}
+									#bannerEbit{
+										display: none;
+									}
+								}
+							}
+						}
+						.basket{
+							@extend %basket-tbody-description;
+							@extend %basket-tbody-unit-subtotal;
+							thead{
+								@extend %basket-thead;
+							}
+							.info{
+								td{
+									background: #FFF;
+									@extend %text-basket-tfoot-info-subtotal;
+									&#tdSubtotal{
+										@extend %text-basket-tfoot-info-title;
+									}
+								}
+							}
+						}
+						#divEndCobranca{
+						.info{
+							.titulo{
+								@extend %placeholder-h2;
+							}
+							.name{
+								@extend %text-enderecos-name;
+								b{
+									@extend %text-enderecos-name;
+								}
+							}
+							.adr{
+								span{
+									@extend %text-enderecos-info;
+									strong{
+										@extend %text-enderecos-info-strong;
+									}
+								}
+							}
+						}
+					}
+					}
+				}	
+			}
+		}
+	}
+}
+
+
+
+/* -------------------------------------------------------------------------------------*/
+/* --------------------*>>> PAGES - MEUS PEDIDOS - CODIGO <<<--------------------------*/
+/* -----------------------------------------------------------------------------------*/
+
+body{
+	&.simple{
+		.container{
+			.content{
+				h1{
+					color: $color-theme-1;
+				}
+				.request{
+					.box{
+						.info{
+							.title{
+								color: $color-theme-1;
+							}
+							.number{
+								color: $color-theme-1;
+							}
+							.description{
+								color: $color-theme-1;
+								text-transform: uppercase;
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

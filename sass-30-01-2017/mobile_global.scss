@@ -1,0 +1,47 @@
+/* GLOBAL ********************************* */
+
+// CONFIG 
+@import "config/config";
+@import "config/colors";
+@import "config/mixins";
+@import "config/fonts";
+
+//DESKTOP - GLOBALS
+@import "desktop/blocs/texts";
+@import "desktop/blocs/buttons";
+@import "desktop/blocs/placeholders";
+@import "desktop/blocs/modals";
+@import "desktop/pages/quickbasket";
+@import "desktop/blocs/sku_quantidade";
+
+// BLOCS
+@import "mobile/blocs/header"; 
+@import "mobile/blocs/footer";
+@import "mobile/blocs/history";
+@import "mobile/blocs/nav_institucional";
+
+// PAGES
+@import "mobile/pages/home";
+@import "mobile/pages/catalogo";
+@import "mobile/pages/comparar";
+@import "mobile/pages/detalhe";
+@import "mobile/pages/detalhe_look";
+@import "mobile/pages/basket";
+@import "mobile/pages/presente";
+@import "mobile/pages/login";
+@import "mobile/pages/minha_conta";
+@import "mobile/pages/cadastro";
+@import "mobile/pages/wishlist";
+@import "mobile/pages/enderecos";
+@import "mobile/pages/fechamento";
+@import "mobile/pages/confirmacao";
+@import "mobile/pages/meus_pedidos";
+@import "mobile/pages/institucional";
+@import "mobile/pages/sitemap";
+@import "desktop/pages/meuscartoes";
+
+//BUSCA
+@import "mobile/pages/busca";
+
+//TRUMPS
+@import "desktop/blocs/trumps";

@@ -1,0 +1,68 @@
+  /* ------------------------------------------------------------------------*/
+ /* --------------------------*>>> LOGIN <<<-------------------------------*/
+/* ------------------------------------------------------------------------*/
+
+
+//Config -----------------------------------------------------------------------------/
+
+
+//Components -----------------------------------------------------------------------/
+
+
+//Style -----------------------------------------------------------------------------/
+body{
+	&.globalId {
+		.content{
+			.main-content{
+				.login{
+					.collum{
+						.field{
+							a{
+								&.enter{
+									@extend %bt-login-entrar;
+								}
+								&.cadastre{
+									@include bt_default();
+									@include fonte($font-def, bold, 14px, #FFF);
+									margin-right: 3px !important;
+								}
+								&.continue{
+									@extend %bt-login-cadastro;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.loginpage{
+		#main{
+			.container{
+				.main-content{
+					.login{
+						.box{
+							fieldset{
+								.title{
+									@include fonte($font-alt-1, normal, 30px, #000);
+									text-transform: uppercase;
+									background: none;
+									height: auto;
+									text-indent: 0;
+								}
+								.field{
+									.continue{
+										@extend %bt-login-cadastro;
+									}
+									.enter{
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}	
+		}
+	}
+}

@@ -1,0 +1,477 @@
+  /* ---------------------------------------------------------------*/
+ /* ------------------>>> BUTTONS GENERAL <<<----------------------*/
+/* ---------------------------------------------------------------*/
+
+// GENERAL *******************************************************************/
+%bt-notifyme-send{
+	@include bt-default();
+	height: 28px;
+	line-height: 18px;
+}
+%bt-general-buy-more{
+	@include bt-default();
+}
+%bt-cat-compare{
+	@include bt-default();
+}
+%bt-compare-retirar{
+	@include bt_default();
+}
+%bt-see-category{
+	@include bt-default(#FFF);
+	color: $color-theme-1;
+}
+// HOME - HEADER *************************************************************/
+%bt-home-header-busca{
+	@include imgbt(bt-home-header-busca, png, 13, 13);
+}
+%bt-header-minicar-empty{
+	@include bt-default();
+	margin: {
+		top: 5px;
+		right: auto;
+		bottom: 15px;
+		left: auto;
+	}
+}
+%bt-header-minicar-continue{
+	@include bt-double(#F4F4F4);
+	color: #000;
+	width: 130px;
+}
+%bt-header-minicar-finalizar{
+	@include bt-double();
+	width: 130px;
+}
+// FOOTER *************************************************************/
+%bt-footer-enviar{
+	@include box-sizing();
+	@include bt-default();
+	margin-top: 12px;
+	height: 30px;
+	line-height: 20px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+// LIST PRODUCT *************************************************************/
+%bt-list-product-buy{
+	@include bt-default();
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+	}
+}
+// DETALHES *************************************************************/
+%bt-details-buy{
+	@include box-sizing();
+	@include bt-default();
+	@include fonte($font-def, normal, 14px, #FFF);
+	@include bgimg(ico-bt-buy, png);
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	letter-spacing: 1px;
+	width: 420px;
+	height: 35px;
+	line-height: 26px;
+	text-align: left;
+	padding-left: 46px;
+	&:hover{
+		@include bgimg(ico-bt-buy, png);
+		background-color: #000;
+		background-repeat: no-repeat;
+		background-position: 15px center;
+	}
+}
+%bt-details-wishlist{
+	@include box-sizing();
+	@include bt-default();
+	@include fonte($font-def, normal, 14px, #FFF);
+	@include bgimg(ico-bt-wishlist, png);
+	background-color: #AEAEAE;
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	letter-spacing: 1px;
+	width: 420px;
+	height: 35px;
+	line-height: 26px;
+	text-align: left;
+	padding-left: 46px;
+	&:hover{
+		@include bgimg(ico-bt-wishlist, png);
+		background-color: #AEAEAE;
+		background-repeat: no-repeat;
+		background-position: 15px center;
+	}
+}
+%bt-details-combo-comprar-todos{
+	@include box-sizing();
+	@include bt-default();
+	@include fonte($font-def, normal, 14px, #FFF);
+	@include bgimg(ico-bt-buy, png);
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	letter-spacing: 1px;
+	height: 35px;
+	line-height: 26px;
+	text-align: left;
+	padding-left: 46px;
+	&:hover{
+		@include bgimg(ico-bt-buy, png);
+		background-color: #000;
+		background-repeat: no-repeat;
+		background-position: 15px center;
+	}
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+// LOOK *************************************************************/
+%bt-look-comprar-selecionados{
+	@include box-sizing();
+	@include bt-default();
+	@include fonte($font-def, normal, 14px, #FFF);
+	@include bgimg(ico-bt-buy, png);
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	letter-spacing: 1px;
+	height: 35px;
+	line-height: 26px;
+	text-align: left;
+	padding-left: 46px;
+	&:hover{
+		@include bgimg(ico-bt-buy, png);
+		background-color: #000;
+		background-repeat: no-repeat;
+		background-position: 15px center;
+	}
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-look-aside-bt-select-all{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 13px, #FFF);
+	letter-spacing: 1px;
+	width: 270px;
+	height: 25px;
+	line-height: 25px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+// BASKET *************************************************************/
+%bt-basket-buy-more{
+	@include bt-default(#F4F4F4);
+	@include fonte($font-def, normal, 12px, #000);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: 20px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-basket-continue{
+	@include bt-default(#000);
+	font-size: 14px;
+	width: 200px;
+	height: 35px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-basket-calcular-frete{
+	@include bt-default();
+	letter-spacing: 1px;
+	width: 140px;
+	height: 30px;
+	line-height: 21px;
+	text-align: center;
+}
+%bt-basket-coupon-utilize{
+	@include bt-default();
+	letter-spacing: 1px;
+	width: 140px;
+	height: 30px;
+	line-height: 21px;
+	text-align: center;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+// PRESENTE *************************************************************/
+%bt-basket-presente-fechar{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 22px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 40px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+// LOGIN ****************************************************************/
+%bt-login-entrar{
+	@include bt-default();
+	@include fonte($font-def, normal, 16px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: initial;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-login-cadastro{
+	@include bt-default();
+	@include fonte($font-alt-1, normal, 16px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	height: 30px;
+	line-height: initial;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+// CADASTRO ****************************************************************/
+%bt-cadastro-salvar{
+	@include bt-default();
+	width: auto;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+// WISHLIST ****************************************************************/
+%bt-wishlist-filter-pesqusiar{
+	@include bt-default();
+	width: 140px;
+	line-height: 20px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-wishlist-comprar{
+	@include box-sizing();
+	@include bt-default();
+	@include fonte($font-def, normal, 14px, #FFF);
+	@include bgimg(ico-bt-buy, png);
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	letter-spacing: 1px;
+	width: 130px;
+	height: 35px;
+	line-height: 26px;
+	text-align: left;
+	padding-left: 46px;
+	&:hover{
+		@include bgimg(ico-bt-buy, png);
+		background-color: #000;
+		background-repeat: no-repeat;
+		background-position: 15px center;
+	}
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-wishlist-salvar{
+	@include bt-default();
+	width: 140px;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-wishlist-add-prod{
+	@include bt-default();
+}
+// MEUS ENDEREÇOS ****************************************************************/
+%bt-enderecos-edit{
+	@include bt-default(#767676);
+	width: auto;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-enderecos-use{
+	@include bt-default();
+	width: auto;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-enderecos-delete{
+	@include bt-default(#730f0f);
+	width: auto;
+	line-height: 30px;
+	&:before{
+		display: none;
+	}
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+// FECHAMENTO ****************************************************************/
+%bt-close-change-adress{
+	@include bt-default();
+	width: auto;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-close-change-service{
+	@include bt-default();
+	width: auto;
+	line-height: 30px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+%bt-close-finish-with{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 22px, #FFF);
+	span{
+		@include fonte($font-alt-1, normal, 22px, #FFF);
+	}
+	letter-spacing: 1px;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+	padding: 5px 20px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+// CONFIRMACAO ****************************************************************/
+%bt-confirmacao-imprimir{
+	@include bt-default();
+	font-size: 18px;
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 40px;
+}
+// MEUS PEDIDOS ****************************************************************/
+%bt-meuspedidos-enviar{
+	@include bt-default();
+	font-size: 20px;
+	width: auto;
+	line-height: 40px;
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+// MEUS CARTOES ****************************************************************/
+%bt-mycards-save{
+	@include bt-default();
+	@media only screen and (max-width : $mobile-w) {
+		width: 100%;
+		height: auto;
+	}
+}
+// MODALS *********************************************************************/
+//→ Indicate
+%bt-modal-indicate{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 30px;
+}
+//→ Calcule sua entrega
+%bt-prazo-entrega-consulta{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 30px;
+}
+//→ Avalie este produto
+%bt-rate-enviar-opiniao{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 30px;
+}
+//→ Esqueceu sua senha?
+%bt-forget-continuar{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 30px;
+}
+//→ Serviço de entrega
+%bt-delivery-change{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 30px;
+}
+%bt-delivery-save{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 30px;
+}
+//→ QuickBasket
+%bt-quickbasket-comprar-mais{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 30px;
+}
+%bt-quickbasket-fechar-pedido{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 30px;
+}
+//→ Cep não cadastrado
+%bt-cep-yes{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 30px;
+}
+%bt-cep-no{
+	@include bt-default();
+	@include fonte($font-alt-1-bold, normal, 18px, #FFF);
+	letter-spacing: 1px;
+	width: auto;
+	line-height: 30px;
+}

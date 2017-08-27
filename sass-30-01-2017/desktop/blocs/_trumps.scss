@@ -1,0 +1,20 @@
+/* -------------------------------------------------------------------------------------*/
+/* --------------------------------*>>> TRUMPS <<<-------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+
+/*
+// Arquivo responsavel por resolver pequenos bugs ou elementos menores para que não seja
+// nescessário a criação de arquivos especificos
+*/
+
+/* Remover google_conversion_frame do topo */
+iframe[name="google_conversion_frame"]{
+	display: none;
+}
+
+/* Remove header promo no responsivo */
+@media only screen and (max-width : $mobile-w) {
+	body #header .head-promo{
+		display: none;
+	}
+}

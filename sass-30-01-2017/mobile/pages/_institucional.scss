@@ -1,0 +1,81 @@
+/* ---------------------------------------------------------------------------------------*/
+/* ------------------------*>>> PAGES - INSTITUCIONAL <<<-------------------------------*/
+/* -------------------------------------------------------------------------------------*/
+body{
+	&.institucional{
+		#main{
+			.container{
+				.nav{
+					background: #FFF;
+					.box{
+						background: #FFF;
+						border: 1px solid #000;
+						h2{
+							@extend %placeholder-h2;
+							padding-left: 0px;
+						}
+						ul{
+							li{
+								@extend %text-checkout-general-span;
+								a{
+									@extend %text-checkout-general-span;
+									&:before{
+										color: $color-theme-1;
+									}
+								}
+							}
+						}
+					}
+				}
+				.main-content{
+					a{
+						color: $color-theme-1;
+					}
+				}
+			}
+			.form{
+				&.box{
+					.actions{
+						.send{
+							@include bt_default();
+							@include fonte($font-def, bold, 14px, #FFF);
+						}
+					}
+				}
+			}
+		}
+		&.internal{
+			
+		}
+	}
+	/*Fale conosco */
+	.return.text {
+		a.btn.buy {
+			@extend %bt-general-buy-more;
+		}
+	}
+
+	/*Afiliados*/
+	&.affiliates {
+		.actions {
+			.save {
+				@include bt_default();
+				@include fonte($font-def, bold, 14px, #FFF);
+			}
+		}
+	}
+	.reports {
+		a.btn.ir.search {
+			@include bt_default();
+			@include fonte($font-def, bold, 14px, #FFF);
+		}
+	}
+	&.partner {
+		.actions {
+			a.enter.ir {
+				@include bt_default();
+				@include fonte($font-def, bold, 14px, #FFF);
+			}
+		}
+	}
+}

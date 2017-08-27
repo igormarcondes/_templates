@@ -1,0 +1,155 @@
+  /* -----------------------------------------------------------------------------------*/
+ /* --------------------------------*>>> HOME <<<--------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+
+
+//Config -----------------------------------------------------------------------------/
+
+
+//Components -----------------------------------------------------------------------/
+
+
+//Style --------------------------------------------------------------------------/
+.home{
+	#main{
+		.container{
+			width: 100%;
+			padding: 0px;
+			.aside{
+				display: none;
+			}
+			.banners{
+				background: #FFF;
+				&.b-top{
+					margin: 0px;
+					margin-top: 15px;
+					> ul{
+						position: relative;
+					}
+					.posicao1{
+						@extend %banner-topo-pos-1;
+					}
+					.posicao2{
+						@extend %banner-topo-pos-2;
+					}
+				}
+				&.b-main{
+					margin: 0px auto;
+					width: $page-width;
+					float: none;
+					> ul{
+						width: 100%;
+						text-align: center;
+						.posicao1{
+							@extend %banner-main-pos-1;
+						}
+						.posicao2,
+						.posicao3{
+							@extend %banner-main-pos-2-3;
+						}
+						.posicao3{
+							margin-top: 15px;
+						}
+					}
+				}
+				&.b-specialstore{
+					margin: 0px auto;
+					width: $page-width;
+					@extend %banner-specialstore;
+				}
+				&.b-betweenvit{
+					@extend %banner-between-vit;
+				}
+				&.b-bottom{
+					@extend %banner-bottom;
+				}
+			}
+			.content{
+				&.specialstore{
+					background: #FFF;
+					width: 100%;
+					text-align: center;
+				}
+				width: $page-width;
+				margin: 0px auto;
+				.main-content{
+					width: $page-width;
+					margin: 0px auto;
+					.section{
+						border: 0px;
+						h2{
+							@extend %placeholder-heading;
+						}
+						.vit-carousel{
+							@include box-sizing();
+							width: $page-width;
+							padding-left: 40px;
+							padding-right: 40px;
+							position: relative;
+							.owl-wrapper-outer{
+								overflow: hidden;
+							}
+							.owl-controls{
+								position: static;
+								.owl-buttons{
+									@extend %placeholder-owl-buttons;
+									top: 215px;
+									.owl-next{
+										position: absolute;
+										left: 1112px;
+									}
+									.owl-prev{
+										position: absolute;
+										left: -38px;
+										right: auto;
+									}
+								}
+							}
+						}
+						.list-products{
+							@extend %placeholder-prod-by-row;
+							.hproduct{
+								@extend %placeholder-hproduct;
+								.figure{
+									@extend %placeholder-list-prod-bt-quickview;
+									@extend %placeholder-list-prod-photo;
+								}
+								.details{
+									.link{
+										@extend %placeholder-list-prod-name;
+										@extend %placeholder-list-prod-offers;
+										@extend %placeholder-list-prod-parcel;
+									}
+									@extend %placeholder-list-prod-buy;
+									.btn{
+										&.buy{
+											display: none;
+										}
+									}
+									.reviewaggregate{
+										display: none;
+									}
+								}
+								@extend %placeholder-list-prod-indisponivel;
+								.tools{
+									width: 160px;
+									margin: 0px auto;
+									@extend %placeholder-sku-carousel;
+									.skus{
+										width: 160px;
+									}
+									.owl-buttons{
+										top: 5px;
+										.owl-next{
+											left: 139px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

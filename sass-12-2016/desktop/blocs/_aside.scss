@@ -1,0 +1,173 @@
+/* -------------------------------------------------------*/
+/* ------------------*>>> ASIDE <<<----------------------*/
+/* -----------------------------------------------------*/
+
+// Config -----------------------------------------------------------------------------/
+$aside-link-colors: #4f4f4f;
+$aside-w: 180px;
+
+// Components -----------------------------------------------------------------------/
+%aside-title{
+	.title{
+		background: #FFF;
+		@include fonte($font-alt-1, normal, 19px, #373435);
+		margin: 0px;
+		padding: 7px 10px; 
+		text-transform: uppercase;
+		border-bottom: 1px solid #9C9C9C;
+	}
+}
+
+// Style ---------------------------------------------------------------------------/
+#main{
+	.container{
+		.aside{
+			@include box-sizing();
+			width: $aside-w;
+
+			.banners{
+				&.b-left{
+					@extend %banner-aside;
+				}
+				&.b-specialstore{
+					@extend %banner-aside-specialstore;
+				}
+			}
+
+			.filters{
+				@extend %aside-title;
+				@include border-radius();
+				background: #FFF;
+				border: 1px solid #FFF;
+				margin-bottom: 10px;
+				#pFilters{
+					@include fonte($font-def, bold, 13px, $aside-link-colors);
+					text-transform: none;
+				}
+				ul{
+					li{
+						background: none;
+						.type{
+							background: none;
+							padding-left: 0px;
+							@include fonte($font-def, normal, 13px, $aside-link-colors);
+						}
+						.item{
+							padding-left: 0px;
+							padding-right: 0px;
+							@include fonte($font-def, bold, 13px, $aside-link-colors);
+							.delete{
+								@include imgbt(bt-aside-excluir, png, 17, 17);
+							}
+							.item{
+								@include fonte($font-def, normal, 13px, $aside-link-colors);
+								margin-top: 0px;
+								.delete{
+									@include imgbt(bt-aside-excluir, png, 17, 17);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.block{
+				@extend %aside-title;
+				@include border-radius(3px);
+				background: #FFF;
+				border: 1px solid #FFF;
+				margin-bottom: 10px;
+				&.custom{
+					> li{
+						padding: 10px;
+					}
+				}
+				ul{
+					&.skuFiltro{
+						margin: 0px;
+						padding: 10px;
+						border-top: 1px solid #EBEBEB;
+						.filterBlock{
+							li{
+								@include box-sizing();
+								@include border-radius();
+								margin: 4px;
+								border: 2px solid #DEDEDE;
+								overflow: hidden;
+								&:hover{
+									border-color: #646464;
+								}
+								a{
+									width: 100%;
+									height: auto;
+									border: 0px;
+									img{
+										width: 100%;
+										height: auto;
+										border: 0px;
+									}
+								}
+							}
+						}
+					}
+					li{
+						background: none;
+						> span{
+							@include fonte($font-def, bold, 13px, #373435);
+							text-transform: none;
+							padding-left: 0px;
+							background: none;
+						}
+						> a{
+							background: none;
+							padding-left: 0px;
+							@include fonte($font-def, normal, 13px, $aside-link-colors);
+						}
+						ul{
+							li{
+								a{
+									background: none;
+									padding-left: 0px;
+									@include fonte($font-def, normal, 13px, $aside-link-colors);
+								}
+								&.sub{
+									@include fonte($font-def, normal, 13px, $aside-link-colors);
+									padding-left: 0px;
+								}
+							}
+						}
+					}
+				}
+				&.custom{
+					.title{
+						span{
+							padding-left: 0px;
+							background: none;
+						}
+					}
+					li{
+						a{
+							background: none;
+							padding-left: 0px;
+							@include fonte($font-def, normal, 13px, $aside-link-colors);
+						}
+					}
+				}
+			}
+			.newsletter{
+				display: none;
+			}
+			.b-specialstore{
+				@extend %aside-title;
+				.ico{
+					padding-left: 0px;
+					background: none;
+				}
+				@include border-radius();
+				background: #FFF;
+				border: 1px solid #FFF;
+				margin-bottom: 10px;
+			}
+		}	
+	}
+}

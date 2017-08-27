@@ -1,0 +1,52 @@
+/* ---------------------------------------------------------------------------------------*/
+/* -----------------------------*>>> PAGES - SITEMAP <<<---------------------------------*/
+/* -------------------------------------------------------------------------------------*/
+
+body{
+	&.sitemap{
+		#main{
+			.container{
+				.content{
+					#main_content{
+						h1{
+							@extend %placeholder-h1;
+							margin-left: 0px !important;
+						}
+						.col{
+							margin: 0px;
+							strong{
+								@extend %text-sitemap-categories;
+							}
+							ul{
+								li{
+									h2{
+										a{
+											@extend %text-checkout-general-strong;
+										}
+									}
+									ul{
+										li{
+											a{
+												@extend %text-checkout-general-span;
+												&:hover{
+													@extend %text-checkout-general-span;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.internal{
+		.return.text{
+			.btn.ir.buy{
+				@extend %bt-general-buy-more;
+			}
+		}
+	}
+}

@@ -1,0 +1,547 @@
+/* -------------------------------------------------------*/
+/* -----------------*>>> HEADER <<<----------------------*/
+/* -----------------------------------------------------*/
+
+// Config -----------------------------------------------------------------------------/
+$header-h: 139px;
+$header-link-color: #000;
+$header-search-color: #000;
+$logo-img-w: 224px;
+$nav-height: 40px;
+$logo-position: 'left';
+
+// Components -----------------------------------------------------------------------/
+%header-logo{
+	#logo{
+		position: absolute;
+		top: 20px;
+		width: $logo-img-w;
+		@if $logo-position == "left"{
+			left: 22px;
+		} @else if $logo-position == "center" {
+			left: 50%;
+			margin-left: -($logo-img-w / 2); 
+		} @else if $logo-position == "right" {
+			right: 22px;
+		}
+		h1{
+			margin: 0px;
+		}
+		a{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+%header-help{
+	.help{
+		background-color: transparent;
+		position: absolute;
+		left: 0px;
+		top: 10px;
+		height: 30px;
+		line-height: 30px;
+		width: 100%;
+		> li{
+			width: auto;
+			height: 15px;
+			line-height: 15px;
+			list-style: none;
+			float: right;
+			@include fonte($font-def, normal, 12px, #373435);
+			padding: 0px 10px;
+			border-left: 1px solid #D3D2D0;
+			&:last-child{
+				border-left: 0px;
+			}
+			a,
+			span,
+			strong{
+				@include fonte($font-def, normal, 12px, #373435);
+				background: none;
+				padding: 0px;
+				line-height: 15px;
+			}	
+		}
+	}
+}
+%header-welcome{
+	.welcome{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		background: transparent;
+		padding: 0px;
+		width: auto;
+		#identificacao{
+			@include fonte($font-def, normal, 12px, #373435);
+			a,
+			span{
+				@include fonte($font-def, normal, 12px, #373435);
+				text-decoration: none;
+				padding: 0px;
+			}
+		}		
+	}
+}
+%header-newsletter{
+	.newsletter{
+		display: none;
+	}
+}
+%header-search{
+	.search{
+		@include box-sizing();
+		@include border-radius(0px);
+		-webkit-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+		-moz-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+		box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+		position: absolute;
+		right: auto;
+		left: 420px;
+		top: 40px;
+		border: 0px;
+		width: auto;
+		height: auto;
+		padding: 0px;
+		background: transparent;
+		legend{
+			display: none;
+		}
+		.placeholder{
+			@include box-sizing();
+			@include border-radius(0px);
+			@include fonte($font-alt-1-light, normal, 16px, #373435);
+			@include bgimg('ico_input_search', 'png');
+			letter-spacing: 1px;
+			background-color: #FFF;
+			background-repeat: no-repeat;
+			background-position: 8px 10px;
+			-webkit-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+			-moz-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+			box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+			border: {
+				top: 0px;
+				right: 0px;
+				bottom: 1px solid #000;
+				left: 0px;
+			}
+			width: 350px;
+			height: 34px;
+			padding-left: 30px;
+		}
+		.btn{
+			@extend %bt-home-header-busca;
+			height: 34px;
+			line-height: 34px;
+			position: relative;
+			padding: 0px 25px;
+		}
+	}
+}
+%header-car{
+	.car{
+		@include bgimg(header-car-bar, png);
+		background-repeat: no-repeat;
+		background-position: left 5px;
+		position: absolute;
+		right: 0px;
+		top: 45px;
+		width: 170px;
+		height: 35px;
+		.basket{
+			@include box-sizing();
+			@include border-radius(5px);
+			@include bgimg(bg-basket, png);
+			background-position: 0px top;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			width: 100%;
+			height: 40px;
+			right: 0px;
+			top: 0px;
+			padding: {
+				top: 0;
+				right: 15px;
+				bottom: 0;
+				left: 55px;
+			}
+			z-index: 9;
+			.title{
+				@include fonte($font-alt-1, normal, 16px, #373435);
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				padding: 0px;
+				line-height: 15px;
+				margin-top: 5px;
+				margin-bottom: 2px;
+				display: inline-block;
+			}
+			.itens{
+				@include fonte($font-def, 400, 12px, #FFF);
+				@include border-radius(50px);
+				background-color: #393536;
+				display:block;
+				height: 25px;
+				width: 25px;
+				line-height: 25px;
+				text-align: center;
+				margin: 0;
+				overflow: hidden;
+				position: absolute; 
+				left: 20px;
+				top: 5px;
+				label{
+					@include fonte($font-def, 400, 12px, #FFF);
+				}
+			}
+		}
+		&:hover{
+			.basket{
+				@include radiusbr(0px);
+				@include radiusbl(0px);
+				@include bgimg(bg-basket, png);
+				background-position: 0px top;
+				background-repeat: no-repeat;
+				height: 50px;
+				.title{
+					@include fonte($font-alt-1, normal, 16px, #373435);
+				}
+				.itens{
+					@include fonte($font-def, 400, 12px, #FFF);
+					label{
+						@include fonte($font-def, 400, 12px, #FFF);
+					}
+				}
+			}
+		}
+	}
+}
+%header-summary-basket{
+	.mini-car{
+		top: 45px;
+		@include box-shadow(0, 0, 0px, #cacaca, false);
+		@include box-sizing();
+		@include border-radius(2px);
+		border: 1px solid #DEDEDE;
+		right: 0px;
+		width: 345px;
+		background-color: #FFF;
+		padding: 0px;
+		z-index: 11;
+		#emptyBasket{
+			.prod{
+				padding: 15px;
+				border-bottom: 1px solid #DEDEDE;
+				p{
+					@include fonte($font-def, bold, 14px, #646464);
+					text-transform: uppercase;
+				}
+			}
+			a{
+				@include bt-default(#000);
+				margin: {
+					top: 5px;
+					right: auto;
+					bottom: 15px;
+					left: auto;
+				}
+			}
+		}
+		#basket_pop_container{
+			.prod{
+				padding: 15px;
+				border-bottom: 1px solid #DEDEDE;
+				&:last-of-type{
+					border-color: #FFF;
+				}
+				.photo{
+					border: 0px !important;
+					margin-bottom: 60px;
+				}
+				.descr{
+					margin: {
+						top: 0px;
+						right: 0px;
+						bottom: 10px;
+						left: 10px;
+					}
+					.name{
+						@include fonte($font-def, normal, 13px, #373435);
+						padding: 0px;
+						text-transform: uppercase;
+					}
+					.cod{
+						@include fonte($font-def, normal, 11px, #808080);
+						text-transform: uppercase;
+						margin: 2px 0px 5px 0px !important;
+						&:before{
+							content: "Cod. ";
+							@include fonte($font-def, normal, 11px, #808080);
+							text-transform: capitalize;
+						}
+					}
+				}
+			}
+			._skus{
+				clear: none;
+				display: inline-block;
+				padding-left: 10px;
+				p{
+					@include fonte($font-def, normal, 11px, #373435);
+					span{
+						@include fonte($font-def, normal, 11px, #373435);
+					}
+				}
+				.total{
+					margin: {
+						top: 15px;
+						right: 0px;
+						bottom: 0px;
+						left: 0px;
+					}
+					position: relative;
+					@include fonte($font-def, bold, 13px, #373435);
+					text-align: left;
+					&:before{
+						content: "Por ";
+						@include fonte($font-def, bold, 13px, #373435);
+					}
+				}
+			}
+			.sum_container{
+				@include box-sizing();
+				height: 35px;
+				width: 100%;
+				border: {
+					top: 1px solid #F0F0F0;
+					bottom: 2px solid #F0F0F0;
+				}
+				background: #FAFAFA;
+				padding: {
+					top: 0px;
+					right: 10px;
+					bottom: 0px;
+					left: 10px;
+				}
+				margin-bottom: 5px;
+				.qtde_prod{
+					@include fonte($font-def, normal, 13px, #373435);
+					line-height: 35px;
+				}
+				.subtotal{
+					@include fonte($font-def, bold, 13px, $color-theme-2);
+					text-transform: uppercase;
+					line-height: 35px;
+					strong{
+						@include fonte($font-def, bold, 13px, $color-theme-2);
+					}
+				}
+			}
+			#btn_checkout{
+				padding: 10px;
+				margin: 0px;
+				text-align: center;
+				overflow: hidden;
+				background: #FFF;
+				a{
+					display: inline-block;
+					&.bt-mini-car-continue{
+						@extend %bt-header-minicar-continue;
+						float: left;
+					}
+					&.bt-mini-car-concluir{
+						@extend %bt-header-minicar-finalizar;
+						float: right;
+					}
+				}
+			}
+		}
+	}
+}
+%header-nav{
+	#nav{
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		> li{
+			position: static;
+			&:last-child{
+				> a{
+					@include fonte($font-alt-1, normal, 19px, #FFDB9C);
+					text-decoration: underline;
+				}
+			}
+			> a{
+				@include fonte($font-alt-1, normal, 19px, #FFF);
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				height: 40px;
+				line-height: 40px;
+				width: auto;
+				&:hover,
+				&.hover,
+				&:active{
+					@include fonte($font-alt-1, normal, 19px, #383435);
+					letter-spacing: 1px;
+					text-decoration: underline;
+					background: #FAF9F7;
+				}
+			}
+			.sub-nav{
+				top: 40px;
+				width: 100% !important;
+				border: 0px;
+				background: #FAF9F7;
+				border-top: 5px solid #FAF9F7;
+				@include box-sizing();
+				padding: 20px;
+				.cont-sub-nav{
+					@include box-sizing();
+					width: $page-width;
+					margin: 0px auto;
+					padding: 30px;
+					overflow: hidden;
+					.collum{
+						width: auto;
+						li{
+							border: 0px;
+							a{
+								@include fonte($font-def, normal, 13px, #373435);
+								text-transform: capitalize;
+								border: 0px;
+							}
+						}
+						&.imagem{
+							@include box-sizing();
+							padding: 0px;
+							float: right;
+							a{
+								border: 0px;
+								img{
+									width: 880px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+%header-float-toolbar{
+	#floatToolbar{
+		background: #FAF9F7;
+		border-bottom: 0px solid #d1d1d1;
+		height: 60px;
+		padding: 0px;
+		.floatToolbar{
+			width: $page-width;
+			margin: 0px auto;
+			position: relative;
+			.closeHeader{
+				border-right: none;
+				margin-top: 15px;
+				padding: 5px;
+				span{
+					@include bgimg(seta-barra, png);
+					background-position: 0px 0px;
+					padding: 0px;
+					background-repeat: no-repeat;
+					width: 20px;
+					height: 20px;
+				}
+			}
+			.logoFT{
+				position: absolute;
+				left: 50px;
+				top: 8px;
+				margin: 0px;
+				img{
+					width: 70%;
+				}
+			}
+			@extend %header-search;
+			.search{
+				position: absolute;
+				left: 420px;
+				right: auto;
+				top: 8px;
+			}
+			@extend %header-car;
+			.car{
+				position: absolute;
+				right: 0px;
+				top: 23px;
+				@extend %header-summary-basket;
+			}
+			.foneFTH{
+				display: none;
+				@include bgimg(icon-foneft, png);
+				background-position: 20px 4px;	
+				background-repeat: no-repeat;
+				font-size: 0px;
+				padding-left: 50px;
+				width: auto;
+				height: 40px;
+				position: absolute;
+				right: 210px;
+				top: 20px;
+				span{
+					display: block;
+					@include fonte($font-def, bold, 14px, #012a60);
+					line-height: 23px;
+				}
+				strong{
+					display: block;
+					@include fonte($font-def, bold, 12px, #0056a3);
+				}
+			}
+		}
+	}
+}
+%header-headerbuy{
+	&.headerbuy{
+		@include bgimg('bg-header', 'jpg');
+		background-repeat: repeat-x;
+		background-position: 0px -32px;
+		position: relative;
+		height: 100px;
+		border-bottom: 1px solid #D1D1D1;
+		.container{
+			height: 100px;
+			padding: 0px;
+			#logo{
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+		}
+	}
+}
+
+// Style --------------------------------------------------------------------------/
+#header{
+	@include bgimg('bg-header', 'jpg');
+	background-repeat: repeat-x;
+	background-position: center top;
+	position: relative;
+	height: $header-h;
+	.container{
+		width: $page-width;
+		height: $header-h;
+		margin: 0px auto;
+		@extend %header-logo;
+		@extend %header-help;
+		@extend %header-welcome;
+		@extend %header-newsletter;
+		@extend %header-search;
+		@extend %header-car;
+		@extend %header-summary-basket;
+	}
+	@extend %header-nav;
+	@extend %header-float-toolbar;
+	@extend %header-headerbuy;
+}

@@ -1,0 +1,68 @@
+  /* -----------------------------------------------------------------------------------*/
+ /* --------------------------------*>>> HOME <<<--------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+
+//Config -----------------------------------------------------------------------------/
+
+//Components -----------------------------------------------------------------------/
+
+//Style --------------------------------------------------------------------------/
+body{
+	&.home{
+		#main{
+			.container{
+				.banners{
+					&.b-main{
+						> ul{
+							> li{
+								width: 100%;
+							}
+						}
+					}
+					&.b-bottom{
+						> ul{
+							> li{
+								margin-bottom: 10px;
+							}
+						}
+					}
+				}
+				.main-content{
+					h2{
+						@extend %placeholder-heading;
+					}
+					.list-products{
+						.hproduct{
+							@extend %placeholder-mobile-hproduct;
+							.figure{
+								@extend %placeholder-mobile-list-prod-photo;
+							}
+							.tools{
+								.skus{
+									.owl-controls{
+										margin-top: -20px;
+									}
+								}
+							}
+							.details{
+								.link{
+									@extend %placeholder-list-prod-name;
+									@extend %placeholder-list-prod-offers;
+									@extend %placeholder-list-prod-parcel;
+								}
+								.reviewaggregate{
+									display: none;
+								}
+								.buy{
+									@extend %bt-list-product-buy;
+									display: none;
+								}
+							}
+							@extend %placeholder-list-prod-indisponivel;
+						}
+					}
+				}
+			}
+		}
+	}
+}
