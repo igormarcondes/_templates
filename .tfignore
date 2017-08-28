@@ -1,0 +1,12 @@
+# Ignora todos os arquivos na pasta node_packages
+node_packages
+
+# Ignora todos os arquivos .db
+*.db
+
+# Ignora a pasta com os CSS compilados
+locales\custom\css\
+
+# Ignora a pasta de cache do SASS
+.sass-cache
+*.css.map
