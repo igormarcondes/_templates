@@ -1,17 +1,20 @@
-$navHeight: 53px;
-$header-h: 98px;
+$navHeight: 58px;
+$header-h: 103px;
 
-%header-logo {
+%header-logo-desktop {
     #logo {
-        margin: 0;
-        @if $desktop {
-            top: 13px;
-            left: 0;
-            h1 {
-                margin: 0;
+        position: absolute;
+        z-index: 2;
+        top: 8px;
+        left: 50px;
+    }
+}
+%header-logo-mobile {
+    #logo {
+        a {
+            img {
+                max-height: 45px;
             }
-        }@else {
-            min-height: 60px;
         }
     }
 }
@@ -21,8 +24,11 @@ $header-h: 98px;
         font-family: $font-custom;
         font-size: 11px;
         padding: 0;
+        top: 6px;
+        left: 290px;
+        position: absolute;
         a {
-            color: $color-theme;
+            color: $colorDefault;
         }
         #identificacao {
             
@@ -32,113 +38,104 @@ $header-h: 98px;
 %header-nav {
     top: 0;
 }
-$nav-bg: #0677bd;
+$nav-bg: $color-theme2;
 $nav-font-family: $font-custom;
-$nav-font-color: #fff;
-$nav-font-size: 11px;
+$nav-font-color: $color-theme5;
+$nav-font-size: 16px;
 $header-height-mobile: 60px;
 
 %header-nav-desktop {
-    .bg-menu {
-        background: $nav-bg url("/static/locales/global/img/bg-menu.gif") no-repeat center 0;
+    .nav-container {
+        background: $nav-bg;
         height: $navHeight;
-        padding: 1px 0 2px;
         @include box-sizing;
         * {
             @include box-sizing;
         }
     }
-    .container-nav {
-        width: $page-width;
-        height: $navHeight;
-        margin: 0 auto;
-    }
     #nav {
         height: $navHeight;
-        position:relative;
+        width: $page-width;
+        margin: 0 auto;
+        position: relative;
         top: 0;
-        clear:left;
-        float:left;
-        width: 100%;
+        left: 0;
+        padding-left: 250px;
         > li {
             float: left;
             text-align: center;
-            border-right: 1px solid #005a92;
-            border-left: 1px solid #0087da;
+            position: static;
             &:first-child,
             &:last-child {
-                border-left: 0;
+               
             }
             &:last-child,
             &:nth-last-child(2) {
-                border-right: 0;
+              
             }
             &:last-child {
-                //float: right;
-                > a {
-                    max-width: 100px;
-                }
+                
             }
             > a {
-                height: ($navHeight - 3px);
+                height: $navHeight;
                 font-family: $nav-font-family;
                 font-size: $nav-font-size;
+                font-weight: bold;
                 color: $nav-font-color;
                 line-height: $navHeight;
                 float: none;
                 text-align: left;
-                text-transform: none;
+                text-transform: uppercase;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: left;
-                padding: 0 15px 0 44px;
-                /*max-width: 140px;*/
+                padding: 0 34px 0;
                 &:hover,
                 &.hover {
-                    background: rgba(0, 0, 0, 0.5);
+                    background: #fff;
                 }
-                span.ico {
-                    width: 40px;
-                    height: 50px;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    text-indent: -9000px;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                }
-                span:not(.ico) {
-                    display: inline-block;
-                    vertical-align: middle;
-                    line-height: normal;
+                &[href*="sale"] {
+                    background: $color-theme3;
+                    color: #fff;
                 }
             }
             
         }
         .sub-nav {
-            top: 50px;
-            border: 1px solid #d1d1d1;
-            padding: 20px;
-            @include box-sizing(content-box);
+            top: 58px;
+            border: 0;
+            width: 100% !important;
+            box-shadow: 0px 8px 28px -1px rgba(0,0,0,0.38);
+            min-height: 200px;
+            padding: 40px 60px;
             .collum {
                 width: 212px;
             }
             li {
+                border-bottom: 1px solid #e0f7fc;
+                &:last-child {
+                    border-bottom: 0;
+                }
                 a {
                     font-family: $font-custom;
                     font-size: 14px;
+                    color: $color-theme5;
+                    font-weight: 600;
+                    padding: 10px 0;
                     &:hover {
-                        color: $color-theme;
                         text-decoration: none;
                     }
                 }
             }
             .imagem {
-                width: 247px;
+                width: auto;
+                float: right;
+                max-width: 688px;
                 img {
-                    width: 247px;
+                    width: auto;
                     height: auto;
+                    max-width: 100%;
                 }
             }
         }
@@ -147,11 +144,12 @@ $header-height-mobile: 60px;
 @mixin icon-nav-mobile {
     @include icons(f039);
     margin: 10px;
-    color: $color-theme;
+    color: $color-theme5;
 }
 %header-nav-mobile {
     height: $header-height-mobile;
     margin: 0;
+    background: $color-theme;
     &.active {
         height: 110px;
     }
@@ -169,15 +167,16 @@ $header-height-mobile: 60px;
         @extend %rk-hide;
     }
     .welcome {
-        background: $color-theme;
+        background: $color-theme4;
         font-family: $nav-font-family; 
-
+        padding: 10px 30px 10px 4px;
         a,
         span {
             color: #fff;
         }
         .hide-menu {
             background: none;
+            width: 31px;
 
             &::after {
                 @include icons(f053, 20px);
@@ -191,6 +190,7 @@ $header-height-mobile: 60px;
         top: 60px;
         width: 100%;
         border: medium none;
+        -webkit-overflow-scrolling:touch;
     }
     #nav {
         background: $nav-bg;
@@ -202,32 +202,126 @@ $header-height-mobile: 60px;
                 font-family: $nav-font-family;
                 font-size: $nav-font-size;
                 color: $nav-font-color;
-                font-weight: normal
+                font-weight: bold;
+                text-transform: uppercase;
+                &[href*="sale"] {
+                    background: $color-theme3;
+                    color: #fff;
+                }
+                &:only-child {
+                    width: 100%;
+                }
             }
             > a:not(.sub-parent) {
-                padding: 20px 15px 20px 70px;
+               
             }
             .sub-parent {
-                color: #fff;
+                color: $color-theme4;
                 font-size: 16px;
-            }
-            span.ico {
-                width: 40px;
-                height: 50px;
-                background-repeat: no-repeat;
-                background-position: center;
-                text-indent: -9000px;
-                display: block;
-                position: absolute;
-                left: 10px;
-                top: 5px;
             }
         }
     }
 }
 %header-help-desktop {
-    .help {
-        display: none;
+    .help-top {
+        position: absolute;
+        right: 124px;
+        left: auto;
+        top: 24px;
+        height: 40px;
+        width: auto;
+        z-index: 2;
+        > li {
+            width: 100%;
+            text-align: center;
+            &:hover {
+                > a {
+                    background-position: 0 bottom;
+                }
+                > ul {
+                   display: block;
+                }
+            }
+            a {
+                padding: 0;
+                background: none;
+            }
+            > a {
+                text-indent: -9000px;
+                display: inline-block;
+                background: url("/static/locales/global/img/ico-minha-conta.png") no-repeat;
+                width: 64px;
+                height: 55px;
+            }
+            > ul {
+                display: none;
+                background: #fff;
+                position: absolute;
+                top: 54px;
+                left: -48px;
+                z-index: 10;
+                padding: 20px;
+                border: 0;
+                min-width: 156px;
+                box-shadow: 0 3px 5px 0 rgba(0,0,0,0.35);
+                text-align: left;
+                li {
+                    width: 100%;
+                    line-height: 20px;
+                    border-bottom: 1px solid #e0f7fc;
+                    color: #5a5a5a;
+                    font-family: $font-custom;
+                    font-weight: bold;
+                    font-size: 11px;
+                    margin-bottom: 8px;
+                    padding-bottom: 8px;
+                    &.reve {
+                       @if $desktop{
+                        display: none;
+                       }
+                    }
+                    &:last-child {
+                        border-bottom: 0;
+                        margin-bottom: 0;
+                    }
+                    a {
+                        text-transform: uppercase;
+                        font-family: $font-custom;
+                        &:hover {
+                            text-decoration: none;
+                            color: $color-theme5;
+                        }
+                    }
+                }
+                .welcome {
+                    position: static;
+                    font-size: 11px;
+                    &.off {
+                        display: none;
+                    }
+                    span {
+                        background: none;
+                        padding: 0;
+                    }
+                    a {
+                        font-size: 12px;
+                        &[href*="index.aspx"] {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    span.rev {
+        position: absolute;
+        right: 223px;
+        top: 45px;
+        a {
+            font-family: $font-custom;
+            color: #114f9e;
+            font-weight: 600;
+        }
     }
 }
 %header-help-mobile {
@@ -237,97 +331,134 @@ $header-height-mobile: 60px;
         padding-top: 0;
         > li {
             > a {
-               
+                display: none;
             }
         }
     }
 }
 %header-search-desktop {
     .search {
-        top: 39px;
-        left: 173px;
+        top: 28px;
+        left: 293px;
         border: 0;
-        width: 515px;
+        width: 595px;
+        border-radius: 5px;
         input {
             font-family: $font-custom;
-            height: 39px;
-            width: 459px;
-            width: calc(100% - 39px);
-            border: 1px solid $colorBorder;
-            border-right: 0;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            background: #fff;
+            height: 50px;
+            width: 100%;
+            padding-left: 21px;
+            padding-right: 50px;
+            border: 0;
+            border-radius: 5px;
+            color: $color-theme4;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 16px;
         }
         .btn {
-            background: #dc252c url("/static/locales/global/img/btn_search.png") no-repeat center;
-            width: 39px;
-            height: 39px;
-            display: block;
+            background: none;
             text-indent: -9000px;
+            height: auto;
+            width: auto;
+            position: absolute;
+            top: 15px;
+            right: 20px;
             padding: 0;
-            margin: 0;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
+            font-size: 0;
+            &::before {
+                @include icons(f002, 20px, $color-theme4);
+                padding-left: 2px;
+            }
+            &:hover {
+                &::before {
+                     color: darken($color-theme4, 15%);
+                }
+            }
         }
     }
 }
 %header-search-mobile {
     .search {
+        margin: 12px 0 0;
         input[type=text] {
             font-family: $font-custom;
+            color: $color-theme4;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .btn {
+            color: $color-theme5;
         }
     }
 }
 @mixin icon-basket {
     background: url("/static/locales/global/img/ico-car.png") no-repeat;
-    width: 22px;
-    height: 21px;
+    background-size: 100% auto;
     content: " ";
     display: block;
-    float: left
+    float: left;
+    @if $desktop{
+        width: 64px;
+        height: 55px;
+    }@else {
+        width: 50px;
+        height: 42px;
+        margin: 8px 10px 0 0;
+    }
 }
 %header-basket-desktop {
     .car {
         &:hover {
             .basket {
-               
+               border-bottom: 4px solid #fff;
+               height: 57px;
+               &::before {
+                   background-position: 0 -55px;
+               }
             }
         }
         .basket {
-            top: 39px;
-            left: 724px;
+            top: 24px;
+            right: 45px;
             padding: 0;
-            background: #fff !important;
-            border: 1px solid $colorBorder !important;
-            border-radius: 5px;
-            min-width: 265px;
+            background: none !important;
+            width: 64px;
+            height: 55px;
 
             &::before {
                 @include icon-basket;
-                margin: 8px;
+            }
+            &:hover {
+                
+
             }
             .title {
-                font-family: $font-custom;
-                float: left;
-                color: $color-theme2;
-                font-weight: bold;
-                text-transform: lowercase;
-                font-size: 18px;
-                line-height: 37px;
-                margin: 0;
-                padding: 0;
-                border-left: 1px solid $colorBorder;
-                padding-left: 14px;
+                display: none;
             }
             .itens {
-                float: left;
-                margin: 12px 5px 0;
-                color: $colorDefault; 
+                position: absolute;
+                color: $colorDefault;
             }
             .basket-count-number,
             .basket-count-label {
-                color: $colorDefault;
+                color: #fff;
+            }
+            .basket-count-number {
+                @include box-sizing;
+                background: $color-theme4;
+                border-radius: 5px;
+                min-width: 16px;
+                line-height: 16px;
+                text-align: center;
+                display: block;
+                font-size: 11px;
+                position: absolute;
+                top: -10px;
+                left: 50px;
+            }
+            .basket-count-label {
+                display: none;
             }
             .zero-item + .basket-count-label {
                 display: none;
@@ -339,25 +470,31 @@ $header-height-mobile: 60px;
     [class*="header-btn-mobile"] {
         .btn-cart-mobile {
             background: none;
+            width: auto;
+            height: auto;
             &::before {
                 @include icon-basket;
-                margin-top: 19px;
             }
         }
         .btn-search-top {
             background: none;
             margin: 0;
             &::after {
-                @include icons(f002, 20px, $color-theme2);
-                margin: 18px 0 0;
+                @include icons(f002, 20px, $color-theme4);
+                margin: 20px 0 0;
             }
         }
         .qtd-cart {
-            background: $color-theme !important;
+            background: $color-theme3 !important;
             position: absolute;
-            top: 28px;
-            left: 48px;
+            top: 8px;
+            left: 74px;
             margin: 0 !important;
+            font-size: 12px;
+            min-width: 10px;
+            text-align: center;
+            min-height: 14px;
+            line-height: 13px;
         }
     }
 }
@@ -410,10 +547,9 @@ $header-height-mobile: 60px;
 %header-float-bar {
     
     #floatToolbar {
-        height: 67px;
+        height: 80px;
         padding: 0;
-        background: #f2f2f2;
-        border-bottom: 2px solid #e8e8e8;
+        background: $color-theme;
         @include box-sizing;
         * {
            @include box-sizing; 
@@ -424,24 +560,20 @@ $header-height-mobile: 60px;
         }
         .closeHeader {
             border: medium none;
-            margin: 0 0 0 -39px;
+            margin-top: 20px;
             width: 50px;
             height: 52px;
             cursor: pointer;
-            display: none;
             &::before {
-                font-family: arial;
-                content: "\203A";
-                font-size: 38px;
-                line-height: 13px;
-                margin-left: -2px;
-                color: #000;
-                transform: rotate(-90deg);
+                @include icons(f077);
+                font-size: 28px;
+                margin: 2px 0 0 5px;
+                color: $color-theme3;
                 display: block;
             }
             &:hover {
                 &::before {
-                    color: $color-theme;
+                   
                 }
             }
             span {
@@ -451,51 +583,50 @@ $header-height-mobile: 60px;
             }
         }
         .logoFT {
-            margin: 11px 0 0;
+            margin: 5px 0 0 20px;
             img {
-                max-height: 42px;
+                max-height: 90px;
             }
         }
         .mini-car {
-            top: 45px;
-            right: -83px;
+            top: 71px;
+            right: 0;
         }
         .search {
             position: absolute;
-            top: 14px;
-            left: 132px;
+            top: 15px;
+            left: 190px;
             margin: 0;
             width: auto;
             input {
-                width: 345px;
+                width: 700px;
                 @include box-sizing;
             }
         }
         .basket {
-            margin-top: 10px;
+            margin-top: 14px;
             width: auto;
-            height: 39px;
+            height: 57px;
+            #lblResumoCesta {
+               background: $color-theme4;
+               border-radius: 5px;
+               min-width: 16px;
+               line-height: 16px;
+               text-align: center;
+               display: block;
+               font-size: 11px;
+               position: absolute;
+               top: -10px;
+               left: 50px;
+               color: #fff;
+            }
         }
         .help-top {
-            top: 8px;
-            right: 57px;
-        }
-        .fone {
-            position: absolute;
             top: 14px;
-            right: 290px;
-            padding: 0 0 5px 30px;
-            background: url("/static/locales/global/img/ico_tel.png") no-repeat 0 6px;  
-            text-transform: lowercase;
-            font-size: 18px;
-            color: $color-theme;
-            font-weight: bold;
-            b {
-                color: $colorDefault;    
-                display: block;
-                font-weight: normal;
-                font-size: 12px;                
-            }
+            right: 77px;
+        }
+        span.rev {
+            top: 35px;
         }
         .box-top {
             position: absolute;
@@ -507,6 +638,7 @@ $header-height-mobile: 60px;
 %header-float-bar-mobile {
     #floatToolbar {
         height: 60px;
+        background: $color-theme;
         .logoFT {
             min-height: $header-height-mobile;
         }
@@ -521,16 +653,16 @@ $header-height-mobile: 60px;
 }
 %Summary-Basket-desktop {
     .mini-car{
-        top: 74px;
-        right: -82px;
+        top: 81px;
+        right: 0;
         background-color: #fff;        
-        border: 1px solid #d2d2d2;
-        padding: 0;
-        width: 348px;
+        border: 0;
+        padding: 10px;
+        width: 361px;
         z-index: 2;
         text-transform: none;
-        box-shadow: none;
         max-height: 383px;
+        box-shadow: 0 3px 5px 0 rgba(0,0,0,0.35);
         #basket_pop_container{
             .mid{
                 .prod {
@@ -542,34 +674,32 @@ $header-height-mobile: 60px;
                         border: none;
                     }
                     .photo{
-                        width: 50px;
+                        width: 90px;
                         border:none!important;
                         margin-bottom: 0;
+                        img {
+                            width: 100%;
+                        }
                     }
                     .descr {
                         margin-left:10px; 
                         margin-bottom: 10px;
-                        width: 230px;
+                        width: 200px;
                         p{
                             &.name {  
                                 font-family: $font-custom;
-                                color: #0677bd;
-                                font-size: 13px;       
-                                font-weight: 600;                     }
-                            &.cod {
-                                color: $colorDefault;
-                                font-size: 11px;
-                                &::before {
-                                    content: "Cod. "
-                                }
+                                color: #4d4d4d;
+                                font-size: 13px;
+                                font-weight: bold;
                             }
                         }
                     }
+                    
                     ._skus {
                         margin-left: 10px;
                         clear: none;
                         display: inline-block;
-                        width: 230px;
+                        width: 200px;
                         font-family: $font-custom;
                         line-height: 11px;
                          p {
@@ -580,18 +710,31 @@ $header-height-mobile: 60px;
                                 color: $colorDefault;
                                 font-weight: normal;
                             }
+                            &.cod {
+                                color: #9b9b9b;
+                                font-size: 11px;
+                                &::before {
+                                    content: "Cod. "
+                                }
+                            }
                         }
+                       
                         .total {
                             position: static;
                             font-weight: bold;   
-                            color: $color-theme;
-                            font-size: 14px;
+                            color: #ea5d85;
+                            font-size: 12px;
                             margin-top: 5px;
+                            span {
+                                color: #5a5a5a;
+                                font-size: 12px;
+                                float: right;
+                            }
                         }
                     }
                 }
                 .sum_container{
-                    background: $color-theme2;
+                    background: none;
                     height: auto;
                     padding: 10px;
                     clear: both;
@@ -599,40 +742,41 @@ $header-height-mobile: 60px;
                     font-family: $font-custom;
                     p {
                         line-height: 34px;
-                        @include fonte($font-custom , 500, 13px, #fff);                  
+                        @include fonte($font-custom , bold, 13px, #5a5a5a);
                         &.subtotal{
-                            font-size: 12px;
-                            color: #fff;
-                            font-weight: 600;
-                            text-transform: uppercase;
+                            font-size: 15px;
+                            color: $color-theme4;
+                            font-weight: bold;
                             strong{
-                                font-weight: 600;
+                                font-weight: bold;
+                                color: #5a5a5a;
                             }
                         }
                     }
                 }
                 #btn_checkout{
                     overflow: hidden;
-                    padding: 10px;
+                    padding: 0;
                     text-align: center;
                     a {
-                        width: auto;
                         height: auto;
                         text-indent: 0;
                         display: inline-block;
-                        line-height: 40px;
-                        font: 600 14px/40px $font-custom;
-                        margin: 0 7px;
+                        font: bold 16px/18px $font-custom;
+                        margin: 0 4px;
+                        border-radius: 5px;
+                        width: 152px;
+                        height: 50px;
+                        text-transform: uppercase;
+                        padding-top: 7px;
                           &:first-child{
-                            background: #fff;
-                            color: $colorDefault;
+                            background: $color-theme;
+                            color: #114f9e;
                           }
                          + a {    
-                            box-shadow: inset -4px -4px 0px 0px darken($btn-success-color, 5%);
                             background: $btn-success-color;
                             color: #fff;
-                            padding: 0 14px;
-                            border-radius: 5px;
+                            
                             &:hover{
                                background: darken($btn-success-color, 5%);
                             } 
@@ -649,22 +793,15 @@ $header-height-mobile: 60px;
                  font-family: $font-custom;
             }
             a {
-                background: $color-theme;
-                font-size: 12px;    
-                margin:0 auto 10px;
-                display:inline-block;
-                font-family: $font-custom;
-                text-transform: uppercase;
+                @extend %btn-secondary;
                 width: auto;
-                border-radius: 5px;
-                box-shadow: inset -4px -4px 0px 0px darken($btn-success-color, 5%);
+                margin: 0 auto;
             }
         }
     }
 }
 %header-buy {
    &.headerbuy {
-      border-bottom: 2px solid $color-theme;
       @if $mobile{
         margin-bottom: 10px;
       }
@@ -682,15 +819,19 @@ $header-height-mobile: 60px;
             padding-right: 0;
         }
       }
+      .container {
+        @if $desktop{
+            padding: 0;
+            height: 163px;
+        }
+      }
    } 
 }
 body {
-    @include fonte($font-def, normal, 12px, $colorDefault);
+    @include fonte(12px, $colorDefault, normal, $font-def);
     .wrapper #header {
-        @extend %header-logo;
-        @extend %header-buy;
-       
          @if $desktop {
+            @extend %header-logo-desktop;
             @extend %header-welcome;
             @extend %header-basket-desktop;
             @extend %header-nav-desktop;
@@ -700,12 +841,14 @@ body {
             @extend %header-float-bar;
             @extend %Summary-Basket-desktop;
          }@else {
+            @extend %header-logo-mobile;
             @extend %header-nav-mobile;
             @extend %header-basket-mobile;
             @extend %header-search-mobile;
             @extend %header-help-mobile;
             @extend %header-float-bar-mobile;
          }
+         @extend %header-buy;
          
     }
 }

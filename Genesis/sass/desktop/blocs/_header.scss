@@ -1,8 +1,8 @@
-body {
+html body {
     background: #fff;
 }    
 div#header {
-    background: #f2f2f2;
+    background: $color-theme;
 
     .container {
         width: $page-width;
@@ -10,6 +10,9 @@ div#header {
         * {
             @include box-sizing;
         }
+    }
+    h1 {
+        margin: 0;
     }
     a {
         text-decoration: none;
@@ -24,6 +27,9 @@ div#header {
         }
     }
     .car {
+        p {
+            margin: 0;
+        }
         .basket {
             background: none;
             width: auto;
@@ -38,7 +44,6 @@ div#header {
         }
     }
     #floatToolbar {
-        box-shadow: none;
         .foneFT {
             padding: 0;
             background: none;
@@ -48,7 +53,7 @@ div#header {
             background: none;
         }
         .btn {
-            position: static;
+           
         }
     }
 }

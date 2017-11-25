@@ -6,8 +6,14 @@ $mobile: false;
 
 $path-img: "/static/locales/global/img";
 
-$color-theme: #dc252c;
-$color-theme2: #0677bd;
+$colorDefault: #565656;
+
+$color-theme: #acf5f4;    // Azul-piscina-claro
+$color-theme2: #8ae9e6;   // Azul-piscina-escuro
+$color-theme3: #f51c59;   //vermelho botao
+$color-theme4: #ea5d85;  //rosa 
+$color-theme5: #114f9e; //azul escuro
+
 $colorBorder: #d2d2d2;
 $colorIcons: #000;
 
@@ -15,53 +21,61 @@ $font-c: #000;
 $link-c: #0677bd;
 $link-color: #0677bd; 
 
-$font-def: Arial,Helvetica,sans-serif;
+$font-def: Arial;
 $font-size-def: 12px;
 
 $font-custom: 'Open Sans', sans-serif;
-$font-custom2: 'Open Sans', sans-serif;
+$font-custom2: 'Kalam', cursive;;
 $font-icon:   'FontAwesome'; 
 
-$colorDefault: #6e6e6e;
-$color-theme: #ee2f36;
-$color-theme2: #0677bd;
-$color-theme3: #db2f63;
-$color-theme4: #0094ae;
-$color-theme5: #565656; 
+$title-modal-color: #114f9e;
+$subtitle-modal-color: #000;
 
 
 /* Largura padrão do conteudo das páginas */
-$page-width: 990px;
+$page-width: 1260px;
 
 
 /* DOCUMENTAÇÃO DE IMAGENS* /
 
 /* Vitrine */
-$ft_vitrine_w: 253px;
-$ft_vitrine_h: 253px;
+$ft_vitrine_w: 240px;
+$ft_vitrine_h: 240px;
 
 
 /* Detalhes */
-$ft_detalhes_w: 387px;
-$ft_detalhes_h: 387px;
+$ft_detalhes_w: 500px;
+$ft_detalhes_h: 500px;
 
 /* Thumb */
 $ft_thumb_w: 75px;
 $ft_thumb_h: 75px;
 
-
-/* look - detalhes */
-$look_detalhes_w: 387px;
-$look_detalhes_h: 387px;
-
 /* Look - Thumb */
 $look_thumb_w: 72px;
 $look_thumb_h: 72px;
 
-$ft_history_w: 130px;
-$ft_history_h: 130px;
+$ft_history_w: $ft_vitrine_w;
+$ft_history_h: $ft_vitrine_w;
 
 /* Quem viu viu tmb e quem viu Look*/
 $ft_suggest_w: 130px;
 $ft_suggest_h: 130px;
 
+
+
+
+/*---------------------------- CHECKOUT -----------------------------------*/
+$colorCheckout: $colorDefault;
+$colorCheckoutDestaque: $color-theme5;
+$colorNumeroPedido: $color-theme5;
+$fontSizeCheckout: 13px;
+
+
+/*---------------------------- Notify -----------------------------------*/
+
+$notify-title-color: $color-theme4;
+$notify-title-font-family: $font-custom;
+$notify-title-text-transform: uppercase;
+$notify-title-font-size: 13px;
+$notify-title-weight: bold;

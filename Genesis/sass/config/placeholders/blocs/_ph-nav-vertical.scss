@@ -1,20 +1,23 @@
 $nav-vertical-bg: #fff;
 
 %nav-vertical-sidebar {
-	width: 180px;
+	width: 205px;
 	background: $nav-vertical-bg;
 	padding: 0;
-	margin-right: 20px;
+	margin-right: 10px;
 	@include box-sizing;
 }
 
 %nav-vertical-title {
-	background: $color-theme2;
+	background: none;
 	font-family: $font-custom;
-	color: #fff;
-	border-bottom: 1px solid #c9c9c9;
+	color: $color-theme5;
 	text-transform: none;
-	font-size: 12px;
+	font-size: 16px;
+	font-weight: bold;
+	@if $desktop{
+		border-bottom: 1px solid #acf5f4;
+	}
 }
 
 %nav-vertical-block-ul {
@@ -29,10 +32,9 @@ $nav-vertical-bg: #fff;
 	margin: 0;
 
 	> span {
-		background: #f2f2f2;
-		@include fonte($font-custom, 600, 12px, #6e6e6e);
+		background: none;
+		@include fonte($font-custom, 700, 12px, #6e6e6e);
 		padding: 9px 10px;
-		line-height: 22px;
 		text-transform: uppercase;
 		cursor: pointer;
 	}
@@ -51,8 +53,14 @@ $nav-vertical-bg: #fff;
 	font-size: 13px;
 	margin: 0;
 	padding: 8px 13px;
+	display: none;
 }
-
+%nav-ico-delete {
+	background: url("/static/locales/global/img/ico_delete.gif") no-repeat;
+	height: 15px;
+	width: 15px;
+	margin-top: 5px;
+}
 %nav-aside-desktop {
 	@extend %nav-vertical-sidebar;
 
@@ -63,7 +71,6 @@ $nav-vertical-bg: #fff;
 
 	.block {
 		background: none;
-		border: 1px solid #c9c9c9;
 		margin-bottom: 10px;
 
 		h3.title {
@@ -83,7 +90,7 @@ $nav-vertical-bg: #fff;
 		> ul {
 			@extend %nav-vertical-block-ul;
 			&.side-filters {
-				border-bottom: 1px solid #ccc;
+				
 			}
 
 			> li {
@@ -103,7 +110,7 @@ $nav-vertical-bg: #fff;
 
 					&:hover {
 						background: none;
-						color: $color-theme;
+						color: $color-theme5;
 						text-decoration: none;
 					}
 
@@ -149,6 +156,8 @@ $nav-vertical-bg: #fff;
 			li {
 				a {
 					background: transparent;
+					padding: 0 0 5px 10px;
+					color: #5d5d5d;
 				}
 			}
 		}
@@ -161,8 +170,6 @@ $nav-vertical-bg: #fff;
 	#divOptionsSearch {
 		h3 {
 			display: block;
-			color: #fff;
-			font-weight: normal;
 		}
 
 	}
@@ -173,22 +180,20 @@ $nav-vertical-bg: #fff;
 
 	.special-store {
 		background: none;
-		border: 1px solid #dfdfdf;
+		border: 0;
 
 		.title {
-			background: $color-theme2;
+			background: none;
 			font-family: $font-custom;
-			color: #fff;
-			font-size: 0;
+			font-weight: bold;
+			color: $color-theme5;
+			font-size: 16px;
 			text-transform: none;
+			border-bottom: 1px solid #acf5f4;
 
 			span {
 				background: none;
 				padding: 0;
-				&::before {
-					content: "Grande Marcas";
-					font-size: 12px; 
-				}
 			}
 
 		}
@@ -199,7 +204,7 @@ $nav-vertical-bg: #fff;
 
 		li {
 			text-align: center;
-			border-top: 1px solid #ccc;
+			border-top: 0;
 			padding: 8px 0;
 			margin: 0;
 			&:first-child {
@@ -216,7 +221,7 @@ $nav-vertical-bg: #fff;
 
 	.filters {
 		background: none;
-		border-bottom: 1px solid #bcbcbc;
+		border-bottom: 0;
 		margin: 0;
 		font-family: $font-custom;
 
@@ -225,11 +230,13 @@ $nav-vertical-bg: #fff;
 		}
 
 		fieldset {
-			border: 1px solid #ccc;
+			border: 1px solid #acf5f4;
+			background: #e4feff;
 			margin-bottom: 10px;
 			ul {
-				margin: 10px;
+				margin: 0;
 				color: #5d5d5d;
+
 			}
 
 			li {
@@ -237,7 +244,8 @@ $nav-vertical-bg: #fff;
 				margin: 0;
 
 				.item .item {
-					padding-right: 20px;
+					padding-right: 11px;
+					width: 100%;
 				}
 
 			}
@@ -248,32 +256,31 @@ $nav-vertical-bg: #fff;
 		p {
 			margin: 0;
 			padding: 11px 10px;
-			color: $colorDefault;
-			border-bottom: 1px solid #bcbcbc;
-			font-size: 12px;
-			background: #f2f2f2;
+			color: $color-theme5;
+			font-size: 15px;
+			background: none;
+			font-weight: bold;
 		}
 
 		.item {
 			margin-top: 2px;
-			padding: 0 20px 5px 0;
+			padding: 0 21px 5px 0;
+			margin-left: 10px;
+			margin-right: 10px;
 		}
 
 		.type {
 			background: none;
-			padding-left: 0;
-			font-weight: normal;
-			color: $color-theme;
 			font-weight: bold;
-			padding: 5px 0;
+			color: #5a5a5a;
+			padding: 5px 0 5px 10px;
 			font-size: 13px;
+			border-bottom: 1px solid $color-theme;
+			margin-bottom: 5px;
 		}
 
 		.delete {
-			background: url("/static/locales/global/img/ico_delete.gif") no-repeat;
-			height: 13px;
-			width: 13px;
-			margin-top: 5px;
+			@extend %nav-ico-delete;
 		}
 
 	}
@@ -288,15 +295,16 @@ $nav-vertical-bg: #fff;
 
 		li ul li {
 			overflow: hidden;
-			margin: 5px 4px;
+			margin: 5px 3px;
 
 			&:hover {
 			}
 
 			a {
-				border: 1px solid #ccc;
+				border: 1px solid #666;
 				width: 30px;
 				height: 30px;
+				border-radius: 5px;
 				@include box-sizing;
 			}
 			img {
@@ -327,10 +335,47 @@ $nav-vertical-bg: #fff;
 	}
 
 }
-
-@if $desktop {
-	div.aside {
-		@extend %nav-aside-desktop;
+%nav-aside-mobile {
+	.nav {
+		font-family: $font-custom;
+		.title {
+			@extend %nav-vertical-title;
+		}
+		fieldset {
+			border: 1px solid #acf5f4;
+			background: #e4feff;
+			p {
+				color: $color-theme5;
+				font-size: 15px;
+				font-weight: bold;
+			}
+			.type {
+				font-weight: bold;
+				color: #5a5a5a;
+				background: none;
+				&::before {
+					display: none;
+				}
+			}
+			.delete {
+				@extend %nav-ico-delete;
+			}
+		}
+		ul {
+			li {
+				span::before {
+					color: $color-theme5;
+				}
+			}
+		}
 	}
-
+}
+body:not(.institucional) {
+	div.aside {
+		@if $desktop {
+			@extend %nav-aside-desktop;
+		}@else {
+			@extend %nav-aside-mobile;
+		}
+	}
 }

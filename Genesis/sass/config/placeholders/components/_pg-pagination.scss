@@ -1,6 +1,6 @@
 ﻿$colorPagination: $colorDefault;
-$colorPaginationDestaque: $colorDefault;
-$heightPagination: 16px;
+$colorPaginationDestaque: $color-theme5;
+$heightPagination: 38px;
 
 %buttons-pagination {
   @include bgimg("arrows", "png");
@@ -15,6 +15,9 @@ $heightPagination: 16px;
 %pagination {
   ul {
     color: $colorPagination;
+    float: none;
+    text-align: center;
+    padding-bottom: 10px;
 
     li {
       height: $heightPagination;
@@ -24,15 +27,25 @@ $heightPagination: 16px;
       float: none;
       vertical-align: middle;
       font-family: $font-custom;
-
+      @if $mobile{
+        margin-bottom: 5px;
+      }
       a {
         color: $colorPagination;
         font-size: 12px;
         border: none;
-        padding: 0px;
+        padding: 0;
         margin: 0;
         height: $heightPagination;
         line-height: $heightPagination;
+        @if $desktop{
+           min-width: 41px;
+        }@else {
+          min-width: 33px;
+        }
+        border-radius: 5px;
+
+        @include box-sizing;
         &:hover {
           color: $colorPaginationDestaque;
         }
@@ -40,7 +53,7 @@ $heightPagination: 16px;
 
       &.page {
         color: $colorPagination;
-        display: inline-block;
+        display: none;
       }
 
       &.numbers {
@@ -48,29 +61,56 @@ $heightPagination: 16px;
       }
 
       .item {
-        padding: 0 2px;
+        padding: 0 5px;
         margin: 0 2px;
       }
-      &:hover,
+      a:hover,
       .selected {
         color: $colorPaginationDestaque;
-        background-color: transparent;
+        background-color: #8ae9e6;
         text-decoration: none;
+        font-weight: bold;
       }
       &:hover {
         color: $color-theme;
       }
-      &:first-child a,
-      &:last-child a{
-        @extend %buttons-pagination;
+      &:first-child,
+      &:last-child {
+        display: none;
+        a {
+
+        }
       }
       &:last-child a {
         background-position: right center;
       }
       &.prev, 
       &.next {
+        background: #8ae9e6;
+        border-radius: 5px;
+        word-spacing: 7px;
+        margin: 0 7px;
+        &.off {
+          background: #ebebeb;
+          a {
+            color: #a5a5a5;
+            &:hover {
+              background: #ebebeb;
+            }
+          }
+        }
         a {
-          color: $color-theme2;
+          background: none;
+          color: $color-theme5;
+          font-weight: bold;
+          text-transform: uppercase;
+          @if $desktop{
+            font-size: 16px;
+            padding: 0 18px;
+          }@else {
+            font-size: 12px;
+            padding: 0 10px;
+          }
         }
       }
       &.prev a,
@@ -82,7 +122,7 @@ $heightPagination: 16px;
 
       &.next a,
       #lnkProxima {
-        margin-left: 8px;
+        
       }
 
     }

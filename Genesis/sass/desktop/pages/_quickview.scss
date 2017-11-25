@@ -1,6 +1,8 @@
 body.quickview {
 	background: none;
-
+	#main {
+		
+	}
 	#main .container {
 		width: 100%;
 		@include box-sizing;
@@ -41,7 +43,7 @@ body.quickview {
 		}
 		.collum.details {
 			width: 480px;
-			width: calc(100% - 460px);
+			width: calc(100% - 620px);
 			.quick-box{
 				border: 1px solid #ebebeb;
 			    padding: 0 15px;
@@ -61,12 +63,13 @@ body.quickview {
 			margin-top: 5px !important;
 		}
 		.social {
-			padding: 0;
-			margin: 0;
-			clear: both;
+			
 		}
 		ul.thumbs {
 			
+		}
+		#ProductBuy {
+			margin-top: 20px !important;
 		}
 
 	}

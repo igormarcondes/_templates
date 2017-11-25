@@ -14,13 +14,5 @@ jQuery(document).ready(function() {
 	var isMobile = function() {
   		if(jQuery(window).width() < 980) {return true}
 	};
-	if(jQuery(".home:not(.mobile-mode) .b-specialstore")[0]) {
-		jQuery(".special-store .owl-carousel").data('owlCarousel').destroy();
-		jQuery(".special-store .owl-carousel").owlCarousel({
-            items: 4,
-            navigation: true,
-            responsive: false,
-            pagination: false
-        });
-	}
+	jQuery(".help-top").clone().insertAfter("#header_busca_container_flutuante");
 }); 

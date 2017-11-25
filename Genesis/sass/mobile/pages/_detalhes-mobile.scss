@@ -91,7 +91,7 @@ body:not(.quickview) {
             }
 
             .padrao-brasileiro {
-                @extend %detail-tabela-medida;
+                
             }
 
         }
@@ -99,14 +99,6 @@ body:not(.quickview) {
         #ProductBuy {
             .txtQuantity {
                 @extend %detail-quantidade;
-            }
-
-        }
-
-        .action {
-            .btn.buy {
-                @extend %btn-detalhes-comprar;
-                width: 200px;
             }
 
         }
@@ -187,7 +179,7 @@ body:not(.quickview) {
         @extend %reviewaggregate-avalicao-dos-clientes;
 
         h2 {
-            @extend %detail-titile-vitrine;
+            
         }
 
         .description {
@@ -205,20 +197,8 @@ body:not(.quickview) {
         }
 
         .hreview {
-            @extend %detail-review;
+          
         }
 
-    }
-}
-body.product {
-    #main .list-products {
-        li.open-combo {
-            color: $color-theme;
-        }
-        .result {
-            .details {
-                text-align: center;
-            }
-        }
     }
 }

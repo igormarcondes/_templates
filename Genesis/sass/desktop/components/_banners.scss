@@ -4,6 +4,11 @@ body {
             float: none;
             width: 100%;
         }
+        &.b-left {
+            li {
+                width: 100%;
+            }
+        }
         li {
             img {
                 width: 100%;
@@ -23,7 +28,7 @@ body {
     &.home {
         .banners {
             &.b-top {
-                width: 1080px;
+                width: 100%;
                 margin: 0 auto;
                 padding-bottom: 10px;
                 .owl-item {
@@ -52,14 +57,13 @@ body {
             &.b-bottom {
                 li {
                     &.posicao1,
-                    &.posicao2,
-                    &.posicao3 {
-                        width: 406px;
+                    &.posicao2 {
+                        width: 625px !important;
                         float: left;
-                        margin: 0 0 10px;
+                        margin: 0;
                     }
                     &.posicao2 {
-                        margin: 0 11px 10px;
+                        float: right;
                     }
                 }
             }
@@ -70,34 +74,19 @@ body {
                 ul{
                     float:none;
                 }
-                
-                .posicao1,
-                .posicao2 {
-                    width: 490px !important;
-                    float: left;
-                    margin: 0;
-                    margin-right: 10px;
-                }
-                .posicao3,
-                .posicao4,
-                .posicao5,
-                .posicao6 {
-                    width: 240px !important;
-                }
-                .posicao6 {
-                    clear: none;
-                    margin-right: 0;
-                }
-                .posicao4 {
-                    
-                }
                 li {
-                    
-                    &:nth-child(2) {
-                        float: right;
-                        margin-right: 0;
+                    width: 100% !important;
+                    &.posicao1,
+                    &.posicao2 {
+                        width: 625px !important;
+                        float: left;
+                        margin: 0;
                     }
-                }
+                    &.posicao2 {
+                        float: right;
+                    }
+                }                
+                
             }
             &.b-betweenvit {
                 width: 100%;
@@ -188,13 +177,42 @@ body {
                 margin: 0 auto;
                 width: $page-width;
                 .posicao1 {
-                    float: none;
-                    width: 100%;
+                   
                 }
             }
         }
     }
-
+    &.vitrine {
+        .banners {
+            &.b-top {
+                .posicao2,
+                .posicao3 {
+                    width: 625px !important;
+                    float: left;
+                }
+                .posicao2 {
+                    float: right;
+                }
+            }
+            &.b-main {
+                li {
+                    width: 100% !important
+                }
+                .posicao1 {
+                    width: 100% !important
+                }
+                .posicao2 {
+                    width: percentage(410px / 1045px) !important;
+                    margin-right: 0;
+                }
+                .posicao3 {
+                    float: right;
+                    width: percentage(625px / 1045px) !important;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
     &.catalog,
     &.look {
         .banners {

@@ -1,9 +1,3 @@
-$colorCheckout : $colorDefault;
-$colorCheckoutDestaque : $color-theme;
-$colorNumeroPedido : $color-theme;
-$fontSizeCheckout : 12px;
-
-
 body {
 	h1,
 	h1 span{
@@ -14,6 +8,46 @@ body {
 			@extend %btn-faleconosco-comprar-produtos;
 			line-height: 42px;
 		}
+	}
+	/* Mapa do site */
+	&.sitemap {
+		#main #main_content {
+			h1 {
+			    @extend %title-checkout; 
+			    margin: 10px 0 20px 0 !important;
+			    text-shadow: none;
+			}
+
+			h2 a {
+			    
+			}
+			h2 {
+				border-bottom: 0;
+				a {
+					color: $color-theme5;
+					font-family: $font-custom;
+					font-size: 14px;
+					font-weight: bold;
+				}
+			}
+			.col strong {
+			    font-family: $font-custom;
+			    color: $color-theme5;
+			    border-bottom: 1px solid #ccc;
+			    font-size: 16px;
+			}
+			ul {
+			    li {
+			        line-height: 14px;
+			        margin-bottom: 5px;
+			        a {
+			        	&::before {
+			        		display: none;
+			        	}
+			        }
+			    }
+			}
+		}	    
 	}
 }
 body.institucional {
@@ -126,20 +160,23 @@ body.institucional {
 				color: #4d4d4d;
 				font-weight: normal;
 				font-family: $font-custom;
-				font-size: 10px;
+				font-size: 12px;
 				a {
-					color: #000;
+					color: $colorDefault;
 					font-weight: normal;
-					font-size: 10px;
+					font-size: 12px;
 					&::before {
-						color: $color-theme;
+						color: $color-theme5;
 					}
 				}
 
 				span {
 					font-weight: normal;
-					font-size: 10px;
+					font-size: 12px;
 					color: $colorDefault;
+				}
+				&.televendas {
+					display: none;
 				}
 
 			}

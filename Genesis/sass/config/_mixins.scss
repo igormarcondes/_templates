@@ -142,9 +142,20 @@
     background: url("#{$path-img}/" + $img-name + "." + $img-type);
 }
 
-@mixin fonte($font-family: $font-def, $font-weight: "normal", $font-size: 12px, $font-color: #000){
-    font: $font-weight  #{$font-size} $font-family;
+@mixin fonte($font-size: 12px, $font-color: $colorDefault, $font-weight: null, $font-family: null, $text-transform:""){
+    font-size: $font-size;
     color: $font-color;
+
+    @if ($font-family != null) and ($font-family != $font-def){
+        font-family: $font-family;
+    }
+
+    @if ($font-weight != null) and ($font-weight != inherit){
+        font-weight: $font-weight;
+    }
+    @if $text-transform != "" {
+        text-transform: $text-transform;
+    }
 }
 
 @mixin font-face($style-name, $file, $family, $category:"") {
@@ -183,6 +194,13 @@
     font: normal $fontSize/1 $font-icon;
     color: $color;
     @extend %icons;
+}
+
+@mixin titleCheckout($important: false, $color:$colorCheckoutDestaque ){
+    @extend %titleCheckout;
+    @if $important {
+        color: $color !important; 
+    }
 }
 
 %icons{

@@ -2,24 +2,183 @@
     position: relative;
     font-family: $font-custom;
     color: $colorDefault;
-    @if $desktop {
-        background: url("/static/locales/global/img/bg_footer.gif") no-repeat center 0;
-        margin: 60px 0 0 0;
-        position: relative;
-        border-top: 0;
-        padding: 0;
-        position: relative;
-        
+    margin: 30px 0 0 0;
+    position: relative;
+    border-top: 0;
+    padding: 0;
+    background: none;
+    * {
+        @include box-sizing;
     }
-	.container {
-		@if $desktop {
-	        width: $page-width;
-	        height: 462px;
-	        @include clearfix;
-	        @include box-sizing;
-	    }@else {
-	    	display: block;
-	    }
+    .container {
+        @if $desktop {
+            width: 100%;
+            height: auto;
+            @include clearfix;
+            @include box-sizing;
+        }@else {
+            display: block;
+        }
+    }
+    .rows {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        .content {
+            @if $desktop{
+                width: $page-width;
+                position: relative;
+                padding-left: 77px;
+                background: none;
+            }
+            height: auto;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        &.rows-1 {
+            background: $color-theme;
+            @if $desktop{
+            height: 85px;
+            }
+        }
+        &.rows-2 {
+            background: $color-theme4;
+            @if $desktop{
+            height: 118px;
+            }
+            .content {
+                @if $desktop{
+                    padding-top: 30px;
+                }
+            }
+        }
+        &.rows-3 {
+            background: $color-theme4;
+            border-bottom: 1px solid #c03a60;
+            .content {
+                @if $desktop{
+                    min-height:90px;
+                    height: auto;
+                }
+            }
+            .border {
+                border-top: 1px solid #c03a60;
+                @include clearfix;
+            }
+        }
+        &.rows-4 {
+            min-height: 95px;
+        }
+    }
+
+    .col {
+        float: left;
+        clear: left;
+        @if $mobile{
+            width: 50%;
+            clear: none;
+            padding-left: 10px;
+            padding-top: 50px;
+        }
+        li {
+            font-family: $font-custom;
+            font-size: 14px;
+            margin-bottom: 20px;
+            @if $desktop{
+                float: left;
+                margin-right: 20px;
+            }
+            a {
+                color: #faf689;
+            }
+        }
+    }
+    .atendimento {
+        color: #fff;
+        background: url("/static/locales/global/img/ico_atendimento.png") no-repeat 0 5px;
+        padding: 0 0 8px 60px;
+        @if $desktop{
+            position: absolute;
+            top: 28px;
+            right: 0;
+        }@else {
+            margin: 0 auto;
+            width: 260px;
+            text-align: center; 
+        }
+        span {
+            display: block;
+            color: #fff;
+            font-family: $font-custom;
+            font-size: 14px;
+            @if $desktop{
+            padding-bottom: 6px;
+            }
+            a {
+                color: #fff;
+            }
+            u {
+                text-decoration: none;
+                @if $mobile{
+                    display: block;
+                }
+            }
+        }
+    }
+    .social {
+        @if $desktop{
+            position: absolute;
+            top: 39px;
+            left: auto;
+            right: 0;
+        }@else {
+            float: left;
+            width: 100%;
+            text-align: center;
+        }
+        li {
+            padding: 0;
+            width: auto;
+            height: auto;
+            @if $desktop{
+                margin: 0 15px 0 0;
+                float: left;
+            }@else {
+                display: inline-block;
+                margin: 0 10px 10px 0;
+            }
+            a {
+                background: url("/static/locales/global/img/ico_social.png") no-repeat;
+                display: block;
+                width: 44px;
+                height: 44px;
+                text-indent: -9000px;
+            }
+            &.facebook a {
+                background-position: 0 0;
+            }
+            &.instagram a {
+                background-position: -66px 0;
+            }
+            &.twitter a {
+                background-position: -132px 0;
+            }
+            &.pinterest a {
+                background-position: -195px 0;
+            }
+        }
+    }
+    .card {
+        background: url("/static/locales/global/img/sprite_pagamentos.png") no-repeat;
+        width: 298px;
+        height: 29px;
+        display: block;
+        margin: 30px 0 0 0;
+        @if $desktop{
+            float: left;
+        }@else {
+            margin: 30px auto 20px;
+        }
     }
 	.newsletter {
         background: none;
@@ -32,10 +191,12 @@
         }@else {
             width: 100%;
             padding: 10px 20px;
-            background: #f2f2f2;
         }
         fieldset {
-            padding-top: 14px;
+            @if $desktop{
+                padding-top: 18px;
+                float: right;
+            }
         }
         .new.field {
             background: url("/static/locales/global/img/ico_email-news.png") no-repeat 0 7px;
@@ -45,15 +206,46 @@
              }
         }
         .tit {
-            color: #0677bd;
-            font-family: $font-custom;
-            font-size: 18px;
+            color: $color-theme5;
+            font-family: $font-custom2;
             width: auto;
             display: block;
-            float: none;
-            text-align: left;
-            @if $mobile {
-                font-size: 16px;
+            float: left;
+            text-transform: uppercase;
+            font-weight: bold;
+            @if $desktop{
+                font-size: 30px;
+                padding-top: 7px;
+                text-align: left;
+                margin-right: 10px;
+            }@else {
+                font-size: 23px;
+                text-align: center;
+                width: 100%;
+                padding-bottom: 10px;
+            }
+        }
+        .subtit {
+            float: left;
+            color: $color-theme4;
+            font-family: $font-custom;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 19px;
+            @if $desktop{
+                padding-top: 7px;
+                width: 200px;
+                font-size: 18px;
+            }@else {
+                width: 100%;
+                padding-bottom: 10px;
+                font-size: 15px;
+                text-align: center;
+            }
+            br {
+                @if $mobile{
+                    display: none;
+                }
             }
         }
 		p {
@@ -66,16 +258,20 @@
 		.field {
 			@if $desktop {
 				float: left;
-                width: 235px;
+                width: 273px;
+                margin-right: 9px;
 			}
 		}
 		input {
             padding: 0 30px 0 10px;
-            border: 1px solid #d2d2d2 !important;
+            border: 0 !important;
             border-radius: 5px;
-            height: 39px;
+            height: 50px;
+            color: $color-theme4 !important;
+            font-weight: 600;
 			@if $desktop {
-				width: 220px;
+				width: 100%;
+                font-size: 16px;
 			}@else {
 
 			}
@@ -85,7 +281,7 @@
 		}
 		.btn.ir {
             @extend %btn-success;
-            line-height: 35px;
+            line-height: 50px;
 		}
 	}
     .collum {
@@ -255,6 +451,8 @@
     .security {
     	@if $desktop{
     		float: right;
+            margin-right: 140px;
+            margin-top: 16px;
     	}@else {
             width: 100%;
             text-align: center;
@@ -272,70 +470,65 @@
     }
     
     .info-cli {
-    	color: #6e6e6e;
+    	color: #565656;
         font-family: $font-custom;
-    	@if $desktop {
-            width: 674px;
-            height: auto;
-            position: absolute;
-            bottom: 34px;
-            font-size: 12px;
-    		margin: 0;
-            line-height: 19px;
-    	}@else {
-            font-size: 10px;
-    	}
-    	a {
-    		color: #777777;
-
-    	}
+        font-size: 12px;
+        position: static;
+        float: left;
+        span {
+            display: block;
+            color: #565656;
+            padding-top: 29px;
+            text-transform: uppercase;
+            @if $desktop{
+            width: 738px;
+            }
+        }
     }
     
 	.copy {
         @if $desktop {
-    		width: auto;
-            border-top: 0;
-            left: auto;
-            right: 0;
-            margin: 0;
-            bottom: 43px;
+    		position: absolute;
+            bottom: 23px;
+            left: 50%;
+            margin-left: 500px;
+            width: auto;
             padding: 0;
+            height: 40px;
+            border: 0;
         }
 	}
     
 }
 %footer-buy {
-    border-top: 1px solid #d4d4d4;
-    border-bottom: 0;
-    background-position: center -70px;
+    font-family: $font-custom;
     @if $desktop{ 
         .container {
-            height: 190px;
+           
         }
         .security {
-            margin-top: 20px;
+            
         }
         .payment.collum {
-            margin: 19px 0 0;
-            height: auto;
+
             .title {
-                display: block;
+                
             }
         }
         .info-cli {
             
         }
         .copy {
-            bottom: 30px;
+           
         }
-    }@else {
-        
     }
 }
+
+
 @if $mobile{
     span.go-top-btn {
         opacity: 1;
-        background: $color-theme;
+        background: $color-theme3;
         overflow: hidden;
         text-align: center;
         border-radius: 40px;

@@ -22,13 +22,20 @@ body {
 
     /* inicio - Lista de desejos*/
     	#main .filter-wish {
-    		min-height: 26px;
+    		@if $desktop{
+    			min-height: 26px;
+    		}
     		select {
-    			height: 28px;
+    			@if $desktop{
+					height: 28px;
+					width: auto;
+    			}
     		}
     		label{
     		    span{
-    		        margin: 5px 5px 0 0 !important;
+    		        @if $desktop{
+    		        	margin: 5px 5px 0 0 !important;
+    		        }
     		    }
     		}
     	}
@@ -43,12 +50,20 @@ body {
 	    		font-size: 14px;
 	    		font-weight: bold;
 	    		padding-bottom: 8px;
-	    		color: #000;
+	    		color: #666;
 	    	}
 	    	&.list-products li {
 	    		border-top: 0;
 	    	}
+	    	.details.box {
+	    		text-align: left;
+	    	}
 	    	.details {
+	    		text-align: center;
+	    		margin-top: 0;
+	    		.cod {
+	    			margin: 0 0 2px;
+	    		}
 	    		.offers {
 	    			.sale {
 	    				display: block !important;
@@ -67,7 +82,7 @@ body {
 	    			@extend %btn-listadesejo-comprar;
 	    			@if $desktop {
 	    				width: auto;
-	    				margin: 0 auto;
+	    				margin: 5px auto 0;
 	    				float: none;
 	    			}@else {
 	    				width: 100%;
@@ -78,7 +93,22 @@ body {
 	    			}
 	    		}
 	    	}
+	    	.reviewaggregate {
+	    		@if $mobile{
+	    			margin: 0 auto !important;
+	    		}
+	    	}
+	    	.stamp {
+	    		position: static;
+	    		padding-top: 5px;
+	    		a {
+	    			position: static !important;
+	    			margin-bottom: 5px !important;
+	    			display: block;
+	    		}
+	    	}
 	        .figure {
+	        	margin-bottom: 10px;
 	        	@if $desktop {
 	            	width: $ft_vitrine_w;
 	            	border: 1px solid #ccc;
@@ -117,11 +147,19 @@ body {
     		}
     		.notifyme.form {
     			@if $desktop {
-    				width: 300px;
-    				margin: 0 auto;
+    				width: 310px;
     			}
     			> span {
-    				color: #6c6c6c;
+    				@include fonte($notify-title-font-size, $notify-title-color, $notify-title-weight, $notify-title-font-family, $notify-title-text-transform);
+    				padding-bottom: 5px;
+    				@if $mobile{
+    					font-size: 11px;
+    				}
+    			}
+    			label {
+    				span {
+    					display: none;
+    				}
     			}
     			input[type="text"] {
     			    @if $desktop {
@@ -129,11 +167,16 @@ body {
     			    	width: 194px !important;
     			    	margin-right: 0;
     			    	border-radius: 0;
+    			    }@else {
+    			    	width: 100% !important;
     			    }
     			    border: 1px solid #ccc;
     			}
     			.btn.send.ir {
     			    @extend %btn-listadesejo-enviar-notify;
+    			    @if $desktop{
+
+    			    }
     			}
     		}
     		.btn.send.ir {
@@ -149,12 +192,13 @@ body {
 	    		}
 	    	}
 	    }
-	    &.page-listadesejo {
+	    &.page-wishlist {
 	    	.aside {
 	    		.block {
 	    			li {
+	    				font-family: $font-custom;
 	    				a::before {
-	    					color: #000;
+	    					color: $color-theme5;
 	    				}
 	    			}
 	    		}
@@ -162,11 +206,11 @@ body {
 	    	.m-order-list,
 	    	.open-mob-filters {
 	    		text-transform: uppercase;
-	    		font-family: $font-custom2;
+	    		font-family: $font-custom;
 	    		font-size: 10px;
 	    	}
 	    	.open-mob-filters {
-	    		display: none;
+	    		
 	    	}
 	    }
     /* fim    - Lista de desejos*/
@@ -213,7 +257,7 @@ body {
     			.info a.description,
     			.info .number strong,
     			.result .box table a {
-    				color: $color-theme;
+    				color: $colorNumeroPedido;
     			}
     			.info .number strong {
     				font-size: 40px;
@@ -242,12 +286,15 @@ body {
     			.request .actions a {
     				@extend %btn-meuspedidos-imprimir;
     			}
+    			.description .details > span {
+    				padding-bottom: 3px;
+    			}
     		}
     		.request .collum .info .title span {
     			font-weight: bold
     		}
     		.request .warning {
-    			color: #ff1e00;
+    			color: red;
     			font-family: $font-custom;
     			font-size: 14px;
     			display: block;
@@ -257,7 +304,7 @@ body {
     		}
     		.request .collum .info .title strong,
     		.request .collum .info .number strong {
-    			color: $color-theme;
+    			color: $colorNumeroPedido;
     		}
     		.request .collum .info .number strong {
     			font-size: 40px;
@@ -275,6 +322,9 @@ body {
 	    	h1.mycards-title {
 	    		@extend %title-checkout2;
 	    		border-bottom: 0;
+	    	}
+	    	#imgHipercard {
+	    		display: none;
 	    	}
 	    	p.mycards-txt {
 				line-height: 22px;
@@ -294,5 +344,23 @@ body {
 	    	}
 	    }
     /*fim - Meus Cartoes*/
+
+    /*inicio - Meus Pedidos sem login */
+    &.simple {
+    	#main .container {
+    		width: 966px;
+    		margin: 0 auto;
+    	}
+    	.box .number strong {
+    		color: $colorNumeroPedido;
+
+    	}
+    	.info a.description {
+			color:  $colorNumeroPedido;
+			font-family: $font-custom;
+			font-size: 13px;
+		}
+    }
+    /*inicio - Meus Pedidos sem login */
 
 }

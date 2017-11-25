@@ -1,5 +1,22 @@
-body.basketpage {
+.basketpage {
     #upBasket {
-        @extend %basket;
+        td {
+        	background: none;
+        }
+        .figure {
+        	img {
+        		width: 100px;
+        		height: 100px;
+        	}
+        }
+        .delivery,
+        .coupon {
+        	label {
+        		margin-right: 0;
+        	}
+        }
+        tfoot .first td {
+        	border-top: 0
+        }
     }
 }

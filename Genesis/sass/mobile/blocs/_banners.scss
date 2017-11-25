@@ -1,17 +1,53 @@
-.banners {
-	&.b-main {
-		li {
-			&.posicao1,
-			&.posicao2 {
-				width: 50%;
-				float: left;
-			}
-			&.posicao3,
-			&.posicao4,
-			&.posicao5,
-			&.posicao6 {
-				width: 25%;
+body {
+	#main .banners {
+		&.b-top {
+			padding: 10px 0 10px 0;
+		}
+		&.b-main {
+			padding-left: 0;
+		    padding-right: 0;
+			li {
+				padding-left: 0;
+				padding-right: 0;
 			}
 		}
 	}
+	&.home {
+		.banners {
+			&.b-main {
+				li {
+					&.posicao1,
+					&.posicao2 {
+						width: 50%;
+						float: left;
+					}
+					&.posicao3,
+					&.posicao4,
+					&.posicao5,
+					&.posicao6 {
+						width: 100%;
+					}
+				}
+			}
+			&.b-bottom {
+				li {
+					&.posicao1,
+					&.posicao2 {
+						width: 50%;
+						float: left;
+						padding-right: 2%;
+						@include box-sizing;
+					}
+					&.posicao2 {
+						float: right;
+						padding-left: 2%;
+						padding-right: 0;
+					}
+				}
+			}
+		}
+	}
+
 }
+
+

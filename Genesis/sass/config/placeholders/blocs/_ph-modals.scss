@@ -1,5 +1,5 @@
 %fancy-close {
-	background: #fff;
+	background: none;
  	height: 30px;
     width: 30px;
     position: absolute;
@@ -29,19 +29,27 @@
 
 %title-modal {
     font-family: $font-custom;
-    color: #000;
-    font-size: 22px;
+    color: $title-modal-color;
+    font-size: 17px;
     margin: 0 0 15px;
+    span {
+    	color: $title-modal-color;
+    	font-size: 17px;
+    }
 }
 %subtitle-modal {
     font-family: $font-custom;
-    color: #000;
+    color: $subtitle-modal-color;
     font-size: 18px;
     margin: 0 0 15px;
 }
 #fancybox-overlay {
-	opacity: 0.9 !important;
-	background: #000 !important;
+	opacity: 0.7 !important;
+	background: #fff !important;
+}
+html, body, body form{
+    font-family: $font-def;
+    font-size: 12px;
 }
 /*cep*/
 #form1{
@@ -89,3 +97,117 @@
         }
     }
 /* fim    - Termos */
+/* inicio - Modal promocao produto gratis*/
+    .basket-gift {
+    	h1 {
+    		@extend %title-modal;
+    	}
+    	.gift-product-details {
+    		.name {
+    			color: $prod-name-color;
+    			font-weight: normal;
+    			font-family: $prod-name-font;
+    		}
+    	}
+        .bt-container {
+            a.btn {
+                @extend %btn-modal-basket-produto-gratis-continue;
+            }
+        }
+    }
+/* inicio - Modal promocao produto gratis */ 
+
+/* inicio - Login Ja existente*/
+    body.globalId.loginpage {
+        iframe[src="/loginExistenteRakutenId.aspx"]#fancybox-frame {
+            @if $desktop{
+                width: 980px;
+                margin: 0px 0 0 -163px;
+            }
+        }
+    }
+    body.loginexistente {
+        a#fancybox-close {
+            display: none;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            height: 35px !important;
+            padding: 7px !important;
+            box-sizing: border-box;
+        }
+
+        #main {
+            h1 {
+                @extend %title-modal;
+                margin: 0; 
+            }
+
+            .field {
+                input {
+                    padding: 6px 9px;
+                }
+            }
+
+            .lbl-buttons {
+                @if $desktop{
+                 float: right;
+                 margin: 0;
+                }
+            }
+
+            .btn {
+                @extend %btn-primary;
+                  @if $desktop{
+                    padding: 4px 15px;
+                    width: auto;
+                 }          
+            }
+            .txt-ops {
+                @if $mobile{
+                    line-height: 16px;
+                    padding-top: 30px;
+                    width: auto;
+                    text-align: left;
+                }
+            }
+        }
+    }
+/* fim    - Login Ja existente*/
+body {
+    &.globalId.loginpage {
+        iframe[src="/senhageracao.aspx"]#fancybox-frame {
+           @if $desktop{
+            width: 980px;
+           }
+        }
+    }
+    &.forget{
+        @if $desktop{
+            max-width: 400px;
+            position: relative;
+        }
+        margin: 0;
+        .form{
+            .field input[type=text]{
+                border: 1px solid #ccc;
+                height: 35px;
+                font-size: 13px;
+                text-indent: 10px; 
+            }
+        }
+        .recover-email {
+            position: relative;
+            @if $desktop{
+                top: 20px;
+            }@else {
+                top: 5px;
+                width: 100%;
+                text-align: center;
+                text-decoration: underline;
+                display: block;
+            }
+        }
+    }
+}

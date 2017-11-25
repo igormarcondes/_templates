@@ -1,6 +1,6 @@
-$btn-primary-color: #000;
-$btn-secondary-color: #727272;
-$btn-success-color: #ee2f36;
+$btn-primary-color: #f51c59;
+$btn-secondary-color: #8ae9e6;
+$btn-success-color: #f51c59;
 
 @mixin btn {
     border-width: 0;
@@ -8,12 +8,12 @@ $btn-success-color: #ee2f36;
     line-height: 35px;
     height: auto;
     text-align: center;
-    font-family: $font-custom2; 
+    font-family: $font-custom; 
     font-size: 18px;
     padding: 0 20px;
     text-indent: 0;
     font-weight: 600;
-    text-transform: none;
+    text-transform: uppercase;
     @include box-sizing;
     &:hover {
         text-decoration: none;
@@ -31,17 +31,13 @@ $btn-success-color: #ee2f36;
 %btn-secondary {
     @include btn;
     background: $btn-secondary-color;
-    border-bottom: 4px solid darken($btn-secondary-color, 10%);
-    border-right: 4px solid darken($btn-secondary-color, 10%);
-    color: #fff;
+    color: #114f9e;
     &:hover {
         background: darken($btn-secondary-color, 10%);
     }
 }
 %btn-success {
     @include btn;
-    border-bottom: 4px solid darken($btn-success-color, 10%);
-    border-right: 4px solid darken($btn-success-color, 10%);
     background: $btn-success-color;
     color: #fff;
     &:hover {
@@ -57,10 +53,10 @@ $btn-success-color: #ee2f36;
     }
 }
 %btn-lg {
-    line-height: 56px;
-    height: 60px;
+    line-height: 69px;
+    height: 69px;
     padding: 0 40px;
-    font-size: 24px;
+    font-size: 30px;
 }
 %btn-sm {
     @if $desktop {
@@ -107,7 +103,7 @@ $btn-success-color: #ee2f36;
         @extend %btn-success;
     }
     %btn-enviar-notify {
-        @extend %btn-success;
+        @extend %btn-secondary ;
     }
     %btn-garantia-continuar {
         @extend %btn-success;
@@ -117,6 +113,7 @@ $btn-success-color: #ee2f36;
 /* inicio - Botoes Look */
     %btn-look-comprar-produtos {
         @extend %btn-success;
+        @extend %btn-lg;
     }
     %btn-look-selecionar-produtos {
         @extend %btn-secondary;
@@ -292,7 +289,7 @@ $btn-success-color: #ee2f36;
 /* inicio - confirmacao  */
     %btn-confirmacao-imprimir-boleto {
         @extend %btn-success;
-        @extend %btn-lg;
+        line-height: 50px;
     }
 /* fim    - confirmacao  */
 

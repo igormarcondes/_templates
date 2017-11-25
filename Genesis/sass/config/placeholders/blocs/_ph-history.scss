@@ -1,20 +1,19 @@
 %history-desktop {
-    border-top: 1px solid #c4c4c4;
-    margin-top: 30px;
-    padding-top: 30px;
+    margin-top: 15px;
+    padding-top: 15px;
     overflow: visible;
     .prod-view {
        
     }
     .list-products {
         .hproduct {
-            width: ($ft_history_w - 5px);
+            width: $ft_history_w;
             padding: 0;
             @include box-sizing(content-box);
             border-left: 0;
             .photo {
-                width: ($ft_history_w - 5px);
-                height: ($ft_history_h - 5px);
+                width: $ft_history_w;
+                height: $ft_history_h;
             }
             .regular {
                 @extend %product-price-from;

@@ -49,64 +49,56 @@
     }
 }
 %carrosel-arrow-vitrine {
-	background: #d2d2d2; 
+	background: none; 
     display: inline-block;
-    padding: 12px 15px;
-    margin: 0 20px 0;
-    opacity: 1;
+    padding: 0;
+    margin: 0;
+    opacity: 0.5;
     text-indent: -9000px; 
     color: transparent;
     font-size: 0;
-    top: calc(50% - 10px) !important;
+    @if $desktop{
+        top: 140px;
+    }@else {
+        top: -50px;
+    }
     width: auto;
     height: auto;
     &::before {
+        background: url("/static/locales/global/img/ico_arrows.png") no-repeat 0 center;
         text-indent: 0;
         content: " ";
-        height: 10px;
-        width: 10px;
-        border: solid #fff;
-        border-width: 0 3px 3px 0;
         display: block;
         position: relative;
+        @if $desktop{
+            height: 34px;
+            width: 35px;
+        }@else {
+            background-size: auto 16px;
+            height: 16px;
+            width: 16px;
+        }
     }
     &:hover {
-        background-color: $color-theme2;
+        opacity: 1;
         &::before {
-            border-color: #fff;
+           
         }
     }
      &.owl-next {
-        right: -20px;
-        @if $mobile {
-            right: -30px;
-        }
+        right: 1px;
         left: auto !important;
-        border-top-left-radius: 40%;
-        border-bottom-left-radius: 40%;
-        &::before { 
-            transform: rotate(-45deg);
-            -webkit-transform: rotate(-45deg);
-            left: 0px;
-            @if $mobile {
-                left: -5px;
+        &::before {
+            @if $desktop{
+            background-position: -35px center;
+            }@else {
+                background-position: -16px center;
             }
         }
     }
     &.owl-prev {
-        border-top-right-radius: 40%;
-        border-bottom-right-radius: 40%;
-        left: -20px;
-        @if $mobile {
-            left: -30px;
-        }
+        left: 1px;
         &::before {
-            transform: rotate(135deg);
-            -webkit-transform: rotate(135deg);
-            left: 0;
-            @if $mobile {
-                left: 5px;
-            }
         }
     }
     &:hover {
@@ -114,29 +106,28 @@
     }
 }
 %carrosel-arrow-sku-desktop {
-    background: none;
-    border: solid #000;
-    border-width: 0 2px 2px 0;
+    background: url("/static/locales/global/img/arrow-sku.png") no-repeat;
     display: inline-block;
     padding: 3px;
     content: " ";
     margin: 0;
-    height: 5px;
-    width: 5px;
+    height: 13px;
+    width: 14px;
     opacity: 1;
-    left: -9px;
+    left: -15px;
+    top: 13px;
+    opacity: 0.5;
     &:hover {
-        border-color: $color-theme;
+        
     }
      &.owl-next {
-        right: -9px;
+        right: -15px;
         left: auto;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
+        transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
     }
     &.owl-prev {
-        transform: rotate(135deg);
-        -webkit-transform: rotate(135deg);
+        
     }
     &:hover {
         opacity: 1;
@@ -150,14 +141,14 @@
     padding: 3px;
     content: " ";
     margin: 0;
-    height: 5px;
-    width: 5px;
+    height: 3px;
+    width: 3px;
     opacity: 1;
     left: 4px;
-    top: 6px;
+    top: 9px;
     overflow: hidden;
     &:hover {
-        border-color: $color-theme;
+        border-color: $color-theme5;
     }
      &.owl-next {
         right: -10px;
@@ -175,37 +166,33 @@
     }
 }
 %carrosel-arrow-look-pieces {
-    background: none !important;
-    border: solid #afafaf;
-    border-width: 0 3px 3px 0;
+    background: url("/static/locales/global/img/arrow-sku.png") no-repeat;
     display: inline-block;
-    padding: 3px;
+    padding: 0;
     content: " ";
     margin: 0;
-    height: 12px;
-    width: 12px;
-    opacity: 1;
+    height: 13px;
+    width: 14px;
+    opacity: 0.8;
     left: 4px;
-    top: 15px;
+    top: 13px;
     &:hover {
-        border-color: $color-theme2;
+        
     }
      &.owl-next {
-        right: 4px;
+        right: 3px;
         left: auto !important;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
+        transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
     }
     &.owl-prev {
-        transform: rotate(135deg);
-        -webkit-transform: rotate(135deg);
         left: 3px;
-        @if $mobile{
-            left: -15px;
-        }
     }
     &:hover {
         opacity: 1;
+    }
+    @if $mobile{
+
     }
 }
 %carrosel-arrow-banner-especial {
@@ -246,11 +233,12 @@
             .owl-page {
                 background-color: #fff;
                 border-radius: 20px;
-                width: 9px;
-                height: 9px;
+                width: 7px;
+                height: 7px;
                 margin-right: 10px;
+                border: 3px solid #fff;
                &.active {
-                    background-color: $color-theme2;
+                    background-color: $color-theme4;
                }
                span {
                     display: none;
@@ -296,7 +284,6 @@
                 .owl-buttons {
                     > div {
                          @extend %carrosel-arrow-sku-desktop;
-                         top: 20px;
                     }
                 }
             }
@@ -324,6 +311,14 @@
             .owl-buttons {
                 div {
                     @extend %carrosel-arrow-look-pieces;
+                }
+            }
+            @if $mobile{
+                .owl-wrapper-outer {
+                    
+                }
+                .owl-controls {
+                    position: static;
                 }
             }
         }

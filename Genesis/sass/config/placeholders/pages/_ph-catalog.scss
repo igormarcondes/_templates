@@ -1,12 +1,12 @@
-$colorBreadcrumbs: #777;
-$colorBreadcrumbsDestaque: $color-theme;
+$colorBreadcrumbs: #5a5a5a;
+$colorBreadcrumbsDestaque: $color-theme5;
 
 %breadcrumbs {
 	#main #breadcrumbs {
 		background: #fff;
-		margin: 0 0 10px;
-		padding: 10px 0 10px 0;
-		border-bottom: 0;
+		margin: 0 0 16px;
+		padding: 10px 0 16px 0;
+		border-bottom: 1px solid #cecece;
 		font-weight: 600;
 		font-family: $font-custom;
 		@if $mobile {
@@ -21,6 +21,11 @@ $colorBreadcrumbsDestaque: $color-theme;
 			margin-right: 5px;
 			color: $colorBreadcrumbs;
 			text-transform: none;
+			line-height: 12px;
+			font-weight: bold;
+			@if $mobile{
+			    line-height: 15px;
+			}
 		}
 
 		a {
@@ -32,18 +37,17 @@ $colorBreadcrumbsDestaque: $color-theme;
 
 			span {
 				background: url('/static/locales/global/img/sprite_bullets.png') no-repeat;
-				background-position: right -139px;
+				background-position: right -138px;
 				padding-right: 13px;
 			}
 
 		}
 
 		span {
-			@include fonte($font-custom, normal, 12px, $colorBreadcrumbsDestaque);
-			text-transform: none;
-
+			@include fonte(12px, $colorBreadcrumbsDestaque, bold, $font-custom, initial);
 			span {
 				color: $colorBreadcrumbs;
+				font-weight: normal;
 			}
 
 		}
@@ -51,11 +55,22 @@ $colorBreadcrumbsDestaque: $color-theme;
 		h1 {
 			span {
 				color: $colorBreadcrumbsDestaque;
+				font-weight: bold;
 			}
 
 		}
 
 	}
+	&.lookDetalhe,
+	&.product {
+		#main #breadcrumbs {
+			@if $desktop{
+				border-bottom: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+
 }
 
 $color-filters: #6e6e6e;
@@ -63,39 +78,42 @@ $color-filter-highlight: $color-theme;
 $fontFilters: $font-size-def;
 
 %filter-navigation {
-	.bg-filter {
-		width: 100%;
+	.order {
 		@include clearfix;
 		position: relative;
+		display: inline-block;
+		margin-left: 253px;
+		margin-bottom: 20px;
+		vertical-align: top;
+		> span {
+			font-weight: bold;
+		}
+		select {
+			width: 175px;
+			height: 25px;
+		}
 	}
 	#main .content .filters {
 		font-family: $font-custom;
 		position: relative;
-		border: 1px solid #cfd1d0;
+		border: 0;
 		padding: 10px;
 		margin: 0;
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
+		display: none;
 		> span {
 			color: $color-filters;
 			float: left;
 			font-size: 11px;
 			line-height: 29px;
 			font-weight: bold;
-			u {
-				color: #000;
-				text-decoration: none;
-				font-weight: normal;
-				text-transform: capitalize;
-				margin-left: 5px;
-				
-			}
+
 		}
 
 		fieldset {
 			float: left;
 		    width: 687px;
 		    width: calc(100% - 81px);
+		    
 		}
 
 		ul {
@@ -122,35 +140,47 @@ $fontFilters: $font-size-def;
 }
 %filter-navigation-mobile {
 	#main {
+		.order {
+			text-align: center;
+			margin: 5px 0;
+			> span {
+				font-weight: bold;
+				color: $color-filters;
+				font-family: $font-custom;
+				font-size: 12px;
+			}
+			select {
+				min-height: 25px;
+			}
+		}
+		.itens-page {
+			color: $color-filters;
+			font-family: $font-custom;
+			font-size: 12px;
+			width: 100%;
+			display: block;
+			text-align: center;
+			margin: 15px 0 0;
+		}
 		.filters {
 			li {
 				@include fonte($font-custom, normal, 11px, $color-filters);
 				a {
 					&.selected {
-						color: $color-theme;
+						color: $color-theme4;
 					}
 				}
 			}
 		}
-		.nav {
-			font-family: $font-custom;
-			.title {
-				color: #000;
-				text-transform: uppercase;
-			}
-			ul {
-				li {
-					span::before {
-						color: $color-filters;
-					}
-				}
-			}
+		#divSort {
+			display: none;
 		}
-		.side-filters {
+		.side-filters,
+		.aside.active {
 			li {
 				span::before,
 				a::before {
-					color: $color-filters;
+					color: $color-theme5;
 				}
 			}
 		}
@@ -159,6 +189,7 @@ $fontFilters: $font-size-def;
 %filter-vs-mode {
 	.vs-mode {
 		font-family: $font-custom;
+		display: none;
 
 		> span {
 			@include fonte($font-custom, bold, 11px, $color-filters);
@@ -217,20 +248,19 @@ $fontFilters: $font-size-def;
 %filter-show-pages {
 	.filter-details {
 		padding: 10px;
-		border: 1px solid #ccc;
+		border: 0;
 		border-top: 0;
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
+		display: none;
 		> p {
 			float: right;
-			@include fonte($font-custom, normal, 11px, $color-filters);
 		}
 
 	}
 
 }
 %filter-show-pages-mobile {
-	.filter-details {
+	.content .filter-details {
+		display: none;
 		> p {
 			@include fonte($font-custom, normal, 11px, $color-filters);
 			text-transform: uppercase;
@@ -241,15 +271,20 @@ $fontFilters: $font-size-def;
  }
 %filter-itens-pages {
 	.itens-page.field {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 14px;
+		margin-left: 15px;
 		> span {
-			@include fonte($font-custom, bold, 11px, $color-filters);
+			@include fonte($font-custom, normal, 12px, $color-filters);
 			line-height: 25px;
 		}
 
 		select {
 			border: 1px solid #d2d2d2;
 			border-radius: 5px;
-			width: 110px;
+			width: 54px;
+			height: 25px;
 		}
 
 	}
@@ -267,10 +302,16 @@ $fontFilters: $font-size-def;
 	@extend %filter-show-pages;
 }
 %catalog-txt-seo {
+	.bg-seo {
+		padding: 10px;
+		margin-top: 20px;
+	}
 	.categ-desc {
-		@include fonte($font-custom, normal, 13px, $colorDefault);
+		@include fonte(13px, $colorDefault, normal, $font-custom, initial);
     	clear: both;
     	margin-bottom: 20px;
+    	line-height: 21px;
+    	text-align: center;
 	}
 }
 %compare-page {
@@ -285,12 +326,26 @@ $fontFilters: $font-size-def;
 }
 %vitrine-veja-mais {
 	.see-category {
-		text-align: right;
 		font-family: $font-custom;
-	    color: $color-theme2;
+	    color: $color-theme5;
 	    border-top: 0;
 	    font-weight: bold;
-	    font-size: 13px;
+	    font-size: 14px;
+	    @if $desktop{
+	    	text-align: right;
+	    }@else {
+	    	text-align: center;
+	    }
+	    em {
+	    	color: #5a5a5a;
+	    }
+	    &:hover {
+	    	text-decoration: none;
+	    	opacity: 0.5;
+	    }
+	    &::before {
+	    	display: none;
+	    }
 	}
 }
 

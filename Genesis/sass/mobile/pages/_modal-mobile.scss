@@ -86,7 +86,7 @@
     body.consult-delivery.modal-mobile {
         #pnlHomeDelivery {
             .cep .field {
-                width: 160px;
+                width: calc(100% - 150px);
                 display: inline-block;
                 float: none;
                 margin: 0;
@@ -104,7 +104,8 @@
             input[type="text"] {
                 width: 98% !important;
                 border-radius: 0;
-                height: 40px;
+                height: 35px;
+                border: 1px solid #ccc;
             }
         }
     }

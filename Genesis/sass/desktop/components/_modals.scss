@@ -5,7 +5,10 @@
 /* inicio - Configuracoes Gerais*/
     body {
         #fancybox-wrap {
-            border: 0px solid #FFF;
+            border: 0;
+        }
+        #fancybox-outer {
+            border: 1px solid #ccc;
         }
         #fancybox-content:empty + a#fancybox-close {
             display: none !important;
@@ -17,16 +20,7 @@
         a#fancybox-close {
             display: none;
         }
-        &.forget{
-            .form{
-                .field input[type=text]{
-                    border: 1px solid #ccc;
-                    height: 35px;
-                    font-size: 13px;
-                    text-indent: 10px; 
-                }
-            }
-        }
+        
         &.email{
             .form .radio input{
                 height:17px;
@@ -143,13 +137,18 @@
             }
             .btn.ir.edit {
                 @extend %btn-modal-editar-endereco;
-                width: 124px;
+                width: 140px;
             }
             .btn.ir.use {
                 @extend %btn-modal-usar-endereco;
             }
             .btn.ir.delete {
                 @extend %btn-modal-deletar-endereco;
+                width: 140px;
+                text-align: center;
+                &::before {
+                    display: none;
+                }
             }
             
         }
@@ -190,19 +189,14 @@
             #txtMensagem {
                 height: 50px;
             }
+            .sucess {
+                left: 0;
+            }
         }
     }
 /* fim    - Avalie este produto */
 
-/* inicio - Modal promocao produto gratis*/
-    .basket-gift {
-        .bt-container {
-            a.btn {
-                @extend %btn-modal-basket-produto-gratis-continue;
-            }
-        }
-    }
-/* inicio - Modal promocao produto gratis */    
+   
 
 /* inicio - Cep Nao Cadastrado */
     body .actions .bt-yes,
@@ -236,7 +230,7 @@
     body.consult-delivery {
         .cep {
             .actions {
-                margin: 18px 0 0;
+                margin: 19px 0 0 -15px;
             }
         }
         .field > label > span {
@@ -248,7 +242,14 @@
             margin: 0 0 5px;
         }
         #txtZipCode {
-            height: 38px;
+            height: 35px;
+        }
+        .delivery-opt {
+            input[type="radio"] {
+                position: relative;
+                top: 2px;
+                margin-right: 3px;
+            }
         }
     }
 /* fim    - Consultar Prazo de entrega */
@@ -270,6 +271,12 @@
             @extend %btn-modal-alterar-senha-continue;
         }
     }
+    body.forget {
+         .form input[type="radio"] {
+            height: auto;
+            border: 0;
+         }
+    }
 /* fim    - Esqueci Minha Senha */
 
 /* inicio - Indique um amigo*/
@@ -280,49 +287,17 @@
     }
 /* fim    - Indique um amigo */
 
-/* inicio - Login Ja existente*/
-    body.loginexistente {
-        a#fancybox-close {
-            display: none;
-        }
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            height: 35px !important;
-            padding: 7px !important;
-            box-sizing: border-box;
-        }
 
-        #main {
-            h1 {
-                @extend %title-modal;
-                margin: 0; 
-            }
-
-            .field {
-                input {
-                    padding: 6px 9px;
-                }
-            }
-
-            .lbl-buttons {
-                float: right;
-            }
-
-            .btn {
-                padding: 8px 10px;
-                width: auto;
-                @extend %btn-primary;
-            }
-        }
-    }
-/* fim    - Login Ja existente*/
 
 /* inicio - Alterar Senha */
     body {
         &.alterarSenha {
             h1 {
                 @extend %title-modal;
+            }
+            #lblMensagemErro.erro {
+                color: #d61717;
+                padding-left: 13px;
             }
         }
     }
