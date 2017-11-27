@@ -8,17 +8,13 @@ $path-img: "/static/locales/global/img";
 
 $colorDefault: #565656;
 
-$color-theme: #acf5f4;    // Azul-piscina-claro
-$color-theme2: #8ae9e6;   // Azul-piscina-escuro
-$color-theme3: #f51c59;   //vermelho botao
-$color-theme4: #ea5d85;  //rosa 
-$color-theme5: #114f9e; //azul escuro
+$color-theme: #f51c59;
+$color-theme2: #8ae9e6;
 
 $colorBorder: #d2d2d2;
 $colorIcons: #000;
 
 $font-c: #000;
-$link-c: #0677bd;
 $link-color: #0677bd; 
 
 $font-def: Arial;
@@ -67,14 +63,14 @@ $ft_suggest_h: 130px;
 
 /*---------------------------- CHECKOUT -----------------------------------*/
 $colorCheckout: $colorDefault;
-$colorCheckoutDestaque: $color-theme5;
-$colorNumeroPedido: $color-theme5;
+$colorCheckoutDestaque: $color-theme;
+$colorNumeroPedido: $color-theme;
 $fontSizeCheckout: 13px;
 
 
 /*---------------------------- Notify -----------------------------------*/
 
-$notify-title-color: $color-theme4;
+$notify-title-color: $color-theme2;
 $notify-title-font-family: $font-custom;
 $notify-title-text-transform: uppercase;
 $notify-title-font-size: 13px;

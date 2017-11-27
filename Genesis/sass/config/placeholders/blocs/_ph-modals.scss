@@ -44,8 +44,8 @@
     margin: 0 0 15px;
 }
 #fancybox-overlay {
-	opacity: 0.7 !important;
-	background: #fff !important;
+	/*opacity: 0.7 !important;
+	background: #fff !important;*/
 }
 html, body, body form{
     font-family: $font-def;
@@ -122,7 +122,7 @@ html, body, body form{
         iframe[src="/loginExistenteRakutenId.aspx"]#fancybox-frame {
             @if $desktop{
                 width: 980px;
-                margin: 0px 0 0 -163px;
+                margin: 0 0 0 -163px;
             }
         }
     }

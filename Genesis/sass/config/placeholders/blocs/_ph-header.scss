@@ -40,7 +40,7 @@ $header-h: 103px;
 }
 $nav-bg: $color-theme2;
 $nav-font-family: $font-custom;
-$nav-font-color: $color-theme5;
+$nav-font-color: $color-theme;
 $nav-font-size: 16px;
 $header-height-mobile: 60px;
 
@@ -58,9 +58,8 @@ $header-height-mobile: 60px;
         width: $page-width;
         margin: 0 auto;
         position: relative;
-        top: 0;
+        bottom: 0;
         left: 0;
-        padding-left: 250px;
         > li {
             float: left;
             text-align: center;
@@ -96,7 +95,7 @@ $header-height-mobile: 60px;
                     background: #fff;
                 }
                 &[href*="sale"] {
-                    background: $color-theme3;
+                    background: $color-theme2;
                     color: #fff;
                 }
             }
@@ -120,7 +119,7 @@ $header-height-mobile: 60px;
                 a {
                     font-family: $font-custom;
                     font-size: 14px;
-                    color: $color-theme5;
+                    color: $color-theme;
                     font-weight: 600;
                     padding: 10px 0;
                     &:hover {
@@ -144,7 +143,7 @@ $header-height-mobile: 60px;
 @mixin icon-nav-mobile {
     @include icons(f039);
     margin: 10px;
-    color: $color-theme5;
+    color: $color-theme;
 }
 %header-nav-mobile {
     height: $header-height-mobile;
@@ -167,7 +166,7 @@ $header-height-mobile: 60px;
         @extend %rk-hide;
     }
     .welcome {
-        background: $color-theme4;
+        background: $color-theme2;
         font-family: $nav-font-family; 
         padding: 10px 30px 10px 4px;
         a,
@@ -205,7 +204,7 @@ $header-height-mobile: 60px;
                 font-weight: bold;
                 text-transform: uppercase;
                 &[href*="sale"] {
-                    background: $color-theme3;
+                    background: $color-theme2;
                     color: #fff;
                 }
                 &:only-child {
@@ -216,7 +215,7 @@ $header-height-mobile: 60px;
                
             }
             .sub-parent {
-                color: $color-theme4;
+                color: $color-theme2;
                 font-size: 16px;
             }
         }
@@ -289,7 +288,7 @@ $header-height-mobile: 60px;
                         font-family: $font-custom;
                         &:hover {
                             text-decoration: none;
-                            color: $color-theme5;
+                            color: $color-theme;
                         }
                     }
                 }
@@ -351,7 +350,7 @@ $header-height-mobile: 60px;
             padding-right: 50px;
             border: 0;
             border-radius: 5px;
-            color: $color-theme4;
+            color: $color-theme2;
             font-weight: 600;
             font-style: italic;
             font-size: 16px;
@@ -367,12 +366,12 @@ $header-height-mobile: 60px;
             padding: 0;
             font-size: 0;
             &::before {
-                @include icons(f002, 20px, $color-theme4);
+                @include icons(f002, 20px, $color-theme2);
                 padding-left: 2px;
             }
             &:hover {
                 &::before {
-                     color: darken($color-theme4, 15%);
+                     color: darken($color-theme2, 15%);
                 }
             }
         }
@@ -383,12 +382,12 @@ $header-height-mobile: 60px;
         margin: 12px 0 0;
         input[type=text] {
             font-family: $font-custom;
-            color: $color-theme4;
+            color: $color-theme2;
             font-weight: bold;
             font-size: 14px;
         }
         .btn {
-            color: $color-theme5;
+            color: $color-theme;
         }
     }
 }
@@ -446,7 +445,7 @@ $header-height-mobile: 60px;
             }
             .basket-count-number {
                 @include box-sizing;
-                background: $color-theme4;
+                background: $color-theme2;
                 border-radius: 5px;
                 min-width: 16px;
                 line-height: 16px;
@@ -480,12 +479,12 @@ $header-height-mobile: 60px;
             background: none;
             margin: 0;
             &::after {
-                @include icons(f002, 20px, $color-theme4);
+                @include icons(f002, 20px, $color-theme2);
                 margin: 20px 0 0;
             }
         }
         .qtd-cart {
-            background: $color-theme3 !important;
+            background: $color-theme2 !important;
             position: absolute;
             top: 8px;
             left: 74px;
@@ -568,7 +567,7 @@ $header-height-mobile: 60px;
                 @include icons(f077);
                 font-size: 28px;
                 margin: 2px 0 0 5px;
-                color: $color-theme3;
+                color: $color-theme2;
                 display: block;
             }
             &:hover {
@@ -608,7 +607,7 @@ $header-height-mobile: 60px;
             width: auto;
             height: 57px;
             #lblResumoCesta {
-               background: $color-theme4;
+               background: $color-theme2;
                border-radius: 5px;
                min-width: 16px;
                line-height: 16px;
@@ -745,7 +744,7 @@ $header-height-mobile: 60px;
                         @include fonte($font-custom , bold, 13px, #5a5a5a);
                         &.subtotal{
                             font-size: 15px;
-                            color: $color-theme4;
+                            color: $color-theme2;
                             font-weight: bold;
                             strong{
                                 font-weight: bold;

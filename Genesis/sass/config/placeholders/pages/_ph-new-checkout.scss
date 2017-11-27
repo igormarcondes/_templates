@@ -1,4 +1,4 @@
-$colorCheckoutDestaque: $color-theme3;
+$colorCheckoutDestaque: $color-theme;
 
 body {
 	#main .form {
@@ -54,7 +54,7 @@ body {
 		}
 		.abas-address {
 			.item-aba input:checked+label {
-				border-top-color: $color-theme5;
+				border-top-color: $color-theme;
 			}
 		}
 		/* endereco de entrega*/
@@ -151,9 +151,14 @@ body {
 /*Confirmcao*/
 .op-confirmation {
 	#main {
-		 h2,
+		h2,
         h3{
            color: $colorCheckoutDestaque;
+        }
+        .confirm-title {
+        	@if $mobile{
+        		padding-top: 0;
+        	}
         }
 		.title-type,
 		.title-address,

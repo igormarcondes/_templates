@@ -295,7 +295,7 @@
 
 			a {
 				background: url("/static/locales/global/img/ico_tabela-medidas.gif") no-repeat 0 center;
-				color: $color-theme5;
+				color: $color-theme;
 				display: block;
 				padding-left: 28px;
 				max-width: 160px;
@@ -416,7 +416,7 @@
 				text-decoration: underline;
 				font-family: $font-custom;
 				font-size: 12px;
-				color: $color-theme5;
+				color: $color-theme;
 				line-height: 16px;
 				display: inline-block;
 				@if $mobile{
@@ -578,14 +578,14 @@
 		@include box-sizing;
 
 		span {
-			color: $color-theme4;
+			color: $color-theme2;
 			font-family: $font-custom;
 			font-size: 0;
 			font-weight: normal;	
 			text-transform: uppercase;	
 			text-align: center;
 			strong {
-				color: $color-theme4;
+				color: $color-theme2;
 				font-size: 16px;
 			}
 
@@ -706,7 +706,7 @@
 		@extend %btn-garantia-continuar;
 	}
 }
-$color-review-name: $color-theme4;
+$color-review-name: $color-theme2;
 
 %detail-sections {
 	div.section {

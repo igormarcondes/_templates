@@ -1,5 +1,5 @@
 ﻿$colorPagination: $colorDefault;
-$colorPaginationDestaque: $color-theme5;
+$colorPaginationDestaque: $color-theme;
 $heightPagination: 38px;
 
 %buttons-pagination {
@@ -101,7 +101,7 @@ $heightPagination: 38px;
         }
         a {
           background: none;
-          color: $color-theme5;
+          color: $color-theme;
           font-weight: bold;
           text-transform: uppercase;
           @if $desktop{

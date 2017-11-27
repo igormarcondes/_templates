@@ -1,5 +1,5 @@
 $colorBreadcrumbs: #5a5a5a;
-$colorBreadcrumbsDestaque: $color-theme5;
+$colorBreadcrumbsDestaque: $color-theme;
 
 %breadcrumbs {
 	#main #breadcrumbs {
@@ -167,7 +167,7 @@ $fontFilters: $font-size-def;
 				@include fonte($font-custom, normal, 11px, $color-filters);
 				a {
 					&.selected {
-						color: $color-theme4;
+						color: $color-theme2;
 					}
 				}
 			}
@@ -180,7 +180,7 @@ $fontFilters: $font-size-def;
 			li {
 				span::before,
 				a::before {
-					color: $color-theme5;
+					color: $color-theme;
 				}
 			}
 		}
@@ -306,7 +306,7 @@ $fontFilters: $font-size-def;
 		padding: 10px;
 		margin-top: 20px;
 	}
-	.categ-desc {
+	[class*='categ-desc'] {
 		@include fonte(13px, $colorDefault, normal, $font-custom, initial);
     	clear: both;
     	margin-bottom: 20px;
@@ -327,7 +327,7 @@ $fontFilters: $font-size-def;
 %vitrine-veja-mais {
 	.see-category {
 		font-family: $font-custom;
-	    color: $color-theme5;
+	    color: $color-theme;
 	    border-top: 0;
 	    font-weight: bold;
 	    font-size: 14px;

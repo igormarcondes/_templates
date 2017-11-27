@@ -148,7 +148,7 @@
     top: 9px;
     overflow: hidden;
     &:hover {
-        border-color: $color-theme5;
+        border-color: $color-theme;
     }
      &.owl-next {
         right: -10px;
@@ -238,7 +238,7 @@
                 margin-right: 10px;
                 border: 3px solid #fff;
                &.active {
-                    background-color: $color-theme4;
+                    background-color: $color-theme2;
                }
                span {
                     display: none;

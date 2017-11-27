@@ -2,7 +2,7 @@ html body {
     background: #fff;
 }    
 div#header {
-    background: $color-theme;
+    background: none;
 
     .container {
         width: $page-width;
@@ -22,8 +22,17 @@ div#header {
         background: none;
     }
     .help {
+        width: auto;
+        position: static;
+        top: auto;
+        left: auto;
         li {
             padding-top: 0;
+            width: auto;
+            a {
+                background: none;
+                padding: 0;
+            }
         }
     }
     .car {

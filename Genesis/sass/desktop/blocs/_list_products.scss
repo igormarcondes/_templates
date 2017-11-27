@@ -148,7 +148,7 @@ body {
                     border-radius: 0;
                     text-transform: uppercase;
                     border-radius: 5px;
-                    color: $color-theme5;
+                    color: $color-theme;
                     line-height: 41px;
                     height: 41px;
                     width: 180px;
@@ -273,7 +273,7 @@ body {
                         color: $colorDefault;
                         font-size: 13px;
                         span {
-                            color: $link-c;
+                            color: #000;
                             font-size: 0;
                             &::before {
                                 content: "SAIBA MAIS";

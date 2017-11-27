@@ -42,7 +42,7 @@
             }
         }
         &.rows-2 {
-            background: $color-theme4;
+            background: $color-theme2;
             @if $desktop{
             height: 118px;
             }
@@ -53,7 +53,7 @@
             }
         }
         &.rows-3 {
-            background: $color-theme4;
+            background: $color-theme2;
             border-bottom: 1px solid #c03a60;
             .content {
                 @if $desktop{
@@ -206,7 +206,7 @@
              }
         }
         .tit {
-            color: $color-theme5;
+            color: $color-theme;
             font-family: $font-custom2;
             width: auto;
             display: block;
@@ -227,7 +227,7 @@
         }
         .subtit {
             float: left;
-            color: $color-theme4;
+            color: $color-theme2;
             font-family: $font-custom;
             font-weight: bold;
             font-style: italic;
@@ -267,7 +267,7 @@
             border: 0 !important;
             border-radius: 5px;
             height: 50px;
-            color: $color-theme4 !important;
+            color: $color-theme2 !important;
             font-weight: 600;
 			@if $desktop {
 				width: 100%;
@@ -528,7 +528,7 @@
 @if $mobile{
     span.go-top-btn {
         opacity: 1;
-        background: $color-theme3;
+        background: $color-theme2;
         overflow: hidden;
         text-align: center;
         border-radius: 40px;

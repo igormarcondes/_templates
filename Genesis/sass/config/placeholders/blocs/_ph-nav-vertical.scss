@@ -11,7 +11,7 @@ $nav-vertical-bg: #fff;
 %nav-vertical-title {
 	background: none;
 	font-family: $font-custom;
-	color: $color-theme5;
+	color: $color-theme;
 	text-transform: none;
 	font-size: 16px;
 	font-weight: bold;
@@ -110,7 +110,7 @@ $nav-vertical-bg: #fff;
 
 					&:hover {
 						background: none;
-						color: $color-theme5;
+						color: $color-theme;
 						text-decoration: none;
 					}
 
@@ -186,7 +186,7 @@ $nav-vertical-bg: #fff;
 			background: none;
 			font-family: $font-custom;
 			font-weight: bold;
-			color: $color-theme5;
+			color: $color-theme;
 			font-size: 16px;
 			text-transform: none;
 			border-bottom: 1px solid #acf5f4;
@@ -256,7 +256,7 @@ $nav-vertical-bg: #fff;
 		p {
 			margin: 0;
 			padding: 11px 10px;
-			color: $color-theme5;
+			color: $color-theme;
 			font-size: 15px;
 			background: none;
 			font-weight: bold;
@@ -345,7 +345,7 @@ $nav-vertical-bg: #fff;
 			border: 1px solid #acf5f4;
 			background: #e4feff;
 			p {
-				color: $color-theme5;
+				color: $color-theme;
 				font-size: 15px;
 				font-weight: bold;
 			}
@@ -364,7 +364,7 @@ $nav-vertical-bg: #fff;
 		ul {
 			li {
 				span::before {
-					color: $color-theme5;
+					color: $color-theme;
 				}
 			}
 		}

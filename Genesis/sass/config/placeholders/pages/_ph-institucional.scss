@@ -24,7 +24,7 @@ body {
 			h2 {
 				border-bottom: 0;
 				a {
-					color: $color-theme5;
+					color: $color-theme;
 					font-family: $font-custom;
 					font-size: 14px;
 					font-weight: bold;
@@ -32,7 +32,7 @@ body {
 			}
 			.col strong {
 			    font-family: $font-custom;
-			    color: $color-theme5;
+			    color: $color-theme;
 			    border-bottom: 1px solid #ccc;
 			    font-size: 16px;
 			}
@@ -166,7 +166,7 @@ body.institucional {
 					font-weight: normal;
 					font-size: 12px;
 					&::before {
-						color: $color-theme5;
+						color: $color-theme;
 					}
 				}
 

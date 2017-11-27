@@ -11,11 +11,11 @@
 	$prod-price-from-c: #5a5a5a;		 			//Produto Price From (de) - Font Color
 	$prod-price-from-s: 14px; 		//Produto Price From (de) - Font Size
 
-	$prod-price-to-c:  $color-theme4; 			        //Produto Price To (por) - Font Color
+	$prod-price-to-c:  $color-theme2; 			        //Produto Price To (por) - Font Color
 	$prod-price-to-s: 16px; 						//Produto Price To (por) - Font Size
 
 	$prod-parcel-c:  #5a5a5a; 						//Produto Parcelamento - Font Color
-	$prod-parcel-strong-c:  $color-theme4;
+	$prod-parcel-strong-c:  $color-theme2;
 	$prod-parcel-weight: bold;
 	$prod-parcel-s: 14px; 							//Produto Parcelamento - Font Size
 
@@ -95,7 +95,7 @@
 }
 /* inicio - Titulos */
 	%title-vitrine {
-		color: $color-theme5;
+		color: $color-theme;
 		font-family: $font-custom2;
 		position: relative;
 		margin-bottom: 20px;
@@ -107,7 +107,7 @@
 		line-height: normal;
 		span {
 	        font-family: $font-custom2;
-	        color: $color-theme5;
+	        color: $color-theme;
 	        font-weight: bold;
 	        @if $desktop{
 	        	font-size: 30px;
@@ -157,7 +157,7 @@
 
 $ratingHeight : 19px;
 $ratingWidth : 20px * 5;
-$ratingColor : $color-theme5;
+$ratingColor : $color-theme;
 $ratingIMG: "star.png";
 
 %reviewaggregate {
@@ -336,7 +336,7 @@ $ratingIMG: "star.png";
     text-align: center;
     &.unavailable {
         padding: 8px 0;
-        color: $color-theme5;
+        color: $color-theme;
         text-transform: uppercase;
         margin-bottom: 0;
     }

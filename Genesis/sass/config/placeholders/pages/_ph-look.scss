@@ -200,7 +200,7 @@ $look_thumb_h: 92px;
 			font-size: 18px;
 			font-family: $font-custom;
 			font-weight: bold;
-			color: $color-theme5;
+			color: $color-theme;
 			text-transform: initial;
 			display: inline-block;
 			vertical-align: top;
@@ -239,7 +239,7 @@ $look_thumb_h: 92px;
 
 		.btn.ir.select-look {
 			background: none;
-			color: $color-theme5;
+			color: $color-theme;
 			text-decoration: underline;
 			font-weight: bold;
 			font-size: 13px;
@@ -329,7 +329,7 @@ $look_thumb_h: 92px;
 		.notifyLabel {
 			span {
 				text-transform: uppercase;
-				color: $color-theme3;
+				color: $color-theme2;
 				font-family: $font-custom;
 				font-size: 14px;
 				font-weight: bold;
