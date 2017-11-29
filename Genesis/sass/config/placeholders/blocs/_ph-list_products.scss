@@ -312,7 +312,6 @@ $ratingIMG: "star.png";
 	b {
 		font-weight: $prod-parcel-weight;
 		color: $prod-parcel-strong-c;
-		display: none;
 	}
 }
 %product-percent-avista {
@@ -344,12 +343,12 @@ $ratingIMG: "star.png";
     	display: block;
     	margin: 0 5px 5px 0;
     	padding: 0;
-    	&:first-child {
+    	/*&:first-child {
     		position: absolute;
     		top: 5px;
     		right: 5px;
     		margin: 0;
-    	}
+    	}*/
     	img {
     		max-width: 105px;
     		width: auto;
