@@ -717,7 +717,8 @@ $basket-border-color: #cecece;
 }
 %banner-promo-desktop {
 	div.orbit-wrapper {
-		background: #f979a9 url("/static/locales/global/img/bg-promo.jpg") no-repeat;
+		background: $color-theme url("/static/locales/global/img/bg-promo.jpg") no-repeat;
+		/*background: url("/static/locales/global/img/bg-promo.jpg") no-repeat;*/
 	    height: auto !important;
 	    width: 100% !important;
 	    margin-bottom: 10px;

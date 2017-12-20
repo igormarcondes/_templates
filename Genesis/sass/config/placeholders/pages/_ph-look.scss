@@ -99,9 +99,7 @@ $look_thumb_h: 92px;
 			position: relative;
 		}
 		.name {
-			@if $desktop{
-				padding-right: 140px;
-			}
+			
 		}
 		
 		.txtQuantity {

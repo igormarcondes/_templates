@@ -127,7 +127,7 @@ $fontFilters: $font-size-def;
 			}
 
 			a {
-				@include fonte($font-custom, normal, 11px, $color-filters);
+				@include fonte(12px, $color-filters, normal, $font-custom, initial);
 				line-height: 29px;
 				text-decoration: none;
 				text-transform: none;
@@ -173,7 +173,7 @@ $fontFilters: $font-size-def;
 			}
 		}
 		#divSort {
-			display: none;
+			
 		}
 		.side-filters,
 		.aside.active {
@@ -189,10 +189,9 @@ $fontFilters: $font-size-def;
 %filter-vs-mode {
 	.vs-mode {
 		font-family: $font-custom;
-		display: none;
 
 		> span {
-			@include fonte($font-custom, bold, 11px, $color-filters);
+			@include fonte(12px, #000, normal, $font-custom, initial);
 		}
 
 		.ico {
@@ -250,7 +249,6 @@ $fontFilters: $font-size-def;
 		padding: 10px;
 		border: 0;
 		border-top: 0;
-		display: none;
 		> p {
 			float: right;
 		}
