@@ -177,17 +177,6 @@
         }
     }
 }
-@mixin reviewaggregate($img-name, $img-type, $star-height, $unit-width){
-    background: url("/static/locales/global/img/" + $img-name + "." + $img-type);
-    width: ($unit-width * 5) + px;
-    height: $star-height + px;
-    .rating{
-        background: url("/static/locales/global/img/" + $img-name + "." + $img-type);
-        background-position: 0 (-($star-height)+px);
-        //width: ($unit-width * 5) + px;
-        height: ($star-height) + px;
-    }
-}
 @mixin icons($iconCode: f00b, $fontSize:28px, $color: $colorIcons) {
     $contentValue: "\"\\#{$iconCode}\"";
     content:  unquote($contentValue);

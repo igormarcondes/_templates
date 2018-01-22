@@ -221,9 +221,17 @@ body {
 	    		border: 1px solid #ccc;
 	    		border-radius: 5px;
 	    	}
-	    	.btn.ir.search {
+	    	.field .btn.ir.search {
 	    		@extend %btn-contacorrente-pesquisar;
-	    	}
+			}
+			.info {
+				color: $colorDefault;
+				@if $mobile{
+					border: 1px solid #ccc;
+					padding: 20px;
+					margin: 10px 0;
+				}
+			}
 	    }
     /* fim    - Conta Corrente*/
 

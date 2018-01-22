@@ -611,7 +611,7 @@
 			}
 		}
 		+.sucess2 {
-			max-width: 260px;
+			
 		}
 	}
 
@@ -759,6 +759,7 @@ $color-review-name: $color-theme2;
 	}
 }
 body {
+	@extend %reviewaggregate;
 	#info-product {
 		@if $desktop{
 			* { @include box-sizing; }
