@@ -66,6 +66,16 @@ div#header {
         }
     }
 }
+.name, .details, 
+.offers, 
+.regular, 
+.parcel, 
+.share, 
+.see-more, 
+.description, 
+.stamp {
+    height: auto;
+}
 #main {
     .container {
         width: $page-width;

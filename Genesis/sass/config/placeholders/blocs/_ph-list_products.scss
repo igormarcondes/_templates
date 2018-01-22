@@ -218,7 +218,14 @@ $ratingIMG: "star.png";
 		width: 107px;
 		margin: 0;
 		> a{
-			@include reviewaggregate(star, png, 19, 20);
+			background: url("/static/locales/global/img/#{$ratingIMG}") repeat-x 0 0;                  
+			height: $ratingHeight;
+			width: $ratingWidth;
+			margin-right: 0px; 
+			display: inline-block;
+			vertical-align: top;
+			float: none;
+			text-align: left;
 			margin: 0;
 			.rating {
 				height: 17px;

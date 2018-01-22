@@ -1,6 +1,6 @@
 $navHeight: 58px;
 $header-h: 103px;
-
+$bg-header: none;
 %header-logo-desktop {
     #logo {
         position: absolute;
@@ -144,7 +144,7 @@ $header-height-mobile: 60px;
 %header-nav-mobile {
     height: $header-height-mobile;
     margin: 0;
-    background: $color-theme;
+    background: $bg-header;
     &.active {
         height: 110px;
     }
@@ -191,8 +191,6 @@ $header-height-mobile: 60px;
         background: $nav-bg;
         font-family: $font-custom;
         > li {
-            border-bottom: 1px solid #005a92;
-            border-top: 1px solid #0087da;
             > a {
                 font-family: $nav-font-family;
                 font-size: $nav-font-size;
@@ -404,15 +402,6 @@ $header-height-mobile: 60px;
 }
 %header-basket-desktop {
     .car {
-        &:hover {
-            .basket {
-               border-bottom: 4px solid #fff;
-               height: 57px;
-               &::before {
-                   background-position: 0 -55px;
-               }
-            }
-        }
         .basket {
             top: 24px;
             right: 45px;
@@ -717,7 +706,7 @@ $header-height-mobile: 60px;
                         .total {
                             position: static;
                             font-weight: bold;   
-                            color: #ea5d85;
+                            color: #000;
                             font-size: 12px;
                             margin-top: 5px;
                             span {

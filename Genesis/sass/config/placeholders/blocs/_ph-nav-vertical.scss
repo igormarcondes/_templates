@@ -15,9 +15,7 @@ $nav-vertical-bg: #fff;
 	text-transform: none;
 	font-size: 16px;
 	font-weight: bold;
-	@if $desktop{
-		border-bottom: 1px solid #acf5f4;
-	}
+
 }
 
 %nav-vertical-block-ul {
@@ -189,7 +187,6 @@ $nav-vertical-bg: #fff;
 			color: $color-theme;
 			font-size: 16px;
 			text-transform: none;
-			border-bottom: 1px solid #acf5f4;
 
 			span {
 				background: none;

@@ -165,10 +165,7 @@ body {
                 padding-bottom: 10px;
                 @include clearfix;
                 &:hover {
-                    box-shadow: 0 0 5px 0 #a2f9f0;
-                    .figure a.link {
-                        opacity: 0.8 !important;
-                    }
+                    
                 }
 
                 .photo {

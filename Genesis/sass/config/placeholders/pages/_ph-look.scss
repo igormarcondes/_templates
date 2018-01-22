@@ -253,10 +253,6 @@ $look_thumb_h: 92px;
 			}
 		}
 		> ul {
-			@if $desktop{
-				border-top: 1px solid #acf5f4;
-				padding-top: 20px;
-			}
 			@include clearfix;
 			> li {
 				@if $desktop{

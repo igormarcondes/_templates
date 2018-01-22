@@ -258,7 +258,6 @@ $fontFilters: $font-size-def;
 }
 %filter-show-pages-mobile {
 	.content .filter-details {
-		display: none;
 		> p {
 			@include fonte($font-custom, normal, 11px, $color-filters);
 			text-transform: uppercase;
