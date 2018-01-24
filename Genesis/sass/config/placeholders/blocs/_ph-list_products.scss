@@ -3,6 +3,7 @@
 	$prod-name-color: #4d4d4d;						//Produto Title - Color
 	$prod-name-font: $font-custom;				//Produto Title - Font
 	$prod-name-font-s: 13px;						//Produto Title - Font Size
+	$prod-name-font-weight: normal;
 
 	$prod-price-font: $font-custom;	  		     	//Produto Price - Font
 	$prod-price-font-c: #9f9f9f;					//Produto Price - Color
@@ -21,12 +22,12 @@
 
 	$hide-button-buy-home: false;
 	$hide-button-buy-catalog: false;
-	$hide-review-home: true;
-	$hide-review-catalog: true;
+	$hide-review-home: false;
+	$hide-review-catalog: false;
 	$hide-filtro-lista: false;
-	$hide-compare-catalog: true;
-	$hide-sigla-depor: true;
-	$hide-fabricante: true;
+	$hide-compare-catalog: false;
+	$hide-sigla-depor: false;
+	$hide-fabricante: false;
 /*----------------------------RATING -----------------------------------*/
 
 
@@ -252,7 +253,7 @@ $ratingIMG: "star.png";
 %product-name {
 	font-family: $font-custom;
 	color: $prod-name-color;
-	font-weight: 200;
+	font-weight: $prod-name-font-weight;
 	@if $desktop {
 		font-size: $prod-name-font-s;
 		margin-bottom: 6px;

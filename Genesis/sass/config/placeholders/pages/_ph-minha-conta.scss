@@ -92,11 +92,6 @@ body {
 	    			}
 	    		}
 	    	}
-	    	.reviewaggregate {
-	    		@if $mobile{
-	    			margin: 0 auto !important;
-	    		}
-	    	}
 	    	.stamp {
 	    		position: static;
 	    		padding-top: 5px;
@@ -221,7 +216,8 @@ body {
 	    		border: 1px solid #ccc;
 	    		border-radius: 5px;
 	    	}
-	    	.field .btn.ir.search {
+	    	.actions .btn.ir.search,
+			.field .btn.ir.search {
 	    		@extend %btn-contacorrente-pesquisar;
 			}
 			.info {

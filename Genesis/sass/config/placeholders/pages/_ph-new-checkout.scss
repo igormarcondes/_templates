@@ -8,6 +8,34 @@ body {
 	}
 	&.checkout {
 		.gift {
+			.figure { 
+				width: $ft_vitrine_w;
+				height: auto;
+				@if $mobile{
+					margin: 0 auto;
+				}
+				img {
+					width: 100% !important;
+					height: auto !important;
+				}
+			}
+			.box .details {
+				color: #565656;
+				.name.fn {
+					a {
+						color: $prod-name-color;
+						font-family: $prod-name-font;
+						font-size: $prod-name-font-s;
+						font-weight: $prod-name-font-weight;
+					}
+				}
+			}
+			.optionList {
+				li {
+					display: flex;
+					align-items: center;
+				}
+			}
 			.btn.continue {
 				@extend  %btn-checkout-gift-continue;
 			}

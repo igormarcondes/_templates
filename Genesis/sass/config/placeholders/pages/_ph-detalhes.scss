@@ -713,9 +713,7 @@ $color-review-name: $color-theme2;
 		        }
 		        .description,
 		        .rating {
-		        	@if $desktop{
-		        		margin-left: 50px;
-		        	}
+		        	
 		        }
 		        p.reviewer {
 		        	color: $color-review-name;
