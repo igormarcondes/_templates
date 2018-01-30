@@ -95,13 +95,13 @@ body {
             @if $desktop {
                 width: 966px;
                 .form .field:not(.person):not(.checkbox) {
-                    /*height: 65px;*/
+                    
                 }
                 .form .field div .validacao,
                 .form .field div .alert,
                 .form .field label .validacao,
                 .form .field label .validacao.alert {
-                    bottom: 3px;
+                    
                 }
             }
         }
