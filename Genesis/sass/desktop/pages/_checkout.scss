@@ -58,7 +58,6 @@ body {
 			}
 			.name {
 			    @extend %product-name;
-			    font-size: 12px;
 			}
 			.regular {
 			    @extend %product-price-from;

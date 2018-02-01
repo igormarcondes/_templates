@@ -41,6 +41,53 @@ body {
 			}
 		}
 	}
+	&.quickBasquet {
+		.photo {
+			width: 100px;
+		}
+		.section {
+			margin: 0;
+			h2 {
+				@extend %title-vitrine;
+			}
+		}
+		.list-products {
+			> li {
+				width: 25%;
+			}
+			.hproduct {
+			    width: 150px !important;
+			}
+			.name {
+				@extend %product-name;
+				margin-bottom: 5px;
+			}
+			.regular {
+			    @extend %product-price-from;
+			}
+			.price {
+			    @extend %product-price-to;
+			    font-size: 12px;
+			}
+			.parcel {
+			    @extend %product-parcel;
+			    font-size: 11px;
+			    span {
+			    	font-family: $font-custom;
+			    }
+			}
+		}
+		.actions {
+			li {
+				a {
+					@extend %btn-modal-quickbasket-fecharpedido;
+					&.ContinuarComprando {
+						@extend %btn-modal-quickbasket-comprarmais;
+					}
+				}
+			}
+		}
+	}
 }
 .op-checkout {
 	div.banners-opc {
