@@ -197,13 +197,6 @@ $header-height-mobile: 60px;
                 color: $nav-font-color;
                 font-weight: bold;
                 text-transform: uppercase;
-                &[href*="sale"] {
-                    background: $color-theme2;
-                    color: #fff;
-                }
-                &:only-child {
-                    width: 100%;
-                }
             }
             > a:not(.sub-parent) {
                
@@ -218,102 +211,8 @@ $header-height-mobile: 60px;
 %header-help-desktop {
     .help-top {
         position: absolute;
-        right: 124px;
-        left: auto;
-        top: 24px;
-        height: 40px;
-        width: auto;
-        z-index: 2;
         > li {
-            width: 100%;
-            text-align: center;
-            &:hover {
-                > a {
-                    background-position: 0 bottom;
-                }
-                > ul {
-                   display: block;
-                }
-            }
-            a {
-                padding: 0;
-                background: none;
-            }
-            > a {
-                text-indent: -9000px;
-                display: inline-block;
-                background: url("/static/locales/global/img/ico-minha-conta.png") no-repeat;
-                width: 64px;
-                height: 55px;
-            }
-            > ul {
-                display: none;
-                background: #fff;
-                position: absolute;
-                top: 54px;
-                left: -48px;
-                z-index: 10;
-                padding: 20px;
-                border: 0;
-                min-width: 156px;
-                box-shadow: 0 3px 5px 0 rgba(0,0,0,0.35);
-                text-align: left;
-                li {
-                    width: 100%;
-                    line-height: 20px;
-                    border-bottom: 1px solid #e0f7fc;
-                    color: #5a5a5a;
-                    font-family: $font-custom;
-                    font-weight: bold;
-                    font-size: 11px;
-                    margin-bottom: 8px;
-                    padding-bottom: 8px;
-                    &.reve {
-                       @if $desktop{
-                        display: none;
-                       }
-                    }
-                    &:last-child {
-                        border-bottom: 0;
-                        margin-bottom: 0;
-                    }
-                    a {
-                        text-transform: uppercase;
-                        font-family: $font-custom;
-                        &:hover {
-                            text-decoration: none;
-                            color: $color-theme;
-                        }
-                    }
-                }
-                .welcome {
-                    position: static;
-                    font-size: 11px;
-                    &.off {
-                        display: none;
-                    }
-                    span {
-                        background: none;
-                        padding: 0;
-                    }
-                    a {
-                        font-size: 12px;
-                        &[href*="index.aspx"] {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    span.rev {
-        position: absolute;
-        right: 223px;
-        top: 45px;
-        a {
-            font-family: $font-custom;
-            color: #114f9e;
-            font-weight: 600;
+
         }
     }
 }
