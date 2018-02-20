@@ -251,7 +251,7 @@ $ratingIMG: "star.png";
 	margin-top: 10px;
 }
 %product-name {
-	font-family: $font-custom;
+	font-family: $prod-name-font;
 	color: $prod-name-color;
 	font-weight: $prod-name-font-weight;
 	@if $desktop {

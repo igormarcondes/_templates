@@ -1,6 +1,9 @@
+$thumb_img-w: 73px;
+$thumb_img-h: 73px;
+
 %detail-collum-image-desktop {
 	.collum.images {
-		width: 600px;
+		width: 530px;
 		margin: 0;  
 		@include box-sizing();
 
@@ -19,41 +22,37 @@
 		    }
 		    #big_photo_container {
 		    	position: relative;
-		    	&::after {
-		    		 background: url("/static/locales/global/img/ico_lupa.png") no-repeat;
-		    		 content: " ";
-		    		 width: 33px;
-		    		 height: 33px;
-		    		 display: block;
-		    		 bottom: 5px;
-		    		 right: 5px;
-		    		 position: absolute;
-		    	}
 		    }
 		}
 		.zoom {
-		    background: none;
-		    display: none;
+			background: #f1f2f2;
+			border: 1px solid #d7d7d7;
+			clear: both;
+			width: 440px;
+			height: 30px;
+			line-height: 30px;
+			float: right;
 		    
 		    .mouseover {
-		        background: none;
+				background: none;
+				padding-left: 8px;
 
 		    }
 		    #hplAmpliar {
-
+				color: #58595b;
+				font-size: 12px;
 		    }
 		}
 		.thumb-container {
 			position: relative;
-			padding-bottom: 80px;
 			float: left;
 		}
 		ul.thumbs {
 		    margin-top: 0px;
 		    margin-left: 0px;
 		    li {
-		        width: 78px;
-		        height: 78px;
+		        width: $thumb_img-w;
+		        height: $thumb_img-h;
 		        margin: 0 0 6px;
 		        clear: both;
 		        border: 0;
@@ -64,8 +63,8 @@
 		            }
 		        }
 		        img {
-		            width: 78px;
-		            height: 78px;
+		            width: $thumb_img-w;
+		            height: $thumb_img-h;
 		        }
 		        &:last-child {
 		            border-bottom: 0;
@@ -74,17 +73,20 @@
 		    }
 		}
 		#ajaxVideoDetail {
-		    position: absolute;
-		    bottom: 0;
 		    margin: 0;
 		}
 		#videoDetalhe {
 		    border: 0;
 		    width: auto;
-		    margin: 0;
+			margin: 0;
+			a {
+				background: url("/static/imagens/thumb_video.gif") no-repeat center;
+				width: $thumb_img-w;
+		        height: $thumb_img-h;
+				display: block;
+			}
 		    img {
-		        width: 78px;
-		        height: 78px;
+		        display: none;
 		    }
 		}
 	}
