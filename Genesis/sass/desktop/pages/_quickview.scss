@@ -75,28 +75,15 @@ body{
     &.catalog,
     &.vitrine{
         #fancybox-wrap{
-            left: 0 !important;
-            width: 100% !important; 
-            background-color: transparent;
+
             #fancybox-outer{
-                width: $page-width!important; 
-                max-width: 100%;
-                margin: 0 auto;
+
                 #fancybox-close{
-                    right: 20px;
+                    
                 }
             }
             #fancybox-content{                
-                width: 100%!important; 
-                border-width: 0 !important;  
-                min-height: 600px;             
-            }
-        }
-        &.mobile-mode{
-            #fancybox-wrap{
-                #fancybox-content{                
-                    min-height: inherit!important;             
-                }
+                           
             }
         }
     }
