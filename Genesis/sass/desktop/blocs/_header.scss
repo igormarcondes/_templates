@@ -37,7 +37,7 @@ div#header {
         span {
             margin: 0;
             padding: 0;
-            background-attachment: none;
+            background: none;
         }
     }
     .car {
@@ -80,10 +80,4 @@ div#header {
 .description, 
 .stamp {
     height: auto;
-}
-#main {
-    .container {
-        width: $page-width;
-        margin: 0 auto;
-    }
 }

@@ -542,3 +542,13 @@
         }
     }
 }
+body {
+    #footer {
+        @extend %footer;
+    }
+    .footerbuy {
+        #footer {
+            @extend %footer-buy;
+        }
+    }
+}

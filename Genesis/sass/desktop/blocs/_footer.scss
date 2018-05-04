@@ -1,26 +1,74 @@
-body {
-    #footer {
-        @extend %footer;
-        * {
-            @include box-sizing;
+div#footer {
+    background: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: 0;
+    .container {
+        height: auto;;
+    }
+    * {
+        @include box-sizing;
+    }
+    .collum {
+        position: static;
+        top: auto;
+        &.news {
+            float: right;
+            margin-right: 0;
         }
-        .collum {
-            
-            &.news {
-                float: right;
-                margin-right: 0;
-            }
-            .newsletter {
-                position: static;
-            }
-        }
-        .field {
-            height: auto;
+        .newsletter {
+            position: static;
         }
     }
-    .footerbuy {
-        #footer {
-            @extend %footer-buy;
+    .social {
+        li {
+            height: auto;
+            margin: 0;
+            padding: 0;
         }
+    }
+    .search {
+        position: static;
+    }
+    .help {
+        left: auto;
+    }
+    .field {
+        height: auto;
+    }
+    .copy {
+        width: auto;
+        position: static;
+        padding: 0;
+        bottom: auto;
+        border: 0;
+        left: auto;
+    }
+    .institucional {
+        li {
+            background: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+.section h2, 
+.history .title, 
+.aside .newsletter legend, 
+.sitemap h1, 
+.vitrine-instagram .title, 
+.shoppinglist .title, 
+.shoppinglist-details .title,
+.acesso-lista-produtos .title {
+    color: #000;
+    font-family: arial;
+    font-weight: normal;
+    text-shadow: none;
+    margin: 0;
+ }
+.footerbuy {
+    #footer {
+       
     }
 }
