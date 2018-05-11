@@ -624,8 +624,6 @@ $header-height-mobile: 60px;
                     border:none;
                     font-family: $font-custom;
                     p {
-                        line-height: 34px;
-                        @include fonte($font-custom , bold, 13px, #5a5a5a);
                         &.subtotal{
                             font-size: 15px;
                             color: $color-theme2;

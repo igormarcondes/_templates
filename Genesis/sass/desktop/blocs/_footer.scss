@@ -21,6 +21,10 @@ div#footer {
             position: static;
         }
     }
+    .payment {
+        width: auto;
+        left: auto;
+    }
     .social {
         li {
             height: auto;
@@ -36,6 +40,12 @@ div#footer {
     }
     .field {
         height: auto;
+    }
+    .info-cli {
+        position: static;
+        width: auto;
+        margin: 0;
+        bottom: auto;
     }
     .copy {
         width: auto;
