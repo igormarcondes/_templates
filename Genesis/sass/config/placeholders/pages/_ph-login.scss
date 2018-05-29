@@ -91,6 +91,10 @@ body {
         @extend %btn-salvar-cadastro;
     }
     &.register {
+        h1 {
+            margin-left: 0;
+            margin-bottom: 15px;
+        }
         #main .container {
             @if $desktop {
                 width: 966px;
@@ -105,8 +109,10 @@ body {
                 }
             }
         }
-        #spanMsgValidacaoNumero {
-            left: 0;
+        &:not(.delivery-address) {
+            #spanMsgValidacaoNumero {
+                left: 0;
+            }
         }
     }
     &.affiliates {

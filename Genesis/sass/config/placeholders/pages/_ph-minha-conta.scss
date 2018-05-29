@@ -211,6 +211,11 @@ body {
 
     /* inicio - Conta Corrente*/
 	    &.contaCorrente {
+			.content {
+				@if $mobile{ 
+					padding: 10px;
+				}
+			}
 	    	.box.form {
 	    		background: #f1f1f1;
 	    		border: 1px solid #ccc;
@@ -226,6 +231,14 @@ body {
 					border: 1px solid #ccc;
 					padding: 20px;
 					margin: 10px 0;
+				}
+			}
+			.account {
+				@if $desktop{ 
+					padding-left: 30px;
+				}
+				p {
+					color: $colorDefault;
 				}
 			}
 	    }
