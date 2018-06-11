@@ -11,15 +11,15 @@
 }
 %busca-paginacao {
 	&:empty {
-		@extend %rk-hide
+		@extend %rk-hide;
 	}
 }
 %busca-aside {
-	 .title {
+	.title {
 	 	@if $desktop{
 	 		margin-bottom: 15px;
 	 	}
-	 }
+	}
 	.filters {
 		@if $mobile{
 			border-bottom: 1px solid #ccc;
@@ -130,9 +130,9 @@
 }
 %filtros-mobile {
 	.open-mob-filters {
-	    margin: 0 -58px 0 0;
-	    top: -9px;
-	    min-width: 122px;
+	    margin: 0;
+	    top: 0;
+	    min-width: 0;
 	}
 }
 %vs-mode {
@@ -212,8 +212,8 @@ body.type-busca {
 	#main {
 		.container {
 			@if $desktop{
-				width: 100%;
-				max-width: 1920px;
+				width: $page-width;
+				max-width: 100%;
 				@include box-sizing;
 			}
 		}
