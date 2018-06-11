@@ -1,3 +1,10 @@
+$quickview-width: 980px;
+#fancybox-wrap.fancybox-quickview {
+	width: $quickview-width !important;
+	#fancybox-content {
+		width: $quickview-width !important;
+	}
+}
 body.quickview {
 	background: none;
 	#main {

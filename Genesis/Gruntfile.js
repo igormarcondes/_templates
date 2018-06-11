@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	 grunt.initConfig({
 	 	paths: {
 			//custom:    'R:/IKCLoja/Genesis/Repository/Genesis/' 
-			custom:    'W:/Genesis/Repository/treinamentoagencia/'
+			custom:    'H:/Genesis/Repository/treinamentoagencia/'
         },
 		// Sass: compiles SCSS files
 		sass : {
