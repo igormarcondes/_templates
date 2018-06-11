@@ -1,368 +1,362 @@
-body {
-    /* inicio - Minha conta Pagina inicial */
-	    &.account {
-	    	h1{
-	    		@if $desktop{
-	    			width: 638px;
-	    			margin: 20px auto 20px;
-	    		}
-	    	}
-	        .nav {
-	            a {
-	                font-family: $font-custom;
-	                font-size: 14px;
+%page-minha-conta {
+	&.account {
+		h1{
+			@if $desktop{
+				width: 638px;
+				margin: 20px auto 20px;
+			}
+		}
+		.nav {
+			a {
+				font-family: $font-custom;
+				font-size: 14px;
 
-	                &:hover {
-	                    color: $link-color;
-	                }
-	            }
-	        }
-	    }
-    /* fim    - Minha conta Pagina inicial */
-
-    /* inicio - Lista de desejos*/
-    	#main .filter-wish {
-    		@if $desktop{
-    			min-height: 26px;
-    		}
-    		select {
-    			@if $desktop{
-					height: 28px;
-					width: auto;
-    			}
-    		}
-    		label{
-    		    span{
-    		        @if $desktop{
-    		        	margin: 5px 5px 0 0 !important;
-    		        }
-    		    }
-    		}
-    	}
-	    #main .desired-products {
-	    	span {
-	    		a {
-	    			color: $link-color;
-	    		}
-	    	}
-	    	.coment .field label > span {
-	    		text-align: left;
-	    		font-size: 14px;
-	    		font-weight: bold;
-	    		padding-bottom: 8px;
-	    		color: #666;
-	    	}
-	    	&.list-products li {
-	    		border-top: 0;
-	    	}
-	    	.details.box {
-	    		text-align: left;
-	    	}
-	    	.details {
-	    		margin-top: 0;
-	    		.cod {
-	    			margin: 0 0 2px;
-	    		}
-	    		.offers {
-	    			.sale {
-	    				display: block !important;
-	    				@if $mobile{
-	    					font-size: 12px;
-	    					strong {
-	    						font-size: 12px;
-	    					}
-	    				}
-	    				&.percent-a-vista {
-	    					@extend %detail-price-offer;
-	    				}
-	    			}
-	    		}
-	    		.btn.ir.buy {
-	    			@extend %btn-listadesejo-comprar;
-	    			@if $desktop {
-	    				width: auto;
-	    				margin: 5px auto 0;
-	    				float: none;
-	    			}@else {
-	    				width: 100%;
-	    				@include box-sizing;
-	    			}
-	    			&::after {
-	    				display: none;
-	    			}
-	    		}
-	    	}
-	    	.stamp {
-	    		position: static;
-	    		padding-top: 5px;
-	    		a {
-	    			position: static !important;
-	    			margin-bottom: 5px !important;
-	    			display: block;
-	    		}
-	    	}
-	        .figure {
-	        	margin-bottom: 10px;
-	        	@if $desktop {
-	            	width: $ft_vitrine_w;
-	            	border: 1px solid #ccc;
-	            	max-width: 200px;
-	        	}
-	            img {
-	                border: 0 !important;
-	                width: 100%;
-	            }
-	        }
-	        .box {
-	        	.added {
-	        		a {
-	        			@if $mobile {
-	        				text-indent: 0;
-	        				width: auto;
-	        				height: auto;
-	        				position: static;
-	        				background: none;
-	        				font-size: 13px;
-	        				transform: none;
-	        			}
-	        		}
-	        	}
-	        }
-	        .rating[style="width:0%%"] {
-	        	width: 0%;
-	        }
-	        textarea {
-    			width: 100%;
-    			border: 1px solid #ccc;
-    		}
-
-    		.btn.ir.save {
-    			@extend %btn-listadesejo-salvar;
-    		}
-    		.notifyme.form {
-    			@if $desktop {
-    				width: 310px;
-    			}
-    			> span {
-    				@include fonte($notify-title-font-size, $notify-title-color, $notify-title-weight, $notify-title-font-family, $notify-title-text-transform);
-    				padding-bottom: 5px;
-    				@if $mobile{
-    					font-size: 11px;
-    				}
-    			}
-    			label {
-    				span {
-    					display: none;
-    				}
-    			}
-    			input[type="text"] {
-    			    @if $desktop {
-    			    	height: 35px;
-    			    	width: 194px !important;
-    			    	margin-right: 0;
-    			    	border-radius: 0;
-    			    }@else {
-    			    	width: 100% !important;
-    			    }
-    			    border: 1px solid #ccc;
-    			}
-    			.btn.send.ir {
-    			    @extend %btn-listadesejo-enviar-notify;
-    			    @if $desktop{
-
-    			    }
-    			}
-    		}
-    		.btn.send.ir {
-    			width: auto;
-    		}
-	    }
-	    .filter-wish {
-	    	.btn.ir.search {
-	    		@extend %btn-listadesejo-pesquisar;
-	    		@extend %btn-sm;
-	    		@if $desktop{
-	    			margin-top: 0px !important;
-	    		}
-	    	}
-	    }
-	    &.page-wishlist {
-	    	.aside {
-	    		.block {
-	    			li {
-	    				font-family: $font-custom;
-	    				a::before {
-	    					color: $color-theme;
-	    				}
-	    			}
-	    		}
-	    	}
-	    	.m-order-list,
-	    	.open-mob-filters {
-	    		text-transform: uppercase;
-	    		font-family: $font-custom;
-	    		font-size: 10px;
-	    	}
-	    	.open-mob-filters {
-	    		
-	    	}
-	    }
-    /* fim    - Lista de desejos*/
-
-    /* inicio - Conta Corrente*/
-	    &.contaCorrente {
-			.content {
-				@if $mobile{ 
-					padding: 10px;
+				&:hover {
+					color: $link-color;
 				}
 			}
-	    	.box.form {
-	    		background: #f1f1f1;
-	    		border: 1px solid #ccc;
-	    		border-radius: 5px;
-	    	}
-	    	.actions .btn.ir.search,
-			.field .btn.ir.search {
-	    		@extend %btn-contacorrente-pesquisar;
+		}
+	}
+}
+%page-lista-desejos {
+	#main .filter-wish {
+		@if $desktop{
+			min-height: 26px;
+		}
+		select {
+			@if $desktop{
+				height: 28px;
+				width: auto;
 			}
-			.info {
-				color: $colorDefault;
-				@if $mobile{
-					border: 1px solid #ccc;
-					padding: 20px;
-					margin: 10px 0;
-				}
-			}
-			.account {
-				@if $desktop{ 
-					padding-left: 30px;
-				}
-				p {
-					color: $colorDefault;
+		}
+		label{
+			span{
+				@if $desktop{
+					margin: 5px 5px 0 0 !important;
 				}
 			}
-	    }
-    /* fim    - Conta Corrente*/
-
-    /* incio - Meus Pedidos */
-    	&.search {
-    		a.description {
-    			color: $link-color;
-    			font-family: $font-custom;
-				font-size: 13px;
-    		}
-    		.result {
-    			td {
-    				a {
-    					color: $link-color;
-    					text-decoration: underline;
-    				}
-    			}
-    		}
-    		#main #panCentro {
-    			> h1 {
-    				@extend %title-checkout2;
-    			}
-    			.field.checkbox {
-    				padding: 5px; /* safari bug fix*/
-    				input[type="radio"] {
-    					
-    				}
-    			}
-    			.info .title strong,
-    			.info a.description,
-    			.info .number strong,
-    			.result .box table a {
-    				color: $colorNumeroPedido;
-    			}
-    			.info .number strong {
-    				font-size: 40px;
-    			}
-	    		.actions .btn.send {
-					@extend %btn-meuspedidos-enviar;
-				}
-				.info a.description {
-					@if $mobile {
-						padding: 5px 0;
+		}
+	}
+	#main .desired-products {
+		span {
+			a {
+				color: $link-color;
+			}
+		}
+		.coment .field label > span {
+			text-align: left;
+			font-size: 14px;
+			font-weight: bold;
+			padding-bottom: 8px;
+			color: #666;
+		}
+		&.list-products li {
+			border-top: 0;
+		}
+		.details.box {
+			text-align: left;
+		}
+		.details {
+			margin-top: 0;
+			.cod {
+				margin: 0 0 2px;
+			}
+			.offers {
+				.sale {
+					display: block !important;
+					@if $mobile{
+						font-size: 12px;
+						strong {
+							font-size: 12px;
+						}
+					}
+					&.percent-a-vista {
+						@extend %detail-price-offer;
 					}
 				}
+			}
+			.btn.ir.buy {
+				@extend %btn-listadesejo-comprar;
+				@if $desktop {
+					width: auto;
+					margin: 5px auto 0;
+					float: none;
+				}@else {
+					width: 100%;
+					@include box-sizing;
+				}
+				&::after {
+					display: none;
+				}
+			}
+		}
+		.stamp {
+			position: static;
+			padding-top: 5px;
+			a {
+				position: static !important;
+				margin-bottom: 5px !important;
+				display: block;
+			}
+		}
+		.figure {
+			margin-bottom: 10px;
+			@if $desktop {
+				width: $ft_vitrine_w;
+				border: 1px solid #ccc;
+				max-width: 200px;
+			}
+			img {
+				border: 0 !important;
+				width: 100%;
+			}
+		}
+		.box {
+			.added {
+				a {
+					@if $mobile {
+						text-indent: 0;
+						width: auto;
+						height: auto;
+						position: static;
+						background: none;
+						font-size: 13px;
+						transform: none;
+					}
+				}
+			}
+		}
+		.rating[style="width:0%%"] {
+			width: 0%;
+		}
+		textarea {
+			width: 100%;
+			border: 1px solid #ccc;
+		}
 
-    		}
+		.btn.ir.save {
+			@extend %btn-listadesejo-salvar;
+		}
+		.notifyme.form {
+			@if $desktop {
+				width: 310px;
+			}
+			> span {
+				@include fonte($notify-title-font-size, $notify-title-color, $notify-title-weight, $notify-title-font-family, $notify-title-text-transform);
+				padding-bottom: 5px;
+				@if $mobile{
+					font-size: 11px;
+				}
+			}
+			label {
+				span {
+					display: none;
+				}
+			}
+			input[type="text"] {
+				@if $desktop {
+					height: 35px;
+					width: 194px !important;
+					margin-right: 0;
+					border-radius: 0;
+				}@else {
+					width: 100% !important;
+				}
+				border: 1px solid #ccc;
+			}
+			.btn.send.ir {
+				@extend %btn-listadesejo-enviar-notify;
+				@if $desktop{
 
-    	}
-    	&.meuspedidos {
-    		background: #fff;
-    		#main {
-    			.container {
-    				@if $desktop {
-						width: 980px !important;
-    				}
-    				
-    			}
-    			.request .actions a {
-    				@extend %btn-meuspedidos-imprimir;
-    			}
-    			.description .details > span {
-    				padding-bottom: 3px;
-    			}
-    		}
-    		.request .collum .info .title span {
-    			font-weight: bold
-    		}
-    		.request .warning {
-    			color: red;
-    			font-family: $font-custom;
-    			font-size: 14px;
-    			display: block;
-    			@if $mobile{
-    				padding-top: 15px;
-    			}
-    		}
-    		.request .collum .info .title strong,
-    		.request .collum .info .number strong {
-    			color: $colorNumeroPedido;
-    		}
-    		.request .collum .info .number strong {
-    			font-size: 40px;
-    		}
+				}
+			}
+		}
+		.btn.send.ir {
+			width: auto;
+		}
+	}
+	.filter-wish {
+		.btn.ir.search {
+			@extend %btn-listadesejo-pesquisar;
+			@extend %btn-sm;
+			@if $desktop{
+				margin-top: 0px !important;
+			}
+		}
+	}
+	&.page-wishlist {
+		.aside {
+			.block {
+				li {
+					font-family: $font-custom;
+					a::before {
+						color: $color-theme;
+					}
+				}
+			}
+		}
+		.m-order-list,
+		.open-mob-filters {
+			text-transform: uppercase;
+			font-family: $font-custom;
+			font-size: 10px;
+		}
+		.open-mob-filters {
+			
+		}
+	}
+}
+%page-conta-corrente {
+	&.contaCorrente {
+		.content {
+			@if $mobile{ 
+				padding: 10px;
+			}
+		}
+		.box.form {
+			background: #f1f1f1;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		.actions .btn.ir.search,
+		.field .btn.ir.search {
+			@extend %btn-contacorrente-pesquisar;
+		}
+		.info {
+			color: $colorDefault;
+			@if $mobile{
+				border: 1px solid #ccc;
+				padding: 20px;
+				margin: 10px 0;
+			}
+		}
+		.account {
+			@if $desktop{ 
+				padding-left: 30px;
+			}
+			p {
+				color: $colorDefault;
+			}
+		}
+	}
+}
+%page-meus-pedidos {
+	&.search {
+		a.description {
+			color: $link-color;
+			font-family: $font-custom;
+			font-size: 13px;
+		}
+		.result {
+			td {
+				a {
+					color: $link-color;
+					text-decoration: underline;
+				}
+			}
+		}
+		#main #panCentro {
+			> h1 {
+				@extend %title-checkout2;
+			}
+			.field.checkbox {
+				padding: 5px; /* safari bug fix*/
+				input[type="radio"] {
+					
+				}
+			}
+			.info .title strong,
+			.info a.description,
+			.info .number strong,
+			.result .box table a {
+				color: $colorNumeroPedido;
+			}
+			.info .number strong {
+				font-size: 40px;
+			}
+			.actions .btn.send {
+				@extend %btn-meuspedidos-enviar;
+			}
+			.info a.description {
+				@if $mobile {
+					padding: 5px 0;
+				}
+			}
 
-    	}
-    /* fim   - Meus Pedidos */
+		}
 
-    /*inicio - Meus Cartoes*/
-	    .internal .return .btn.buy {
-	    	@extend %btn-meuscartoes-comprar-produtos;
-	    	width: auto;
-	    }
-	    &.mycards {
-	    	h1.mycards-title {
-	    		@extend %title-checkout2;
-	    		border-bottom: 0;
-	    	}
-	    	#imgHipercard {
-	    		display: none;
-	    	}
-	    	p.mycards-txt {
-				line-height: 22px;
-				font-size: 13px;
-	    	}
-	    	.new-card {
-	    		h2 {
-	    			text-align: center;
-	    		}
-	    	}
-	    	.add-new-card {
-	    		@extend  %btn-meuscartoes-cadastrar-cartao;
-	    		display: inline-block;
-	    	}
-	    	.save.btn.ir {
-	    		@extend  %btn-meuscartoes-cadastrar;
-	    	}
-	    }
-    /*fim - Meus Cartoes*/
+	}
+	&.meuspedidos {
+		background: #fff;
+		#main {
+			.container {
+				@if $desktop {
+					width: 980px !important;
+				}
+				
+			}
+			.request .actions a {
+				@extend %btn-meuspedidos-imprimir;
+			}
+			.description .details > span {
+				padding-bottom: 3px;
+			}
+		}
+		.request .collum .info .title span {
+			font-weight: bold
+		}
+		.request .warning {
+			color: red;
+			font-family: $font-custom;
+			font-size: 14px;
+			display: block;
+			@if $mobile{
+				padding-top: 15px;
+			}
+		}
+		.request .collum .info .title strong,
+		.request .collum .info .number strong {
+			color: $colorNumeroPedido;
+		}
+		.request .collum .info .number strong {
+			font-size: 40px;
+		}
 
-    /*inicio - Meus Pedidos sem login */
-    &.simple {
+	}	
+}
+%page-meus-cartoes {
+	.internal .return .btn.buy {
+		@extend %btn-meuscartoes-comprar-produtos;
+		width: auto;
+	}
+	&.mycards {
+		h1.mycards-title {
+			@extend %title-checkout2;
+			border-bottom: 0;
+		}
+		#imgHipercard {
+			display: none;
+		}
+		p.mycards-txt {
+			line-height: 22px;
+			font-size: 13px;
+		}
+		.new-card {
+			h2 {
+				text-align: center;
+			}
+		}
+		.add-new-card {
+			@extend  %btn-meuscartoes-cadastrar-cartao;
+			display: inline-block;
+		}
+		.save.btn.ir {
+			@extend  %btn-meuscartoes-cadastrar;
+		}
+	}	
+}
+%page-meus-pedidos-sem-login {
+	&.simple {
     	#main .container {
     		width: 966px;
     		margin: 0 auto;
@@ -377,6 +371,13 @@ body {
 			font-size: 13px;
 		}
     }
-    /*inicio - Meus Pedidos sem login */
+}
 
+body {
+	@extend %page-minha-conta;
+	@extend %page-lista-desejos;
+	@extend %page-conta-corrente;
+	@extend %page-meus-pedidos;
+	@extend %page-meus-cartoes;
+	@extend %page-meus-pedidos-sem-login;
 }

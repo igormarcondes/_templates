@@ -49,9 +49,9 @@
 	}
 }
 @if $hide-review-catalog {
-	body.catalog #main .list-products:not(.show-one) .reviewaggregate,
+	body.catalog #main .list-products .reviewaggregate,
 	body.vitrine #main .list-products .reviewaggregate,
-	body.look:not(.lookDetalhe) .list-products:not(.show-one) .reviewaggregate {
+	body.look:not(.lookDetalhe) .list-products .reviewaggregate {
 		@extend %rk-hide;
 	}
 }
